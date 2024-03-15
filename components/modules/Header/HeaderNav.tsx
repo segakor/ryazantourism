@@ -1,4 +1,5 @@
 import { headerMenu } from "@/constants/contstants";
+import { HeaderMenu } from "./HeaderMenu";
 
 export const HeaderNav = () => {
   return (
@@ -23,6 +24,7 @@ export const HeaderNav = () => {
                 </svg>
               </div>
             )}
+            <HeaderMenu subItem={item.subItem} />
           </li>
         ))}
       </ul>

@@ -1,5 +1,18 @@
-.header {
+.header_wrapper {
+  position: fixed;
+  width: 100%;
+  top: 20px;
+  left: 0;
+  right: 0;
+  max-width: 101.25rem;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 0.75rem;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
   border: 1px solid red;
+}
+.header {
   border-radius: 0.75rem;
   max-width: 95%;
 }
@@ -14,12 +27,15 @@
   display: flex;
   justify-content: space-between;
   padding: 1.5625rem 0;
+  @media (max-width: 1035px) {
+    padding: 1.25rem 0;
+  }
 }
 
 .header_left {
   display: flex;
   align-items: center;
-  gap: 1.875rem;
+  gap: 1rem;
 }
 
 .header_title {
@@ -41,6 +57,9 @@ svg path {
   display: flex;
   flex-direction: column;
   gap: 1.375rem;
+  @media (max-width: 1035px) {
+    display: none;
+  }
 }
 
 .header_block_wrapper {
@@ -48,7 +67,6 @@ svg path {
   align-items: center;
   gap: 3.125rem;
   align-self: flex-end;
-  border: 1px solid red;
 }
 .header_block {
   display: flex;
@@ -64,6 +82,7 @@ svg path {
   display: flex;
   gap: clamp(0.9375rem, -0.7327586207rem + 2.6939655172vw, 2.5rem);
 }
+
 .menu_item {
   position: relative;
   display: -webkit-box;
@@ -81,8 +100,17 @@ svg path {
   transition: color 0.3s ease-in-out;
   cursor: pointer;
 }
+.menu_item:before {
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 100%;
+  height: 15px;
+  background-color: transparent;
+  content: "";
+}
 
-.menu_item:hover {
+.menu_item:hover .menu_link {
   color: #96ee05;
 }
 
@@ -101,4 +129,149 @@ svg path {
 
 .chevron {
   display: flex;
+}
+
+.menu_item:hover .menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  display: flex;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 15px);
+  background: #ffffff;
+  -webkit-box-shadow: 0px 3px 18px -1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 18px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 0.875rem;
+  padding: 1.875rem;
+  min-width: 18.75rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+  cursor: default;
+}
+
+.menu_subitem:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.subitem_link {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: 121%;
+  color: rgba(20, 20, 20, 0.5);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.subitem_link:hover {
+  color: #141414;
+  cursor: pointer;
+}
+.subitem_link:hover::before {
+  opacity: 1;
+}
+.subitem_link:before {
+  position: absolute;
+  left: -16px;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #b9fa4f;
+  content: "";
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.header-icon {
+  flex: 0 0 2.5rem;
+  border-radius: 3.125rem;
+  background-color: #b9fa4f;
+  z-index: 120;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  cursor: pointer;
+  @media (min-width: 1035px) {
+    display: none;
+  }
+}
+
+.header-icon_icon {
+  display: block;
+  position: relative;
+  width: 1.125rem;
+  height: 0.75rem;
+  z-index: 5;
+}
+
+.header-icon_icon span,
+.header-icon_icon::before,
+.header-icon_icon::after {
+  content: "";
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #141414;
+  border-radius: 4px;
+}
+
+.header-icon_icon span {
+  width: 60%;
+  top: calc(50% - 0.0625rem);
+}
+
+.header-icon_icon::after {
+  bottom: 0;
+}
+
+.menu-open .header-icon_icon span {
+  width: 0;
+}
+
+.menu-open .header-icon_icon::before {
+  top: calc(50% - 0.0625rem);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.menu-open .header-icon_icon::after {
+  bottom: calc(50% - 0.0625rem);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.drawer-open {
+  position: fixed;
+  width: 100%;
+  height: calc(100% + 20px);
+  background-color: #ffff;
+  top: -20px;
+  right: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+
+.drawer-close {
+  position: fixed;
+  width: 100%;
+  height: calc(100% + 20px);
+  background-color: #ffff;
+  top: -20px;
+  right: 0;
+  bottom: 0;
+  transform: translateY(-120%);
+  transition: 0.5s;
 }
