@@ -1,7 +1,7 @@
 "use client";
 import { url } from "@/constants/contstants";
 import "./style.css";
-import { HeaderNav } from "./HeaderNav";
+import { HeaderNav, HeaderNavMobile } from "./HeaderNav";
 import Icons from "@/components/elements/Logo/Icons";
 import LogoRzn from "@/components/elements/Logo/LogoRzn";
 import { useState } from "react";
@@ -65,17 +65,19 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className={`${isOpenMenu ? "drawer-open" : "drawer-close"}`}>
-        <div>
-          <div className="flex flex-col mt-14 border-red-950">
-            <a href="tel:+74912777414" className="menu__phone">
+      <div className="adaptive-wrapper">
+        <div className={`${isOpenMenu ? "drawer-open" : "drawer-close"}`}>
+          <div className="contacts">
+            <a href="tel:+74912777414" className="phone">
               +74912777414
             </a>
-            <a href="mailto:rzn.visit@gmail.com" className="menu__email">
+            <a href="mailto:rzn.visit@gmail.com" className="email">
               rzn.visit@gmail.com
             </a>
           </div>
-          {/* <HeaderNav /> */}
+          <div className="menu_body">
+            <HeaderNavMobile />
+          </div>
         </div>
       </div>
     </div>
