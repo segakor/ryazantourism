@@ -3,7 +3,7 @@ import { url } from "@/constants/contstants";
 import "./style.css";
 import { HeaderNav, HeaderNavMobile } from "./HeaderNav";
 import Icons from "@/components/elements/Logo/Icons";
-import LogoRzn from "@/components/elements/Logo/LogoRzn";
+import LogoHeader from "@/components/elements/Logo/LogoHeader";
 import { useState } from "react";
 
 const Header = () => {
@@ -19,7 +19,7 @@ const Header = () => {
         <div className="header_container">
           <div className="header_body">
             <div className="header_left">
-              <LogoRzn />
+              <LogoHeader />
               <p className="header_title">
                 Все о туризме в Рязани <br /> и Рязанской области
               </p>

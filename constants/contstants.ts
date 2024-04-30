@@ -16,6 +16,9 @@ export const headerMenu = [
       { label: "Природа", path: "/Природа" },
       { label: "Кухня Рязанского края", path: "/Кухня Рязанского края" },
       { label: "Архитектура", path: "/Архитектура" },
+      { label: "События", path: "/Архитектура" },
+      { label: "Наследие Рязани", path: "/Архитектура" },
+      { label: "Наследие Касимова", path: "/Архитектура" },
     ],
   },
   {
@@ -65,5 +68,43 @@ export const headerMenu = [
     item: "Контакты",
     subItem: [],
     path: "/istoria",
+  },
+];
+
+export const mainNavigation = [
+  {
+    icon_url: "/mainNavigation/navigation1.jpg",
+    title: "Что посмотреть?",
+    desc: "Все популярные объекты города и области",
+  },
+  {
+    icon_url: "/mainNavigation/navigation2.jpg",
+    title: "Чем заняться?",
+    desc: "Подсказки для творческих, активных и неугомонных путешественников",
+  },
+  {
+    icon_url: "/mainNavigation/navigation3.jpg",
+    title: "Где поесть?",
+    desc: "Самые вкусные заведения Рязанской области",
+  },
+  {
+    icon_url: "/mainNavigation/navigation4.jpg",
+    title: "Где остановиться?",
+    desc: "От модного отеля в центре до уютного глемпинга в сельской глубинке",
+  },
+  {
+    icon_url: "/mainNavigation/navigation5.jpg",
+    title: "Сувениры",
+    desc: "Что привезти с собой из путешествия",
+  },
+  {
+    icon_url: "/mainNavigation/navigation6.jpg",
+    title: "Вечер в городе",
+    desc: "Развлечения на любой вкус",
+  },
+  {
+    icon_url: "/mainNavigation/navigation7.jpg",
+    title: "Здоровье",
+    desc: "Для тех, кто совмещает отдых и заботу об организме",
   },
 ];

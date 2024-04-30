@@ -32,3 +32,17 @@ a {
 ul li {
   list-style: none;
 }
+
+svg:hover path {
+  transition: all ease 0.4s;
+}
+svg:hover circle {
+  transition: all ease 0.4s;
+}
+
+svg path {
+  transition: all ease 0.4s;
+}
+svg circle {
+  transition: all ease 0.4s;
+}

@@ -1,0 +1,16 @@
+import Link from "next/link";
+import Image from "next/image";
+
+const LogoFooter = () => (
+  <Link className="logo" href="/">
+    <Image
+      src="/logoFooter.svg"
+      alt="Логотип компании"
+      width={69}
+      height={58}
+      priority
+    />
+  </Link>
+);
+
+export default LogoFooter;
