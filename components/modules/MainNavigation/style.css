@@ -4,6 +4,10 @@
   display: grid;
   gap: 80px;
   padding: 0 10px;
+  padding-top: 7.5rem;
+  @media (max-width: 880px) {
+    gap: 40px;
+  }
 }
 
 .navigation_body {
@@ -54,9 +58,13 @@
 .navigation_image {
   object-fit: cover;
   width: 100%;
-  height: 408px;
+  height: 408px  !important;
   transition: transform 0.3s ease-in-out;
   filter: brightness(50%);
+  position: relative !important;
+  @media (max-width: 880px) {
+    height: 350px  !important;
+  }
 }
 
 .navigation_inner {
@@ -85,12 +93,20 @@
   color: #fff;
   h3 {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 40px;
   }
   p {
     font-size: 18px;
     font-weight: 400;
+  }
+  @media (max-width: 880px) {
+    h3{
+      font-size: 32px;
+    }
+    p {
+      font-size: 12px;
+    }
   }
 }
 
@@ -98,5 +114,13 @@
   color: #000000;
   h3 {
     font-size: 60px;
+  }
+  @media (max-width: 880px) {
+    h3{
+      font-size: 32px;
+    }
+    p {
+      font-size: 12px;
+    }
   }
 }

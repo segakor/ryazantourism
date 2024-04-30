@@ -1,0 +1,17 @@
+.button_wrapper {
+  background-color: #b9fa4f;
+  padding: 30px 30px;
+  color: #000000;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+  border: none;
+  border-radius: 50px;
+  width: 100%;
+}
+
+.button_wrapper:hover {
+  background-color: #fff;
+  transition: all ease 0.4s;
+}

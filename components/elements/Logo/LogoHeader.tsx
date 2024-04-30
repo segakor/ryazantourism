@@ -5,10 +5,11 @@ const LogoHeader = () => (
   <Link className="logo" href="/">
     <Image
       src="/logo.svg"
-      alt="Логотип компании"
+      alt="Логотип"
       width={69}
       height={66}
       priority
+      className="logo"
     />
   </Link>
 );
