@@ -1,6 +1,6 @@
 "use client";
 import "./style.css";
-import Slider, { slickGoTo } from "react-slick";
+import Slider/* , { slickGoTo } */ from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { heroMap } from "@/constants/contstants";
