@@ -4,8 +4,8 @@ import Slider/* , { slickGoTo } */ from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { heroMap } from "@/constants/contstants";
-import { Button } from "@/components/elements/Button/Button";
 import { useEffect, useRef, useState } from "react";
+import Button from "@/components/elements/Button/Button";
 
 export const Hero = () => {
   let sliderRef = useRef(null);

@@ -2,22 +2,22 @@
 import Icons from "@/components/elements/Logo/Icons";
 import "./style.css";
 import Image from "next/image";
-import { Button } from "@/components/elements/Button/Button";
+import Button from "@/components/elements/Button/Button";
 
 export const MainBannerRoutes = () => {
   return (
-    <section className="banner_routes_wrapper">
+    <section className="grid_layout">
       <div className="banner_routes_header">
-        <h3 className="section_header">Маршруты</h3>
-        <p className="section_desc">
-          <Icons icon={"quote"} className="quote"/> Исследуйте Рязань самостоятельно или с
-          опытными экскурсоводами
+        <h3 className="header_typography">Маршруты</h3>
+        <p className="desc_typography">
+          <Icons icon={"quote"} className="quote" /> Исследуйте Рязань
+          самостоятельно или с опытными экскурсоводами
         </p>
       </div>
       <div className="banner_routes_body">
         <div className="banner_routes_card_first">
-          <h3 className="section_header">Самостоятельные маршруты</h3>
-          <p className="section_desc">
+          <h3 className="header_typography">Самостоятельные маршруты</h3>
+          <p className="desc_typography">
             Готовые тематические сценарии для самостоятельных увлекательных
             путешествий. Рекомендуется для легких на подъем и любопытных
             искателей приключений
@@ -43,8 +43,8 @@ export const MainBannerRoutes = () => {
             height={202}
             className="banner_image"
           />
-          <h3 className="section_header">Маршрут с гидом</h3>
-          <p className="section_desc">
+          <h3 className="header_typography">Маршрут с гидом</h3>
+          <p className="desc_typography">
             Проект для тех, кто готов к глубокому погружению в историю и
             культуру города и области в компании с экскурсоводом. Подходит для
             опытных и начинающих туристов
