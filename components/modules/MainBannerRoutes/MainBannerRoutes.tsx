@@ -10,7 +10,7 @@ export const MainBannerRoutes = () => {
       <div className="banner_routes_header">
         <h3 className="header_typography">Маршруты</h3>
         <p className="desc_typography">
-          <Icons icon={"quote"} className="quote" /> Исследуйте Рязань
+          <Icons icon={"quote"} className="quote" />Исследуйте Рязань
           самостоятельно или с опытными экскурсоводами
         </p>
       </div>
