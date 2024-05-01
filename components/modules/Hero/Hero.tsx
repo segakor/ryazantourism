@@ -14,9 +14,9 @@ export const Hero = () => {
   var settings = {
     dots: false,
     slidesToScroll: 1,
-    /* fade: true, */
+    fade: true,
     infinite: true,
-    speed: 200,
+    speed: 500,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 4000,
