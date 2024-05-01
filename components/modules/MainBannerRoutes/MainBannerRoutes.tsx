@@ -8,13 +8,11 @@ export const MainBannerRoutes = () => {
   return (
     <section className="banner_routes_wrapper">
       <div className="banner_routes_header">
-        <div>
-          <h3 className="section_header">Маршруты</h3>
-          <p className="section_desc">
-            <Icons icon={"quote"} /> Исследуйте Рязань самостоятельно или с
-            опытными экскурсоводами
-          </p>
-        </div>
+        <h3 className="section_header">Маршруты</h3>
+        <p className="section_desc">
+          <Icons icon={"quote"} className="quote"/> Исследуйте Рязань самостоятельно или с
+          опытными экскурсоводами
+        </p>
       </div>
       <div className="banner_routes_body">
         <div className="banner_routes_card_first">

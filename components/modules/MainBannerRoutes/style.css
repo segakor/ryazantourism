@@ -16,14 +16,15 @@
 }
 
 .banner_routes_header {
-  display: flex;
+  display: grid;
   justify-content: center;
   text-align: center;
+  gap: 20px;
 }
 
 .banner_routes_body {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 28px;
 }
 .banner_routes_card_first,
@@ -78,4 +79,9 @@
 }
 .banner_routes_button {
   width: 264px;
+}
+.quote{
+  @media (max-width: 880px) {
+    display: none;
+  }
 }

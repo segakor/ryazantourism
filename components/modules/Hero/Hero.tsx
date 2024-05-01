@@ -16,7 +16,7 @@ export const Hero = () => {
     slidesToScroll: 1,
     /* fade: true, */
     infinite: true,
-    speed: 500,
+    speed: 200,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 4000,

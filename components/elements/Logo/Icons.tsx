@@ -136,10 +136,12 @@ const icons = {
 
 const Icons = ({
   icon,
+  className,
 }: {
   icon: "apple" | "android" | "vk" | "tg" | "ok" | "goTo" | "quote";
+  className?: string;
 }) => {
-  return <>{icons[icon]}</>;
+  return <div className={className}>{icons[icon]}</div>;
 };
 
 export default Icons;
