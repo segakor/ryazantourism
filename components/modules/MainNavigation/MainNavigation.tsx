@@ -7,9 +7,9 @@ import { mainNavigation } from "@/constants/contstants";
 export const MainNavigation = () => {
   return (
     <section className="navigation_wrapper">
-      <div className="section_title">
-        <h3>Спланировать путешествие</h3>
-        <p>
+      <div className="navigation_header">
+        <h3 className="section_header">Спланировать путешествие</h3>
+        <p className="section_desc">
           Собрали для вас только лучшие места, которые помогут вам насладиться
           Рязанью
         </p>
@@ -24,8 +24,8 @@ export const MainNavigation = () => {
                 <Icons icon={"goTo"} />
               </div>
               <div className="navigation_inner_footer">
-                <h3>{item.title}</h3>
-                <p>{item.desc}</p>
+                <h3 className="section_header">{item.title}</h3>
+                <p className="section_desc">{item.desc}</p>
               </div>
             </div>
           </div>

@@ -46,3 +46,20 @@ svg path {
 svg circle {
   transition: all ease 0.4s;
 }
+
+.section_header {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 40px;
+  @media (max-width: 880px) {
+    font-size: 32px;
+  }
+}
+
+.section_desc {
+  font-size: 18px;
+  font-weight: 400;
+  @media (max-width: 880px) {
+    font-size: 12px;
+  }
+}

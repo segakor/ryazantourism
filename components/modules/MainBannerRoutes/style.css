@@ -1,0 +1,81 @@
+.banner_routes_wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  gap: 80px;
+  padding: 0 10px;
+  padding-top: 7.5rem;
+  @media (max-width: 880px) {
+    gap: 40px;
+  }
+  p {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+.banner_routes_header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner_routes_body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 28px;
+}
+.banner_routes_card_first,
+.banner_routes_card_second {
+  display: grid;
+  gap: 20px;
+  border-radius: 14px;
+  background-color: #b9fa4f;
+  padding: 40px;
+  position: relative;
+  transition: all ease 0.4s;
+}
+.banner_routes_card_second {
+  background-color: #252525;
+  color: #ffff;
+}
+
+.banner_image {
+  width: 100%;
+  object-fit: none;
+}
+
+.banner_routes_card_first:hover {
+  background-color: #252525;
+  color: #ffff;
+  transition: all ease 0.4s;
+  .button_wrapper {
+    background-color: #ffff;
+    color: #000000;
+  }
+}
+.banner_routes_card_second:hover {
+  background-color: #b9fa4f;
+  color: #000000;
+  transition: all ease 0.4s;
+  .button_wrapper {
+    background-color: #000000;
+    color: #ffff;
+  }
+}
+.banner_routes_card_first {
+  .button_wrapper {
+    background-color: #000000;
+    color: #fff;
+  }
+}
+.banner_routes_card_second {
+  .button_wrapper {
+    background-color: #ffff;
+    color: #000000;
+  }
+}
+.banner_routes_button {
+  width: 264px;
+}

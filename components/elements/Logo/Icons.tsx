@@ -118,12 +118,26 @@ const icons = {
       />
     </svg>
   ),
+  quote: (
+    <svg
+      width="36"
+      height="31"
+      viewBox="0 0 36 31"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.375 0H16.125L12.375 19.7045V31H0.5V19.7045L7.375 0ZM26.75 0H35.5L31.75 19.7045V31H19.875V19.7045L26.75 0Z"
+        fill="#B9FA4F"
+      />
+    </svg>
+  ),
 };
 
 const Icons = ({
   icon,
 }: {
-  icon: "apple" | "android" | "vk" | "tg" | "ok" | "goTo";
+  icon: "apple" | "android" | "vk" | "tg" | "ok" | "goTo" | "quote";
 }) => {
   return <>{icons[icon]}</>;
 };
