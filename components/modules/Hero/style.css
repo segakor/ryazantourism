@@ -1,6 +1,7 @@
 .hero_wrapper {
   overflow: hidden;
   position: relative;
+  margin-bottom: 7.5rem;
 }
 
 .hero_image {

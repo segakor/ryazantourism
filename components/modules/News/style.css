@@ -14,8 +14,13 @@
 
 .news_body {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(291px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(291px, 1fr)); */
   gap: 24px;
+  @media (max-width: 880px) {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
 }
 
 .news_card {
