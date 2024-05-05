@@ -6,7 +6,7 @@ import Icons from "@/components/elements/Logo/Icons";
 import LogoHeader from "@/components/elements/Logo/LogoHeader";
 import { useState } from "react";
 
-const Header = () => {
+export const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const onOpenMenu = () => {
@@ -83,5 +83,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

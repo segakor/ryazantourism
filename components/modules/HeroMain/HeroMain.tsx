@@ -7,7 +7,7 @@ import { heroMap } from "@/constants/contstants";
 import { useEffect, useRef, useState } from "react";
 import Button from "@/components/elements/Button/Button";
 
-export const Hero = () => {
+export const HeroMain = () => {
   let sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 

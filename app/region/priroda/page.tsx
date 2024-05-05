@@ -1,5 +1,13 @@
-const Priroda = () => {
-  return <div><h1>Природа</h1></div>
-}
+import { HeroLongRead } from "@/components/modules/HeroLongRead";
+import { LongRead } from "@/components/modules/LongRead";
 
-export default Priroda
+const Priroda = () => {
+  return (
+    <div className="grey">
+      <HeroLongRead imgUrl="/heroPages/priroda.jpg" title="Природа" />
+      <LongRead />
+    </div>
+  );
+};
+
+export default Priroda;

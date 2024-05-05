@@ -1,0 +1,25 @@
+.logread_wrapper {
+  display: flex;
+  gap: 28px;
+}
+
+.longread_body {
+  display: grid;
+  gap: 40px;
+  width: 80%;
+  position: relative;
+  margin-top: -7.5rem;
+  @media (max-width: 880px) {
+    width: 100%;
+  }
+}
+
+.longread_sidebar {
+  padding-top: 180px;
+  padding: 180px 20px 20px 20px;
+  position: sticky;
+  top: 0;
+  @media (max-width: 880px) {
+    display: none;
+  }
+}

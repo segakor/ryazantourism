@@ -14,16 +14,6 @@ body {
   /* overflow-x: hidden; */
 }
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
-
 a {
   color: inherit;
   text-decoration: none;
@@ -47,7 +37,7 @@ svg circle {
   transition: all ease 0.4s;
 }
 
-.header_typography{
+.header_typography {
   font-size: 60px;
   font-weight: 500;
   line-height: 40px;
@@ -79,4 +69,25 @@ svg circle {
 .home_page {
   display: grid;
   gap: 7.5rem;
+}
+
+.grey {
+  background-color: #f5f5f5;
+}
+
+:root {
+  --color-black: rgba(0, 0, 0, 1);
+  --color-white: rgba(255, 255, 255, 1);
+  --color-green: rgba(185, 250, 79, 1);
+  --color-grey: rgba(137, 137, 137, 1);
+  --color-semi-black: rgba(20, 20, 20, 0.5);
+  --color-light-grey: rgba(201, 201, 201, 1);
+  --color-semi-light-gray: rgba(0, 0, 0, 0.1);
+  --color-very-light-gray: rgba(242, 242, 242, 1);
+  --color-graphite: rgba(37, 37, 37, 1);
+  --color-semi-white: rgba(255, 255, 255, 0.5);
+  --color-longread-grey: rgba(245, 245, 245, 1);
+  --color-purple: rgba(127, 108, 250, 1);
+  --color-blue: rgba(83, 99, 247, 1);
+  --color-partner-card-grey: rgba(247, 247, 247, 1);
 }

@@ -11,14 +11,14 @@ export const headerMenu = [
   {
     item: "Регион",
     subItem: [
-      { label: "История", path: "/istoria" },
-      { label: "Культура", path: "/Культура" },
-      { label: "Природа", path: "/Природа" },
-      { label: "Кухня Рязанского края", path: "/Кухня Рязанского края" },
-      { label: "Архитектура", path: "/Архитектура" },
-      { label: "События", path: "/Архитектура" },
-      { label: "Наследие Рязани", path: "/Архитектура" },
-      { label: "Наследие Касимова", path: "/Архитектура" },
+      { label: "История", path: "/region/istoriya" },
+      { label: "Культура", path: "/region/kultura" },
+      { label: "Природа", path: "/region/priroda" },
+      { label: "Кухня Рязанского края", path: "/region/kuhnya-ryazanskogo-kraya" },
+      { label: "Архитектура", path: "/region/arhitektura" },
+      { label: "События", path: "/region/istoriya" },
+      { label: "Наследие Рязани", path: "/region/istoriya" },
+      { label: "Наследие Касимова", path: "/region/istoriya" },
     ],
   },
   {

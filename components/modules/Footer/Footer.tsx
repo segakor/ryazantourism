@@ -1,7 +1,7 @@
 import LogoFooter from "@/components/elements/Logo/LogoFooter";
 import "./style.css";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer_container">
@@ -32,5 +32,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

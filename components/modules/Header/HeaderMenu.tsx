@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Props = {
   subItem: { label: string; path: string }[];
   isAdaptive?: boolean;
@@ -8,11 +10,11 @@ export const HeaderMenu = ({ subItem, isAdaptive }: Props) => {
   }
 
   return (
-    <div className= {!isAdaptive ? "menu hover":"submenu_item"}>
+    <div className={!isAdaptive ? "menu hover" : "submenu_item"}>
       <ul>
         {subItem.map((item, index) => (
           <li className="menu_subitem" key={index}>
-            <a className="subitem_link">{item.label}</a>
+            <Link className="subitem_link" href={item.path}>{item.label}</Link>
           </li>
         ))}
       </ul>
