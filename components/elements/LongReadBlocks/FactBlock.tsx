@@ -1,7 +1,7 @@
 import "./style.css";
 import Image from "next/image";
 
-export const FactBlock = ({ fact }: { fact: string }) => {
+export const FactBlock = ({ text }: { text: string }) => {
   return (
     <div className="fact_block">
       <div className="fact_block_body">
@@ -15,7 +15,7 @@ export const FactBlock = ({ fact }: { fact: string }) => {
         />
         <div className="fact_block_desc">
           <div className="h4">Интересный факт</div>
-          <div className="text3">{fact}</div>
+          <div className="text3">{text}</div>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import "./style.css";
 import Image from "next/image";
 
-export const QuoteBlock = ({ children }: { children: React.ReactNode }) => {
+export const QuoteBlock = ({ text }: { text: string }) => {
   return (
     <div className="quote_block">
       <div className="quote_block_body">
@@ -13,7 +13,7 @@ export const QuoteBlock = ({ children }: { children: React.ReactNode }) => {
           height={40}
           className="image"
         />
-        <div className="quote_block_desc">{children}</div>
+        <div className="quote_block_desc">{text}</div>
       </div>
     </div>
   );
