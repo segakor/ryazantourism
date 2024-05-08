@@ -1,9 +1,15 @@
-import { HeroLongRead } from "@/components/modules/HeroLongRead";
+import { HeroPage } from "@/components/modules/HeroPage";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Культура - Всё о туризме в Рязани и Рязанской области",
+};
 
 const Kultura = () => {
   return (
     <div className="pages">
-      <HeroLongRead imgUrl="/heroPages/region/kultura.jpg" title="Культура" />
+      <HeroPage imgUrl="/heroPages/region/kultura.jpg" title="Культура" />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 .hero_longread_wrapper {
   position: relative;
-  height: 424px;
-  background-color: var(--color-purple);
+  height: 500px;
+  /* background-color: var(--color-purple); */
   border-radius: 0px 0px 100px 100px;
   overflow: hidden;
 }
@@ -9,7 +9,7 @@
   object-fit: cover;
   width: 100%;
   filter: brightness(50%);
-  height: 424px;
+  height: 500px;
 }
 .hero_longread_inner {
   position: absolute;
@@ -31,14 +31,4 @@
   display: grid;
   gap: 40px;
   color: #fff;
-  h3 {
-    font-size: 64px;
-    font-weight: 500;
-    line-height: 70px;
-  }
-  @media (max-width: 880px) {
-    h3 {
-      font-size: 48px;
-    }
-  }
 }

@@ -1,8 +1,14 @@
-import { HeroLongRead } from "@/components/modules/HeroLongRead"
+import { HeroPage } from "@/components/modules/HeroPage"
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Наследие Касимова - Всё о туризме в Рязани и Рязанской области",
+};
 
 const NasledieKasimova = () => {
   return  <div className="pages">
-  <HeroLongRead imgUrl="/heroPages/region/arhitektura.jpg" title="Наследие Касимова" />
+  <HeroPage imgUrl="/heroPages/region/arhitektura.jpg" title="Наследие Касимова" />
 </div>
 }
 

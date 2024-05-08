@@ -73,37 +73,37 @@ export const headerMenu = [
 
 export const mainNavigation = [
   {
-    icon_url: "/mainNavigation/navigation1.jpg",
+    imgUrl: "/mainNavigation/navigation1.jpg",
     title: "Что посмотреть?",
     desc: "Все популярные объекты города и области",
   },
   {
-    icon_url: "/mainNavigation/navigation2.jpg",
+    imgUrl: "/mainNavigation/navigation2.jpg",
     title: "Чем заняться?",
     desc: "Подсказки для творческих, активных и неугомонных путешественников",
   },
   {
-    icon_url: "/mainNavigation/navigation3.jpg",
+    imgUrl: "/mainNavigation/navigation3.jpg",
     title: "Где поесть?",
     desc: "Самые вкусные заведения Рязанской области",
   },
   {
-    icon_url: "/mainNavigation/navigation4.jpg",
+    imgUrl: "/mainNavigation/navigation4.jpg",
     title: "Где остановиться?",
     desc: "От модного отеля в центре до уютного глемпинга в сельской глубинке",
   },
   {
-    icon_url: "/mainNavigation/navigation5.jpg",
+    imgUrl: "/mainNavigation/navigation5.jpg",
     title: "Сувениры",
     desc: "Что привезти с собой из путешествия",
   },
   {
-    icon_url: "/mainNavigation/navigation6.jpg",
+    imgUrl: "/mainNavigation/navigation6.jpg",
     title: "Вечер в городе",
     desc: "Развлечения на любой вкус",
   },
   {
-    icon_url: "/mainNavigation/navigation7.jpg",
+    imgUrl: "/mainNavigation/navigation7.jpg",
     title: "Здоровье",
     desc: "Для тех, кто совмещает отдых и заботу об организме",
   },
@@ -113,31 +113,31 @@ export const heroMap = [
   {
     title: "История",
     desc: "Тысячелетнее путешествие во времени: громкие имена, интересные факты, невероятные сюжеты",
-    img_url: "/hero/hero1.jpg",
+    imgUrl: "/hero/hero1.jpg",
     link: "/region/istoriya",
   },
   {
     title: "Культура",
     desc: "Что? Где? Когда? Список заведений и событий, которые стоит включить в план вашей поездки",
-    img_url: "/hero/hero2.jpg",
+    imgUrl: "/hero/hero2.jpg",
     link: "/region/kultura",
   },
   {
     title: "Природа",
     desc: "Вам дворцов заманчивые своды не заменят никогда свободы? Выбирайте, куда выбраться из города",
-    img_url: "/hero/hero3.jpg",
+    imgUrl: "/hero/hero3.jpg",
     link: "/region/priroda",
   },
   {
     title: "Кухня рязанского края",
     desc: "Гастрономический фестиваль и лучшие локальные блюда в меню местных ресторанов",
-    img_url: "/hero/hero4.jpg",
+    imgUrl: "/hero/hero4.jpg",
     link: "/region/kuhnya-ryazanskogo-kraya",
   },
   {
     title: "Архитектура",
     desc: "Путеводитель по значимым постройкам с XVI века до наших дней. В объективе Рязань и область",
-    img_url: "/hero/hero5.jpg",
+    imgUrl: "/hero/hero5.jpg",
     link: "/region/arhitektura",
   },
 ];

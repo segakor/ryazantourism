@@ -3,7 +3,7 @@ import { TextBlock } from "./TextBlock";
 import { LinkBlock } from "./LinkBlock";
 import { LongReadItemBlock } from "./LongReadItemBlock";
 import { ListBlock } from "./ListBlock";
-import { AdressBlock } from "./AdressBlock";
+import { AddressBlock } from "./AddressBlock";
 
 const createElement = (subElementType: SUB_ELEMENT_TYPE, props: any) => {
   if (subElementType === SUB_ELEMENT_TYPE.TEXT_BLOCK) {
@@ -18,8 +18,8 @@ const createElement = (subElementType: SUB_ELEMENT_TYPE, props: any) => {
   if (subElementType === SUB_ELEMENT_TYPE.LIST_BLOCK) {
     return <ListBlock {...props} />;
   }
-  if (subElementType === SUB_ELEMENT_TYPE.ADRESS_BLOCK) {
-    return <AdressBlock {...props} />;
+  if (subElementType === SUB_ELEMENT_TYPE.ADDRESS_BLOCK) {
+    return <AddressBlock {...props} />;
   }
   return null;
 };

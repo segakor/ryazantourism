@@ -1,9 +1,9 @@
-import { HeroLongRead } from "@/components/modules/HeroLongRead";
+import { HeroPage } from "@/components/modules/HeroPage";
 
 const Page = () => {
   return (
     <div className="pages">
-      <HeroLongRead
+      <HeroPage
         imgUrl=""
         title="Здоровье"
       />

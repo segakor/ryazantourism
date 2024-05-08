@@ -28,7 +28,7 @@ export const template = [
         ],
       },
       {
-        element: "ADRESS_BLOCK",
+        element: "ADDRESS_BLOCK",
         text: "Рязань, Татарская, 36, +7 (4912) 50 44 45",
         link: "https://ya.ru",
       },

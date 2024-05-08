@@ -16,7 +16,7 @@ export const MainNavigation = () => {
       <div className="navigation_body">
         {mainNavigation.map((item, index) => (
           <div className="navigation_card" key={index}>
-            <img className="navigation_image" src={item.icon_url} alt="" />
+            <img className="navigation_image" src={item.imgUrl} alt="" />
             <div className="navigation_inner">
               <div className="navigation_inner_header">
                 <Icons icon={"goTo"} />

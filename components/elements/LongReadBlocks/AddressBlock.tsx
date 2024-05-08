@@ -1,7 +1,7 @@
 import Link from "next/link";
 import "./style.css";
 
-export const AdressBlock = ({
+export const AddressBlock = ({
   text,
   link,
 }: {
@@ -9,7 +9,7 @@ export const AdressBlock = ({
   link: string;
 }) => {
   return (
-    <div className="note-text adress_block">
+    <div className="note-text address_block">
       {text} {link && <Link href={link}>ссылка</Link>}
     </div>
   );
