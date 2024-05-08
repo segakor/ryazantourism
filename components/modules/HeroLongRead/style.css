@@ -1,6 +1,9 @@
 .hero_longread_wrapper {
   position: relative;
   height: 424px;
+  background-color: var(--color-purple);
+  border-radius: 0px 0px 100px 100px;
+  overflow: hidden;
 }
 .hero_longread_image {
   object-fit: cover;
@@ -34,7 +37,7 @@
     line-height: 70px;
   }
   @media (max-width: 880px) {
-    h3{
+    h3 {
       font-size: 48px;
     }
   }

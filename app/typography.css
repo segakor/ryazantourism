@@ -5,6 +5,7 @@
   line-height: 110%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .h2 {
   font-size: 60px;
@@ -12,6 +13,7 @@
   font-style: normal;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 
 .h3 {
@@ -21,6 +23,7 @@
   line-height: 121%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .h4 {
   font-size: 32px;
@@ -29,6 +32,7 @@
   line-height: 120%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .h4-2 {
   font-size: 28px;
@@ -37,6 +41,7 @@
   line-height: 120%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .h5 {
   font-size: 20px;
@@ -45,6 +50,7 @@
   line-height: 130%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .h6 {
   font-size: 16px;
@@ -53,6 +59,7 @@
   line-height: 125%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .text1 {
   font-size: 20px;
@@ -61,6 +68,7 @@
   line-height: 140%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .text2 {
   font-size: 18px;
@@ -69,6 +77,7 @@
   line-height: 130%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .text4 {
   font-size: 14px;
@@ -77,6 +86,7 @@
   line-height: 125%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .text3 {
   font-size: 16px;
@@ -85,6 +95,7 @@
   line-height: 150%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .note-text {
   font-size: 12px;
@@ -93,23 +104,26 @@
   line-height: 150%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .quote-text {
   font-size: 16px;
-
   font-weight: 500;
   font-style: normal;
   line-height: 138%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .quote-author-text {
   font-size: 16px;
   font-style: italic;
   font-weight: 700;
   line-height: 158%;
+  font-family: PT Serif;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .lead-text {
   font-size: 16px;
@@ -118,6 +132,7 @@
   line-height: 150%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .button-text {
   font-size: 20px;
@@ -126,6 +141,7 @@
   line-height: 140%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .loyalty-text {
   font-size: 12px;
@@ -134,6 +150,7 @@
   line-height: 125%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }
 .partner-card-text {
   font-size: 14px;
@@ -142,4 +159,5 @@
   line-height: 125%;
   text-decoration: none;
   text-transform: none;
+  white-space: pre-line;
 }

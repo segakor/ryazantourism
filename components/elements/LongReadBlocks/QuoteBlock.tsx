@@ -1,7 +1,13 @@
 import "./style.css";
 import Image from "next/image";
 
-export const QuoteBlock = ({ text }: { text: string }) => {
+export const QuoteBlock = ({
+  text,
+  authorText,
+}: {
+  text: string;
+  authorText: string;
+}) => {
   return (
     <div className="quote_block">
       <div className="quote_block_body">
@@ -13,7 +19,10 @@ export const QuoteBlock = ({ text }: { text: string }) => {
           height={40}
           className="image"
         />
-        <div className="quote_block_desc">{text}</div>
+        <div>
+        <div className="quote-text">{text}</div>
+        <div className="quote-author-text">{authorText}</div>
+        </div>
       </div>
     </div>
   );

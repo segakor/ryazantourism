@@ -2,6 +2,8 @@ import { SUB_ELEMENT_TYPE } from "@/types/types";
 import { TextBlock } from "./TextBlock";
 import { LinkBlock } from "./LinkBlock";
 import { LongReadItemBlock } from "./LongReadItemBlock";
+import { ListBlock } from "./ListBlock";
+import { AdressBlock } from "./AdressBlock";
 
 const createElement = (subElementType: SUB_ELEMENT_TYPE, props: any) => {
   if (subElementType === SUB_ELEMENT_TYPE.TEXT_BLOCK) {
@@ -12,6 +14,12 @@ const createElement = (subElementType: SUB_ELEMENT_TYPE, props: any) => {
   }
   if (subElementType === SUB_ELEMENT_TYPE.LONG_READ_ITEM_BLOCK) {
     return <LongReadItemBlock {...props} />;
+  }
+  if (subElementType === SUB_ELEMENT_TYPE.LIST_BLOCK) {
+    return <ListBlock {...props} />;
+  }
+  if (subElementType === SUB_ELEMENT_TYPE.ADRESS_BLOCK) {
+    return <AdressBlock {...props} />;
   }
   return null;
 };

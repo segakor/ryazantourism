@@ -1,7 +1,9 @@
+import { HeroLongRead } from "@/components/modules/HeroLongRead";
+
 const Istoriya = () => {
   return (
-    <div>
-      <h1>История</h1>
+    <div className="pages">
+      <HeroLongRead imgUrl="/heroPages/region/istoriya.jpg" title="История" />
     </div>
   );
 };

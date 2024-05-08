@@ -4,8 +4,7 @@ import "./style.css";
 import { QuoteBlock } from "@/components/elements/LongReadBlocks/QuoteBlock";
 import { FactBlock } from "@/components/elements/LongReadBlocks/FactBlock";
 import { LeadBlock } from "@/components/elements/LongReadBlocks/LeadBlock";
-import { prirodaTemplate } from "@/constants/pages/priroda";
-import { ELEMENT_TYPE } from "@/types/types";
+import { ELEMENT_TYPE, LongReadBody } from "@/types/types";
 
 const createElement = (elementType: ELEMENT_TYPE, props: any) => {
   if (elementType === ELEMENT_TYPE.FACT_BLOCK) {
@@ -23,16 +22,23 @@ const createElement = (elementType: ELEMENT_TYPE, props: any) => {
   return null;
 };
 
-const sideBarItem = prirodaTemplate
-  .filter((item) => item.element === ELEMENT_TYPE.LONG_READ_BLOCK)
-  .map((item) => item.title);
+export const LongRead = ({ body }: { body: LongReadBody[] }) => {
+  const scrollIntoView = (elementId?: string) => {
+    //@ts-ignore
+    document
+      .getElementById(elementId || "")
+      .scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 
-export const LongRead = () => {
+  const sideBarItem = body
+    ?.filter((item) => item.element === ELEMENT_TYPE.LONG_READ_BLOCK)
+    ?.map((item) => item?.title);
+
   return (
     <section className="grid_layout">
       <div className="logread_wrapper">
         <div className="longread_body">
-          {prirodaTemplate.map((item, index) => (
+          {body?.map((item, index) => (
             <div key={index}>
               {createElement(item.element as ELEMENT_TYPE, item)}
             </div>
@@ -42,14 +48,11 @@ export const LongRead = () => {
           <div className="longread_sidebar">
             <div className="h4">Разделы</div>
             <>
-              {sideBarItem.map((item, index) => (
+              {sideBarItem?.map((item, index) => (
                 <div
+                  className="longread_sidebar_item text1"
                   key={index}
-                  onClick={() =>
-                    document
-                      .getElementById(item)
-                      .scrollIntoView({ behavior: "smooth", block: "center" })
-                  }
+                  onClick={() => scrollIntoView(item)}
                 >
                   {item}
                 </div>
