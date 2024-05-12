@@ -1,11 +1,11 @@
-.arch_card_body {
+.arch_card_group {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 28px;
-  margin-top:228px;
   @media (max-width: 880px) {
     grid-template-columns: 1fr;
   }
+  margin-bottom: 160px;
 }
 
 .arch_card_item {
@@ -17,6 +17,18 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+}
+
+.arch_image {
+  object-fit: cover;
+  width: 100%;
+  height: 408px !important;
+  transition: transform 0.3s ease-in-out;
+  filter: brightness(60%);
+  position: relative !important;
+  @media (max-width: 880px) {
+    height: 350px !important;
+  }
 }
 
 .arch_card_item_inner {
@@ -35,7 +47,7 @@
 
 .arch_card_item_header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .arch_card_item_body {
@@ -44,26 +56,27 @@
 }
 
 .arch_card_item:hover {
-  svg circle {
-    fill: #96ee05;
+  .arch_card_item_header {
+    svg circle {
+      fill: #96ee05;
+    }
+    svg path {
+      fill: black;
+    }
   }
-  svg path {
-    fill: black;
-  }
+
   .arch_image {
     transform: scale(115%);
     transition: transform 0.3s ease-in-out;
   }
 }
 
-.arch_image {
-  object-fit: cover;
-  width: 100%;
-  height: 408px !important;
-  transition: transform 0.3s ease-in-out;
-  filter: brightness(60%);
-  position: relative !important;
-  @media (max-width: 880px) {
-    height: 350px !important;
+.arch_address {
+  display: flex;
+  gap: 10px;
+}
+.arch_address:hover {
+  svg path {
+    fill: white;
   }
 }

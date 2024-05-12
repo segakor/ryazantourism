@@ -10,7 +10,7 @@ export enum SUB_ELEMENT_TYPE {
   LONG_READ_ITEM_BLOCK = "LONG_READ_ITEM_BLOCK",
   LINK_BLOCK = "LINK_BLOCK",
   LIST_BLOCK = "LIST_BLOCK",
-  ADDRESS_BLOCK = "ADDRESS_BLOCK"
+  ADDRESS_BLOCK = "ADDRESS_BLOCK",
 }
 
 export type LongReadBody = {
@@ -18,5 +18,20 @@ export type LongReadBody = {
   subElements: {
     element: SUB_ELEMENT_TYPE;
   }[];
-  title?:string;
+  title?: string;
 };
+
+export type TagList = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+
+export type PlaceCard = {
+  name: string; // название карточки
+  address: string; //address
+  url_name: string; //название кнопки
+  url: string; //  ссылка на кнопке
+  description: string;
+  image_path: string;
+  tags: { id: number; name: string }[];
+  category: { name: string };
+};
+
+export type ResponsePlaceCard = { data: PlaceCard[] };

@@ -1,0 +1,39 @@
+.tabs {
+  display: flex;
+  gap: 20px;
+  padding: 80px 0 60px 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  @media (max-width: 880px) {
+    padding: 0;
+    margin-top: 20px;
+  }
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab {
+  transition: all ease 0.4s;
+  background-color: var(--color-partner-card-grey);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border-radius: 500px;
+  padding: 1.25rem 2.5rem;
+  white-space: nowrap;
+  .button-text {
+    font-size: 18px;
+  }
+}
+.tab:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  transition: all ease 0.4s;
+}
+
+.active {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}

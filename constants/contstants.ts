@@ -141,3 +141,50 @@ export const heroMap = [
     link: "/region/arhitektura",
   },
 ];
+
+export const tabsChtoPosmotret = [
+  { label: "Все", id: "all" },
+  { label: "Музеи", id: "museums" },
+  { label: "Архитектура", id: "architecture" },
+  { label: "Природа", id: "nature" },
+  { label: "Памятники", id: "monuments" },
+  { label: "Арт-объекты", id: "artObjects" },
+  { label: "Театры", id: "theaters" },
+]
+
+export const tabsChemZanyatsya = [
+  { label: "Все", id: "all" },
+  { label: "Развлечения", id: "Развлечения" },
+  { label: "Творчество", id: "Творчество" },
+  { label: "Частные музеи", id: "Частные музеи" },
+  { label: "Активный отдых", id: "Активный отдых" },
+]
+
+export const tabsGdePoest = [
+  { label: "Все", id: "all" },
+  { label: "Рестораны", id: "Рестораны" },
+  { label: "Кофейни", id: "Кофейни" },
+  { label: "Стритфуд", id: "Стритфуд" },
+ 
+]
+
+export const tabGdePoest = [
+  { label: "Все", id: "all" },
+  { label: "Отели", id: "Отели" },
+  { label: "Гостевые дома", id: "Гостевые дома" },
+  { label: "Глэмпинг", id: "Глэмпинг" },
+]
+
+export const tabsVecherVGorode = [
+  { label: "Все", id: "all" },
+  { label: "Бары", id: "Бары" },
+  { label: "Кальянные", id: "Кальянные" },
+]
+
+export const tabsZdorove = [
+  { label: "Все", id: "all" },
+  { label: "Стоматология", id: "Стоматология" },
+  { label: "Клиники", id: "Клиники" },
+  { label: "Санатории", id: "Санатории" },
+  { label: "Студии красоты и здоровья", id: "Студии красоты и здоровья" },
+]

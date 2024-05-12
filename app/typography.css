@@ -141,7 +141,7 @@
   line-height: 140%;
   text-decoration: none;
   text-transform: none;
-  white-space: pre-line;
+  white-space: nowrap
 }
 .loyalty-text {
   font-size: 12px;

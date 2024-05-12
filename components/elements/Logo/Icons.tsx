@@ -132,13 +132,37 @@ const icons = {
       />
     </svg>
   ),
+  location: (
+    <svg
+      width="12"
+      height="16"
+      viewBox="0 0 12 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0 6.85831C0 3.61134 2.71333 0.986938 5.99539 0.986938C9.28669 0.986938 12 3.61134 12 6.85831C12 8.4945 11.405 10.0135 10.4256 11.301C9.34506 12.7212 8.0133 13.9586 6.51428 14.9299C6.1712 15.1543 5.86157 15.1713 5.48503 14.9299C3.97747 13.9586 2.64571 12.7212 1.57447 11.301C0.594343 10.0135 0 8.4945 0 6.85831ZM4.01953 7.04108C4.01953 8.12882 4.90713 8.98433 5.99545 8.98433C7.08449 8.98433 7.98063 8.12882 7.98063 7.04108C7.98063 5.96182 7.08449 5.06467 5.99545 5.06467C4.90713 5.06467 4.01953 5.96182 4.01953 7.04108Z"
+        fill="white"
+      />
+    </svg>
+  ),
 };
 
 const Icons = ({
   icon,
   className,
 }: {
-  icon: "apple" | "android" | "vk" | "tg" | "ok" | "goTo" | "quote";
+  icon:
+    | "apple"
+    | "android"
+    | "vk"
+    | "tg"
+    | "ok"
+    | "goTo"
+    | "quote"
+    | "location";
   className?: string;
 }) => {
   return <div className={className}>{icons[icon]}</div>;
