@@ -4,7 +4,8 @@ import "./style.css";
 import { HeaderNav, HeaderNavMobile } from "./HeaderNav";
 import Icons from "@/components/elements/Logo/Icons";
 import LogoHeader from "@/components/elements/Logo/LogoHeader";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -12,6 +13,13 @@ export const Header = () => {
   const onOpenMenu = () => {
     setIsOpenMenu((prev) => !prev);
   };
+
+  const pathname = usePathname();
+  console.log(pathname);
+
+  useEffect(() => {
+    setIsOpenMenu(false);
+  }, [pathname]);
 
   return (
     <div className="header_wrapper">

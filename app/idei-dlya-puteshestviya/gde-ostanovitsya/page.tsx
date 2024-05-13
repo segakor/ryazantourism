@@ -1,9 +1,8 @@
-import Body from "./body";
 import type { Metadata } from "next";
-import { API_URL } from "@/constants/apiUrl";
-import { ResponsePlaceCard } from "@/types/types";
+import Body from "./body";
 import Loading from "./loading";
-import Layout from "./layout";
+import { ResponsePlaceCard } from "@/types/types";
+import { API_URL } from "@/constants/apiUrl";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
@@ -19,11 +18,11 @@ const Page = async () => {
   const cards = (await getPlaceCard()) as ResponsePlaceCard;
 
   return (
-    <Layout>
+    <>
       <Suspense fallback={<Loading />}>
         <Body data={cards.data} />
       </Suspense>
-    </Layout>
+    </>
   );
 };
 

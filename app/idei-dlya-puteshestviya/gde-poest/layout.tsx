@@ -9,9 +9,9 @@ export default function RootLayout({
   return (
     <Layout>
       <HeroPage
-        imgUrl="/heroPages/idei-dlya-puteshestviya/gde-ostanovitsya.jpg"
-        title="Где остановиться?"
-        desc="От модного отеля в центре до уютного глемпинга в сельской глубинке"
+        imgUrl="/heroPages/idei-dlya-puteshestviya/gde-poest.jpg"
+        title="Где поесть?"
+        desc="Самые вкусные заведения Рязанской области"
       />
       {children}
     </Layout>
