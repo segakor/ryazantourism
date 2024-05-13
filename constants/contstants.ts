@@ -14,7 +14,10 @@ export const headerMenu = [
       { label: "История", path: "/region/istoriya" },
       { label: "Культура", path: "/region/kultura" },
       { label: "Природа", path: "/region/priroda" },
-      { label: "Кухня Рязанского края", path: "/region/kuhnya-ryazanskogo-kraya" },
+      {
+        label: "Кухня Рязанского края",
+        path: "/region/kuhnya-ryazanskogo-kraya",
+      },
       { label: "Архитектура", path: "/region/arhitektura" },
       { label: "События", path: "/region/sobytiya" },
       { label: "Наследие Рязани", path: "/region/nasledie-ryazani" },
@@ -24,50 +27,62 @@ export const headerMenu = [
   {
     item: "Идеи для путешествия",
     subItem: [
-      { label: "Что посмотреть?", path: "/idei-dlya-puteshestviya/chto-posmotret" },
-      { label: "Чем заняться?", path: "/idei-dlya-puteshestviya/chem-zanyatsya" },
+      {
+        label: "Что посмотреть?",
+        path: "/idei-dlya-puteshestviya/chto-posmotret",
+      },
+      {
+        label: "Чем заняться?",
+        path: "/idei-dlya-puteshestviya/chem-zanyatsya",
+      },
       { label: "Где поесть?", path: "/idei-dlya-puteshestviya/gde-poest" },
-      { label: "Где остановиться?", path: "/idei-dlya-puteshestviya/gde-ostanovitsya" },
+      {
+        label: "Где остановиться?",
+        path: "/idei-dlya-puteshestviya/gde-ostanovitsya",
+      },
       { label: "Сувениры", path: "/idei-dlya-puteshestviya/suveniry" },
-      { label: "Вечер в городе", path: "/idei-dlya-puteshestviya/vecher-v-gorode" },
+      {
+        label: "Вечер в городе",
+        path: "/idei-dlya-puteshestviya/vecher-v-gorode",
+      },
       { label: "Здоровье", path: "/idei-dlya-puteshestviya/zdorove" },
     ],
   },
   {
     item: "Ты с местными",
     subItem: [
-      { label: "Визит центр для туристов", path: "/istoria" },
-      { label: "Ответы на вопросы", path: "/Культура" },
-      { label: "Ваши отзывы", path: "/Природа" },
-      { label: "Мобильное приложение", path: "/Кухня Рязанского края" },
+      { label: "Визит центр для туристов", path: "/ty-s-mestnym/cit" },
+      { label: "Ответы на вопросы", path: "/ty-s-mestnym/otvety-na-voprosy" },
+      { label: "Ваши отзывы", path: "/ty-s-mestnym/obratnaya-svyaz" },
+      { label: "Мобильное приложение", path: "/ty-s-mestnym/mobilnoe-prilozhenie" },
     ],
   },
   {
     item: "Маршруты",
     subItem: [
-      { label: "Организованные машруты", path: "/istoria" },
-      { label: "Самостоятельные машруты", path: "/istoria" },
+      { label: "Организованные машруты", path: "/marshruty/organizovannye-marshruty" },
+      { label: "Самостоятельные машруты", path: "/marshruty/samostoyatelnye-marshruty" },
     ],
   },
   {
     item: "Профессионалам",
     subItem: [
-      { label: "Агенство развития туризма", path: "/istoria" },
-      { label: "Проекты", path: "/istoria" },
-      { label: "База знаний", path: "/istoria" },
-      { label: "Реестр туроператоров", path: "/istoria" },
-      { label: "Новости арт", path: "/istoria" },
+      { label: "Агенство развития туризма", path: "/professionalam/agentstvo-razvitiya-turizma" },
+      { label: "Проекты", path: "/professionalam/proekty" },
+      { label: "База знаний", path: "/professionalam/baza-znanij" },
+      { label: "Реестр туроператоров", path: "/professionalam/reestr-turoperatorov" },
+      { label: "Новости арт", path: "/professionalam/novosti-art" },
     ],
   },
   {
     item: "Галерея",
     subItem: [],
-    path: "/istoria",
+    path: "/galereya",
   },
   {
     item: "Контакты",
     subItem: [],
-    path: "/istoria",
+    path: "/kontakty",
   },
 ];
 
@@ -76,36 +91,43 @@ export const mainNavigation = [
     imgUrl: "/mainNavigation/navigation1.jpg",
     title: "Что посмотреть?",
     desc: "Все популярные объекты города и области",
+    path: "/idei-dlya-puteshestviya/chto-posmotret",
   },
   {
     imgUrl: "/mainNavigation/navigation2.jpg",
     title: "Чем заняться?",
     desc: "Подсказки для творческих, активных и неугомонных путешественников",
+    path: "/idei-dlya-puteshestviya/chem-zanyatsya",
   },
   {
     imgUrl: "/mainNavigation/navigation3.jpg",
     title: "Где поесть?",
     desc: "Самые вкусные заведения Рязанской области",
+    path: "/idei-dlya-puteshestviya/gde-poest",
   },
   {
     imgUrl: "/mainNavigation/navigation4.jpg",
     title: "Где остановиться?",
     desc: "От модного отеля в центре до уютного глемпинга в сельской глубинке",
+    path: "/idei-dlya-puteshestviya/gde-ostanovitsya",
   },
   {
     imgUrl: "/mainNavigation/navigation5.jpg",
     title: "Сувениры",
     desc: "Что привезти с собой из путешествия",
+    path: "/idei-dlya-puteshestviya/suveniry",
   },
   {
     imgUrl: "/mainNavigation/navigation6.jpg",
     title: "Вечер в городе",
     desc: "Развлечения на любой вкус",
+    path: "/idei-dlya-puteshestviya/vecher-v-gorode",
   },
   {
     imgUrl: "/mainNavigation/navigation7.jpg",
     title: "Здоровье",
     desc: "Для тех, кто совмещает отдых и заботу об организме",
+    path: "/idei-dlya-puteshestviya/zdorove",
   },
 ];
 
@@ -150,7 +172,7 @@ export const tabsChtoPosmotret = [
   { label: "Памятники", id: "monuments" },
   { label: "Арт-объекты", id: "artObjects" },
   { label: "Театры", id: "theaters" },
-]
+];
 
 export const tabsChemZanyatsya = [
   { label: "Все", id: "all" },
@@ -158,28 +180,27 @@ export const tabsChemZanyatsya = [
   { label: "Творчество", id: "Творчество" },
   { label: "Частные музеи", id: "Частные музеи" },
   { label: "Активный отдых", id: "Активный отдых" },
-]
+];
 
 export const tabsGdePoest = [
   { label: "Все", id: "all" },
   { label: "Рестораны", id: "Рестораны" },
   { label: "Кофейни", id: "Кофейни" },
   { label: "Стритфуд", id: "Стритфуд" },
- 
-]
+];
 
 export const tabGdePoest = [
   { label: "Все", id: "all" },
   { label: "Отели", id: "Отели" },
   { label: "Гостевые дома", id: "Гостевые дома" },
   { label: "Глэмпинг", id: "Глэмпинг" },
-]
+];
 
 export const tabsVecherVGorode = [
   { label: "Все", id: "all" },
   { label: "Бары", id: "Бары" },
   { label: "Кальянные", id: "Кальянные" },
-]
+];
 
 export const tabsZdorove = [
   { label: "Все", id: "all" },
@@ -187,4 +208,4 @@ export const tabsZdorove = [
   { label: "Клиники", id: "Клиники" },
   { label: "Санатории", id: "Санатории" },
   { label: "Студии красоты и здоровья", id: "Студии красоты и здоровья" },
-]
+];

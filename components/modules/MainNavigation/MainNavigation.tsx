@@ -2,6 +2,7 @@
 import Icons from "@/components/elements/Logo/Icons";
 import "./style.css";
 import { mainNavigation } from "@/constants/contstants";
+import Link from "next/link";
 
 export const MainNavigation = () => {
   return (
@@ -15,18 +16,20 @@ export const MainNavigation = () => {
       </div>
       <div className="navigation_body">
         {mainNavigation.map((item, index) => (
-          <div className="navigation_card" key={index}>
-            <img className="navigation_image" src={item.imgUrl} alt="" />
-            <div className="navigation_inner">
-              <div className="navigation_inner_header">
-                <Icons icon={"goTo"} />
-              </div>
-              <div className="navigation_inner_footer">
-                <h3 className="header_typography">{item.title}</h3>
-                <p className="desc_typography">{item.desc}</p>
+          <Link key={index} href={item.path}>
+            <div className="navigation_card">
+              <img className="navigation_image" src={item.imgUrl} alt="" />
+              <div className="navigation_inner">
+                <div className="navigation_inner_header">
+                  <Icons icon={"goTo"} />
+                </div>
+                <div className="navigation_inner_footer">
+                  <h3 className="header_typography">{item.title}</h3>
+                  <p className="desc_typography">{item.desc}</p>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

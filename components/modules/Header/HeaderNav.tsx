@@ -2,6 +2,7 @@ import { headerMenu, url } from "@/constants/contstants";
 import { HeaderMenu } from "./HeaderMenu";
 import { useState } from "react";
 import Icons from "@/components/elements/Logo/Icons";
+import Link from "next/link";
 
 export const HeaderNav = () => {
   return (
@@ -9,7 +10,13 @@ export const HeaderNav = () => {
       <ul className="header_nav">
         {headerMenu.map((item, index) => (
           <li className="menu_item" key={index}>
-            <span className="menu_link">{item.item}</span>
+            <span className="menu_link">
+              {item.path ? (
+                <Link href={item.path}>{item.item}</Link>
+              ) : (
+                <>{item.item}</>
+              )}
+            </span>
             {!!item.subItem.length && (
               <div className="chevron">
                 <svg
@@ -85,32 +92,32 @@ export const HeaderNavMobile = () => {
         ))}
       </ul>
       <div className="icon_adaptive">
-          <div className="header_block">
-            <p className="header_title">Моб. приложение</p>
-            <div className="header_block header_icon">
-              <a href={url.apple} target="_blank">
-                <Icons icon="apple" />
-              </a>
-              <a href={url.android} target="_blank">
-                <Icons icon="android" />
-              </a>
-            </div>
-          </div>
-          <div className="header_block">
-            <p className="header_title">Мы в соц. сетях</p>
-            <div className="header_block header_icon">
-              <a href={url.vk} target="_blank">
-                <Icons icon="vk" />
-              </a>
-              <a href={url.tg} target="_blank">
-                <Icons icon="tg" />
-              </a>
-              <a href={url.ok} target="_blank">
-                <Icons icon="ok" />
-              </a>
-            </div>
+        <div className="header_block">
+          <p className="header_title">Моб. приложение</p>
+          <div className="header_block header_icon">
+            <a href={url.apple} target="_blank">
+              <Icons icon="apple" />
+            </a>
+            <a href={url.android} target="_blank">
+              <Icons icon="android" />
+            </a>
           </div>
         </div>
+        <div className="header_block">
+          <p className="header_title">Мы в соц. сетях</p>
+          <div className="header_block header_icon">
+            <a href={url.vk} target="_blank">
+              <Icons icon="vk" />
+            </a>
+            <a href={url.tg} target="_blank">
+              <Icons icon="tg" />
+            </a>
+            <a href={url.ok} target="_blank">
+              <Icons icon="ok" />
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };
