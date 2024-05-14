@@ -5,7 +5,7 @@ export const data = [
     address: "Рязань, Кремль, 15",
     imgUrl: "https://i.ibb.co/Bc0LgNr/4-D8-A5749-resized.jpg",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 9, name: 9 },
@@ -17,7 +17,7 @@ export const data = [
     address: "Рыбновский р-н, с. Константиново",
     imgUrl: "https://i.ibb.co/Bc0LgNr/4-D8-A5749-resized.jpg",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 9, name: 9 },
@@ -29,7 +29,7 @@ export const data = [
     address: "Рязань, Свободы, 57",
     imgUrl: "https://i.ibb.co/Bc0LgNr/4-D8-A5749-resized.jpg",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 9, name: 9 },
@@ -41,7 +41,7 @@ export const data = [
     address: "Рязань, Павлова, 25",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 9, name: 9 },
@@ -54,7 +54,7 @@ export const data = [
     address: "Рязань, пл. Маргелова, 1",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 9, name: 9 },
@@ -66,7 +66,7 @@ export const data = [
     address: "Рязань, Соборная, 22",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 9, name: 9 },
@@ -79,7 +79,7 @@ export const data = [
     address: "Рязань, Почтовая, 58",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 9, name: 9 },
       { id: 3, name: 3 },
@@ -91,7 +91,7 @@ export const data = [
     address: "Рязань, Свободы, 79",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 4, name: 4 },
@@ -103,7 +103,7 @@ export const data = [
     address: "Рязань, Ленина, 35",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 4, name: 4 },
     ],
@@ -114,7 +114,7 @@ export const data = [
     address: "Рязань, Николодворянская, 24/42",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
     ],
@@ -125,7 +125,7 @@ export const data = [
     address: "Рязань, Крупской, 17",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 4, name: 4 },
@@ -137,7 +137,7 @@ export const data = [
     address: "Рязань,Порядок, 76",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 4, name: 4 },
     ],
@@ -148,7 +148,7 @@ export const data = [
     address: "Рыбное, Почтовая, 22",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 4, name: 4 },
       { id: 10, name: 10 },
@@ -160,19 +160,20 @@ export const data = [
     address: "Спасский р-н, с. Ижевское, Зеленая, 23",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 4, name: 4 },
     ],
   },
   {
-    title: "Историко-культурный природно-ландшафтный музей-заповедник «Усадьба Худекова»",
+    title:
+      "Историко-культурный природно-ландшафтный музей-заповедник «Усадьба Худекова»",
     desc: "Усадьба Сергея Худекова — один из немногих усадебных парков, сохранившихся до наших дней на территории Рязанской области",
     address: "Кораблинский р-н, с. Ерлино, Административный центр, 5",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 8, name: 8 },
       { id: 6, name: 6 },
     ],
@@ -183,7 +184,7 @@ export const data = [
     address: "Касимов, пл. Соборная, 7/8",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
     ],
@@ -194,7 +195,7 @@ export const data = [
     address: "Рыбновский район, с. Новоселки, Пирогова, 17",
     imgUrl: "",
     category: { name: "Музеи" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
     ],
@@ -205,7 +206,7 @@ export const data = [
     address: "Рязань, Торговый городок, 1",
     imgUrl: "",
     category: { name: "Архитектура" },
-    tag: [
+    tags: [
       { id: 3, name: 3 },
       { id: 5, name: 5 },
       { id: 9, name: 9 },
@@ -217,8 +218,7 @@ export const data = [
     address: "Касимовский р-н, пос. Гусь-Железный",
     imgUrl: "",
     category: { name: "Архитектура" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Старожиловский конезавод",
@@ -226,8 +226,7 @@ export const data = [
     address: "пос. Старожилово",
     imgUrl: "",
     category: { name: "Архитектура" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Усадьба фон Дервиза в Кирицах",
@@ -235,8 +234,7 @@ export const data = [
     address: "Спасский р-н, с. Кирицы, Фон Дервиза, 2к1",
     imgUrl: "",
     category: { name: "Архитектура" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Свято-Иоанно-Богословский мужской монастырь",
@@ -244,9 +242,7 @@ export const data = [
     address: "Рыбновский р-н, с. Пощупово",
     imgUrl: "",
     category: { name: "Архитектура" },
-    tag: [
-      { id: 9, name: 9 },
-    ],
+    tags: [{ id: 9, name: 9 }],
   },
   {
     title: "Солотчинский Рождества Богородицы женский монастырь",
@@ -254,7 +250,7 @@ export const data = [
     address: "Рязань, Монастырская площадь, Солотча, 1а",
     imgUrl: "",
     category: { name: "Архитектура" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 8, name: 8 },
       { id: 9, name: 9 },
@@ -266,7 +262,7 @@ export const data = [
     address: "Касимов",
     imgUrl: "",
     category: { name: "Архитектура" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 9, name: 9 },
     ],
@@ -277,9 +273,7 @@ export const data = [
     address: "Касимов, пл. Победы, 9а",
     imgUrl: "",
     category: { name: "Архитектура" },
-    tag: [
-      { id: 5, name: 5 },
-    ],
+    tags: [{ id: 5, name: 5 }],
   },
   {
     title: "Скопин — город гончаров",
@@ -287,9 +281,7 @@ export const data = [
     address: "Скопин",
     imgUrl: "",
     category: { name: "Архитектура" },
-    tag: [
-      { id: 5, name: 5 },
-    ],
+    tags: [{ id: 5, name: 5 }],
   },
   {
     title: "Улица Мюнстерская",
@@ -297,8 +289,7 @@ export const data = [
     address: "Рязань, Мюнстерская",
     imgUrl: "",
     category: { name: "Архитектура" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Дом художника",
@@ -306,8 +297,7 @@ export const data = [
     address: "Рязань, Первомайский просп., 42/2",
     imgUrl: "",
     category: { name: "Архитектура" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Курортный поселок Солотча",
@@ -315,7 +305,7 @@ export const data = [
     address: "Рязань, пос. Солотча",
     imgUrl: "",
     category: { name: "Природа" },
-    tag: [
+    tags: [
       { id: 8, name: 8 },
       { id: 9, name: 9 },
     ],
@@ -326,7 +316,7 @@ export const data = [
     address: "Спас-Клепики, пл. Ленина, 20",
     imgUrl: "",
     category: { name: "Природа" },
-    tag: [
+    tags: [
       { id: 8, name: 8 },
       { id: 9, name: 9 },
     ],
@@ -337,7 +327,7 @@ export const data = [
     address: "Спасский р-н, пос. Брыкин бор",
     imgUrl: "",
     category: { name: "Природа" },
-    tag: [
+    tags: [
       { id: 8, name: 8 },
       { id: 4, name: 4 },
       { id: 9, name: 9 },
@@ -349,7 +339,7 @@ export const data = [
     address: "Рязань, Проезд речников, 1в",
     imgUrl: "",
     category: { name: "Природа" },
-    tag: [
+    tags: [
       { id: 4, name: 4 },
       { id: 8, name: 8 },
       { id: 3, name: 3 },
@@ -361,7 +351,7 @@ export const data = [
     address: "Спасский р-н, с. Старая Рязань",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 8, name: 8 },
       { id: 9, name: 9 },
@@ -373,8 +363,7 @@ export const data = [
     address: "Рязань, Трубежная набережная",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Памятник Ивану Петровичу Павлову",
@@ -382,9 +371,7 @@ export const data = [
     address: "Рязань, Ленина, 24",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
-
-    ],
+    tags: [],
   },
   {
     title: "Памятник Евпатию Коловрату",
@@ -392,8 +379,7 @@ export const data = [
     address: "Рязань, Ленина, 46",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Памятник Константину Эдуардовичу Циолковскому",
@@ -401,8 +387,7 @@ export const data = [
     address: "Рязань, Циолковского",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Памятник Олегу Рязанскому",
@@ -410,9 +395,7 @@ export const data = [
     address: "Рязань, Соборная, 16",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
-
-    ],
+    tags: [],
   },
   {
     title: "Аллея путешественников",
@@ -420,9 +403,7 @@ export const data = [
     address: "Рязань, Радищева",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
-
-    ],
+    tags: [],
   },
   {
     title: "Памятник Надежде Николаевне Чумаковой",
@@ -430,8 +411,7 @@ export const data = [
     address: "Рязань, Первомайский просп., 72",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Памятник Василию Филипповичу Маргелову",
@@ -439,9 +419,7 @@ export const data = [
     address: "Рязань, Сенная",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
-
-    ],
+    tags: [],
   },
   {
     title: "Монумент Победы",
@@ -449,9 +427,7 @@ export const data = [
     address: "Рязань, пл. Победы",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
-
-    ],
+    tags: [],
   },
   {
     title: "Памятник Владимиру Ленину",
@@ -459,9 +435,7 @@ export const data = [
     address: "",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
-
-    ],
+    tags: [],
   },
   {
     title: "Памятник Петру и Февронии в селе Ласково",
@@ -469,9 +443,7 @@ export const data = [
     address: "Спасс-Клепиковский р-н, с. Ласково",
     imgUrl: "",
     category: { name: "Памятники" },
-    tag: [
-
-    ],
+    tags: [],
   },
   {
     title: "Дом Эраста Гарина",
@@ -479,9 +451,7 @@ export const data = [
     address: "Рязань, Соборная, 34",
     imgUrl: "",
     category: { name: "Арт-объекты" },
-    tag: [
-
-    ],
+    tags: [],
   },
   {
     title: "Стела «Превратим Рязань в город высокой культуры»",
@@ -489,8 +459,7 @@ export const data = [
     address: "Рязань, Московское шоссе, 61",
     imgUrl: "",
     category: { name: "Арт-объекты" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Первый магазин Макса Фактора",
@@ -498,9 +467,7 @@ export const data = [
     address: "Рязань, Соборная, 48",
     imgUrl: "",
     category: { name: "Арт-объекты" },
-    tag: [
-
-    ],
+    tags: [],
   },
   {
     title: "",
@@ -508,7 +475,7 @@ export const data = [
     address: "",
     imgUrl: "",
     category: { name: "Арт-объекты" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 9, name: 9 },
@@ -520,8 +487,7 @@ export const data = [
     address: "Рязань",
     imgUrl: "",
     category: { name: "Арт-объекты" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Скульптурная группа «Хлебная площадь»",
@@ -529,9 +495,7 @@ export const data = [
     address: "Рязань, Краснорядская, 2",
     imgUrl: "",
     category: { name: "Арт-объекты" },
-    tag: [
-
-    ],
+    tags: [],
   },
   {
     title: "Скульптура «Студенты»",
@@ -539,8 +503,7 @@ export const data = [
     address: "Рязань, Свободы, 46",
     imgUrl: "",
     category: { name: "Арт-объекты" },
-    tag: [
-    ],
+    tags: [],
   },
   {
     title: "Рязанский государственный областной театр кукол",
@@ -548,7 +511,7 @@ export const data = [
     address: "Рязань, Есенина, 27",
     imgUrl: "",
     category: { name: "Театры" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 4, name: 4 },
       { id: 6, name: 6 },
@@ -561,7 +524,7 @@ export const data = [
     address: "Рязань, Циолковского, 12",
     imgUrl: "",
     category: { name: "Театры" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
     ],
@@ -572,7 +535,7 @@ export const data = [
     address: "Рязань, Ленина, 26",
     imgUrl: "",
     category: { name: "Театры" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 9, name: 9 },
@@ -584,7 +547,7 @@ export const data = [
     address: "Рязань, пл. Театральная, 7а",
     imgUrl: "",
     category: { name: "Театры" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 9, name: 9 },
@@ -596,7 +559,7 @@ export const data = [
     address: "Рязань, Соборная, 16",
     imgUrl: "",
     category: { name: "Театры" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 6, name: 6 },
       { id: 4, name: 4 },
@@ -608,10 +571,9 @@ export const data = [
     address: "Рязань, Касимовское ш., 25 к.2",
     imgUrl: "",
     category: { name: "Театры" },
-    tag: [
+    tags: [
       { id: 5, name: 5 },
       { id: 9, name: 9 },
-
     ],
   },
-]
+];

@@ -13,7 +13,7 @@ const Body = () => {
   };
 
   const filteredData =
-    tab !== "all" ? data.filter((item) => item.category === tab) : data;
+    tab !== "all" ? data.filter((item) => item.category.name === tab) : data;
 
   return (
     <section className="grid_layout">
