@@ -2,17 +2,11 @@
 import Icons from "@/components/elements/Logo/Icons";
 import "./style.css";
 import { Tags } from "@/components/elements/Tags/Tags";
-import { TagList } from "@/types/types";
+import { TagList, TArchCard } from "@/types/types";
 
-type ArchCard = {
-  imgUrl: string;
-  title: string;
-  desc: string;
-  address: string;
-  tags: { id: number; name: string }[];
-};
 
-const Card = ({ item }: { item: ArchCard }) => {
+const Card = ({ item }: { item: TArchCard }) => {
+  
   const tags = item.tags.map((item) => item.id) as TagList[];
 
   return (
@@ -36,7 +30,7 @@ const Card = ({ item }: { item: ArchCard }) => {
   );
 };
 
-export const ArchCard = ({ data }: { data: ArchCard[] }) => {
+export const ArchCard = ({ data }: { data: TArchCard[] }) => {
   return (
     <div className="arch_card_group">
       {data.map((item, index) => (

@@ -3,9 +3,9 @@ import { Tabs } from "@/components/elements/Tabs/Tabs";
 import { PlaceCard } from "@/components/modules/PlaceCard/PlaceCard";
 import { tabsGdePoest } from "@/constants/contstants";
 import { useState } from "react";
-import { PlaceCard as tPlaceCard } from "@/types/types";
+import { TPlaceCard } from "@/types/types";
 
-const Body = ({ data }: { data: tPlaceCard[] }) => {
+const Body = ({ data }: { data: TPlaceCard[] }) => {
   const [tab, setTab] = useState("all");
 
   const onChangeTab = (e: string) => {

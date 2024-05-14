@@ -166,12 +166,12 @@ export const heroMap = [
 
 export const tabsChtoPosmotret = [
   { label: "Все", id: "all" },
-  { label: "Музеи", id: "museums" },
-  { label: "Архитектура", id: "architecture" },
-  { label: "Природа", id: "nature" },
-  { label: "Памятники", id: "monuments" },
-  { label: "Арт-объекты", id: "artObjects" },
-  { label: "Театры", id: "theaters" },
+  { label: "Музеи", id: "Музеи" },
+  { label: "Архитектура", id: "Архитектура" },
+  { label: "Природа", id: "Природа" },
+  { label: "Памятники", id: "Памятники" },
+  { label: "Арт-объекты", id: "Арт-объекты" },
+  { label: "Театры", id: "Театры" },
 ];
 
 export const tabsChemZanyatsya = [

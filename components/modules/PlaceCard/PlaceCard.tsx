@@ -8,10 +8,10 @@ import "./style.css";
 import Icons from "@/components/elements/Logo/Icons";
 import { Tag, Tags } from "@/components/elements/Tags/Tags";
 import Button from "@/components/elements/Button/Button";
-import { TagList, PlaceCard as tPlaceCard } from "@/types/types";
+import { TagList, TPlaceCard } from "@/types/types";
 
 
-export const PlaceCard = ({ data }: { data: tPlaceCard[] }) => {
+export const PlaceCard = ({ data }: { data: TPlaceCard[] }) => {
   return (
     <div className="place_card_group">
       {data?.map((item, index) => (
@@ -21,7 +21,7 @@ export const PlaceCard = ({ data }: { data: tPlaceCard[] }) => {
   );
 };
 
-const Card = ({ item }: { item: tPlaceCard }) => {
+const Card = ({ item }: { item: TPlaceCard }) => {
   const [isFullText, setIsFullText] = useState(false);
 
   const textLength = item.description.length > 254;

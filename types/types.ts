@@ -23,7 +23,7 @@ export type LongReadBody = {
 
 export type TagList = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
-export type PlaceCard = {
+export type TPlaceCard = {
   name: string; // название карточки
   address: string; //address
   url_name: string; //название кнопки
@@ -34,4 +34,13 @@ export type PlaceCard = {
   category: { name: string };
 };
 
-export type ResponsePlaceCard = { data: PlaceCard[] };
+export type TArchCard = {
+  title: string; // название карточки
+  address: string; //address
+  desc: string;
+  imgUrl: string;
+  tags: { id: number; name: number }[];
+  category: { name: string };
+};
+
+export type ResponsePlaceCard = { data: TPlaceCard[] };

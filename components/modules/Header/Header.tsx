@@ -15,7 +15,6 @@ export const Header = () => {
   };
 
   const pathname = usePathname();
-  console.log(pathname);
 
   useEffect(() => {
     setIsOpenMenu(false);

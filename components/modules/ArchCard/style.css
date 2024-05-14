@@ -17,6 +17,7 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  background-color: var(--color-grey);
 }
 
 .arch_image {

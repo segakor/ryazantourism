@@ -17,6 +17,7 @@
 }
 
 .place_card_item_header {
+  background-color: var(--color-grey);
   height: 200px;
   width: 408px;
   display: flex;

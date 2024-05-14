@@ -1,6 +1,6 @@
 "use client";
 import { Tabs } from "@/components/elements/Tabs/Tabs";
-import { tabsChemZanyatsya } from "@/constants/contstants";
+import { tabsChtoPosmotret } from "@/constants/contstants";
 import { useState } from "react";
 import { data } from "@/constants/pages/chto-posmotret";
 import { ArchCard } from "@/components/modules/ArchCard/ArchCard";
@@ -17,7 +17,7 @@ const Body = () => {
 
   return (
     <section className="grid_layout">
-      <Tabs tabs={tabsChemZanyatsya} onChange={onChangeTab} />
+      <Tabs tabs={tabsChtoPosmotret} onChange={onChangeTab} />
       <ArchCard data={filteredData} />
     </section>
   );
