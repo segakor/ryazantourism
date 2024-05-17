@@ -1,6 +1,6 @@
 import { HeroPage } from "@/components/modules/HeroPage";
 import { LongRead } from "@/components/modules/LongRead";
-import { template } from "@/constants/pages/priroda";
+import { template } from "@/constants/pages/region/priroda";
 import { LongReadBody } from "@/types/types";
 
 import type { Metadata } from "next";
