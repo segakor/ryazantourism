@@ -12,13 +12,9 @@ export const LongReadItemBlock = ({
   srcImg: string;
 }) => {
   return (
-    <div>
-      <div>
-        <div className="h5" style={{ marginBottom: "10px" }}>
-          {title}
-        </div>
-        <TextBlock text={text} />
-      </div>
+    <div className="longread_item_block">
+      {title && <div className="h5">{title}</div>}
+      {text && <TextBlock text={text} />}
       {srcImg && <ImageBlock srcImg={srcImg} />}
     </div>
   );

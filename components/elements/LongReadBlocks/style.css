@@ -114,3 +114,8 @@
   width: 14px;
   height: 14px;
 }
+
+.longread_item_block {
+  display: grid;
+  gap: 24px;
+}

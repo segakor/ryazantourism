@@ -11,6 +11,7 @@ export enum SUB_ELEMENT_TYPE {
   LINK_BLOCK = "LINK_BLOCK",
   LIST_BLOCK = "LIST_BLOCK",
   ADDRESS_BLOCK = "ADDRESS_BLOCK",
+  FACT_BLOCK = "FACT_BLOCK",
 }
 
 export type LongReadBody = {

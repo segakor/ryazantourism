@@ -4,6 +4,7 @@ import { LinkBlock } from "./LinkBlock";
 import { LongReadItemBlock } from "./LongReadItemBlock";
 import { ListBlock } from "./ListBlock";
 import { AddressBlock } from "./AddressBlock";
+import { FactBlock } from "./FactBlock";
 
 const createElement = (subElementType: SUB_ELEMENT_TYPE, props: any) => {
   if (subElementType === SUB_ELEMENT_TYPE.TEXT_BLOCK) {
@@ -20,6 +21,9 @@ const createElement = (subElementType: SUB_ELEMENT_TYPE, props: any) => {
   }
   if (subElementType === SUB_ELEMENT_TYPE.ADDRESS_BLOCK) {
     return <AddressBlock {...props} />;
+  }
+  if (subElementType === SUB_ELEMENT_TYPE.FACT_BLOCK) {
+    return <FactBlock {...props} />;
   }
   return null;
 };
