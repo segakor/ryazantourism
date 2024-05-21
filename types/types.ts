@@ -45,3 +45,10 @@ export type TArchCard = {
 };
 
 export type ResponsePlaceCard = { data: TPlaceCard[] };
+
+export type TOtvet = {
+  question: string;
+  answer: {title:string; desc:string}[];
+  keyword: string[];
+  category: { name: string };
+};

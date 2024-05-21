@@ -6,7 +6,7 @@ export const News = () => {
   return (
     <section className="grid_layout">
       <div className="news_header">
-        <div className="header_typography">
+        <div className="h2">
           {"Актуальная информация о происходящем в городе"}
         </div>
         <div>
@@ -15,44 +15,44 @@ export const News = () => {
       </div>
       <div className="news_body">
         <div className="news_card">
-          <div className="desc_typography news_card_title">
+          <div className="h6 news_card_title">
             Музейный центр РИАМЗ приглашает на открытие выставки «Связь
             поколений»
           </div>
           <img className="news_card_arrows" src={"/news/arrows.svg"} alt="" />
           <div className="news_card_date">
-            <div className="header_typography">24</div>
-            <div className="desc_typography">марта 2024</div>
+            <div className="h3">24</div>
+            <div className="h6">марта 2024</div>
           </div>
         </div>
         <div className="news_card">
-          <div className="desc_typography news_card_title">
+          <div className="h6 news_card_title">
           В Рязани открылся новый отдел Рязанского историко-архитектурного музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
           </div>
           <img className="news_card_arrows" src={"/news/arrows.svg"} alt="" />
           <div className="news_card_date">
-            <div className="header_typography">24</div>
-            <div className="desc_typography">марта 2024</div>
+            <div className="h3">24</div>
+            <div className="h6">марта 2024</div>
           </div>
         </div>
         <div className="news_card">
-          <div className="desc_typography news_card_title">
+          <div className="h6 news_card_title">
           В Рязани открылся новый отдел Рязанского историко-архитектурного музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
           </div>
           <img className="news_card_arrows" src={"/news/arrows.svg"} alt="" />
           <div className="news_card_date">
-            <div className="header_typography">24</div>
-            <div className="desc_typography">марта 2024</div>
+            <div className="h3">24</div>
+            <div className="h6">марта 2024</div>
           </div>
         </div>
         <div className="news_card">
-          <div className="desc_typography news_card_title">
+          <div className="h6 news_card_title">
           В Рязани открылся новый отдел Рязанского историко-архитектурного музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
           </div>
           <img className="news_card_arrows" src={"/news/arrows.svg"} alt="" />
           <div className="news_card_date">
-            <div className="header_typography">24</div>
-            <div className="desc_typography">марта 2024</div>
+            <div className="h3">24</div>
+            <div className="h6">марта 2024</div>
           </div>
         </div>
       </div>

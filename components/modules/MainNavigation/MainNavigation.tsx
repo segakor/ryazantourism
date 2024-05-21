@@ -8,8 +8,8 @@ export const MainNavigation = () => {
   return (
     <section className="grid_layout">
       <div className="navigation_header">
-        <h3 className="header_typography">Спланировать путешествие</h3>
-        <p className="desc_typography">
+        <h3 className="h2">Спланировать путешествие</h3>
+        <p className="text2">
           Собрали для вас только лучшие места, которые помогут вам насладиться
           Рязанью
         </p>
@@ -24,8 +24,8 @@ export const MainNavigation = () => {
                   <Icons icon={"goTo"} />
                 </div>
                 <div className="navigation_inner_footer">
-                  <h3 className="header_typography">{item.title}</h3>
-                  <p className="desc_typography">{item.desc}</p>
+                  <h3 className="h3">{item.title}</h3>
+                  <p className="text2">{item.desc}</p>
                 </div>
               </div>
             </div>

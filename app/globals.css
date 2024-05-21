@@ -32,24 +32,6 @@ svg circle {
   transition: all ease 0.4s;
 }
 
-.header_typography {
-  font-size: 60px;
-  font-weight: 500;
-  line-height: 40px;
-  white-space: pre-line;
-  @media (max-width: 880px) {
-    font-size: 32px;
-  }
-}
-
-.desc_typography {
-  font-size: 18px;
-  font-weight: 400;
-  @media (max-width: 880px) {
-    font-size: 12px;
-  }
-}
-
 .grid_layout {
   max-width: 1280px;
   margin: 0 auto;
@@ -86,4 +68,17 @@ svg circle {
   --color-purple: rgba(127, 108, 250, 1);
   --color-blue: rgba(83, 99, 247, 1);
   --color-partner-card-grey: rgba(247, 247, 247, 1);
+}
+
+.active_link{
+  a{
+    transition: all ease 0.4s;
+    text-decoration:underline;
+    color: var(--color-blue);
+  }
+  
+  a:hover {
+    transition: all ease 0.4s;
+    color:  var(--color-green );
+  }
 }

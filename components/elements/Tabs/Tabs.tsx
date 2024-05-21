@@ -10,9 +10,11 @@ type tTab = {
 export const Tabs = ({
   tabs,
   onChange,
+  isOtvety,
 }: {
   tabs: tTab[];
   onChange: (tabId: string) => void;
+  isOtvety?: boolean;
 }) => {
   const [active, setActive] = useState("all");
 
@@ -20,16 +22,20 @@ export const Tabs = ({
     //@ts-ignore
     document
       .getElementById(elementId || "")
-      .scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      .scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
   };
 
   const onClick = (id: string) => {
     setActive(id);
-    scrollIntoView(id)
+    scrollIntoView(id);
     onChange(id);
   };
   return (
-    <div className="tabs">
+    <div className={`tabs ${isOtvety && "tabs_otvety"}`}>
       {tabs.map((item, index) => (
         <Tab
           {...item}

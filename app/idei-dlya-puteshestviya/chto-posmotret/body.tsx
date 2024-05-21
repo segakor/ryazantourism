@@ -2,7 +2,7 @@
 import { Tabs } from "@/components/elements/Tabs/Tabs";
 import { tabsChtoPosmotret } from "@/constants/contstants";
 import { useState } from "react";
-import { data } from "@/constants/pages/chto-posmotret";
+import { data } from "@/constants/pages/idei-dlya-puteshestviya/chto-posmotret";
 import { ArchCard } from "@/components/modules/ArchCard/ArchCard";
 
 const Body = () => {

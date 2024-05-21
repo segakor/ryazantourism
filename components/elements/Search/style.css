@@ -1,0 +1,21 @@
+.search_wrapper {
+  padding-top: 60px;
+}
+
+.search_block {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 6.25rem;
+  padding: 3.75rem;
+
+  input {
+    width: 100%;
+    line-height: 119%;
+    font-size: 2rem;
+    border: none;
+    outline: 0;
+  }
+}

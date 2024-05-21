@@ -37,3 +37,15 @@
   background-color: var(--color-black);
   color: var(--color-white);
 }
+
+.tabs_otvety {
+  padding: 0;
+  .tab {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+  .active {
+    background-color: var(--color-purple);
+    color: var(--color-white);
+  }
+}

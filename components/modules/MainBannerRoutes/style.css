@@ -24,14 +24,6 @@
   padding: 40px;
   position: relative;
   transition: all ease 0.4s;
-  .header_typography{
-    font-size: 40px;
-  }
-  @media (max-width: 880px) {
-    .header_typography{
-      font-size: 32px;
-    }
-  }
 }
 .banner_routes_card_second {
   background-color: #252525;

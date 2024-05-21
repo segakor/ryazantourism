@@ -78,9 +78,6 @@
 .navigation_inner_footer {
   display: grid;
   gap: 20px;
-  .header_typography{
-    font-size: 40px;
-  }
 }
 .navigation_inner_footer{
   color:#ffff

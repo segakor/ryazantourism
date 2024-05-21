@@ -1,3 +1,8 @@
+.otvety_group {
+  display: grid;
+  gap: 1rem;
+}
+
 .otvet_wrapper {
   border-radius: 3.75rem;
   /*  border: 1px solid red; */
@@ -37,7 +42,35 @@
 .otvet_body_content {
   overflow: hidden;
 }
-.otvet_body_content_inner{
-border:1px solid red;
-padding: 20px 0;
+
+.otvet_body_content_inner {
+  padding: 30px 0px;
+  display: grid;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.otvet_body_content_inner:last-child {
+ margin-bottom: 30px;
+}
+
+
+.otvet_body_content_inner_title {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.otvet_body_content_inner_title_number {
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  background-size: cover;
+  background-image: url("/otvety/number.svg");
+}
+.otvet_body_content_inner_desc {
+  white-space: pre-line;
 }

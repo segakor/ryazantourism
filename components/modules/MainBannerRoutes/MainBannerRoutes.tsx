@@ -8,16 +8,16 @@ export const MainBannerRoutes = () => {
   return (
     <section className="grid_layout">
       <div className="banner_routes_header">
-        <h3 className="header_typography">Маршруты</h3>
-        <p className="desc_typography">
+        <h3 className="h2">Маршруты</h3>
+        <p className="text2">
           <Icons icon={"quote"} className="quote" />Исследуйте Рязань
           самостоятельно или с опытными экскурсоводами
         </p>
       </div>
       <div className="banner_routes_body">
         <div className="banner_routes_card_first">
-          <h3 className="header_typography">Самостоятельные маршруты</h3>
-          <p className="desc_typography">
+          <h3 className="h3">Самостоятельные маршруты</h3>
+          <p className="text2">
             Готовые тематические сценарии для самостоятельных увлекательных
             путешествий. Рекомендуется для легких на подъем и любопытных
             искателей приключений
@@ -43,8 +43,8 @@ export const MainBannerRoutes = () => {
             height={202}
             className="banner_image"
           />
-          <h3 className="header_typography">Маршрут с гидом</h3>
-          <p className="desc_typography">
+          <h3 className="h3">Маршрут с гидом</h3>
+          <p className="text2">
             Проект для тех, кто готов к глубокому погружению в историю и
             культуру города и области в компании с экскурсоводом. Подходит для
             опытных и начинающих туристов

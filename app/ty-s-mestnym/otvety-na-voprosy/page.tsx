@@ -12,13 +12,9 @@ export const metadata: Metadata = {
 
 const Page = async () => {
   return (
-    <div className="pages">
-      <Suspense fallback={<Loading />}>
-        <section className="grid_layout">
-          <Otvet />
-        </section>
-      </Suspense>
-    </div>
+    <Suspense fallback={<Loading />}>
+      <Body />
+    </Suspense>
   );
 };
 
