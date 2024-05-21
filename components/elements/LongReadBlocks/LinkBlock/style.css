@@ -1,0 +1,30 @@
+.link_block {
+  padding: 30px;
+  background-color: #f5f5f5;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.link_block_body {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  @media (max-width: 880px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.link_block_body_text {
+  display: grid;
+  gap: 10px;
+}
+.link_block_image {
+  width: 199px;
+  height: 98px;
+  .longread_image {
+    height: 98px !important;
+    border-radius: 10px;
+  }
+  @media (max-width: 880px) {
+    width: 100%;
+  }
+}

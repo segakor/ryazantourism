@@ -15,15 +15,17 @@
 }
 
 .longread_sidebar {
+  @media (max-width: 880px) {
+    display: none;
+  }
+}
+.longread_sidebar_body {
   padding-top: 180px;
   padding: 180px 20px 20px 20px;
   position: sticky;
   top: 0;
   display: grid;
   gap: 30px;
-  @media (max-width: 880px) {
-    display: none;
-  }
 }
 .longread_sidebar_item {
   cursor: pointer;

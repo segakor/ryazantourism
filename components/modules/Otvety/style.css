@@ -1,0 +1,43 @@
+.otvet_wrapper {
+  border-radius: 3.75rem;
+  /*  border: 1px solid red; */
+  overflow: hidden;
+  background: var(--color-white);
+}
+
+.otvet_header {
+  background: var(--color-white);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  cursor: pointer;
+}
+
+.otvet_header_active {
+  .button_spoiler_arrow {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+}
+
+.otvet_body {
+  background: var(--color-white);
+  padding: 0 60px;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+
+.otvet_body_active {
+  background: var(--color-white);
+  grid-template-rows: 1fr;
+}
+
+.otvet_body_content {
+  overflow: hidden;
+}
+.otvet_body_content_inner{
+border:1px solid red;
+padding: 20px 0;
+}

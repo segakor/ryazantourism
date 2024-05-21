@@ -1,5 +1,5 @@
 .button_wrapper {
-  background-color: #b9fa4f;
+  background-color: var(--color-green);
   padding: 30px 30px;
   color: #000000;
   cursor: pointer;
@@ -10,11 +10,27 @@
 
   @media (max-width: 880px) {
     padding: 20px;
-   }
-
+  }
 }
 
 .button_wrapper:hover {
   background-color: #fff;
   transition: all ease 0.4s;
+}
+
+.button_spoiler {
+  display: flex;
+  background-color: var(--color-green);
+  width: 5rem;
+  height: 5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.button_spoiler_arrow {
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }

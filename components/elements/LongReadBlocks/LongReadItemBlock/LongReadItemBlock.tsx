@@ -1,5 +1,5 @@
-import { ImageBlock } from "./ImageBlock";
-import { TextBlock } from "./TextBlock";
+import { ImageBlock } from "../ImageBlock/ImageBlock";
+import { TextBlock } from "../TextBlock/TextBlock";
 import "./style.css";
 
 export const LongReadItemBlock = ({

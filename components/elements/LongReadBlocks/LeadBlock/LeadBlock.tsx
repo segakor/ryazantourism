@@ -1,4 +1,5 @@
-import { ImageBlock } from "./ImageBlock";
+import { ImageBlock } from "../ImageBlock/ImageBlock";
+import "./style.css";
 
 export const LeadBlock = ({
   title,

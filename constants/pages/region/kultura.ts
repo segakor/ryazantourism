@@ -68,6 +68,7 @@ export const template = [
         element: "LINK_BLOCK",
         title: "Этнокультурный центр «Заряна»",
         desc: "Шилово, Спасская, 38, +7 (49136) 2 13 39",
+        link: "",
       },
       {
         element: "LONG_READ_ITEM_BLOCK",

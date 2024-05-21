@@ -1,0 +1,21 @@
+.fact_block {
+  padding: 50px 80px;
+  background-color: #5363f7;
+  border-radius: 30px;
+  color: #ffff;
+  @media (max-width: 880px) {
+    padding: 30px 30px;
+    .image {
+      display: none;
+    }
+  }
+}
+
+.fact_block_body {
+  display: flex;
+  gap: 20px;
+}
+.fact_block_desc {
+  display: grid;
+  gap: 20px;
+}

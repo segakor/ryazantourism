@@ -1,0 +1,4 @@
+.longread_item_block {
+  display: grid;
+  gap: 24px;
+}

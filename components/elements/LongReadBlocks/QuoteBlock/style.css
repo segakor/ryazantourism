@@ -1,0 +1,17 @@
+.quote_block {
+  padding: 50px 80px;
+  gap: 20px;
+  color: #ffffff;
+  background-color: #252525;
+  border-radius: 30px;
+  @media (max-width: 880px) {
+    padding: 30px 30px;
+    .image {
+      display: none;
+    }
+  }
+}
+.quote_block_body {
+  display: flex;
+  gap: 20px;
+}

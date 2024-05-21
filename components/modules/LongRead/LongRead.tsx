@@ -1,10 +1,10 @@
 "use client";
-import { LongReadBlock } from "@/components/elements/LongReadBlocks";
 import "./style.css";
-import { QuoteBlock } from "@/components/elements/LongReadBlocks/QuoteBlock";
-import { FactBlock } from "@/components/elements/LongReadBlocks/FactBlock";
-import { LeadBlock } from "@/components/elements/LongReadBlocks/LeadBlock";
+import { QuoteBlock } from "@/components/elements/LongReadBlocks/QuoteBlock/QuoteBlock";
+import { FactBlock } from "@/components/elements/LongReadBlocks/FactBlock/FactBlock";
+import { LeadBlock } from "@/components/elements/LongReadBlocks/LeadBlock/LeadBlock";
 import { ELEMENT_TYPE, LongReadBody } from "@/types/types";
+import { LongReadBlock } from "@/components/elements/LongReadBlocks/LongReadBlock/LongReadBlock";
 
 const createElement = (elementType: ELEMENT_TYPE, props: any) => {
   if (elementType === ELEMENT_TYPE.FACT_BLOCK) {
@@ -44,8 +44,8 @@ export const LongRead = ({ body }: { body: LongReadBody[] }) => {
             </div>
           ))}
         </div>
-        <div>
-          <div className="longread_sidebar">
+        <div className="longread_sidebar">
+          <div className="longread_sidebar_body">
             <div className="h4">Разделы</div>
             <>
               {sideBarItem?.map((item, index) => (

@@ -1,10 +1,11 @@
 import { SUB_ELEMENT_TYPE } from "@/types/types";
-import { TextBlock } from "./TextBlock";
-import { LinkBlock } from "./LinkBlock";
-import { LongReadItemBlock } from "./LongReadItemBlock";
-import { ListBlock } from "./ListBlock";
-import { AddressBlock } from "./AddressBlock";
-import { FactBlock } from "./FactBlock";
+import { TextBlock } from "../TextBlock/TextBlock";
+import { LinkBlock } from "../LinkBlock/LinkBlock";
+import { LongReadItemBlock } from "../LongReadItemBlock/LongReadItemBlock";
+import { ListBlock } from "../ListBlock/ListBlock";
+import { AddressBlock } from "../AddressBlock/AddressBlock";
+import { FactBlock } from "../FactBlock/FactBlock";
+import "./style.css";
 
 const createElement = (subElementType: SUB_ELEMENT_TYPE, props: any) => {
   if (subElementType === SUB_ELEMENT_TYPE.TEXT_BLOCK) {

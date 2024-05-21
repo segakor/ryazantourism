@@ -1,0 +1,12 @@
+.image_block {
+  border-radius: 30px;
+}
+.longread_image {
+  object-fit: cover;
+  border-radius: 30px;
+  width: 100%;
+  height: 437px !important;
+  @media (max-width: 880px) {
+    height: 250px !important;
+  }
+}

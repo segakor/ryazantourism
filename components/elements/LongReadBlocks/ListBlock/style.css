@@ -1,0 +1,19 @@
+.list_block_body {
+  display: grid;
+  gap: 12px;
+}
+
+.list_block_body_li {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.list_block_body_li:before {
+  background-image: url("/listBlock/list.svg");
+  background-size: cover;
+  content: "";
+  display: flex;
+  width: 14px;
+  height: 14px;
+}
