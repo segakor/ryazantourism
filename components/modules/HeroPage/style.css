@@ -1,7 +1,7 @@
 .hero_longread_wrapper {
   position: relative;
   height: 500px;
-  /* background-color: var(--color-purple); */
+  background-color: var(--color-semi-white);
   border-radius: 0px 0px 100px 100px;
   overflow: hidden;
 }
