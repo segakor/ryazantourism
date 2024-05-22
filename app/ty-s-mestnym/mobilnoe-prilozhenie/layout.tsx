@@ -8,11 +8,13 @@ export default function RootLayout({
 }>) {
   return (
     <Layout>
-      <HeroPage
-        imgUrl="/heroPages/ty-s-mestnym/mobilnoe-prilozhenie.jpg"
-        title="Мобильное приложение"
-      />
-      {children}
+      <div className="pages">
+        <HeroPage
+          imgUrl="/heroPages/ty-s-mestnym/mobilnoe-prilozhenie.jpg"
+          title="Мобильное приложение"
+        />
+        {children}
+      </div>
     </Layout>
   );
 }

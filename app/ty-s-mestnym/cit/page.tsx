@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import Body from "./body";
 import Loading from "./loading";
-import { ResponsePlaceCard } from "@/types/types";
-import { API_URL } from "@/constants/apiUrl";
+import { TLongReadBody } from "@/types/types";
 import { Suspense } from "react";
+import { template } from "@/constants/pages/ty-s-mestnym/cit";
 
 export const metadata: Metadata = {
-  title: "Визит-центр для туристов - Всё о туризме в Рязани и Рязанской области",
+  title:
+    "Визит-центр для туристов - Всё о туризме в Рязани и Рязанской области",
 };
 
 const Page = async () => {
-
   return (
     <>
       <Suspense fallback={<Loading />}>
-        {/* <Body data={cards.data} /> */}
+        <Body data={template as TLongReadBody[]} />
       </Suspense>
     </>
   );

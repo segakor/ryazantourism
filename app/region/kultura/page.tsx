@@ -1,7 +1,7 @@
 import { HeroPage } from "@/components/modules/HeroPage";
 import { LongRead } from "@/components/modules/LongRead";
 import { template } from "@/constants/pages/region/kultura";
-import { LongReadBody } from "@/types/types";
+import { TLongReadBody } from "@/types/types";
 
 import type { Metadata } from "next";
 
@@ -13,7 +13,7 @@ const Kultura = () => {
   return (
     <div className="pages">
       <HeroPage imgUrl="/heroPages/region/kultura.jpg" title="Культура" />
-      <LongRead body={template as LongReadBody[]} />
+      <LongRead body={template as TLongReadBody[]} />
     </div>
   );
 };

@@ -8,11 +8,13 @@ export default function RootLayout({
 }>) {
   return (
     <Layout>
-      <HeroPage
-        imgUrl="/heroPages/ty-s-mestnym/cit.jpg"
-        title="Обратная связь"
-      />
-      {children}
+      <div className="pages">
+        <HeroPage
+          imgUrl="/heroPages/ty-s-mestnym/cit.jpg"
+          title="Обратная связь"
+        />
+        {children}
+      </div>
     </Layout>
   );
 }

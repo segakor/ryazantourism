@@ -1,7 +1,7 @@
 import { HeroPage } from "@/components/modules/HeroPage";
 import { LongRead } from "@/components/modules/LongRead";
 import { template } from "@/constants/pages/region/kuhnya-ryazanskogo-kraya";
-import { LongReadBody } from "@/types/types";
+import { TLongReadBody } from "@/types/types";
 
 import type { Metadata } from "next";
 
@@ -16,7 +16,7 @@ const Kuhnya = () => {
         imgUrl="/heroPages/region/kuhnya.jpg"
         title="Кухня рязанского края"
       />
-      <LongRead body={template as LongReadBody[]} />
+      <LongRead body={template as TLongReadBody[]} />
     </div>
   );
 };

@@ -1,11 +1,11 @@
 "use client";
 import { Tabs } from "@/components/elements/Tabs/Tabs";
-import { data } from "@/constants/pages/ty-s-mestnym/otvety-na-voprosy";
 import { useState } from "react";
 import { Search } from "@/components/elements/Search/Search";
 import { Otvety } from "@/components/modules/Otvety/Otvet";
+import { TOtvet } from "@/types/types";
 
-const Body = () => {
+const Body = ({ data }: { data: TOtvet[] }) => {
   const [tab, setTab] = useState("all");
 
   const onChangeTab = (e: string) => {

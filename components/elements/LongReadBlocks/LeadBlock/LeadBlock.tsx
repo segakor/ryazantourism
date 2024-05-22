@@ -1,4 +1,5 @@
 import { ImageBlock } from "../ImageBlock/ImageBlock";
+import { TextBlock } from "../TextBlock/TextBlock";
 import "./style.css";
 
 export const LeadBlock = ({
@@ -13,7 +14,7 @@ export const LeadBlock = ({
   return (
     <div className="longread_block">
       <div className="lead-text">{title}</div>
-      <div className="text3">{desc}</div>
+      {desc && <TextBlock text={desc} />}
       {srcImg && <ImageBlock srcImg={srcImg} />}
     </div>
   );

@@ -9,14 +9,13 @@ export enum SUB_ELEMENT_TYPE {
   TEXT_BLOCK = "TEXT_BLOCK",
   LONG_READ_ITEM_BLOCK = "LONG_READ_ITEM_BLOCK",
   LINK_BLOCK = "LINK_BLOCK",
-  LIST_BLOCK = "LIST_BLOCK",
   ADDRESS_BLOCK = "ADDRESS_BLOCK",
   FACT_BLOCK = "FACT_BLOCK",
 }
 
-export type LongReadBody = {
+export type TLongReadBody = {
   element: ELEMENT_TYPE;
-  subElements: {
+  subElements?: {
     element: SUB_ELEMENT_TYPE;
   }[];
   title?: string;

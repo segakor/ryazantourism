@@ -14,7 +14,7 @@ export const LinkBlock = ({
   link: string;
 }) => {
   return (
-    <Link href={link}>
+    <Link href={link} target="_black">
       <div className="link_block">
         <div className="link_block_body">
           <div className="link_block_body_text">

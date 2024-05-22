@@ -3,7 +3,7 @@ import "./style.css";
 import { QuoteBlock } from "@/components/elements/LongReadBlocks/QuoteBlock/QuoteBlock";
 import { FactBlock } from "@/components/elements/LongReadBlocks/FactBlock/FactBlock";
 import { LeadBlock } from "@/components/elements/LongReadBlocks/LeadBlock/LeadBlock";
-import { ELEMENT_TYPE, LongReadBody } from "@/types/types";
+import { ELEMENT_TYPE, TLongReadBody } from "@/types/types";
 import { LongReadBlock } from "@/components/elements/LongReadBlocks/LongReadBlock/LongReadBlock";
 
 const createElement = (elementType: ELEMENT_TYPE, props: any) => {
@@ -22,7 +22,7 @@ const createElement = (elementType: ELEMENT_TYPE, props: any) => {
   return null;
 };
 
-export const LongRead = ({ body }: { body: LongReadBody[] }) => {
+export const LongRead = ({ body }: { body: TLongReadBody[] }) => {
   const scrollIntoView = (elementId?: string) => {
     //@ts-ignore
     document
@@ -46,7 +46,7 @@ export const LongRead = ({ body }: { body: LongReadBody[] }) => {
         </div>
         <div className="longread_sidebar">
           <div className="longread_sidebar_body">
-            <div className="h4">Разделы</div>
+            {!!sideBarItem.length && <div className="h4">Разделы</div>}
             <>
               {sideBarItem?.map((item, index) => (
                 <div
