@@ -44,7 +44,7 @@ export const Otvet = ({ item }: { item: TOtvet }) => {
                 {item.title}
               </div>
               <div
-                className="otvet_body_content_inner_desc styled_link"
+                className="otvet_body_content_inner_desc styled_link styled_list"
                 dangerouslySetInnerHTML={{ __html: item.desc }}
               />
             </div>
