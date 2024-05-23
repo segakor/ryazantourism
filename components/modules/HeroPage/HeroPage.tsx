@@ -12,7 +12,7 @@ export const HeroPage = ({
 }) => {
   return (
     <div className="hero_longread_wrapper">
-      <Image className="hero_longread_image" src={imgUrl} alt="Фон" fill />
+      <Image className="hero_longread_image" src={imgUrl} alt="Фон" fill priority/>
       <div className="hero_longread_inner">
         <div className="hero_longread_inner_body">
           <h1 className="h1">{title}</h1>
