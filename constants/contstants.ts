@@ -49,7 +49,7 @@ export const headerMenu = [
     ],
   },
   {
-    item: "Ты с местными",
+    item: "Инфо-центр",
     subItem: [
       { label: "Визит центр для туристов", path: "/ty-s-mestnym/cit" },
       { label: "Ответы на вопросы", path: "/ty-s-mestnym/otvety-na-voprosy" },
@@ -68,14 +68,25 @@ export const headerMenu = [
     item: "Профессионалам",
     subItem: [
       { label: "Агенство развития туризма", path: "/professionalam/agentstvo-razvitiya-turizma" },
-      { label: "Проекты", path: "/professionalam/proekty" },
+      /* { label: "Проекты", path: "/professionalam/proekty" }, */
       { label: "База знаний", path: "/professionalam/baza-znanij" },
       { label: "Реестр туроператоров", path: "/professionalam/reestr-turoperatorov" },
       { label: "Новости арт", path: "/professionalam/novosti-art" },
     ],
   },
   {
-    item: "Галерея",
+    item: "Проекты",
+    subItem: [
+      { label: "Промтуризм", path: "/professionalam/agentstvo-razvitiya-turizma" },
+      { label: "Автотуризм", path: "/professionalam/agentstvo-razvitiya-turizma" },
+      { label: "Библиотека", path: "/professionalam/agentstvo-razvitiya-turizma" },
+      { label: "Школа", path: "/professionalam/agentstvo-razvitiya-turizma" },
+    
+    ],
+    path: "/galereya",
+  },
+  {
+    item: "Новости",
     subItem: [],
     path: "/galereya",
   },

@@ -1,3 +1,10 @@
+.bg_color {
+  background-color: var(--color-light-grey);
+  .slick-slider{
+    height: 100vh;
+  }
+}
+
 .hero_wrapper {
   overflow: hidden;
   position: relative;
@@ -39,12 +46,18 @@
     line-height: 28px;
   }
   @media (max-width: 880px) {
-    h3{
+    h3 {
       font-size: 48px;
     }
   }
 }
 
-.hero_button{
+.hero_button {
   width: 268px;
+}
+
+.hero_button_action {
+  width: 100%;
+  display: flex;
+  gap: 8px;
 }

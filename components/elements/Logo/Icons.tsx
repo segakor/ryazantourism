@@ -148,6 +148,27 @@ const icons = {
       />
     </svg>
   ),
+  arrow_button_round: (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_453_18124)">
+        <path
+          d="M-3.49691e-07 8L12 1.0718L12 14.9282L-3.49691e-07 8Z"
+          fill="white"
+        ></path>
+      </g>
+      <defs>
+        <clipPath id="clip0_453_18124">
+          <rect width="16" height="16" fill="white"></rect>
+        </clipPath>
+      </defs>
+    </svg>
+  ),
 };
 
 const Icons = ({
@@ -162,10 +183,15 @@ const Icons = ({
     | "ok"
     | "goTo"
     | "quote"
-    | "location";
+    | "location"
+    | "arrow_button_round";
   className?: string;
 }) => {
-  return <div className={className}>{icons[icon]}</div>;
+  return (
+    <div className={className}>
+      <div>{icons[icon]}</div>
+    </div>
+  );
 };
 
 export default Icons;

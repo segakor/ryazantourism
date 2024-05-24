@@ -47,7 +47,14 @@ export type ResponsePlaceCard = { data: TPlaceCard[] };
 
 export type TOtvet = {
   question: string;
-  answer: {title:string; desc:string}[];
+  answer: { title: string; desc: string }[];
   keyword: string[];
   category: { name: string };
+};
+
+export type TDocument = {
+  type: string;
+  name: string;
+  link: string;
+  year?: string;
 };

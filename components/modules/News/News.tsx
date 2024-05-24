@@ -13,7 +13,7 @@ export const News = () => {
           <Button name="все новости" onClick={() => console.log("allNews")} />
         </div>
       </div>
-      <div className="news_body">
+      <div className="news_group">
         <div className="news_card">
           <div className="h6 news_card_title">
             Музейный центр РИАМЗ приглашает на открытие выставки «Связь

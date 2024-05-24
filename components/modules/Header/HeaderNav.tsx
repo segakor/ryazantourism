@@ -58,7 +58,7 @@ export const HeaderNavMobile = () => {
         {headerMenu.map((item, index) => (
           <div key={index} className="menu_item_mobile_item">
             <li className="menu_item_mobile">
-              <span className="menu_link">{item.item}</span>
+              <span className="menu_link" onClick={() => onOpenSubMenu(index)}>{item.item}</span>
               {!!item.subItem.length && (
                 <div
                   className={
@@ -66,7 +66,6 @@ export const HeaderNavMobile = () => {
                       ? "chevron_mobile_active"
                       : "chevron_mobile"
                   }
-                  onClick={() => onOpenSubMenu(index)}
                 >
                   <svg
                     width="10"

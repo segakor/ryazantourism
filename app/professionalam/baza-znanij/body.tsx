@@ -1,24 +1,14 @@
 "use client";
 import { Tabs } from "@/components/elements/Tabs/Tabs";
+import { Documents } from "@/components/modules/Document/Document";
 import { PlaceCard } from "@/components/modules/PlaceCard/PlaceCard";
 import { tabsZdorove } from "@/constants/contstants";
-import { useState } from "react";
-import { TPlaceCard } from "@/types/types";
+import { TDocument } from "@/types/types";
 
-const Body = ({ data }: { data: TPlaceCard[] }) => {
-  const [tab, setTab] = useState("all");
-
-  const onChangeTab = (e: string) => {
-    setTab(e);
-  };
-
-  const filteredData =
-    tab !== "all" ? data.filter((item) => item.category.name === tab) : data;
-
+const Body = ({ data }: { data: TDocument[] }) => {
   return (
     <section className="grid_layout">
-      <Tabs tabs={tabsZdorove} onChange={onChangeTab} />
-      <PlaceCard data={filteredData} />
+      <Documents data={data} />
     </section>
   );
 };

@@ -37,7 +37,7 @@ export const HeroPage = ({
         alt="Фон"
         fill
         priority
-        quality={50}
+        quality={40}
         placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
       />
       <div className="hero_longread_inner">

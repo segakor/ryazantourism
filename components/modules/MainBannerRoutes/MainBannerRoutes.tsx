@@ -9,10 +9,10 @@ export const MainBannerRoutes = () => {
     <section className="grid_layout">
       <div className="banner_routes_header">
         <h3 className="h2">Маршруты</h3>
-        <p className="text2">
+        <div className="text2">
           <Icons icon={"quote"} className="quote" />Исследуйте Рязань
           самостоятельно или с опытными экскурсоводами
-        </p>
+        </div>
       </div>
       <div className="banner_routes_body">
         <div className="banner_routes_card_first">
