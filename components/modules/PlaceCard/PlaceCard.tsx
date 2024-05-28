@@ -67,7 +67,7 @@ const Card = ({ item }: { item: TPlaceCard }) => {
           </div>
           <div>
             <Button
-              name={item.url_name}
+              label={item.url_name}
               onClick={() => window.open(item.url)}
             />
           </div>

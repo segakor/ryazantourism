@@ -5,7 +5,6 @@
 
 .otvet_wrapper {
   border-radius: 3.75rem;
-  /*  border: 1px solid red; */
   overflow: hidden;
   background: var(--color-white);
 }

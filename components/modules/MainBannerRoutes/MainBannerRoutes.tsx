@@ -10,8 +10,8 @@ export const MainBannerRoutes = () => {
       <div className="banner_routes_header">
         <h3 className="h2">Маршруты</h3>
         <div className="text2">
-          <Icons icon={"quote"} className="quote" />Исследуйте Рязань
-          самостоятельно или с опытными экскурсоводами
+          <Icons icon={"quote"} className="quote" />
+          Исследуйте Рязань самостоятельно или с опытными экскурсоводами
         </div>
       </div>
       <div className="banner_routes_body">
@@ -23,7 +23,7 @@ export const MainBannerRoutes = () => {
             искателей приключений
           </p>
           <div className="banner_routes_button">
-            <Button name="Перейти" onClick={() => console.log("e")} />
+            <Button label="Перейти" onClick={() => console.log("e")} />
           </div>
           <Image
             priority
@@ -50,7 +50,7 @@ export const MainBannerRoutes = () => {
             опытных и начинающих туристов
           </p>
           <div className="banner_routes_button">
-            <Button name="Перейти" onClick={() => console.log("e")} />
+            <Button label="Перейти" onClick={() => console.log("e")} />
           </div>
         </div>
       </div>

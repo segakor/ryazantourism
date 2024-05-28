@@ -44,7 +44,7 @@ export const HeroMain = () => {
                 <p>{item.desc}</p>
                 <div className="hero_button">
                   <Button
-                    name={"Подробнее"}
+                    label={"Подробнее"}
                     onClick={() => window.open(item.link, "_self")}
                   />
                 </div>

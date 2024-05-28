@@ -10,7 +10,7 @@ export const News = () => {
           {"Актуальная информация о происходящем в городе"}
         </div>
         <div>
-          <Button name="все новости" onClick={() => console.log("allNews")} />
+          <Button label="Все новости" onClick={() => console.log("allNews")} isBlackHover/>
         </div>
       </div>
       <div className="news_group">

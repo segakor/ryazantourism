@@ -3,9 +3,11 @@ import { Header } from "../modules/Header";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
+    <div style={{ display: "grid", minHeight: "100vh" }}>
       <Header />
-      <div className="content">{children}</div>
+      <main className="content" style={{ flex: "1 0 auto" }}>
+        {children}
+      </main>
       <Footer />
     </div>
   );

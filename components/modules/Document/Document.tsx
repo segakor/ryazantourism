@@ -1,7 +1,6 @@
 import "./style.css";
 import Link from "next/link";
 import { TDocument } from "@/types/types";
-import Button from "@/components/elements/Button/Button";
 
 const Document = ({ item }: { item: TDocument }) => {
   return (

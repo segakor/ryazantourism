@@ -4,21 +4,14 @@ import { PlaceCard } from "@/components/modules/PlaceCard/PlaceCard";
 import { tabsZdorove } from "@/constants/contstants";
 import { useState } from "react";
 import { TPlaceCard } from "@/types/types";
+import { OrganizedBannerRoutes } from "@/components/modules/OrganizedBannerRoutes";
 
-const Body = ({ data }: { data: TPlaceCard[] }) => {
-  const [tab, setTab] = useState("all");
-
-  const onChangeTab = (e: string) => {
-    setTab(e);
-  };
-
-  const filteredData =
-    tab !== "all" ? data.filter((item) => item.category.name === tab) : data;
+const Body = () => {
 
   return (
     <section className="grid_layout">
-      <Tabs tabs={tabsZdorove} onChange={onChangeTab} />
-      <PlaceCard data={filteredData} />
+      <OrganizedBannerRoutes/>
+      {/* <PlaceCard data={filteredData} /> */}
     </section>
   );
 };

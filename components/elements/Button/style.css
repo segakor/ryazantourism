@@ -10,11 +10,20 @@
   @media (max-width: 880px) {
     padding: 20px;
   }
+  .text4{
+    text-transform: uppercase;
+  }
+  
 }
 
 .button_wrapper:hover {
-  background-color: #fff;
+  background-color: var(--color-white);
   transition: all ease 0.4s;
+}
+
+.black_hover:hover {
+  background-color: var(--color-black);
+  color:var(--color-white);
 }
 
 .button_spoiler {

@@ -1,9 +1,17 @@
 import "./style.css";
 
-const Button = ({ name, onClick }: { name: string; onClick: () => void }) => {
+const Button = ({
+  label,
+  onClick,
+  isBlackHover,
+}: {
+  label: string;
+  onClick: () => void;
+  isBlackHover?: boolean;
+}) => {
   return (
-    <button className="button_wrapper" onClick={onClick}>
-      <div className="text4">{name}</div>
+    <button className={`button_wrapper ${isBlackHover && 'black_hover'}`} onClick={onClick}>
+      <div className="text4">{label}</div>
     </button>
   );
 };

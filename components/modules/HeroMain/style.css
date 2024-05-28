@@ -1,8 +1,11 @@
 .bg_color {
   background-color: var(--color-light-grey);
-  .slick-slider{
+  .slick-slider {
     height: 100vh;
   }
+  /* //NOTE: ломалось из-за Layout */
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .hero_wrapper {
