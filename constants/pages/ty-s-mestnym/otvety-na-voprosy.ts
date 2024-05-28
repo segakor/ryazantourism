@@ -39,7 +39,7 @@ export const data = [
       },
       {
         title: "Музей истории ВДВ",
-        desc: "Рязань — столица ВДВ, а 2 августа давно считается большим городским праздником. В Рязани находится не только училище ВДВ, но и единственный в своем роде музей, рассказывающий о создании знаменитых войск «дяди Васи». Все об истории крылатой пехоты вы можете узнать в столице воздушно-десантных войск.\n\nАдрес: Рязань, пл. Маргелова, 1\n\n+7 (4912) 72 14 78\n\n<a href='https://vk.com/mus_vdv62/' target='_blank'>подробнее по ссылке</a>",
+        desc: "Рязань — столица ВДВ, а 2 августа давно считается большим городским праздником. В Рязани находится не только училище ВДВ, но и единственный в своем роде музей, рассказывающий о создании знаменитых войск «дяди Васи». Все об истории крылатой пехоты вы можете узнать в столице воздушно-десантных войск.\n\nАдрес: Рязань, пл. Маргелова, 1\n\n+7 (4912) 72 14 78",
       },
       {
         title: "Нижний городской сад",
@@ -239,7 +239,7 @@ export const data = [
     answer: [
       {
         title: "Понедельник — выходной у большинства государственных музеев",
-        desc: "В этот день работают\n\n<ul><li><a href='https://vk.com/mus_vdv62/' target='_blank'>Музей истории ВДВ</a></li><li><a href='https://vk.com/mirledentsa/' target='_blank'>Музей истории рязанского леденца</a></li><li><a href='https://vk.com/galereya.pryanikov/' target='_blank'>Музей «Галерея пряников»</a></li><li><a href='https://vk.com/fabrika.igryshek/' target='_blank'>Музей «Фабрика игрушек»</a></li><li><a href='https://vk.com/aromatvremeni/' target='_blank'>Исторический салон «Аромат времени»</a></li><li><a href='https://vk.com/mirshocolada_ryazan/' target='_blank'>Музей истории рязанского шоколада</a></li><li><a href='https://vk.com/pahnet_hlebom_rzn/' target='_blank'>Музей «Пахнет хлебом»</a></li><li><a href='https://vk.com/fotodom62/' target='_blank'>Музейно-выставочный центр «Фотодом»</a></li><li><a href='https://mimdrzn.ru/' target='_blank'>Музей истории молодежного движения</a></li><li><a href='https://vk.com/public194193231' target='_blank'>Рязанский музей путешественников</a></li></ul>",
+        desc: "В этот день работают\n\n<ul><li>Музей истории ВДВ</li><li><a href='https://vk.com/mirledentsa/' target='_blank'>Музей истории рязанского леденца</a></li><li><a href='https://vk.com/galereya.pryanikov/' target='_blank'>Музей «Галерея пряников»</a></li><li><a href='https://vk.com/fabrika.igryshek/' target='_blank'>Музей «Фабрика игрушек»</a></li><li><a href='https://vk.com/aromatvremeni/' target='_blank'>Исторический салон «Аромат времени»</a></li><li><a href='https://vk.com/mirshocolada_ryazan/' target='_blank'>Музей истории рязанского шоколада</a></li><li><a href='https://vk.com/pahnet_hlebom_rzn/' target='_blank'>Музей «Пахнет хлебом»</a></li><li><a href='https://vk.com/fotodom62/' target='_blank'>Музейно-выставочный центр «Фотодом»</a></li><li><a href='https://mimdrzn.ru/' target='_blank'>Музей истории молодежного движения</a></li><li><a href='https://vk.com/public194193231' target='_blank'>Рязанский музей путешественников</a></li></ul>",
       },
     ],
     keyword: ["график работы музеев", "график работы", "музеи"],
