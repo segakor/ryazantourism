@@ -3,6 +3,9 @@
   display: flex;
   justify-content: space-between;
   gap: 1.875rem;
+  @media (max-width: 880px) {
+    flex-direction: column;
+  }
 }
 
 .routes_info {
@@ -19,6 +22,10 @@
   grid-template-columns: 390px 390px;
   justify-content: center;
   gap: 1.25rem;
+  @media (max-width: 880px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .routes_banner_item {
