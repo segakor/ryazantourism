@@ -1,11 +1,23 @@
 .bg_color {
-  background-color: var(--color-light-grey);
+  /*   background-color: var(--color-light-grey);
   .slick-slider {
     height: 100vh;
-  }
+  } */
   /* //NOTE: ломалось из-за Layout */
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  /*   display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr)); */
+  /* .carousel {
+    width: 100vw
+  } */
+  /* border:3px solid red; */
+  /*   overflow: hidden; */
+  .swiper-slide {
+    height: 100vh;
+    width: 100% !important;
+  }
+  .swiper-pagination-bullet-active {
+    background: var(--color-green);
+  }
 }
 
 .hero_wrapper {
