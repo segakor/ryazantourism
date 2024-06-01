@@ -10,10 +10,9 @@
   @media (max-width: 880px) {
     padding: 20px;
   }
-  .text4{
+  .text4 {
     text-transform: uppercase;
   }
-  
 }
 
 .button_wrapper:hover {
@@ -23,7 +22,7 @@
 
 .black_hover:hover {
   background-color: var(--color-black);
-  color:var(--color-white);
+  color: var(--color-white);
 }
 
 .button_spoiler {
@@ -67,4 +66,8 @@
 
 .next {
   transform: rotate(180deg);
+}
+
+.grey {
+  background-color: #efefef;
 }

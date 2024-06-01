@@ -1,6 +1,8 @@
 "use client";
 import { ReactNode, useEffect } from "react";
 import "./style.css";
+import Button from "../Button/Button";
+import CloseModal from "../Button/CloseModal";
 
 export const Modal = ({
   open,
@@ -36,7 +38,7 @@ export const Modal = ({
       className={`
         z-100
         fixed inset-0 flex justify-center items-center transition-colors
-        ${open ? "visible bg-black/40" : "invisible"}
+        ${open ? "visible bg-black/70" : "invisible"}
       `}
     >
       {/* modal */}
@@ -48,13 +50,14 @@ export const Modal = ({
           ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}
         `}
       >
-        <button
-          onClick={onClose}
-          className="absolute top-2 right-4 p-1 rounded-lg text-gray-400 bg-white hover:bg-gray-50 hover:text-gray-600 rounded-full"
-        >
-          X
-        </button>
+        <div className="absolute top-2 right-4 close_modal_header">
+          <CloseModal onClick={onClose} />
+        </div>
+
         {children}
+        <div className="close_modal">
+          <Button label={"Закрыть"} onClick={onClose} isBlackHover />
+        </div>
       </div>
     </div>
   );

@@ -50,6 +50,9 @@
     line-height: 143%;
     color: rgba(20, 20, 20, 0.5);
   }
+  @media (max-width: 880px) {
+    width: auto;
+  }
 }
 
 .routes_banner:hover {

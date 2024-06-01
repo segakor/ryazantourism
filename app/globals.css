@@ -115,7 +115,5 @@ svg circle {
   touch-action: none;
   -ms-scroll-chaining: none;
   overscroll-behavior: none;
-  /* .header_wrapper{
-    
-  } */
+  /* position: fixed; */
 }

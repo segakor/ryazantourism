@@ -1,8 +1,23 @@
 .modal_size {
-  width: 70%;
+  max-width: 70%;
   @media (max-width: 880px) {
-    width: 100%;
+    min-width: 100%;
     height: 100vh;
     overflow-y: auto;
+    border-radius: 0px;
+  }
+}
+
+.close_modal {
+  display: none;
+  @media (max-width: 880px) {
+    display: block;
+    margin: 16px;
+  }
+}
+
+.close_modal_header {
+  @media (max-width: 880px) {
+    display: none;
   }
 }

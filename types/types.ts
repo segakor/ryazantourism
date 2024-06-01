@@ -58,3 +58,11 @@ export type TDocument = {
   link: string;
   year?: string;
 };
+
+export type TGid = {
+  fio: string;
+  shortDecs: string;
+  desc: string;
+  phone: string;
+  srcImg: string;
+};
