@@ -8,7 +8,7 @@ export const MainNavigation = () => {
   return (
     <section className="grid_layout">
       <div className="navigation_header">
-        <h3 className="h2">Спланировать путешествие</h3>
+        <h2 className="h2">Спланировать путешествие</h2>
         <p className="text2">
           Собрали для вас только лучшие места, которые помогут вам насладиться
           Рязанью

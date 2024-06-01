@@ -12,7 +12,7 @@ import { heroMap } from "@/constants/contstants";
 import { useRef, useState } from "react";
 import Button from "@/components/elements/Button/Button";
 import RoundButton from "@/components/elements/Button/RoundButton";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import {  EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
 
 export const HeroMain = () => {
   let sliderRef = useRef(null) as any;
@@ -80,18 +80,20 @@ export const HeroMain = () => {
         ))}
       </Slider> */}
       <Swiper
-        /* spaceBetween={30} */
-        /* centeredSlides={true} */
+        /* spaceBetween={30}
+        centeredSlides={true} */
+        speed={500}
         autoplay={{
           delay: 2500,
-          disableOnInteraction: false,
-        }}
+          disableOnInteraction: true,
+         }}
         loop
+        /* effect={'fade'} */
         pagination={{
           clickable: true,
         }}
         /*  navigation={true} */
-        modules={[/* Autoplay, */ Pagination /* Navigation */]}
+        modules={[/* Autoplay, */ Pagination, EffectFade, Autoplay /* Navigation */]}
         /* onAutoplayTimeLeft={onAutoplayTimeLeft} */
         className="mySwiper"
       >
@@ -101,7 +103,7 @@ export const HeroMain = () => {
               <img className="hero_image" src={item.imgUrl} alt="Фон" />
               <div className="hero_inner">
                 <div className="hero_inner_body">
-                  <h3>{item.title}</h3>
+                  <div className="h3">{item.title}</div>
                   <p>{item.desc}</p>
                   <div className="hero_button">
                     <Button

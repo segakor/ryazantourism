@@ -15,8 +15,16 @@
     height: 100vh;
     width: 100% !important;
   }
+  .swiper-pagination-bullet{
+    background: var(--color-grey);
+  }
   .swiper-pagination-bullet-active {
     background: var(--color-green);
+  }
+  .swiper-pagination{
+    @media (max-width: 880px) {
+      margin-bottom: 40px;
+    }
   }
 }
 
