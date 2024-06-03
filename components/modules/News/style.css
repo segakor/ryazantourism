@@ -24,6 +24,7 @@
 }
 
 .news_card {
+  min-width: 308px;
   background-color: #f2f2f2;
   padding: 80px 40px;
   border-radius: 20px;
@@ -43,12 +44,15 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.news_card:hover {
-  transition: all ease 0.4s;
-  background-color: #b9fa4f;
-  .news_card_arrows {
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
+
+@media (hover: hover) {
+  .news_card:hover {
+    transition: all ease 0.4s;
+    background-color: #b9fa4f;
+    .news_card_arrows {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
   }
 }
 

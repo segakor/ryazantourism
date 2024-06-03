@@ -8,10 +8,12 @@
   position: relative;
 }
 
-.document:hover {
-  box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
-  .document_action {
-    background-color: #b9fa4f;
+@media (hover: hover) {
+  .document:hover {
+    box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.1);
+    .document_action {
+      background-color: #b9fa4f;
+    }
   }
 }
 

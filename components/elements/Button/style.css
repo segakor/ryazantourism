@@ -7,22 +7,14 @@
   border: none;
   border-radius: 50px;
   width: 100%;
-  @media (max-width: 880px) {
-    padding: 20px;
-  }
+  display: flex;
+  justify-content: center;
   .text4 {
     text-transform: uppercase;
   }
-}
-
-.button_wrapper:hover {
-  background-color: var(--color-white);
-  transition: all ease 0.4s;
-}
-
-.black_hover:hover {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  @media (max-width: 880px) {
+    padding: 20px;
+  }
 }
 
 .button_spoiler {
@@ -57,12 +49,6 @@
     fill: var(--color-black);
   }
 }
-.button_round:hover {
-  background-color: var(--color-green);
-  svg path {
-    fill: var(--color-white);
-  }
-}
 
 .next {
   transform: rotate(180deg);
@@ -70,4 +56,23 @@
 
 .grey {
   background-color: #efefef;
+}
+
+@media (hover: hover) {
+  .button_wrapper:hover {
+    background-color: var(--color-white);
+    transition: all ease 0.4s;
+  }
+
+  .black_hover:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+
+  .button_round:hover {
+    background-color: var(--color-green);
+    svg path {
+      fill: var(--color-white);
+    }
+  }
 }

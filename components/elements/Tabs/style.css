@@ -27,10 +27,13 @@
     font-size: 18px;
   }
 }
-.tab:hover {
-  background-color: var(--color-black);
-  color: var(--color-white);
-  transition: all ease 0.4s;
+
+@media (hover: hover) {
+  .tab:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    transition: all ease 0.4s;
+  }
 }
 
 .active {

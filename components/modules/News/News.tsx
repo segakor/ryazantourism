@@ -1,6 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
+import LinkButton from "@/components/elements/Button/LinkButton";
 import "./style.css";
-import Button from "@/components/elements/Button/Button";
 
 export const News = () => {
   return (
@@ -10,7 +11,8 @@ export const News = () => {
           {"Актуальная информация о происходящем в городе"}
         </div>
         <div>
-          <Button label="Все новости" onClick={() => console.log("allNews")} isBlackHover/>
+          <LinkButton isBlackHover>Все новости</LinkButton>
+          {/* <Button label="Все новости" onClick={() => console.log("allNews")} isBlackHover/> */}
         </div>
       </div>
       <div className="news_group">

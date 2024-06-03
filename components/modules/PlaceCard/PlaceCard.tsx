@@ -1,15 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState } from "react";
-/* import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"; */
 import "./style.css";
 import Icons from "@/components/elements/Logo/Icons";
 import { Tag, Tags } from "@/components/elements/Tags/Tags";
-import Button from "@/components/elements/Button/Button";
 import { TagList, TPlaceCard } from "@/types/types";
-
+import LinkButton from "@/components/elements/Button/LinkButton";
 
 export const PlaceCard = ({ data }: { data: TPlaceCard[] }) => {
   return (
@@ -66,10 +62,9 @@ const Card = ({ item }: { item: TPlaceCard }) => {
             </div>
           </div>
           <div>
-            <Button
-              label={item.url_name}
-              onClick={() => window.open(item.url)}
-            />
+            <LinkButton href={item.url} target="_blank">
+              {item.url_name}
+            </LinkButton>
           </div>
         </div>
       </div>

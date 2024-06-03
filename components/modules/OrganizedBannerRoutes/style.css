@@ -55,8 +55,10 @@
   }
 }
 
-.routes_banner:hover {
-  background-color: var(--color-green);
+@media (hover: hover) {
+  .routes_banner:hover {
+    background-color: var(--color-green);
+  }
 }
 
 .routes_banner_content {

@@ -29,17 +29,19 @@
   position: relative;
 }
 
-.navigation_card:hover {
-  .navigation_image {
-    transform: scale(115%);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  svg circle {
-    fill: #96ee05;
-  }
-  svg path {
-    fill: black;
+@media (hover: hover) {
+  .navigation_card:hover {
+    .navigation_image {
+      transform: scale(115%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    svg circle {
+      fill: #96ee05;
+    }
+    svg path {
+      fill: black;
+    }
   }
 }
 

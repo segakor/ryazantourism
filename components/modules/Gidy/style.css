@@ -58,19 +58,21 @@
   gap: 10px;
 }
 
-.gid_item:hover {
-  .gid_item_header {
-    svg circle {
-      fill: #96ee05;
+@media (hover: hover) {
+  .gid_item:hover {
+    .gid_item_header {
+      svg circle {
+        fill: #96ee05;
+      }
+      svg path {
+        fill: black;
+      }
     }
-    svg path {
-      fill: black;
-    }
-  }
 
-  .gid_image {
-    transform: scale(115%);
-    transition: transform 0.3s ease-in-out;
+    .gid_image {
+      transform: scale(115%);
+      transition: transform 0.3s ease-in-out;
+    }
   }
 }
 
@@ -86,7 +88,7 @@
   @media (max-width: 880px) {
     flex-direction: column;
   }
-  .h4{
+  .h4 {
     margin-bottom: 1.875rem;
   }
 }

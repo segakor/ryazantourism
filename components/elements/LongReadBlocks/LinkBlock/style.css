@@ -30,7 +30,9 @@
   }
 }
 
-.link_block:hover{
-  background-color: var( --color-light-grey);
-  transition: all ease 0.4s;
+@media (hover: hover) {
+  .link_block:hover {
+    background-color: var(--color-light-grey);
+    transition: all ease 0.4s;
+  }
 }

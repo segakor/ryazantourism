@@ -2,7 +2,7 @@
 import Icons from "@/components/elements/Logo/Icons";
 import "./style.css";
 import Image from "next/image";
-import Button from "@/components/elements/Button/Button";
+import LinkButton from "@/components/elements/Button/LinkButton";
 
 export const MainBannerRoutes = () => {
   return (
@@ -23,7 +23,7 @@ export const MainBannerRoutes = () => {
             искателей приключений
           </p>
           <div className="banner_routes_button">
-            <Button label="Перейти" onClick={() => console.log("e")} />
+            <LinkButton>Перейти</LinkButton>
           </div>
           <Image
             priority
@@ -50,7 +50,7 @@ export const MainBannerRoutes = () => {
             опытных и начинающих туристов
           </p>
           <div className="banner_routes_button">
-            <Button label="Перейти" onClick={() => console.log("e")} />
+            <LinkButton>Перейти</LinkButton>
           </div>
         </div>
       </div>

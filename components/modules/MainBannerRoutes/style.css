@@ -38,24 +38,27 @@
   }
 }
 
-.banner_routes_card_first:hover {
-  background-color: #252525;
-  color: #ffff;
-  transition: all ease 0.4s;
-  .button_wrapper {
-    background-color: #ffff;
-    color: #000000;
-  }
-}
-.banner_routes_card_second:hover {
-  background-color: #b9fa4f;
-  color: #000000;
-  transition: all ease 0.4s;
-  .button_wrapper {
-    background-color: #000000;
+@media (hover: hover) {
+  .banner_routes_card_first:hover {
+    background-color: #252525;
     color: #ffff;
+    transition: all ease 0.4s;
+    .button_wrapper {
+      background-color: #ffff;
+      color: #000000;
+    }
+  }
+  .banner_routes_card_second:hover {
+    background-color: #b9fa4f;
+    color: #000000;
+    transition: all ease 0.4s;
+    .button_wrapper {
+      background-color: #000000;
+      color: #ffff;
+    }
   }
 }
+
 .banner_routes_card_first {
   .button_wrapper {
     background-color: #000000;
@@ -73,6 +76,6 @@
 }
 .quote{
   @media (max-width: 880px) {
-    display: none;
+    svg{display: none;}
   }
 }
