@@ -9,3 +9,9 @@ export const API_URL = {
   ZDOROVE: BASE_URL + "21",
   SUVENIRY: BASE_URL + "30",
 };
+
+export const API_URL_SINGLY_ROUTES =
+  "https://api.tr.plenexy.digital/api/routes?page=1&limit=10&with=category";
+
+export const API_URL_DETAILS_SINGLY_ROUTES =
+  "https://api.tr.plenexy.digital/api/routes";

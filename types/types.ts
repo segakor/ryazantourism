@@ -45,6 +45,10 @@ export type TArchCard = {
 
 export type ResponsePlaceCard = { data: TPlaceCard[] };
 
+/* export type Response<T> = {
+  data: T;
+}; */
+
 export type TOtvet = {
   question: string;
   answer: { title: string; desc: string }[];
@@ -66,3 +70,29 @@ export type TGid = {
   phone: string;
   srcImg: string;
 };
+
+export type TSinglyRoutes = {
+  id: number;
+  title: string;
+  category: { name: string };
+  duration: { days: number; hours: number; minutes: number };
+  images: { url: string }[];
+};
+
+export type TSinglyRoutesDetails = {
+  description: string;
+  images: { url: string }[];
+  title: string;
+  sights: {
+    id: number;
+    image_path: string;
+    name: string;
+    point_x: number;
+    point_y: number;
+  }[];
+  duration: { days: number; hours: number; minutes: number };
+};
+
+export type ResponseSinglyRoutes = { data: TSinglyRoutes[] };
+
+export type ResponseSinglyRoutesDetails = TSinglyRoutesDetails;

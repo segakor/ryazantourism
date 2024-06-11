@@ -13,7 +13,7 @@ export const LeadBlock = ({
 }) => {
   return (
     <div className="longread_block">
-      <div className="lead-text">{title}</div>
+      {title && <div className="lead-text">{title}</div>}
       {desc && <TextBlock text={desc} />}
       {srcImg && <ImageBlock srcImg={srcImg} />}
     </div>

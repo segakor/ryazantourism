@@ -1,11 +1,11 @@
 "use client";
 import { Tabs } from "@/components/elements/Tabs/Tabs";
-import { PlaceCard } from "@/components/modules/PlaceCard/PlaceCard";
-import { tabsZdorove } from "@/constants/contstants";
+import { tabsSinglyRoutes } from "@/constants/contstants";
 import { useState } from "react";
-import { TPlaceCard } from "@/types/types";
+import { SinglyRoutest } from "@/components/modules/SinglyRoutes/SinglyRoutes";
+import { TSinglyRoutes } from "@/types/types";
 
-const Body = ({ data }: { data: TPlaceCard[] }) => {
+const Body = ({ data }: { data: TSinglyRoutes[] }) => {
   const [tab, setTab] = useState("all");
 
   const onChangeTab = (e: string) => {
@@ -17,8 +17,8 @@ const Body = ({ data }: { data: TPlaceCard[] }) => {
 
   return (
     <section className="grid_layout">
-      <Tabs tabs={tabsZdorove} onChange={onChangeTab} />
-      <PlaceCard data={filteredData} />
+      <Tabs tabs={tabsSinglyRoutes} onChange={onChangeTab} />
+      <SinglyRoutest data={filteredData} />
     </section>
   );
 };

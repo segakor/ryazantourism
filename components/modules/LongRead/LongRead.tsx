@@ -5,6 +5,7 @@ import { FactBlock } from "@/components/elements/LongReadBlocks/FactBlock/FactBl
 import { LeadBlock } from "@/components/elements/LongReadBlocks/LeadBlock/LeadBlock";
 import { ELEMENT_TYPE, TLongReadBody } from "@/types/types";
 import { LongReadBlock } from "@/components/elements/LongReadBlocks/LongReadBlock/LongReadBlock";
+import { ReactNode } from "react";
 
 const createElement = (elementType: ELEMENT_TYPE, props: any) => {
   if (elementType === ELEMENT_TYPE.FACT_BLOCK) {
@@ -22,7 +23,7 @@ const createElement = (elementType: ELEMENT_TYPE, props: any) => {
   return null;
 };
 
-export const LongRead = ({ body }: { body: TLongReadBody[] }) => {
+export const LongRead = ({ body, children }: { body: TLongReadBody[], children?:ReactNode }) => {
   const scrollIntoView = (elementId?: string) => {
     //@ts-ignore
     document
@@ -43,6 +44,7 @@ export const LongRead = ({ body }: { body: TLongReadBody[] }) => {
               {createElement(item.element as ELEMENT_TYPE, item)}
             </div>
           ))}
+          {children}
         </div>
         <div className="longread_sidebar">
           <div className="longread_sidebar_body">

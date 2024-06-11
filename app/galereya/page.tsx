@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Body from "./body";
 import Loading from "./loading";
-import { ResponsePlaceCard } from "@/types/types";
 import { API_URL } from "@/constants/apiUrl";
 import { Suspense } from "react";
 

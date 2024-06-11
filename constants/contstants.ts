@@ -220,3 +220,9 @@ export const tabsZdorove = [
   { label: "Санатории", id: "Санатории" },
   { label: "Студии красоты и здоровья", id: "Студии красоты и здоровья" },
 ];
+
+export const tabsSinglyRoutes = [
+  { label: "Все", id: "all" },
+  { label: "Пеший", id: "Пеший" },
+  { label: "Автомобильный", id: "Автомобильный" },
+]
