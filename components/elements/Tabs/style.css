@@ -1,13 +1,8 @@
 .tabs {
   display: flex;
   gap: 20px;
-  padding: 80px 0 60px 0;
   flex-wrap: nowrap;
   overflow-x: auto;
-  @media (max-width: 880px) {
-    padding: 0;
-    margin-top: 20px;
-  }
 }
 
 .tabs::-webkit-scrollbar {
@@ -42,7 +37,6 @@
 }
 
 .tabs_otvety {
-  padding: 0;
   .tab {
     background-color: var(--color-white);
     color: var(--color-black);

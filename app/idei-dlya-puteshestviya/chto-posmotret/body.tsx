@@ -17,7 +17,9 @@ const Body = () => {
 
   return (
     <section className="grid_layout">
-      <Tabs tabs={tabsChtoPosmotret} onChange={onChangeTab} />
+      <div className="wrapper_tabs">
+        <Tabs tabs={tabsChtoPosmotret} onChange={onChangeTab} />
+      </div>
       <ArchCard data={filteredData} />
     </section>
   );

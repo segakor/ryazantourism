@@ -18,13 +18,12 @@ export const HeroMain = () => {
   return (
     <div className="bg_color">
       <Swiper
-        speed={500}
+        speed={1000}
         autoplay={{
           delay: 3000,
           disableOnInteraction: true,
         }}
         loop
-
         pagination={{
           clickable: true,
         }}

@@ -17,7 +17,9 @@ const Body = ({ data }: { data: TPlaceCard[] }) => {
 
   return (
     <section className="grid_layout">
-      <Tabs tabs={tabsChemZanyatsya} onChange={onChangeTab} />
+      <div className="wrapper_tabs">
+        <Tabs tabs={tabsChemZanyatsya} onChange={onChangeTab} />
+      </div>
       <PlaceCard data={filteredData} />
     </section>
   );

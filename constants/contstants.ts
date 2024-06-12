@@ -200,7 +200,7 @@ export const tabsGdePoest = [
   { label: "Стритфуд", id: "Стритфуд" },
 ];
 
-export const tabGdePoest = [
+export const tabsGdeOstanivitsya = [
   { label: "Все", id: "all" },
   { label: "Отели", id: "Отели" },
   { label: "Гостевые дома", id: "Гостевые дома" },

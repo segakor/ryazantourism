@@ -1,7 +1,7 @@
 "use client";
 import { Tabs } from "@/components/elements/Tabs/Tabs";
 import { PlaceCard } from "@/components/modules/PlaceCard/PlaceCard";
-import { tabGdePoest } from "@/constants/contstants";
+import { tabsGdeOstanivitsya } from "@/constants/contstants";
 import { useState } from "react";
 import { TPlaceCard } from "@/types/types";
 
@@ -17,7 +17,9 @@ const Body = ({ data }: { data: TPlaceCard[] }) => {
 
   return (
     <section className="grid_layout">
-      <Tabs tabs={tabGdePoest} onChange={onChangeTab} />
+      <div className="wrapper_tabs">
+        <Tabs tabs={tabsGdeOstanivitsya} onChange={onChangeTab} />
+      </div>
       <PlaceCard data={filteredData} />
     </section>
   );

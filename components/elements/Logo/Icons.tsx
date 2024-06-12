@@ -169,6 +169,83 @@ const icons = {
       </defs>
     </svg>
   ),
+  eye: (
+    <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
+      <svg
+        width="77"
+        height="49"
+        viewBox="0 0 77 49"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M38.125 1.32739L38.2043 10.4975"
+          stroke="#FF0F00"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+        <path
+          d="M5.12197 30.1409C3.17861 31.9447 3.40621 34.8778 5.60387 36.3567C12.0616 40.7024 24.382 47.4482 38.3953 47.327C52.4086 47.2059 64.6105 40.248 70.9921 35.7914C73.1639 34.2747 73.3407 31.338 71.3665 29.5681C65.0401 23.8966 52.4365 14.5953 38.1134 14.7191C23.7902 14.843 11.3493 24.3608 5.12197 30.1409Z"
+          fill="white"
+          stroke="#FF0F00"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+        <path
+          d="M6.22878 30.3191C3.84091 31.9508 3.8689 35.1888 6.28463 36.7789C12.9082 41.1388 24.8642 47.4432 38.3974 47.3261C51.9306 47.2091 63.7758 40.699 70.323 36.2252C72.7109 34.5935 72.6829 31.3555 70.2671 29.7654C63.6436 25.4055 51.6875 19.1011 38.1544 19.2181C24.6212 19.3352 12.776 25.8453 6.22878 30.3191Z"
+          fill="white"
+          stroke="#FF0F00"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+        <ellipse
+          cx="11.7269"
+          cy="11.7613"
+          rx="11.7269"
+          ry="11.7613"
+          transform="matrix(-0.999963 0.00864578 0.00864578 0.999963 54.4648 19.0781)"
+          fill="#FF0F00"
+        ></ellipse>
+        <path
+          d="M60.2578 5.51831L53.6883 13.5838"
+          stroke="#FF0F00"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+        <path
+          d="M17.0615 5.89282L23.7695 13.8435"
+          stroke="#FF0F00"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+      <svg
+        width="136"
+        height="27"
+        viewBox="0 0 136 27"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 1C5.2153 10.1101 25.179 27.8335 71.3113 25.8458C117.444 23.8582 125 12.5 133.5 4"
+          stroke="#FF0F00"
+        ></path>
+        <path
+          d="M135.5 3.5C133.833 6.16667 130.7 12.2 131.5 15"
+          stroke="#FF0F00"
+        ></path>
+        <path
+          d="M134 2C129.667 4.33333 119.9 8.9 115.5 8.5"
+          stroke="#FF0F00"
+        ></path>
+      </svg>
+    </div>
+  ),
 };
 
 const Icons = ({
@@ -184,7 +261,8 @@ const Icons = ({
     | "goTo"
     | "quote"
     | "location"
-    | "arrow_button_round";
+    | "arrow_button_round"
+    | "eye";
   className?: string;
 }) => {
   return (

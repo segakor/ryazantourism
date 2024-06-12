@@ -23,6 +23,10 @@
   }
 }
 
+.news_group::-webkit-scrollbar {
+  display: none;
+}
+
 .news_card {
   min-width: 308px;
   background-color: #f2f2f2;

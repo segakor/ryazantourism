@@ -1,4 +1,3 @@
-import Body from "./body";
 
 import type { Metadata } from "next";
 
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <div>
-      <Body />
+      1
     </div>
   );
 };

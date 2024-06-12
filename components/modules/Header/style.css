@@ -50,9 +50,12 @@
   font-size: 0.75rem;
 }
 
-svg:hover path {
-  fill: black;
+.header_icon{
+  svg:hover path {
+    fill: black;
+  }
 }
+
 
 .header_right {
   display: flex;
