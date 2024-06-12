@@ -57,8 +57,8 @@ export const HeaderNavMobile = () => {
       <ul className="header_nav_mobile">
         {headerMenu.map((item, index) => (
           <div key={index} className="menu_item_mobile_item">
-            <li className="menu_item_mobile">
-              <span className="menu_link" onClick={() => onOpenSubMenu(index)}>{item.item}</span>
+            <li className="menu_item_mobile"  onClick={() => onOpenSubMenu(index)}>
+              <span className="menu_link">{item.item}</span>
               {!!item.subItem.length && (
                 <div
                   className={

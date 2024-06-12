@@ -29,21 +29,25 @@
   border-radius: 1.25rem;
   padding: 2.5rem;
   @media (max-width: 880px) {
-    flex: 0 0 85%;
+    flex: 0 0 100%;
+    padding: 1.75rem;
   }
 }
 
 .podcast_card_item_body {
   display: grid;
   gap: 1.625rem;
-  .h5 {
-    font-size: 1.75rem;
-  }
   p {
     line-height: 145%;
     color: #252525;
     opacity: 0.4;
     font-size: 1rem;
+  }
+
+  @media (max-width: 880px) {
+    p {
+      font-size: 0.75rem;
+    }
   }
 }
 
@@ -57,7 +61,8 @@
     text-underline-offset: 0.25rem;
     font-weight: 500;
     text-decoration: underline;
-  }
+  };
+  font-size: clamp(0.875rem, 0.8253968254rem + 0.2116402116vw, 1rem);
 }
 
 .podcast_card_link_all {
@@ -84,6 +89,7 @@
   cursor: pointer;
   @media (max-width: 880px) {
     flex: 0 0 40%;
+    font-size: clamp(0.875rem, 0.8253968254rem + 0.2116402116vw, 1rem);
   }
 }
 

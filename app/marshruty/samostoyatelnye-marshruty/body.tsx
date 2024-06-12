@@ -22,10 +22,7 @@ const Body = ({ data }: { data: TSinglyRoutes[] }) => {
   return (
     <div className="samostoyatelnye_marshruty_page">
       <section className="grid_layout">
-        <h4
-          className="h4"
-          style={{ textAlign: "center", color: "var(--color-grey)" }}
-        >
+        <h4 className="h4">
           Мы собрали десятки сценариев путешествий по Рязанской области для
           разных людей и разных ситуаций. И продумали их до мелочей
         </h4>
@@ -47,10 +44,7 @@ const Body = ({ data }: { data: TSinglyRoutes[] }) => {
           <Tabs tabs={tabsSinglyRoutes} onChange={onChangeTab} />
           <SinglyRoutest data={filteredData} />
         </div>
-        <h4
-          className="h4"
-          style={{ textAlign: "center", color: "var(--color-grey)" }}
-        >
+        <h4 className="h4">
           Знакомство с городом с лучшим бесплатным приложением для свободного
           путешественника! Отправляйтесь гулять и слушайте истории о том, что
           находится вокруг.

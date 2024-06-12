@@ -1,6 +1,15 @@
 .samostoyatelnye_marshruty_page {
   padding-top: 120px;
   padding-bottom: 120px;
+  .h4 {
+    opacity: 0.4;
+    text-align: center;
+    color: var(--color-grey);
+  }
+  @media (max-width: 880px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 .singly_routes_info {
   display: flex;
@@ -16,17 +25,12 @@
   color: #252525;
   font-size: 1.5rem;
   @media (max-width: 880px) {
-    font-size: 1.25rem;
+    font-size: clamp(0.75rem, 0.4523809524rem + 1.2698412698vw, 1.5rem);
   }
 }
 
 .singly_routes_info_decor {
   @media (max-width: 880px) {
-    /*  position: absolute;
-    left: 50%;
-    top: calc(100% + 3px);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%); */
     display: none;
   }
 }
