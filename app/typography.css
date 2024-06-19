@@ -157,6 +157,9 @@
   text-decoration: none;
   text-transform: none;
   white-space: nowrap;
+  @media (max-width: 880px) {
+    font-size: clamp(0.75rem, 0.6507936508rem + 0.4232804233vw, 1rem);
+  }
 }
 .loyalty-text {
   font-size: 12px;
