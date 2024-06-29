@@ -35,13 +35,13 @@ export const CalendarSlide = () => {
     end: endOfWeek(endOfMonth(firstDayOfMonth), { weekStartsOn: 1 }),
   });
 
-  const getPrevMonth = (event: React.MouseEvent<SVGSVGElement>) => {
+  const getPrevMonth = (event:any) => {
     event.preventDefault();
     const firstDayOfPrevMonth = add(firstDayOfMonth, { months: -1 });
     setCurrMonth(format(firstDayOfPrevMonth, "MMM-yyyy"));
   };
 
-  const getNextMonth = (event: React.MouseEvent<SVGSVGElement>) => {
+  const getNextMonth = (event: any) => {
     event.preventDefault();
     const firstDayOfNextMonth = add(firstDayOfMonth, { months: 1 });
     setCurrMonth(format(firstDayOfNextMonth, "MMM-yyyy"));
@@ -118,7 +118,7 @@ export const CalendarSlide = () => {
         })}
       </div>
       <div className="grid grid-cols-7 gap-2 sm:gap-8 mt-8 place-items-center">
-        {daysInMonth.map((day, idx) => {
+        {daysInMonth.map((day:any, idx) => {
           return (
             <div key={idx} className={colStartClasses[getDay(day - 1)]}>
               <p
