@@ -90,7 +90,7 @@ export const OrganizedBannerRoutes = () => {
           </svg>
         </div>
       </div>
-      <Modal open={isModalOpen} onClose={onModalClose}>
+      <Modal open={isModalOpen} onClose={onModalClose} noP>
         <ModalOrder/>
       </Modal>
     </div>
