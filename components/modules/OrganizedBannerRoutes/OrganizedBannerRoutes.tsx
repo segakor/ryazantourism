@@ -9,7 +9,7 @@ import { ModalOrder } from "../ModalOrder/ModalOrder";
 const cards = [
   {
     title: "Вас встретят",
-    desc: "Каждую субботу с 29 апреля по 28 октября мы встречаем гостейгорода около «АМАКС Конгресс-отель» (Первомайский просп., 54). Время старта 12.00.",
+    desc: "Каждую субботу с конца апреля по конец октября мы встречаем гостейгорода около «АМАКС Конгресс-отель» (Первомайский просп., 54). Время старта 12.00.",
     srcImg: "/routesCard/icon_1.png",
   },
   {
@@ -34,7 +34,6 @@ export const OrganizedBannerRoutes = () => {
 
   const onModalOpen = () => {
     setIsModalOpen(true);
-    console.log("asdasd");
   };
 
   const onModalClose = () => {
@@ -90,8 +89,8 @@ export const OrganizedBannerRoutes = () => {
           </svg>
         </div>
       </div>
-      <Modal open={isModalOpen} onClose={onModalClose} noP>
-        <ModalOrder/>
+      <Modal open={isModalOpen} onClose={onModalClose}>
+        <ModalOrder />
       </Modal>
     </div>
   );

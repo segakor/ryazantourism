@@ -8,12 +8,10 @@ export const Modal = ({
   open,
   onClose,
   children,
-  noP,
 }: {
   open: boolean;
   onClose: () => void;
   children: ReactNode;
-  noP?: boolean;
 }) => {
   useEffect(() => {
     if (open) {
@@ -38,7 +36,7 @@ export const Modal = ({
       onClick={onClose}
       className={`
         z-100
-        fixed inset-0 flex justify-center items-center transition-colors
+        fixed inset-0 flex justify-center items-center
         ${open ? "visible bg-black/70" : "invisible"}
       `}
     >
@@ -46,7 +44,7 @@ export const Modal = ({
         onClick={(e) => e.stopPropagation()}
         className={`
         modal_size
-          bg-white rounded-3xl shadow ${!noP && "p-6"} transition-all
+          bg-white rounded-3xl shadow transition-all
           ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}
         `}
       >

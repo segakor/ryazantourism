@@ -25,7 +25,6 @@ export const Gid = ({ item }: { item: TGid }) => {
 
   const onModalOpen = () => {
     setIsModalOpen(true);
-    console.log("asdasd");
   };
 
   const onModalClose = () => {

@@ -1,5 +1,5 @@
 .modal_size {
-  max-width: 70%;
+  max-width: 1024px;
   @media (max-width: 880px) {
     min-width: 100%;
     height: 100vh;
@@ -8,24 +8,10 @@
   }
 }
 
-.close_modal {
-  display: none;
-  @media (max-width: 880px) {
-    display: block;
-    margin: 16px;
-  }
-}
-
-.close_modal_header {
-  @media (max-width: 880px) {
-    display: none;
-  }
-}
 .close{
   position: absolute;
     display: flex;
     cursor: pointer;
-    /* border: 1px solid red; */
     width: 100%;
     padding: 1rem;
     justify-content: flex-end;
