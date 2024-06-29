@@ -1,6 +1,10 @@
+"use client";
 import Image from "next/image";
 import "./style.css";
 import Button from "@/components/elements/Button/Button";
+import { useState } from "react";
+import { Modal } from "@/components/elements/Modal/Modal";
+import { ModalOrder } from "../ModalOrder/ModalOrder";
 
 const cards = [
   {
@@ -26,53 +30,69 @@ const cards = [
 ];
 
 export const OrganizedBannerRoutes = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const onModalOpen = () => {
+    setIsModalOpen(true);
+    console.log("asdasd");
+  };
+
+  const onModalClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <div className="routes_wrapper">
-      <div className="routes_info">
-        <div className="h3">
-          Приезжай на один день или оставайся на выходные
-        </div>
-        <Button
-          label={"Записаться на экскурсию"}
-          onClick={() => console.log("e")}
-          isBlackHover
-        />
-      </div>
-
-      <div className="routes_banner_group">
-        {cards.map((item, index) => (
-          <div className="routes_banner_item" key={index}>
-            <div className="routes_banner_icon">
-              <Image width={42} height={42} src={item.srcImg} alt="Icon" />
-            </div>
-
-            <div className="routes_banner">
-              <div className="routes_banner_svg">
-                <Image
-                  width={390}
-                  height={156}
-                  src={"/routesCard/organized.svg"}
-                  alt="Icon"
-                />
-              </div>
-              <div className="routes_banner_content">
-                <div className="text2">{item.title}</div>
-                <div className="text3">{item.desc}</div>
-              </div>
-            </div>
+    <div>
+      <div className="routes_wrapper">
+        <div className="routes_info">
+          <div className="h3">
+            Приезжай на один день или оставайся на выходные
           </div>
-        ))}
-        <svg height="0" width="0">
-          <defs>
-            <clipPath id="svgPathRoutes" clipPathUnits="objectBoundingBox">
-              <path
-                d="M0.128,0.308 C0.227,0.308,0.308,0.227,0.308,0.128 C0.308,0.1,0.301,0.074,0.29,0.051 C0.28,0.03,0.294,0,0.317,0 H0.949 C0.977,0,1,0.023,1,0.051 V0.949 C1,0.977,0.977,1,0.949,1 H0.051 C0.023,1,0,0.977,0,0.949 V0.317 C0,0.294,0.03,0.28,0.051,0.29 C0.074,0.301,0.1,0.308,0.128,0.308"
-                fill="black"
-              ></path>
-            </clipPath>
-          </defs>
-        </svg>
+          <Button
+            label={"Записаться на экскурсию"}
+            onClick={onModalOpen}
+            isBlackHover
+          />
+        </div>
+
+        <div className="routes_banner_group">
+          {cards.map((item, index) => (
+            <div className="routes_banner_item" key={index}>
+              <div className="routes_banner_icon">
+                <Image width={42} height={42} src={item.srcImg} alt="Icon" />
+              </div>
+
+              <div className="routes_banner">
+                <div className="routes_banner_svg">
+                  <Image
+                    width={390}
+                    height={156}
+                    src={"/routesCard/organized.svg"}
+                    alt="Icon"
+                  />
+                </div>
+                <div className="routes_banner_content">
+                  <div className="text2">{item.title}</div>
+                  <div className="text3">{item.desc}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+          <svg height="0" width="0">
+            <defs>
+              <clipPath id="svgPathRoutes" clipPathUnits="objectBoundingBox">
+                <path
+                  d="M0.128,0.308 C0.227,0.308,0.308,0.227,0.308,0.128 C0.308,0.1,0.301,0.074,0.29,0.051 C0.28,0.03,0.294,0,0.317,0 H0.949 C0.977,0,1,0.023,1,0.051 V0.949 C1,0.977,0.977,1,0.949,1 H0.051 C0.023,1,0,0.977,0,0.949 V0.317 C0,0.294,0.03,0.28,0.051,0.29 C0.074,0.301,0.1,0.308,0.128,0.308"
+                  fill="black"
+                ></path>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
       </div>
+      <Modal open={isModalOpen} onClose={onModalClose}>
+        <ModalOrder/>
+      </Modal>
     </div>
   );
 };

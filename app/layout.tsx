@@ -3,7 +3,7 @@ import "./globals.css";
 import "./typography.css";
 import Layout from "@/components/layouts/Layout";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: 'fallback', });
 
 export default function RootLayout({
   children,

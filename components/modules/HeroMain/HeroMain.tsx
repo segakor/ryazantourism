@@ -14,25 +14,21 @@ import { EffectFade, Pagination, Autoplay } from "swiper/modules";
 import LinkButton from "@/components/elements/Button/LinkButton";
 
 export const HeroMain = () => {
-
   return (
-    <div className="bg_color">
+    <div className="swiper_wrapper">
       <Swiper
-        speed={1000}
+        speed={1500}
         autoplay={{
           delay: 3000,
-          disableOnInteraction: true,
         }}
         loop
         pagination={{
           clickable: true,
         }}
-
-        modules={[
-         Pagination,
-          EffectFade,
-          Autoplay ,
-        ]}
+        modules={[Pagination, EffectFade, Autoplay]}
+        style={{
+          height: "100vh",
+        }}
         className="mySwiper"
       >
         {heroMap.map((item, index) => (

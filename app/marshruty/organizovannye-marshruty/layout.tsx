@@ -1,5 +1,5 @@
 import Layout from "@/components/layouts/PageLayout";
-import { HeroPage } from "@/components/modules/HeroPage";
+import { Hero } from "./Hero/Hero";
 
 export default function RootLayout({
   children,
@@ -8,10 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <Layout>
-      <HeroPage
-        imgUrl="/heroPages/ty-s-mestnym/cit.jpg"
-        title="Организованные маршруты"
-      />
+      <Hero />
       {children}
     </Layout>
   );
