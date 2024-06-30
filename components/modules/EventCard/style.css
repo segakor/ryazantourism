@@ -16,7 +16,21 @@
   background-size: cover;
   border-radius: 14px;
   gap: 1rem;
+  background-size: 100%;
+  transition: all 0.3s ease-in-out;
 }
+.event_card_item_decs {
+  display: inline-block !important;
+  font-weight: 500;
+  line-height: 121%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1.875rem;
+  margin-bottom: 0.3125rem;
+  padding: 0.875rem 1.25rem;
+}
+/* .event_card_item_inner:hover {
+  background-size: 110%;
+} */
 
 .wrapper_event {
   display: flex;
@@ -28,9 +42,9 @@
 }
 
 .wrapper_swiper {
-  width: 50%;
+  width: 600px;
   @media (max-width: 880px) {
-    width: 390px;
+    max-width: 390px;
   }
 }
 
@@ -46,7 +60,7 @@
     width: fit-content;
   }
   .swiper-pagination-bullet {
-    background: black;
+    background: var(--color-white);
   }
   .swiper-pagination-bullet-active {
     background: var(--color-green);

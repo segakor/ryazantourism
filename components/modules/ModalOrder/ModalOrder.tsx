@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import "./style.css";
-import { parse } from "date-fns";
+import { eachDayOfInterval, endOfMonth, format, parse } from "date-fns";
 import Button from "@/components/elements/Button/Button";
+import { ru } from "date-fns/locale";
 
 export const ModalOrder = () => {
   const [formValue, setFormValue] = useState({
@@ -29,8 +30,12 @@ export const ModalOrder = () => {
     setFormValue((prev) => ({ ...prev, count }));
   };
 
-  //последння суббота апреля (начало)
-  //последння суббота октября (конец)
+  const optionsDate = eachDayOfInterval({
+    start: new Date(new Date().getFullYear(), 3, 22),
+    end: endOfMonth(new Date(new Date().getFullYear(), 9, 1)),
+  })
+    .filter((item) => item.getDay() === 6)
+    .filter((item) => item > new Date());
 
   return (
     <div className="modal_order">
@@ -42,9 +47,9 @@ export const ModalOrder = () => {
           экскурсоводом, полезные подарки и скидки, которые обязательно
           пригодятся во время путешествия. <br />
           <br />
-          Каждую субботу с конца апреля по конец октября мы встречаем гостей города
-          около «АМАКС Конгресс-отель» (Первомайский просп., 54). Время старта
-          12.00.
+          Каждую субботу с конца апреля по конец октября мы встречаем гостей
+          города около «АМАКС Конгресс-отель» (Первомайский просп., 54). Время
+          старта 12.00.
         </div>
       </div>
       <div className="modal_order_form">
@@ -76,8 +81,15 @@ export const ModalOrder = () => {
           <option value="" disabled selected>
             Дата
           </option>
-          <option value="22.06.2024">22.06.2024</option>
-          <option value="23.06.2024">23.06.2024</option>
+          {optionsDate.map((item, index) => (
+            <option
+              value={format(item, "MM.dd.yyy")}
+              key={index}
+              disabled={new Date() > item}
+            >
+              {format(item, "d MMMM yyyy", { locale: ru })}
+            </option>
+          ))}
         </select>
         <span>Колличество людей</span>
         <div className="count_people">
@@ -91,7 +103,7 @@ export const ModalOrder = () => {
                 onClick={() => onChangeCount(item)}
               >
                 <div className="options__text">
-                  {item != 5 ? item : item + " +"}
+                  {item != 5 ? item : item + "+"}
                 </div>
               </button>
             ))}

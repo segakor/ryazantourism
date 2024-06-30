@@ -11,34 +11,61 @@ import { Pagination, Navigation } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import 'swiper/css/navigation';
+import "swiper/css/navigation";
+import { useState } from "react";
+import { format } from "date-fns";
+
+const cards = [
+  {
+    title: "Обзорная автобусно-пешеходная экскурсия по Рязани",
+    imgUrl:
+      "https://ryazantourism.ru/assets/cache/images/4d8a6277_resized-1-416x594-8de.jpg",
+    dates: ["2024-06-29", "2024-06-30"],
+    price: 2550,
+    days: 1,
+  },
+  {
+    title: "Обзорная экскурсия (с посещением Солотчи)",
+    imgUrl:
+      "https://ryazantourism.ru/assets/cache/images/4d8a8961_resized-416x594-ad6.jpg",
+    dates: ["2024-06-29", "2024-07-28", "2024-06-27"],
+    price: 200,
+    days: 2,
+  },
+];
+
+const eventsDates = cards.map((item) => item.dates).flat();
 
 export const EventCard = () => {
-  /*   const adaptiveWidthSwiper = window?.screen.width - 25 */
+  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+
+  const onChangeDate = (e: Date) => {
+    setSelectedDate(e);
+  };
+
+  const filterEvents = cards.filter((item) =>
+    item.dates.includes(format(selectedDate, "yyyy-MM-dd"))
+  );
 
   return (
     <div>
       <div className="h3 title">Туры от туроператоров</div>
       <div className="wrapper_event">
-        <CalendarSlide />
-        <div
-          className="wrapper_swiper" /* style={{width:adaptiveWidthSwiper}} */
-        >
+        <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
+        <div className="wrapper_swiper">
           <Swiper
             navigation={true}
             pagination={{
-              /* dynamicBullets: true, */
               clickable: true,
             }}
             modules={[Pagination, Navigation]}
             className="swiper"
           >
-            <SwiperSlide>
-              <Card />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card />
-            </SwiperSlide>
+            {filterEvents.map((item, index) => (
+              <SwiperSlide key={index}>
+                <Card {...item} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
@@ -46,19 +73,32 @@ export const EventCard = () => {
   );
 };
 
-const Card = () => {
+const Card = ({
+  title,
+  imgUrl,
+  dates,
+  price,
+  days,
+}: {
+  title: string;
+  imgUrl: string;
+  dates: string[];
+  price: number;
+  days: number;
+}) => {
   return (
     <div
       className="event_card_item_inner"
       style={{
-        backgroundImage: `linear-gradient(356.75deg, rgba(0, 0, 0, 0.2) 13.4%, rgba(0, 0, 0, 0) 97.73%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${"https://static.tildacdn.com/tild3262-3939-4161-b965-383961636262/SobPl-044.jpg"})`,
+        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${imgUrl})`,
       }}
     >
-      <div className="h5">
-        Цикл кинопоказов с участием Эраста Гарина — «Каин XVIII»
-      </div>
-      <div className="h5">
-        Цикл кинопоказов с участием Эраста Гарина — «Каин XVIII»
+      <div className="h5">{title}</div>
+      <div>
+        <p className="event_card_item_decs">Продолжительность: {days} д.</p>
+        <p className="event_card_item_decs">
+          Стоимость: {price.toLocaleString()} рублей/человек .
+        </p>
       </div>
       <Button label="Перейти" onClick={() => alert("das")} />
     </div>
