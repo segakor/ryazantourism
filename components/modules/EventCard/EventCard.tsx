@@ -52,7 +52,7 @@ export const EventCard = () => {
       <div className="h3 title">Туры от туроператоров</div>
       <div className="wrapper_event">
         <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
-        {/* <div className="wrapper_swiper">
+        <div className="wrapper_swiper">
           <Swiper
             navigation={true}
             pagination={{
@@ -67,7 +67,7 @@ export const EventCard = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div> */}
+        </div>
       </div>
     </div>
   );

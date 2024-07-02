@@ -1,4 +1,4 @@
-const {nextui} = require("@nextui-org/react");
+const { nextui } = require("@nextui-org/react");
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -16,6 +16,9 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+  },
+  future: {
+    hoverOnlyWhenSupported: true,
   },
   darkMode: "class",
   plugins: [nextui()],

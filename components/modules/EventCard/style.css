@@ -36,6 +36,7 @@
   @media (max-width: 880px) {
     flex-direction: column;
     gap: 1.5rem;
+    max-width: 370px;
   }
 }
 
@@ -44,7 +45,8 @@
   border-radius: 14px;
   overflow: hidden;
   @media (max-width: 880px) {
-    max-width: 390px;
+    max-width: 370px;
+    overflow: hidden;
   }
 }
 
