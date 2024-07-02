@@ -35,7 +35,7 @@ export const Modal = ({
       className={`
         z-100
         fixed inset-0 flex justify-center items-center
-        h-screen
+        
         ${open ? "visible bg-black/70" : "invisible"}
       `}
     >
@@ -44,7 +44,7 @@ export const Modal = ({
         className={`
         modal_size
           bg-white rounded-3xl shadow
-          h-screen
+          
           ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}
         `}
       >

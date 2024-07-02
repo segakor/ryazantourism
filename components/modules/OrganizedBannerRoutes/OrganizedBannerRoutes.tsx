@@ -2,9 +2,9 @@
 import Image from "next/image";
 import "./style.css";
 import Button from "@/components/elements/Button/Button";
-import { useState } from "react";
-import { Modal } from "@/components/elements/Modal/Modal";
-import { ModalOrder } from "../ModalOrder/ModalOrder";
+import { ModalOrder as Foo } from "../ModalOrder/ModalOrder";
+import { useDisclosure } from "@nextui-org/react";
+import { Modal, ModalContent, ModalBody } from "@nextui-org/modal";
 
 const cards = [
   {
@@ -30,7 +30,7 @@ const cards = [
 ];
 
 export const OrganizedBannerRoutes = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  /* const [isModalOpen, setIsModalOpen] = useState(false);
 
   const onModalOpen = () => {
     setIsModalOpen(true);
@@ -38,7 +38,9 @@ export const OrganizedBannerRoutes = () => {
 
   const onModalClose = () => {
     setIsModalOpen(false);
-  };
+  }; */
+
+  const { isOpen, onOpenChange } = useDisclosure();
 
   return (
     <div>
@@ -49,7 +51,7 @@ export const OrganizedBannerRoutes = () => {
           </div>
           <Button
             label={"Записаться на экскурсию"}
-            onClick={onModalOpen}
+            onClick={onOpenChange}
             isBlackHover
           />
         </div>
@@ -89,8 +91,22 @@ export const OrganizedBannerRoutes = () => {
           </svg>
         </div>
       </div>
-      <Modal open={isModalOpen} onClose={onModalClose}>
-        <ModalOrder />
+      <Modal
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        size="4xl"
+        scrollBehavior="outside"
+        backdrop="blur"
+      >
+        <ModalContent className="bg-[#806fdf] p-0">
+          {(onClose) => (
+            <>
+              <ModalBody>
+                <Foo/>
+              </ModalBody>
+            </>
+          )}
+        </ModalContent>
       </Modal>
     </div>
   );
