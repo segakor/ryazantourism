@@ -155,7 +155,7 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
                   flex items-center justify-center 
                   font-medium h-8 w-8 rounded-full  
                   hover:text-gray-900
-                  transition-all
+                  
                   ${isSameMonth(day, today) ? "text-white" : "text-[#a598fb]"} 
                   ${!isToday(day) && "hover:bg-[#b6acfc]"} 
                   ${

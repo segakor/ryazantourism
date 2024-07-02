@@ -97,7 +97,7 @@ const Card = ({
       <div>
         <p className="event_card_item_decs">Продолжительность: {days} д.</p>
         <p className="event_card_item_decs">
-          Стоимость: {price.toLocaleString()} рублей/человек .
+          Стоимость: {price.toLocaleString()} руб./чел.
         </p>
       </div>
       <Button label="Перейти" onClick={() => alert("das")} />

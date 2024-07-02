@@ -1,8 +1,6 @@
 "use client";
 import { ReactNode, useEffect } from "react";
 import "./style.css";
-import Button from "../Button/Button";
-import CloseModal from "../Button/CloseModal";
 
 export const Modal = ({
   open,
@@ -37,6 +35,7 @@ export const Modal = ({
       className={`
         z-100
         fixed inset-0 flex justify-center items-center
+        h-screen
         ${open ? "visible bg-black/70" : "invisible"}
       `}
     >
@@ -44,7 +43,8 @@ export const Modal = ({
         onClick={(e) => e.stopPropagation()}
         className={`
         modal_size
-          bg-white rounded-3xl shadow transition-all
+          bg-white rounded-3xl shadow
+          h-screen
           ${open ? "scale-100 opacity-100" : "scale-125 opacity-0"}
         `}
       >
