@@ -47,7 +47,7 @@ export const Gid = ({ item }: { item: TGid }) => {
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         size="4xl"
-        scrollBehavior={"inside"}
+        scrollBehavior="outside"
         backdrop="blur"
       >
         <ModalContent>

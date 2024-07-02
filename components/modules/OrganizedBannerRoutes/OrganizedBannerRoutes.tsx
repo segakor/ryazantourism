@@ -95,7 +95,7 @@ export const OrganizedBannerRoutes = () => {
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         size="4xl"
-        scrollBehavior="inside"
+        scrollBehavior="outside"
         backdrop="blur"
       >
         <ModalContent className="bg-[#806fdf] p-0">
