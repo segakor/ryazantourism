@@ -75,6 +75,7 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
 
   return (
     <div className="w-auto rounded-3xl p-6 sm:p-10 border-solid bg-[#7f6cfa]">
+      {currentDay.toDateString()}
       <div className="flex items-center justify-between">
         <p className="h4 text-xl text-white">
           {format(firstDayOfMonth, "LLLL yyyy", { locale: ru })}
