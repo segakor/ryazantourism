@@ -24,20 +24,24 @@ export const HeroPage = ({
   imgUrl,
   title,
   desc,
+  noFilter,
 }: {
   imgUrl: string;
   title: string;
   desc?: string;
+  noFilter?: boolean;
 }) => {
   return (
     <div className="hero_longread_wrapper">
       <Image
-        className="hero_longread_image"
+        className={`hero_longread_image ${
+          noFilter && "hero_longread_image_no_filter"
+        }`}
         src={imgUrl}
-        alt="Фон"
+        alt="hero_img"
         fill
         priority
-        quality={40}
+        /* quality={40} */
         placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
       />
       <div className="hero_longread_inner">

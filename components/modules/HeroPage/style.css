@@ -14,6 +14,9 @@
   filter: brightness(50%);
   height: 500px;
 }
+.hero_longread_image_no_filter{
+  filter: brightness(100%);
+}
 .hero_longread_inner {
   position: absolute;
   top: 50%;

@@ -79,7 +79,7 @@ export const headerMenu = [
     subItem: [
       { label: "Промтуризм", path: "/professionalam/agentstvo-razvitiya-turizma" },
       { label: "Автотуризм", path: "/professionalam/agentstvo-razvitiya-turizma" },
-      { label: "Библиотека", path: "/professionalam/agentstvo-razvitiya-turizma" },
+      { label: "Библиотека", path: "/biblioteka" },
       { label: "Школа", path: "/professionalam/agentstvo-razvitiya-turizma" },
     
     ],
