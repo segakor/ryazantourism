@@ -65,8 +65,7 @@ export const ModalOrder = () => {
         <div className="form_input">
           <input
             placeholder="Телефон"
-            type="text"
-            inputMode="text"
+            type="tel"
             value={formValue.phone}
             onChange={(e) => onChangePhone(e.target.value)}
           />

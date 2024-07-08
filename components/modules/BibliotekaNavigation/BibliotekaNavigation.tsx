@@ -1,3 +1,4 @@
+import { bibliotekaNavigation } from "@/constants/contstants";
 import Link from "next/link";
 
 const GoToIcon = (
@@ -18,81 +19,32 @@ const GoToIcon = (
   </div>
 );
 
-//TODO: не дает замапить item т.к. ругается на bg-[url()]
-
 export const BibliotekaNavigation = () => {
   return (
     <section className="grid_layout">
       <div className="md:grid-cols-2 grid-cols-1 grid gap-7 color text-white md:my-40 my-20">
-        {/* item */}
-        <Link
-          href="/posmotret"
-          className="group/item cursor-pointer flex md:h-[510px] h-96 rounded-[40px] border-solid border-2 p-[40px] color-white bg-cover bg-[url('/bibliotekaNavigation/1.png')]"
-        >
-          <div className="flex flex-col justify-end">
-            <div className="flex justify-between items-center">
-              <div className="max-w-[360px]">
-                <h3 className="h3 mb-5">Посмотреть</h3>
-                <p className="text2">
-                  В Рязань любят приезжать блогеры и журналисты. Смотрите, зачем
-                </p>
+        {bibliotekaNavigation.map((item, index) => (
+          <Link
+            key={index}
+            href={item.path}
+            className="group/item cursor-pointer flex md:h-[510px] h-96 rounded-[40px] p-[40px] color-white bg-cover"
+            style={{ backgroundImage: `url(${item.imgUrl})` }}
+          >
+            <div
+              className={`flex flex-col ${
+                (index === 0 || index === 3) && "justify-end"
+              }`}
+            >
+              <div className="flex justify-between items-center">
+                <div className="max-w-[360px]">
+                  <h3 className="h3 mb-5">{item.title}</h3>
+                  <p className="text2">{item.desc}</p>
+                </div>
+                {GoToIcon}
               </div>
-              {GoToIcon}
             </div>
-          </div>
-        </Link>
-        {/* item */}
-        <Link
-          href="/pochitat"
-          className="group/item cursor-pointer flex md:h-[510px] h-96 rounded-[40px] border-solid border-2 p-[40px] color-white bg-cover bg-[url('/bibliotekaNavigation/2.png')]"
-        >
-          <div className="flex-col justify-start">
-            <div className="flex justify-between items-center">
-              <div className="max-w-[360px]">
-                <h3 className="h3 mb-5">Почитать</h3>
-                <p className="text2">
-                  Что нужно узнать о Рязани и области, прежде чем собраться в
-                  гости
-                </p>
-              </div>
-              {GoToIcon}
-            </div>
-          </div>
-        </Link>
-        {/* item */}
-        <Link
-          href="/poslushat"
-          className="group/item cursor-pointer flex md:h-[510px] h-96 rounded-[40px] border-solid border-2 p-[40px] color-white bg-cover bg-[url('/bibliotekaNavigation/3.png')]"
-        >
-          <div className="flex flex-col">
-            <div className="flex justify-between items-center">
-              <div className="max-w-[360px]">
-                <h3 className="h3 mb-5">Послушать</h3>
-                <p className="text2">
-                  Для тех, кто любит ушами: аудиогиды, подкасты и личные истории
-                </p>
-              </div>
-              {GoToIcon}
-            </div>
-          </div>
-        </Link>
-        {/* item */}
-        <Link
-          href="/vdohnovitsiya"
-          className="group/item cursor-pointer flex md:h-[510px] h-96 rounded-[40px] border-solid border-2 p-[40px] color-white bg-cover bg-[url('/bibliotekaNavigation/4.png')]"
-        >
-          <div className="flex flex-col justify-end">
-            <div className="flex justify-between items-center">
-              <div className="max-w-[360px]">
-                <h3 className="h3 mb-5">Вдохновиться</h3>
-                <p className="text2">
-                  Эти снимки могли стать еще лучше, если бы на них оказались вы
-                </p>
-              </div>
-              {GoToIcon}
-            </div>
-          </div>
-        </Link>
+          </Link>
+        ))}
       </div>
     </section>
   );

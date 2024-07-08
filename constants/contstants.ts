@@ -142,6 +142,33 @@ export const mainNavigation = [
   },
 ];
 
+export const bibliotekaNavigation = [
+  {
+    imgUrl: "/bibliotekaNavigation/1.png",
+    title: "Посмотреть",
+    desc: "В Рязань любят приезжать блогеры и журналисты. Смотрите, зачем",
+    path: "/posmotret",
+  },
+  {
+    imgUrl: "/bibliotekaNavigation/2.png",
+    title: "Почитать",
+    desc: "Что нужно узнать о Рязани и области, прежде чем собраться в гости",
+    path: "/pochitat",
+  },
+  {
+    imgUrl: "/bibliotekaNavigation/3.png",
+    title: "Послушать",
+    desc: "Для тех, кто любит ушами: аудиогиды, подкасты и личные истории",
+    path: "/poslushat",
+  },
+  {
+    imgUrl: "/bibliotekaNavigation/4.png",
+    title: "Вдохновиться",
+    desc: "Эти снимки могли стать еще лучше, если бы на них оказались вы",
+    path: "/vdohnovitsiya",
+  },
+]
+
 export const heroMap = [
   {
     title: "История",
