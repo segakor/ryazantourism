@@ -54,34 +54,54 @@ export const headerMenu = [
       { label: "Визит центр для туристов", path: "/ty-s-mestnym/cit" },
       { label: "Ответы на вопросы", path: "/ty-s-mestnym/otvety-na-voprosy" },
       { label: "Ваши отзывы", path: "/ty-s-mestnym/obratnaya-svyaz" },
-      { label: "Мобильное приложение", path: "/ty-s-mestnym/mobilnoe-prilozhenie" },
+      {
+        label: "Мобильное приложение",
+        path: "/ty-s-mestnym/mobilnoe-prilozhenie",
+      },
     ],
   },
   {
     item: "Маршруты",
     subItem: [
-      { label: "Организованные машруты", path: "/marshruty/organizovannye-marshruty" },
-      { label: "Самостоятельные машруты", path: "/marshruty/samostoyatelnye-marshruty" },
+      {
+        label: "Организованные машруты",
+        path: "/marshruty/organizovannye-marshruty",
+      },
+      {
+        label: "Самостоятельные машруты",
+        path: "/marshruty/samostoyatelnye-marshruty",
+      },
     ],
   },
   {
     item: "Профессионалам",
     subItem: [
-      { label: "Агенство развития туризма", path: "/professionalam/agentstvo-razvitiya-turizma" },
+      {
+        label: "Агенство развития туризма",
+        path: "/professionalam/agentstvo-razvitiya-turizma",
+      },
       /* { label: "Проекты", path: "/professionalam/proekty" }, */
       { label: "База знаний", path: "/professionalam/baza-znanij" },
-      { label: "Реестр туроператоров", path: "/professionalam/reestr-turoperatorov" },
+      {
+        label: "Реестр туроператоров",
+        path: "/professionalam/reestr-turoperatorov",
+      },
       { label: "Новости арт", path: "/professionalam/novosti-art" },
     ],
   },
   {
     item: "Проекты",
     subItem: [
-      { label: "Промтуризм", path: "/professionalam/agentstvo-razvitiya-turizma" },
-      { label: "Автотуризм", path: "/professionalam/agentstvo-razvitiya-turizma" },
+      {
+        label: "Промтуризм",
+        path: "/professionalam/agentstvo-razvitiya-turizma",
+      },
+      {
+        label: "Автотуризм",
+        path: "/professionalam/agentstvo-razvitiya-turizma",
+      },
       { label: "Библиотека", path: "/biblioteka" },
       { label: "Школа", path: "/professionalam/agentstvo-razvitiya-turizma" },
-    
     ],
     path: "/galereya",
   },
@@ -144,30 +164,34 @@ export const mainNavigation = [
 
 export const bibliotekaNavigation = [
   {
+    id: "posmotret",
     imgUrl: "/bibliotekaNavigation/1.png",
     title: "Посмотреть",
     desc: "В Рязань любят приезжать блогеры и журналисты. Смотрите, зачем",
     path: "/posmotret",
   },
   {
+    id: "pochitat",
     imgUrl: "/bibliotekaNavigation/2.png",
     title: "Почитать",
     desc: "Что нужно узнать о Рязани и области, прежде чем собраться в гости",
     path: "/pochitat",
   },
   {
+    id: "poslushat",
     imgUrl: "/bibliotekaNavigation/3.png",
     title: "Послушать",
     desc: "Для тех, кто любит ушами: аудиогиды, подкасты и личные истории",
     path: "/poslushat",
   },
   {
+    id: "vdohnovitsiya",
     imgUrl: "/bibliotekaNavigation/4.png",
     title: "Вдохновиться",
     desc: "Эти снимки могли стать еще лучше, если бы на них оказались вы",
     path: "/vdohnovitsiya",
   },
-]
+];
 
 export const heroMap = [
   {
@@ -252,4 +276,4 @@ export const tabsSinglyRoutes = [
   { label: "Все", id: "all" },
   { label: "Пеший", id: "Пеший" },
   { label: "Автомобильный", id: "Автомобильный" },
-]
+];

@@ -2,12 +2,20 @@
 const nextConfig = {
   // ...
   images: {
-    remotePatterns: [{
-      protocol: 'https',
-      hostname: 'api.tr.plenexy.digital',
-      port: '',
-      pathname: '**'
-    }]
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.tr.plenexy.digital",
+        port: "",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "i.ibb.co",
+        port: "",
+        pathname: "**",
+      },
+    ],
   },
   // ...
 };

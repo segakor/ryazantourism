@@ -96,3 +96,41 @@ export type TSinglyRoutesDetails = {
 export type ResponseSinglyRoutes = { data: TSinglyRoutes[] };
 
 export type ResponseSinglyRoutesDetails = TSinglyRoutesDetails;
+
+export type TBibliotekaNavigation = {
+  id: string;
+  imgUrl: string;
+  title: string;
+  desc: string;
+  path: string;
+};
+
+export type TPosmotretCard = {
+  title: string;
+  desc: string;
+  prolongation: number;
+  date: string;
+  imgUrl: string;
+  linkName: string;
+  link: string;
+};
+
+export type TPoslushatCard = {
+  title: string;
+  desc: string;
+  prolongation: number;
+  date: string;
+  imgUrl: string;
+  linkIzi?: string;
+  linkYa?: string;
+};
+
+export type TPochitatCard = {
+  title: string;
+  desc: string;
+  imgUrl: string;
+  linkLitres?: string;
+  linkOzon?: string;
+  tag?: string[];
+  fileUrl?: string;
+};

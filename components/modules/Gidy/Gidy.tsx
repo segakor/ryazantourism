@@ -30,7 +30,7 @@ export const Gid = ({ item }: { item: TGid }) => {
         <img
           className="gid_image"
           src={"https://i.ibb.co/LR6FL3t/image.png"}
-          alt=""
+          alt="gid_image"
         />
         <div className="gid_item_inner">
           <div className="gid_item_header">
