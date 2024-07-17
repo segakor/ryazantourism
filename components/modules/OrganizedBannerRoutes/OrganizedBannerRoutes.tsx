@@ -30,15 +30,6 @@ const cards = [
 ];
 
 export const OrganizedBannerRoutes = () => {
-  /* const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const onModalOpen = () => {
-    setIsModalOpen(true);
-  };
-
-  const onModalClose = () => {
-    setIsModalOpen(false);
-  }; */
 
   const { isOpen, onOpenChange } = useDisclosure();
 

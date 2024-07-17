@@ -134,3 +134,10 @@ export type TPochitatCard = {
   tag?: string[];
   fileUrl?: string;
 };
+
+export type TNewsArt = {
+  id:number;
+  title:string;
+  desc:string;
+  imgUrl:string;
+}
