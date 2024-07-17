@@ -6,8 +6,8 @@ import { TagList, TArchCard } from "@/types/types";
 
 
 const Card = ({ item }: { item: TArchCard }) => {
-  
-  const tags = item.tags.map((item) => item.id) as TagList[];
+
+  const tags = item.tags?.map((item) => item.id) as TagList[];
 
   return (
     <div className="arch_card_item">
