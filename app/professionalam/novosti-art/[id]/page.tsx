@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = news.find((item) => item.id === Number(id));
 
   return {
-    title: `Новости АРТ - ${data?.title}`,
+    title: `${data?.title} - Всё о туризме в Рязани и Рязанской области`,
   };
 }
 

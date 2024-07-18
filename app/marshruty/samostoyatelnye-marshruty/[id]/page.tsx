@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const data = await getSinglyRoutesDetails(id);
 
   return {
-    title: `Самостоятельные маршруты - ${data.title}`,
+    title: `${data.title} - Всё о туризме в Рязани и Рязанской области`,
   };
 }
 

@@ -35,7 +35,7 @@ export const Tabs = ({
     onChange(id);
   };
   return (
-    <div className={`tabs ${isOtvety && "tabs_otvety"}`}>
+    <div className={`tabs ${isOtvety && "tabs_otvety"} no-scrollbar`}>
       {tabs.map((item, index) => (
         <Tab
           {...item}

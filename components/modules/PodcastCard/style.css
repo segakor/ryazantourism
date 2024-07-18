@@ -9,10 +9,6 @@
   }
 }
 
-.podcast_card_group::-webkit-scrollbar {
-  display: none;
-}
-
 .podcast_card_item {
   background-color: #f2f2f2;
   display: -webkit-box;

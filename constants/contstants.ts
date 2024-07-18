@@ -80,7 +80,6 @@ export const headerMenu = [
         label: "Агенство развития туризма",
         path: "/professionalam/agentstvo-razvitiya-turizma",
       },
-      /* { label: "Проекты", path: "/professionalam/proekty" }, */
       { label: "База знаний", path: "/professionalam/baza-znanij" },
       {
         label: "Реестр туроператоров",
@@ -92,23 +91,17 @@ export const headerMenu = [
   {
     item: "Проекты",
     subItem: [
-      {
+     /*  {
         label: "Промтуризм",
         path: "/professionalam/agentstvo-razvitiya-turizma",
       },
       {
         label: "Автотуризм",
         path: "/professionalam/agentstvo-razvitiya-turizma",
-      },
+      }, */
       { label: "Библиотека", path: "/biblioteka" },
-      { label: "Школа", path: "/professionalam/agentstvo-razvitiya-turizma" },
+      /* { label: "Школа", path: "/professionalam/agentstvo-razvitiya-turizma" }, */
     ],
-    path: "/galereya",
-  },
-  {
-    item: "Новости",
-    subItem: [],
-    path: "/galereya",
   },
   {
     item: "Контакты",

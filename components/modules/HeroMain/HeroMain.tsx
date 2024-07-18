@@ -17,7 +17,7 @@ export const HeroMain = () => {
   return (
     <div className="swiper_wrapper">
       <Swiper
-        speed={1500}
+        speed={1000}
         autoplay={{
           delay: 3000,
         }}
@@ -37,7 +37,7 @@ export const HeroMain = () => {
               <img className="hero_image" src={item.imgUrl} alt="Фон" />
               <div className="hero_inner">
                 <div className="hero_inner_body">
-                  <div className="h3">{item.title}</div>
+                  <div className="md:text-6xl text-5xl">{item.title}</div>
                   <p>{item.desc}</p>
                   <div className="hero_button">
                     <LinkButton href={item.link} target="_self">

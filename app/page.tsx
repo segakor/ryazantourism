@@ -15,10 +15,10 @@ export default async function Home() {
   return (
     <main>
       <HeroMain />
-      <div className="home_page">
+      <div className="grid_layout">
         <MainNavigation />
         <MainBannerRoutes />
-        <News />
+        <News type="city" />
       </div>
     </main>
   );

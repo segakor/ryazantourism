@@ -5,10 +5,6 @@
   overflow-x: auto;
 }
 
-.tabs::-webkit-scrollbar {
-  display: none;
-}
-
 .tab {
   transition: all ease 0.4s;
   background-color: var(--color-partner-card-grey);

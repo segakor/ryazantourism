@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export const MainNavigation = () => {
   return (
-    <section className="grid_layout">
+    <div className="grid md:gap-20 gap-10 md:mt-20 mt-10">
       <div className="navigation_header">
         <h2 className="h2">Спланировать путешествие</h2>
         <p className="text2">
@@ -32,6 +32,6 @@ export const MainNavigation = () => {
           </Link>
         ))}
       </div>
-    </section>
+    </div>
   );
 };

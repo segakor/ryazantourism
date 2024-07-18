@@ -4,7 +4,9 @@ import { TDocument } from "@/types/types";
 const Body = ({ data }: { data: TDocument[] }) => {
   return (
     <section className="grid_layout">
-      <Documents data={data} />
+      <div className="pt-[11.25rem]">
+        <Documents data={data} />
+      </div>
     </section>
   );
 };

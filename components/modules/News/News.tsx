@@ -3,16 +3,25 @@
 import LinkButton from "@/components/elements/Button/LinkButton";
 import "./style.css";
 
-export const News = () => {
+type Props = {
+  type: "city" | "art";
+};
+
+export const News = ({ type }: Props) => {
+  const title = type === "city" ? "Рязани и Рязанской области" : "туризме";
+
   return (
-    <section className="grid_layout">
+    <div
+      className={`grid md:gap-20 gap-10  ${type === "art" && "md:max-w-[82.5rem] md:m-auto"}`}
+    >
       <div className="news_header">
-        <div className="h2">
-          {"Актуальная информация о происходящем в городе"}
-        </div>
+        <h2 className="h2">
+          Актуальная информация <br></br> о происходящем в {title}
+        </h2>
         <div>
-          <LinkButton isBlackHover>Все новости</LinkButton>
-          {/* <Button label="Все новости" onClick={() => console.log("allNews")} isBlackHover/> */}
+          <LinkButton isBlackHover href="">
+            Все новости
+          </LinkButton>
         </div>
       </div>
       <div className="news_group">
@@ -29,7 +38,8 @@ export const News = () => {
         </div>
         <div className="news_card">
           <div className="h6 news_card_title">
-          В Рязани открылся новый отдел Рязанского историко-архитектурного музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
+            В Рязани открылся новый отдел Рязанского историко-архитектурного
+            музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
           </div>
           <img className="news_card_arrows" src={"/news/arrows.svg"} alt="" />
           <div className="news_card_date">
@@ -39,7 +49,8 @@ export const News = () => {
         </div>
         <div className="news_card">
           <div className="h6 news_card_title">
-          В Рязани открылся новый отдел Рязанского историко-архитектурного музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
+            В Рязани открылся новый отдел Рязанского историко-архитектурного
+            музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
           </div>
           <img className="news_card_arrows" src={"/news/arrows.svg"} alt="" />
           <div className="news_card_date">
@@ -49,7 +60,8 @@ export const News = () => {
         </div>
         <div className="news_card">
           <div className="h6 news_card_title">
-          В Рязани открылся новый отдел Рязанского историко-архитектурного музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
+            В Рязани открылся новый отдел Рязанского историко-архитектурного
+            музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
           </div>
           <img className="news_card_arrows" src={"/news/arrows.svg"} alt="" />
           <div className="news_card_date">
@@ -68,6 +80,6 @@ export const News = () => {
           </clipPath>
         </defs>
       </svg>
-    </section>
+    </div>
   );
 };
