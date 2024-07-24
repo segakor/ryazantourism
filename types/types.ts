@@ -3,6 +3,7 @@ export enum ELEMENT_TYPE {
   FACT_BLOCK = "FACT_BLOCK",
   QUOTE_BLOCK = "QUOTE_BLOCK",
   LONG_READ_BLOCK = "LONG_READ_BLOCK",
+  NEWS_BLOCK = "NEWS_BLOCK",
 }
 
 export enum SUB_ELEMENT_TYPE {
@@ -136,8 +137,8 @@ export type TPochitatCard = {
 };
 
 export type TNewsArt = {
-  id:number;
-  title:string;
-  desc:string;
-  imgUrl:string;
-}
+  id: number;
+  title: string;
+  desc: string;
+  imgUrl: string;
+};

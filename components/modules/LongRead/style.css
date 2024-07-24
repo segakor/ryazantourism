@@ -6,9 +6,7 @@
 .longread_body {
   display: grid;
   gap: 40px;
-  width: 80%;
   position: relative;
-  margin-top: -7.5rem;
   z-index: 2;
   @media (max-width: 880px) {
     width: 100%;

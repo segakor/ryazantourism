@@ -141,8 +141,8 @@ const icons = {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M0 6.85831C0 3.61134 2.71333 0.986938 5.99539 0.986938C9.28669 0.986938 12 3.61134 12 6.85831C12 8.4945 11.405 10.0135 10.4256 11.301C9.34506 12.7212 8.0133 13.9586 6.51428 14.9299C6.1712 15.1543 5.86157 15.1713 5.48503 14.9299C3.97747 13.9586 2.64571 12.7212 1.57447 11.301C0.594343 10.0135 0 8.4945 0 6.85831ZM4.01953 7.04108C4.01953 8.12882 4.90713 8.98433 5.99545 8.98433C7.08449 8.98433 7.98063 8.12882 7.98063 7.04108C7.98063 5.96182 7.08449 5.06467 5.99545 5.06467C4.90713 5.06467 4.01953 5.96182 4.01953 7.04108Z"
         fill="white"
       />
@@ -183,7 +183,7 @@ const icons = {
           stroke="#FF0F00"
           stroke-width="2"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         ></path>
         <path
           d="M5.12197 30.1409C3.17861 31.9447 3.40621 34.8778 5.60387 36.3567C12.0616 40.7024 24.382 47.4482 38.3953 47.327C52.4086 47.2059 64.6105 40.248 70.9921 35.7914C73.1639 34.2747 73.3407 31.338 71.3665 29.5681C65.0401 23.8966 52.4365 14.5953 38.1134 14.7191C23.7902 14.843 11.3493 24.3608 5.12197 30.1409Z"
@@ -191,7 +191,7 @@ const icons = {
           stroke="#FF0F00"
           stroke-width="2"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         ></path>
         <path
           d="M6.22878 30.3191C3.84091 31.9508 3.8689 35.1888 6.28463 36.7789C12.9082 41.1388 24.8642 47.4432 38.3974 47.3261C51.9306 47.2091 63.7758 40.699 70.323 36.2252C72.7109 34.5935 72.6829 31.3555 70.2671 29.7654C63.6436 25.4055 51.6875 19.1011 38.1544 19.2181C24.6212 19.3352 12.776 25.8453 6.22878 30.3191Z"
@@ -199,7 +199,7 @@ const icons = {
           stroke="#FF0F00"
           stroke-width="2"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         ></path>
         <ellipse
           cx="11.7269"
@@ -214,14 +214,14 @@ const icons = {
           stroke="#FF0F00"
           stroke-width="2"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         ></path>
         <path
           d="M17.0615 5.89282L23.7695 13.8435"
           stroke="#FF0F00"
           stroke-width="2"
           stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinejoin="round"
         ></path>
       </svg>
       <svg

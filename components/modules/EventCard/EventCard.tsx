@@ -1,8 +1,6 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import Icons from "@/components/elements/Logo/Icons";
 import "./style.css";
-import Button from "@/components/elements/Button/Button";
 import { CalendarSlide } from "@/components/elements/Calendar/CalendarSlide";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,27 +12,10 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useState } from "react";
 import { format } from "date-fns";
+import LinkButton from "@/components/elements/Button/LinkButton";
+import { eventCards } from "@/constants/pages/organizovannye-marshruty/eventCards";
 
-const cards = [
-  {
-    title: "Обзорная автобусно-пешеходная экскурсия по Рязани",
-    imgUrl:
-      "https://ryazantourism.ru/assets/cache/images/4d8a6277_resized-1-416x594-8de.jpg",
-    dates: ["2024-06-29", "2024-06-30"],
-    price: 2550,
-    days: 1,
-  },
-  {
-    title: "Обзорная экскурсия (с посещением Солотчи)",
-    imgUrl:
-      "https://ryazantourism.ru/assets/cache/images/4d8a8961_resized-416x594-ad6.jpg",
-    dates: ["2024-06-29", "2024-07-28", "2024-06-27"],
-    price: 200,
-    days: 2,
-  },
-];
-
-const eventsDates = cards.map((item) => item.dates).flat();
+const eventsDates = eventCards.map((item) => item.dates).flat();
 
 export const EventCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
@@ -43,7 +24,7 @@ export const EventCard = () => {
     setSelectedDate(e);
   };
 
-  const filterEvents = cards.filter((item) =>
+  const filterEvents = eventCards.filter((item) =>
     item.dates.includes(format(selectedDate, "yyyy-MM-dd"))
   );
 
@@ -100,7 +81,7 @@ const Card = ({
           Стоимость: {price.toLocaleString()} руб./чел.
         </p>
       </div>
-      <Button label="Перейти" onClick={() => alert("das")} />
+      <LinkButton href="">Перейти</LinkButton>
     </div>
   );
 };

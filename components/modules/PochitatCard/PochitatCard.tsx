@@ -41,7 +41,7 @@ const PochitatCardItem = (props: TPochitatCard) => {
                     stroke="white"
                     stroke-width="1.5"
                     stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 {item}

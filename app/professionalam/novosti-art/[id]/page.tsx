@@ -26,16 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const Page = async ({ params }: Props) => {
-  const data = await getSinglyRoutesDetails(params.id) as TNewsArt;
+  const data = (await getSinglyRoutesDetails(params.id)) as TNewsArt;
 
   return (
     <Suspense fallback={<Loading />}>
-      <div className="pages">
-        <HeroPage
-          imgUrl={data?.imgUrl || "/heroPages/ty-s-mestnym/cit.jpg"}
-          title={data?.title || ""}
-          desc=""
-        />
+      <div className="pages md:pt-48 pt-36">
         <Body data={data} />
       </div>
     </Suspense>

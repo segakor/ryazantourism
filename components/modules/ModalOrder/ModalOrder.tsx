@@ -4,6 +4,7 @@ import "./style.css";
 import { eachDayOfInterval, endOfMonth, format, parse } from "date-fns";
 import Button from "@/components/elements/Button/Button";
 import { ru } from "date-fns/locale";
+import { sendMail } from "@/service/mailSender";
 
 export const ModalOrder = () => {
   const [formValue, setFormValue] = useState({
@@ -36,6 +37,15 @@ export const ModalOrder = () => {
   })
     .filter((item) => item.getDay() === 6)
     .filter((item) => item > new Date());
+
+
+  const sendEmail = async () => {
+    try {
+      await fetch("/api/emails", { method: "POST"});
+    } catch (error) {
+      alert("Не удалось отправить сообщение");
+    }
+  };
 
   return (
     <div className="modal_order">
@@ -112,7 +122,7 @@ export const ModalOrder = () => {
           <Button
             label="Записаться на экскурсию"
             isBlackHover
-            onClick={() => alert(JSON.stringify(formValue))}
+            onClick={sendEmail}
           />
         </div>
       </div>

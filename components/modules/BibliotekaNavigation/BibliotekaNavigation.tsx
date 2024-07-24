@@ -9,7 +9,7 @@ export const BibliotekaNavigation = () => {
           <Link
             key={index}
             href={item.path}
-            className="group/item cursor-pointer flex md:h-[510px] h-96 rounded-[40px] p-[40px] color-white bg-cover"
+            className="group/item cursor-pointer flex md:h-[510px] h-96 rounded-[40px] p-[40px] color-white bg-cover shadow-lg"
             style={{ backgroundImage: `url(${item.imgUrl})` }}
           >
             <div
@@ -63,7 +63,7 @@ export const BibliotekaNavigationFlat = ({
             <Link
               key={index}
               href={item.path}
-              className="group/item cursor-pointer flex h-96 rounded-[40px] p-[40px] color-white bg-cover"
+              className="group/item cursor-pointer flex h-96 rounded-[40px] p-[40px] color-white bg-cover shadow-lg"
               style={{ backgroundImage: `url(${item.imgUrl})` }}
             >
               <div className={`flex flex-col justify-between`}>

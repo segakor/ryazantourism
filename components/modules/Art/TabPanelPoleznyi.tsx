@@ -75,37 +75,37 @@ const svgArrows = (
   >
     <g clip-path="url(#clip0_428_18104)">
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M11 0L9.4215 1.53237L17.7892 9.9H0V12.1H17.7892L9.4446 20.4445L11 22C15.0271 17.9729 18.1456 14.8544 22 11L11 0Z"
         fill=""
       ></path>
     </g>
     <g clip-path="url(#clip1_428_18104)">
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M47 0L45.4215 1.53237L53.7892 9.9H36V12.1H53.7892L45.4446 20.4445L47 22C51.0271 17.9729 54.1456 14.8544 58 11L47 0Z"
         fill=""
-        fill-opacity="0.5"
+        fillOpacity="0.5"
       ></path>
     </g>
     <g clip-path="url(#clip2_428_18104)">
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M83 0L81.4215 1.53237L89.7892 9.9H72V12.1H89.7892L81.4446 20.4445L83 22C87.0271 17.9729 90.1456 14.8544 94 11L83 0Z"
         fill=""
-        fill-opacity="0.2"
+        fillOpacity="0.2"
       ></path>
     </g>
     <g clip-path="url(#clip3_428_18104)">
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M119 0L117.422 1.53237L125.789 9.9H108V12.1H125.789L117.445 20.4445L119 22C123.027 17.9729 126.146 14.8544 130 11L119 0Z"
         fill=""
-        fill-opacity="0.1"
+        fillOpacity="0.1"
       ></path>
     </g>
     <defs>

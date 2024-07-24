@@ -1,9 +1,11 @@
-const Layout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div>
-      {children}
-    </div>
-  );
+const Layout = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return <div className={className}>{children}</div>;
 };
 
 export default Layout;

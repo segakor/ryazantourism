@@ -69,6 +69,7 @@ svg circle {
 .pages {
   background-color: var(--color-longread-grey);
   padding-bottom: 160px;
+  height: 100%;
 }
 
 :root {

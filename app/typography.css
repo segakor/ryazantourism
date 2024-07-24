@@ -17,6 +17,7 @@
   text-decoration: none;
   text-transform: none;
   white-space: pre-line;
+  line-height: 120%;
   @media (max-width: 880px) {
     font-size: 40px;
   }
@@ -159,7 +160,7 @@
   white-space: pre-line;
 }
 .button-text {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   font-style: normal;
   line-height: 140%;
@@ -167,7 +168,7 @@
   text-transform: none;
   white-space: nowrap;
   @media (max-width: 880px) {
-    font-size: clamp(0.75rem, 0.6507936508rem + 0.4232804233vw, 1rem);
+    font-size: 14px;
   }
 }
 .loyalty-text {

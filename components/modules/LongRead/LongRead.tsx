@@ -6,6 +6,7 @@ import { LeadBlock } from "@/components/elements/LongReadBlocks/LeadBlock/LeadBl
 import { ELEMENT_TYPE, TLongReadBody } from "@/types/types";
 import { LongReadBlock } from "@/components/elements/LongReadBlocks/LongReadBlock/LongReadBlock";
 import { ReactNode } from "react";
+import { NewsBlock } from "@/components/elements/LongReadBlocks/NewsBlock/NewsBlock";
 
 const createElement = (elementType: ELEMENT_TYPE, props: any) => {
   if (elementType === ELEMENT_TYPE.FACT_BLOCK) {
@@ -20,10 +21,20 @@ const createElement = (elementType: ELEMENT_TYPE, props: any) => {
   if (elementType === ELEMENT_TYPE.LONG_READ_BLOCK) {
     return <LongReadBlock {...props} />;
   }
+  if (elementType === ELEMENT_TYPE.NEWS_BLOCK) {
+    return <NewsBlock {...props} />;
+  }
   return null;
 };
 
-export const LongRead = ({ body, children }: { body: TLongReadBody[], children?:ReactNode }) => {
+type Props = {
+  body: TLongReadBody[];
+  children?: ReactNode;
+  noMargin?: boolean;
+  noSidebar?: boolean;
+};
+
+export const LongRead = ({ body, children, noMargin, noSidebar }: Props) => {
   const scrollIntoView = (elementId?: string) => {
     //@ts-ignore
     document
@@ -38,7 +49,11 @@ export const LongRead = ({ body, children }: { body: TLongReadBody[], children?:
   return (
     <section className="grid_layout">
       <div className="logread_wrapper">
-        <div className="longread_body">
+        <div
+          className={`longread_body ${noMargin ? "mt-auto" : "mt-[-7.5rem]"} ${
+            noSidebar ? "w-full" : "md:w-[80%] w-full"
+          }`}
+        >
           {body?.map((item, index) => (
             <div key={index}>
               {createElement(item.element as ELEMENT_TYPE, item)}
@@ -46,7 +61,7 @@ export const LongRead = ({ body, children }: { body: TLongReadBody[], children?:
           ))}
           {children}
         </div>
-        <div className="longread_sidebar">
+        {!noSidebar && <div className="longread_sidebar">
           <div className="longread_sidebar_body">
             {!!sideBarItem.length && <div className="h4">Разделы</div>}
             <>
@@ -61,7 +76,7 @@ export const LongRead = ({ body, children }: { body: TLongReadBody[], children?:
               ))}
             </>
           </div>
-        </div>
+        </div>}
       </div>
     </section>
   );
