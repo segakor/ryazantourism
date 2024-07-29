@@ -31,7 +31,7 @@ export const EventMainCard = () => {
   return (
     <div className="grid md:gap-20 gap-10">
       <div className="h2">Календарь событий</div>
-      <div className="wrapper_event min-h-full">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px] min-h-full">
         <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
         <div className="swiper_wrapper_event">
           {!!filterEvents.length ? (

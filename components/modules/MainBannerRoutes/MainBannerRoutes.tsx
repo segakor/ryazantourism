@@ -14,7 +14,7 @@ export const MainBannerRoutes = () => {
           Исследуйте Рязань самостоятельно или с опытными экскурсоводами
         </div>
       </div>
-      <div className="banner_routes_body">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px]">
         <div className="banner_routes_card_first">
           <h3 className="h3">Самостоятельные маршруты</h3>
           <p className="text2">

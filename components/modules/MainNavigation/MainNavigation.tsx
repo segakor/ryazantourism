@@ -14,9 +14,13 @@ export const MainNavigation = () => {
           Рязанью
         </p>
       </div>
-      <div className="navigation_body">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-[28px]">
         {mainNavigation.map((item, index) => (
-          <Link key={index} href={item.path}>
+          <Link
+            key={index}
+            href={item.path}
+            className={`${(index === 0 || index === 3) && "md:col-span-2 col-span-1"}`}
+          >
             <div className="navigation_card">
               <img className="navigation_image" src={item.imgUrl} alt="" />
               <div className="navigation_inner">

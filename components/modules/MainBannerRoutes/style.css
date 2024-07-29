@@ -1,31 +1,40 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .banner_routes_header {
+  display: -ms-grid;
   display: grid;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   gap: 20px;
   div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 20px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
-.banner_routes_body {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-}
 .banner_routes_card_first,
 .banner_routes_card_second {
+  display: -ms-grid;
   display: grid;
   gap: 20px;
   border-radius: 14px;
   background-color: #b9fa4f;
   padding: 40px;
   position: relative;
+  -webkit-transition: all ease 0.4s;
+  -o-transition: all ease 0.4s;
   transition: all ease 0.4s;
 }
 .banner_routes_card_second {
@@ -35,7 +44,8 @@
 
 .banner_image {
   width: 100%;
-  object-fit: none;
+  -o-object-fit: none;
+     object-fit: none;
   @media (max-width: 768px) {
     display: none;
   }
@@ -45,6 +55,8 @@
   .banner_routes_card_first:hover {
     background-color: #252525;
     color: #ffff;
+    -webkit-transition: all ease 0.4s;
+    -o-transition: all ease 0.4s;
     transition: all ease 0.4s;
     .button_wrapper {
       background-color: #ffff;
@@ -54,6 +66,8 @@
   .banner_routes_card_second:hover {
     background-color: #b9fa4f;
     color: #000000;
+    -webkit-transition: all ease 0.4s;
+    -o-transition: all ease 0.4s;
     transition: all ease 0.4s;
     .button_wrapper {
       background-color: #000000;
