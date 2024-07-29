@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { ButtonDownload } from "@/components/elements/Button/ButtonDownload";
 import { ChipsService } from "@/components/elements/ChipsService/ChipsService";
+import { ImageBlock } from "@/components/elements/LongReadBlocks/ImageBlock/ImageBlock";
 import { poshitat } from "@/constants/pages/poshitat/poshitat";
 import { TPochitatCard } from "@/types/types";
 
@@ -13,17 +14,13 @@ export const PochitatCard = () => {
     </div>
   );
 };
-
+//TODO: Image сделать один на всех
 const PochitatCardItem = (props: TPochitatCard) => {
   const { imgUrl, title, desc, linkLitres, linkOzon, fileUrl, tag } = props;
   return (
     <div className="flex flex-col gap-12 bg-[#F7F7F7] rounded-[30px] p-7">
       <div className="flex flex-col gap-7 h-full">
-        <img
-          className="rounded-[40px] md:w-[348px] md:h-[348px] object-cover"
-          src={imgUrl}
-          alt="imgUrl"
-        />
+         <ImageBlock srcImg={imgUrl} full/>
         {tag?.map((item, index) => (
           <span key={index}>
             <div className="inline-block rounded-full text-white py-2 px-4 bg-[#5363F7]">

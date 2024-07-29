@@ -1,9 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
-import "./style.css";
-export const ImageBlock = ({ srcImg }: { srcImg: string }) => {
+import Image from "next/image";
+import { createShimmer } from "@/utils/shimer";
+
+export const ImageBlock = ({ srcImg, full, classNameImg }: { srcImg: string; full?: boolean, classNameImg?:string }) => {
   return (
-    <div className="image_block">
-      <img className="longread_image" src={srcImg} alt="img" />
+    <div className={`w-full relative ${full ? 'pt-[100%]' : "pt-[56%]"}`}>
+      <Image
+        src={srcImg}
+        alt="img"
+        objectFit="cover"
+        fill
+        className={`w-full h-full top-0 left-0 object-cover rounded-[30px] max-h-[437px] ${classNameImg && classNameImg}`}
+        placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
+        priority
+      />
     </div>
   );
 };

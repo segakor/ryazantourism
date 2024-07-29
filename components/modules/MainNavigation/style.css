@@ -4,19 +4,19 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 28px;
 
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 
   :nth-child(1) {
     grid-column: span 2;
-    @media (max-width: 880px) {
+    @media (max-width: 768px) {
       grid-column: span 1;
     }
   }
   :nth-child(4) {
     grid-column: span 2;
-    @media (max-width: 880px) {
+    @media (max-width: 768px) {
       grid-column: span 1;
     }
   }
@@ -52,7 +52,7 @@
   transition: transform 0.3s ease-in-out;
   filter: brightness(50%);
   position: relative !important;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     height: 350px !important;
   }
 }

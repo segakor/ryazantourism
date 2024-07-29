@@ -1,11 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 import { posmotret } from "@/constants/pages/posmotret/posmotret";
 import { TPosmotretCard } from "@/types/types";
 import Link from "next/link";
+import { ImageBlock } from "@/components/elements/LongReadBlocks/ImageBlock/ImageBlock";
 
 export const PosmotretCard = () => {
   return (
-    <div className="grid sm:gap-7 gap-10 md:grid-cols-2 grid-cols-1 my-20 md:mt-40 md:mb-20">
+    <div className="grid md:gap-7 gap-10 md:grid-cols-2 grid-cols-1 my-20 md:mt-40 md:mb-20">
       {posmotret.map((item, index) => (
         <PosmotretCardItem {...item} key={index} />
       ))}
@@ -24,7 +24,7 @@ export const PosmotretCardItem = ({
 }: TPosmotretCard) => {
   return (
     <div className="flex flex-col gap-7">
-      <img className="rounded-[40px] object-cover" src={imgUrl} alt="imgUrl"/>
+      <ImageBlock srcImg={imgUrl} />
       <div className="flex flex-col gap-2">
         <div className="library-h">{title}</div>
         <div className="text3">{desc}</div>

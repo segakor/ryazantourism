@@ -8,13 +8,13 @@
   gap: 40px;
   position: relative;
   z-index: 2;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 }
 
 .longread_sidebar {
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }

@@ -12,8 +12,11 @@
 
 .banner_routes_body {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 28px;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 }
 .banner_routes_card_first,
 .banner_routes_card_second {
@@ -33,7 +36,7 @@
 .banner_image {
   width: 100%;
   object-fit: none;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }
@@ -75,7 +78,7 @@
   width: 264px;
 }
 .quote{
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     svg{display: none;}
   }
 }

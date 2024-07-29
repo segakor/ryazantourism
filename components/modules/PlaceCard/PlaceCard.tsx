@@ -6,6 +6,8 @@ import Icons from "@/components/elements/Logo/Icons";
 import { Tag, Tags } from "@/components/elements/Tags/Tags";
 import { TagList, TPlaceCard } from "@/types/types";
 import LinkButton from "@/components/elements/Button/LinkButton";
+import Image from "next/image";
+import { createShimmer } from "@/utils/shimer";
 
 export const PlaceCard = ({ data }: { data: TPlaceCard[] }) => {
   return (
@@ -35,7 +37,19 @@ const Card = ({ item }: { item: TPlaceCard }) => {
         <div className="place_card_item_header_tags">
           <Tags tags={tags} />
         </div>
-        <img className="place_card_image" src={item.image_path} alt="Фон" />
+        <div className="grid h-[200px] w-full">
+          <div className={`w-full relative`}>
+            <Image
+              src={item.image_path}
+              alt="img"
+              objectFit="cover"
+              fill
+              className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg  brightness-[90%]`}
+              placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
+              priority
+            />
+          </div>
+        </div>
       </div>
       <div className="place_card_item_body">
         <div className="place_card_item_body_inner">

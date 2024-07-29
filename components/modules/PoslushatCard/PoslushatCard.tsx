@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { ChipsService } from "@/components/elements/ChipsService/ChipsService";
+import { ImageBlock } from "@/components/elements/LongReadBlocks/ImageBlock/ImageBlock";
 import { poslushat } from "@/constants/pages/poslushat/poslushat";
 import { TPoslushatCard } from "@/types/types";
 
@@ -24,12 +25,10 @@ const PoslushatCardItem = ({
 }: TPoslushatCard) => {
   return (
     <div className="flex flex-col gap-12 bg-[#F7F7F7] rounded-[30px] p-7">
-      <div className="flex md:flex-row flex-col gap-7">
-        <img
-          className="rounded-[40px] md:w-[248px] md:h-[248px] object-cover"
-          src={imgUrl}
-          alt="imgUrl"
-        />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+        <div className="md:w-[248px] md:h-[248px]">
+          <ImageBlock srcImg={imgUrl} full/>
+        </div>
         <div className="flex flex-col gap-2">
           <p className="text3 text-gray-400">
             {prolongation} минут ・ {date}

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -24,7 +24,7 @@
   min-height: 15rem;
   border-radius: 1.25rem;
   padding: 2.5rem;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     flex: 0 0 100%;
     padding: 1.75rem;
   }
@@ -40,7 +40,7 @@
     font-size: 1rem;
   }
 
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     p {
       font-size: 0.75rem;
     }
@@ -83,7 +83,7 @@
   font-size: 1.5rem;
   grid-column: span 2;
   cursor: pointer;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     flex: 0 0 40%;
     font-size: clamp(0.875rem, 0.8253968254rem + 0.2116402116vw, 1rem);
   }

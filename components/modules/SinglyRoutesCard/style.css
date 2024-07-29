@@ -5,7 +5,7 @@
   background-color: white;
   padding: 20px;
   border-radius: 30px;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 }
@@ -27,7 +27,7 @@
     height: 150px !important;
     border-radius: 10px;
   }
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 }

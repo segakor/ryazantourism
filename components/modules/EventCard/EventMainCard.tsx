@@ -12,26 +12,26 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useState } from "react";
 import { format } from "date-fns";
+import { sobytiyaCards } from "@/constants/pages/sobytiaya/sobytiya";
 import Link from "next/link";
-import { eventCards } from "@/constants/pages/organizovannye-marshruty/eventCards";
 
-const eventsDates = eventCards.map((item) => item.dates).flat();
+const eventsDates = sobytiyaCards.map((item) => item.dates).flat();
 
-export const EventCard = () => {
+export const EventMainCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
 
   const onChangeDate = (e: Date) => {
     setSelectedDate(e);
   };
 
-  const filterEvents = eventCards.filter((item) =>
+  const filterEvents = sobytiyaCards.filter((item) =>
     item.dates.includes(format(selectedDate, "yyyy-MM-dd"))
   );
 
   return (
-    <div>
-      <div className="h3 title">Туры от туроператоров</div>
-      <div className="wrapper_event">
+    <div className="grid md:gap-20 gap-10">
+      <div className="h2">Календарь событий</div>
+      <div className="wrapper_event min-h-full">
         <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
         <div className="swiper_wrapper_event">
           {!!filterEvents.length ? (
@@ -66,14 +66,10 @@ const Card = ({
   title,
   imgUrl,
   dates,
-  price,
-  days,
 }: {
   title: string;
   imgUrl: string;
   dates: string[];
-  price: number;
-  days: number;
 }) => {
   return (
     <div
@@ -83,12 +79,12 @@ const Card = ({
       }}
     >
       <div className="h5">{title}</div>
-       <div>
+      {/*  <div>
         <p className="event_card_item_decs">Продолжительность: {days} д.</p>
         <p className="event_card_item_decs">
           Стоимость: {price.toLocaleString()} руб./чел.
         </p>
-      </div>
+      </div> */}
       <Link href={""} target="_blank">
         <div
           className="group/item bg-[var(--color-white)] hover:bg-[var(--color-green)] text-black

@@ -6,7 +6,7 @@
     text-align: center;
     color: var(--color-grey);
   }
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -24,13 +24,13 @@
   text-align: center;
   color: #252525;
   font-size: 1.5rem;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     font-size: clamp(0.75rem, 0.4523809524rem + 1.2698412698vw, 1.5rem);
   }
 }
 
 .singly_routes_info_decor {
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     display: none;
   }
 }

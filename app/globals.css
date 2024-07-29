@@ -61,7 +61,7 @@ svg circle {
   display: grid;
   gap: 80px;
   padding: 0 10px;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     gap: 40px;
   }
 }
@@ -136,7 +136,7 @@ svg circle {
   flex-wrap: nowrap;
   overflow-x: auto;
   padding: 80px 0 60px 0;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     padding: 0;
     margin-top: 20px;
   }

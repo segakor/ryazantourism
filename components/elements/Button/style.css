@@ -16,7 +16,7 @@ button:focus {
   .text4 {
     text-transform: uppercase;
   }
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     padding: 20px;
   }
 }

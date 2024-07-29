@@ -74,13 +74,13 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
     eventDates?.map((item) => isEqual(startOfDay(item), day)).includes(true);
 
   return (
-    <div className="w-auto rounded-3xl p-6 sm:p-10 border-solid bg-[#7f6cfa]">
-      {currentDay.toDateString()}
+    <div className="w-auto rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa] md:h-[584px]">
+      {/* {currentDay.toDateString()} */}
       <div className="flex items-center justify-between">
         <p className="h4 text-xl text-white">
           {format(firstDayOfMonth, "LLLL yyyy", { locale: ru })}
         </p>
-        <div className="flex items-center justify-evenly gap-6 sm:gap-12">
+        <div className="flex items-center justify-evenly gap-6 md:gap-12">
           <button
             aria-label="calendar backward"
             className="hover:text-gray-400 text-gray-800 dark:text-gray-100 text-white"
@@ -125,8 +125,8 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
           </button>
         </div>
       </div>
-      <hr className="my-4 sm:my-6" />
-      <div className="grid grid-cols-7 gap-6 sm:gap-12 place-items-center">
+      <hr className="my-4 md:my-6" />
+      <div className="grid grid-cols-7 gap-6 md:gap-12 place-items-center">
         {days.map((day, idx) => {
           return (
             <div
@@ -140,15 +140,16 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
           );
         })}
       </div>
-      <div className="grid grid-cols-7 gap-2 sm:gap-6 mt-8 place-items-center">
+      <div className="grid grid-cols-7 gap-2 md:gap-6 mt-8 place-items-center">
         {daysInMonth.map((day: any, idx) => {
           return (
             <div
               key={idx}
               className={colStartClasses[getDay(day - 1)]}
-              onClick={() => {
+              /* onClick={() => {
                 isEventDay(day) && onClickDay(day);
-              }}
+              }} */
+              onClick={() => onClickDay(day)}
             >
               <p
                 className={`w-[40px] h-[40px] 

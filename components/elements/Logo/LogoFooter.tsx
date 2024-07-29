@@ -5,7 +5,7 @@ const LogoFooter = () => (
   <Link className="logo" href="/">
     <Image
       src="/logoFooter.svg"
-      alt="Логотип компании"
+      alt="logo"
       width={69}
       height={58}
       priority

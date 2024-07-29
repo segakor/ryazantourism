@@ -5,7 +5,7 @@
   .button_wrapper {
     width: 283px;
   }
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     gap: 16px;
     align-items: baseline;
@@ -17,7 +17,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   /* grid-template-columns: repeat(auto-fit, minmax(291px, 1fr)); */
   gap: 24px;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     overflow-x: scroll;
     overflow-y: hidden;
   }

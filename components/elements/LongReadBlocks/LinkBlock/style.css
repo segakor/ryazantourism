@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-between;
   gap: 60px;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     gap: 20px;
   }
@@ -25,7 +25,7 @@
     height: 98px !important;
     border-radius: 10px;
   }
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
 }

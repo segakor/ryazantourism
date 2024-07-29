@@ -14,7 +14,7 @@
   border-radius: 500px;
   padding: 1.25rem 2.5rem;
   white-space: nowrap;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     padding: clamp(1rem, 0.9007936508rem + 0.4232804233vw, 1.25rem)
       clamp(1.5rem, 1.1031746032rem + 1.6931216931vw, 2.5rem);
   }

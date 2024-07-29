@@ -6,7 +6,7 @@
   text-decoration: none;
   text-transform: none;
   white-space: pre-line;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     font-size: 2.25rem;
   }
 }
@@ -18,7 +18,7 @@
   text-transform: none;
   white-space: pre-line;
   line-height: 120%;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     font-size: 40px;
   }
 }
@@ -31,7 +31,7 @@
   text-decoration: none;
   text-transform: none;
   white-space: pre-line;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     font-size: 30px;
   }
 }
@@ -43,7 +43,7 @@
   text-decoration: none;
   text-transform: none;
   white-space: pre-line;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     font-size: clamp(1.25rem, 0.6795634921rem + 2.4338624339vw, 2.6875rem);
   }
 }
@@ -64,7 +64,7 @@
   text-decoration: none;
   text-transform: none;
   white-space: pre-line;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     font-size: clamp(1.125rem, 0.876984127rem + 1.0582010582vw, 1.75rem);
   }
 }
@@ -167,7 +167,7 @@
   text-decoration: none;
   text-transform: none;
   white-space: nowrap;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     font-size: 14px;
   }
 }

@@ -1,3 +1,4 @@
+import { EventMainCard } from "@/components/modules/EventCard/EventMainCard";
 import { HeroMain } from "@/components/modules/HeroMain";
 import { MainBannerRoutes } from "@/components/modules/MainBannerRoutes";
 import { MainNavigation } from "@/components/modules/MainNavigation";
@@ -18,6 +19,7 @@ export default async function Home() {
       <div className="grid_layout">
         <MainNavigation />
         <MainBannerRoutes />
+        <EventMainCard />
         <News type="city" />
       </div>
     </main>

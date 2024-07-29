@@ -3,7 +3,7 @@
   background-color: #5363f7;
   border-radius: 30px;
   color: #ffff;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     padding: 30px;
     .image {
       display: none;

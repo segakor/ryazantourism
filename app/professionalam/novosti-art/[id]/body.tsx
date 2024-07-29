@@ -4,7 +4,7 @@ import { TLongReadBody, TNewsArt } from "@/types/types";
 const Body = ({ data }: { data: TNewsArt }) => {
   const templates = [
     {
-      element: "NEWS_BLOCK",
+      element: "SINGLE_BLOCK",
       desc: data.desc,
       srcImg: data.imgUrl,
       title: data.title,

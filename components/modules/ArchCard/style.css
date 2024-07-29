@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 28px;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
   margin-bottom: 160px;
@@ -27,7 +27,7 @@
   transition: transform 0.3s ease-in-out;
   filter: brightness(60%);
   position: relative !important;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     height: 350px !important;
   }
 }

@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   gap: 1.875rem;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 }
 
 .routes_info {
   flex: 0 1 20rem;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     flex: 1rem;
   }
   .h3 {
@@ -23,7 +23,7 @@
   grid-template-columns: 390px 390px;
   justify-content: center;
   gap: 1.25rem;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -51,7 +51,7 @@
     line-height: 143%;
     color: rgba(20, 20, 20, 0.5);
   }
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     width: auto;
   }
 }

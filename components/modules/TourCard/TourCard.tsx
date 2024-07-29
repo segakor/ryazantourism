@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Icons from "@/components/elements/Logo/Icons";
 import "./style.css";
 import LinkButton from "@/components/elements/Button/LinkButton";
 import { data } from "@/constants/pages/marshruty/samostoyatelnye-marshruty/3dtour";

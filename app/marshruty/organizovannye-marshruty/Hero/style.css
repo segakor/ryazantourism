@@ -4,7 +4,7 @@
   background-color: #806fdf;
   border-radius: 0px 0px 100px 100px;
   overflow: hidden;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     border-radius: 0px 0px 50px 50px;
   }
 }
@@ -19,7 +19,7 @@
     max-width: 100%;
     z-index: 2;
   }
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     gap: 1rem;
   }
 }
@@ -29,7 +29,7 @@
   width: 730px;
   z-index: 2;
   margin-bottom: 3rem;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     width: auto;
   }
 }
@@ -42,7 +42,7 @@
   line-height: 156%;
   padding-left: 4.375rem;
   color: white;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     font-size: clamp(0.875rem, 0.7757936508rem + 0.4232804233vw, 1.125rem);
     padding-left: clamp(1.5625rem, 0.4464285714rem + 4.7619047619vw, 4.375rem);
     line-height: 135%;
@@ -70,7 +70,7 @@
   position: absolute;
   right: -37rem;
   z-index: 1;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     right: clamp(-37.5rem, -2.8412698413rem + -42.0105820106vw, -12.6875rem);
     top: clamp(5rem, 7.0952380952rem + -2.5396825397vw, 6.5rem);
     max-width: clamp(24.375rem, 2.0535714286rem + 95.2380952381vw, 80.625rem);

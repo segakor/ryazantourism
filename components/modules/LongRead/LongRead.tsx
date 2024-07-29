@@ -6,7 +6,7 @@ import { LeadBlock } from "@/components/elements/LongReadBlocks/LeadBlock/LeadBl
 import { ELEMENT_TYPE, TLongReadBody } from "@/types/types";
 import { LongReadBlock } from "@/components/elements/LongReadBlocks/LongReadBlock/LongReadBlock";
 import { ReactNode } from "react";
-import { NewsBlock } from "@/components/elements/LongReadBlocks/NewsBlock/NewsBlock";
+import { SingleBlock } from "@/components/elements/LongReadBlocks/SingleBlock/SingleBlock";
 
 const createElement = (elementType: ELEMENT_TYPE, props: any) => {
   if (elementType === ELEMENT_TYPE.FACT_BLOCK) {
@@ -21,8 +21,8 @@ const createElement = (elementType: ELEMENT_TYPE, props: any) => {
   if (elementType === ELEMENT_TYPE.LONG_READ_BLOCK) {
     return <LongReadBlock {...props} />;
   }
-  if (elementType === ELEMENT_TYPE.NEWS_BLOCK) {
-    return <NewsBlock {...props} />;
+  if (elementType === ELEMENT_TYPE.SINGLE_BLOCK) {
+    return <SingleBlock {...props} />;
   }
   return null;
 };

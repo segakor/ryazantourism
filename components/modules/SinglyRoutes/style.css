@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 28px;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 }
@@ -20,7 +20,7 @@
   height: 200px;
   width: 408px;
   display: flex;
-  @media (max-width: 880px) {
+  @media (max-width: 768px) {
     width: 100%;
   }
   position: relative;

@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer'
 
-export async function sendMail(subject, toEmail, otpText) {
+export async function sendMail(subject, text) {
   const transporter = nodemailer.createTransport({
     host: "smtp.yandex.ru",
     port: 465,
@@ -17,8 +17,8 @@ export async function sendMail(subject, toEmail, otpText) {
   const mailOptions = {
     from: 'mickslip2@yandex.ru',
     to: 'kornienko955@gmail.com',
-    subject: 'subject',
-    text: 'otpText',
+    subject: subject,
+    text: text,
   }
 
   await new Promise((resolve, reject) => {
