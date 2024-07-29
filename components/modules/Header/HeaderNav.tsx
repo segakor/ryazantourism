@@ -9,7 +9,11 @@ export const HeaderNav = () => {
     <nav>
       <ul className="flex gap-10">
         {headerMenu.map((item, index) => (
-          <li className="menu_item" key={index}>
+          <li
+            className="flex items-center gap-[0.3125rem] whitespace-nowrap 
+            font-medium leading-[121%] transition-all cursor-pointer group/item relative text-sm hover:text-[#96ee05]"
+            key={index}
+          >
             <span className="menu_link">
               {item.path ? (
                 <Link href={item.path}>{item.item}</Link>
@@ -18,20 +22,20 @@ export const HeaderNav = () => {
               )}
             </span>
             {!!item.subItem.length && (
-              <div className="chevron">
-                <svg
-                  width="10"
-                  height="5"
-                  viewBox="0 0 10 5"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5 5L0.669872 0.500001L9.33013 0.5L5 5Z"
-                    fill="#141414"
-                  ></path>
-                </svg>
-              </div>
+              <svg
+                width="10"
+                height="5"
+                viewBox="0 0 10 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="group-hover/item:rotate-180 transition-all "
+              >
+                <path
+                  d="M5 5L0.669872 0.500001L9.33013 0.5L5 5Z"
+                  fill="black"
+                  className="group-hover/item:fill-[#96ee05]"
+                ></path>
+              </svg>
             )}
             <HeaderMenu subItem={item.subItem} />
           </li>
@@ -57,7 +61,10 @@ export const HeaderNavMobile = () => {
       <ul className="header_nav_mobile">
         {headerMenu.map((item, index) => (
           <div key={index} className="menu_item_mobile_item">
-            <li className="menu_item_mobile"  onClick={() => onOpenSubMenu(index)}>
+            <li
+              className="menu_item_mobile"
+              onClick={() => onOpenSubMenu(index)}
+            >
               <span className="menu_link">{item.item}</span>
               {!!item.subItem.length && (
                 <div

@@ -10,7 +10,7 @@ export const HeaderMenu = ({ subItem, isAdaptive }: Props) => {
   }
 
   return (
-    <div className={!isAdaptive ? "menu hover" : "submenu_item"}>
+    <div className={!isAdaptive ? "group-hover/item:opacity-100 opacity-0 absolute bg-white shadow-2xl top-[calc(100%)] transition-all p-[1.875rem] rounded-[0.875rem] pointer-events-none cursor-default group-hover/item:pointer-events-auto" : "submenu_item"}>
       <ul>
         {subItem.map((item, index) => (
           <li className="menu_subitem" key={index}>

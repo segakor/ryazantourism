@@ -21,13 +21,17 @@ export const Header = () => {
   }, [pathname]);
 
   return (
-    <div className="fixed w-full top-[20px] left-0 right-0 bg-white 
-    z-10 md:max-w-[101.25rem] max-w-[95%] rounded-[0.75rem] mx-auto shadow-2xl">
+    <div
+      className="fixed w-full top-[20px] left-0 right-0 bg-white 
+    z-10 md:max-w-[101.25rem] max-w-[95%] rounded-[0.75rem] mx-auto shadow-2xl"
+    >
       <header className="rounded-[0.75rem]">
-        <div className="max-w-[82.5rem] mx-auto px-[1.25rem]">
+        <div className="max-w-[82.5rem] mx-auto md:px-auto px-[1.25rem]">
           <div className="flex justify-between py-[1.5625rem]">
             <div className="flex items-center gap-4">
-              <div className="md:w-auto md:h-auto w-[40px] h-[38px]"><LogoHeader /></div>
+              <div className="md:w-auto md:h-auto w-[40px] h-[38px]">
+                <LogoHeader />
+              </div>
               <p className="header_title">
                 Все о туризме в Рязани <br /> и Рязанской области
               </p>
@@ -63,7 +67,10 @@ export const Header = () => {
               <HeaderNav />
             </div>
             <button
-              className={`header-icon ${isOpenMenu && "menu-open"}`}
+              className={`rounded-full bg-[#b9fa4f] w-[2.5rem] h-[2.5rem] 
+                flex justify-center items-center z-[100] md:hidden visible ${
+                  isOpenMenu && "menu-open"
+                }`}
               onClick={onOpenMenu}
             >
               <div className="header-icon_icon">
