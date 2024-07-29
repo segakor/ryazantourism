@@ -7,7 +7,7 @@ import Link from "next/link";
 export const HeaderNav = () => {
   return (
     <nav>
-      <ul className="header_nav">
+      <ul className="flex gap-10">
         {headerMenu.map((item, index) => (
           <li className="menu_item" key={index}>
             <span className="menu_link">

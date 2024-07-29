@@ -21,21 +21,22 @@ export const Header = () => {
   }, [pathname]);
 
   return (
-    <div className="header_wrapper">
-      <header className="header">
-        <div className="header_container">
-          <div className="header_body">
-            <div className="header_left">
-              <LogoHeader />
+    <div className="fixed w-full top-[20px] left-0 right-0 bg-white 
+    z-10 md:max-w-[101.25rem] max-w-[95%] rounded-[0.75rem] mx-auto shadow-2xl">
+      <header className="rounded-[0.75rem]">
+        <div className="max-w-[82.5rem] mx-auto px-[1.25rem]">
+          <div className="flex justify-between py-[1.5625rem]">
+            <div className="flex items-center gap-4">
+              <div className="md:w-auto md:h-auto w-[40px] h-[38px]"><LogoHeader /></div>
               <p className="header_title">
                 Все о туризме в Рязани <br /> и Рязанской области
               </p>
             </div>
-            <div className="header_right">
-              <div className="header_block_wrapper">
-                <div className="header_block">
+            <div className="md:flex flex-col gap-5 md:visible hidden">
+              <div className="flex items-end justify-end gap-[3.125rem]">
+                <div className="flex items-center gap-[0.625rem]">
                   <p className="header_title">Моб. приложение</p>
-                  <div className="header_block header_icon">
+                  <div className="flex items-center gap-[0.3125rem]">
                     <a href={url.apple} target="_blank">
                       <Icons icon="apple" />
                     </a>
@@ -44,9 +45,9 @@ export const Header = () => {
                     </a>
                   </div>
                 </div>
-                <div className="header_block">
+                <div className="flex items-center gap-[0.625rem]">
                   <p className="header_title">Мы в соц. сетях</p>
-                  <div className="header_block header_icon">
+                  <div className="flex items-center gap-[0.3125rem]">
                     <a href={url.vk} target="_blank">
                       <Icons icon="vk" />
                     </a>
