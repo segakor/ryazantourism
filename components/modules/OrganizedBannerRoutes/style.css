@@ -12,9 +12,6 @@
   @media (max-width: 768px) {
     flex: 1rem;
   }
-  .h3 {
-    margin-bottom: 3.75rem;
-  }
 }
 
 .routes_banner_group {

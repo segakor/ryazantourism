@@ -3,12 +3,13 @@ import Icons from "@/components/elements/Logo/Icons";
 import "./style.css";
 import { mainNavigation } from "@/constants/contstants";
 import Link from "next/link";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 export const MainNavigation = () => {
   return (
     <div className="grid md:gap-20 gap-10 md:mt-20 mt-10">
       <div className="navigation_header">
-        <h2 className="h2">Спланировать путешествие</h2>
+        <Typography variant="h2" className="font-medium">Спланировать путешествие</Typography>
         <p className="text2">
           Собрали для вас только лучшие места, которые помогут вам насладиться
           Рязанью
@@ -19,7 +20,9 @@ export const MainNavigation = () => {
           <Link
             key={index}
             href={item.path}
-            className={`${(index === 0 || index === 3) && "md:col-span-2 col-span-1"}`}
+            className={`${
+              (index === 0 || index === 3) && "md:col-span-2 col-span-1"
+            }`}
           >
             <div className="navigation_card">
               <img className="navigation_image" src={item.imgUrl} alt="" />
@@ -28,7 +31,9 @@ export const MainNavigation = () => {
                   <Icons icon={"goTo"} />
                 </div>
                 <div className="navigation_inner_footer">
-                  <h3 className="h3">{item.title}</h3>
+                  <Typography variant="h3" className="font-medium">
+                    {item.title}
+                  </Typography>
                   <p className="text2">{item.desc}</p>
                 </div>
               </div>

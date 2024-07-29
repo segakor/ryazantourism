@@ -1,3 +1,4 @@
+import { Typography } from "@/components/elements/Typography/Typography";
 import { bibliotekaNavigation } from "@/constants/contstants";
 import Link from "next/link";
 
@@ -19,7 +20,9 @@ export const BibliotekaNavigation = () => {
             >
               <div className="flex justify-between items-center">
                 <div className="max-w-[360px]">
-                  <h3 className="h3 mb-5">{item.title}</h3>
+                  <Typography variant="h3" className="mb-5 font-medium">
+                    {item.title}
+                  </Typography>
                   <p className="text2">{item.desc}</p>
                 </div>
                 <div className="md:w-20 md:h-20 bg-white flex justify-center rounded-full items-center group-hover/item:bg-[var(--color-green)] transition-all">
@@ -56,7 +59,9 @@ export const BibliotekaNavigationFlat = ({
   );
   return (
     <div>
-      <div className="h3">Попробуйте также</div>
+      <Typography variant="h3" className="font-medium">
+        Попробуйте также
+      </Typography>
       <div>
         <div className="md:grid-cols-3 grid-cols-1 grid gap-7 color text-white mt-20 mb-40">
           {excludeBibliotekaNavigation.map((item, index) => (
@@ -69,7 +74,9 @@ export const BibliotekaNavigationFlat = ({
               <div className={`flex flex-col justify-between`}>
                 <div className="flex justify-between items-center">
                   <div className="max-w-[360px]">
-                    <h3 className="h3 mb-5">{item.title}</h3>
+                    <Typography variant="h3" className="font-medium mb-5">
+                      {item.title}
+                    </Typography>
                     <p className="text2">{item.desc}</p>
                   </div>
                 </div>

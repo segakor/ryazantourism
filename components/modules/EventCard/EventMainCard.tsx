@@ -14,6 +14,7 @@ import { useState } from "react";
 import { format } from "date-fns";
 import { sobytiyaCards } from "@/constants/pages/sobytiaya/sobytiya";
 import Link from "next/link";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 const eventsDates = sobytiyaCards.map((item) => item.dates).flat();
 
@@ -30,7 +31,7 @@ export const EventMainCard = () => {
 
   return (
     <div className="grid md:gap-20 gap-10">
-      <div className="h2">Календарь событий</div>
+      <Typography variant="h2" className="font-medium">Календарь событий</Typography>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px] min-h-full">
         <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
         <div className="swiper_wrapper_event">

@@ -5,6 +5,7 @@ import Button from "@/components/elements/Button/Button";
 import { ModalOrder as Foo } from "../ModalOrder/ModalOrder";
 import { useDisclosure } from "@nextui-org/react";
 import { Modal, ModalContent, ModalBody } from "@nextui-org/modal";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 const cards = [
   {
@@ -37,9 +38,7 @@ export const OrganizedBannerRoutes = () => {
     <div>
       <div className="routes_wrapper">
         <div className="routes_info">
-          <div className="h3">
-            Приезжай на один день или оставайся на выходные
-          </div>
+          <Typography variant="h3" className="mb-7 font-medium">Приезжай на один день или оставайся на выходные</Typography>
           <Button
             label={"Записаться на экскурсию"}
             onClick={onOpenChange}

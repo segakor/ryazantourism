@@ -5,6 +5,7 @@ import { LongReadItemBlock } from "../LongReadItemBlock/LongReadItemBlock";
 import { AddressBlock } from "../AddressBlock/AddressBlock";
 import { FactBlock } from "../FactBlock/FactBlock";
 import "./style.css";
+import { Typography } from "../../Typography/Typography";
 
 const createElement = (subElementType: SUB_ELEMENT_TYPE, props: any) => {
   if (subElementType === SUB_ELEMENT_TYPE.TEXT_BLOCK) {
@@ -34,7 +35,9 @@ export const LongReadBlock = ({
 }) => {
   return (
     <div className="longread_block">
-      <div className="h3" id={title}>{title}</div>
+      <Typography variant="h3" id={title} className="font-medium">
+        {title}
+      </Typography>
       {subElements.map((item, index) => (
         <div key={index}>
           {createElement(item.element as SUB_ELEMENT_TYPE, item)}

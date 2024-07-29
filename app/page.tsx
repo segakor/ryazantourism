@@ -20,7 +20,7 @@ export default async function Home() {
         <MainNavigation />
         <MainBannerRoutes />
         <EventMainCard />
-       {/*  <News type="city" /> */}
+        <News type="city" />
       </div>
     </main>
   );

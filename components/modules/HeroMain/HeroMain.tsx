@@ -2,16 +2,14 @@
 "use client";
 import "./style.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { heroMap } from "@/constants/contstants";
-/* import RoundButton from "@/components/elements/Button/RoundButton"; */
 import { EffectFade, Pagination, Autoplay } from "swiper/modules";
 import LinkButton from "@/components/elements/Button/LinkButton";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 export const HeroMain = () => {
   return (
@@ -37,27 +35,13 @@ export const HeroMain = () => {
               <img className="hero_image" src={item.imgUrl} alt="Фон" />
               <div className="hero_inner">
                 <div className="hero_inner_body">
-                  <div className="md:text-6xl text-5xl">{item.title}</div>
+                  <Typography variant="h1">{item.title}</Typography>
                   <p>{item.desc}</p>
                   <div className="hero_button">
                     <LinkButton href={item.link} target="_self">
                       Подробнее
                     </LinkButton>
                   </div>
-                  {/*  <div className="hero_button_action">
-                    <RoundButton
-                      type="prev"
-                      onClick={() => {
-                        sliderRef.current.slickGoTo(currentSlide - 1);
-                      }}
-                    />
-                    <RoundButton
-                      type="next"
-                      onClick={() => {
-                        sliderRef.current.slickGoTo(currentSlide + 1);
-                      }}
-                    />
-                  </div> */}
                 </div>
               </div>
             </div>

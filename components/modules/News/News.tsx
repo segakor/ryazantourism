@@ -2,6 +2,7 @@
 "use client";
 import LinkButton from "@/components/elements/Button/LinkButton";
 import "./style.css";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 type Props = {
   type: "city" | "art";
@@ -17,17 +18,17 @@ export const News = ({ type }: Props) => {
       }`}
     >
       <div className="flex md:flex-row flex-col md:gap-0 gap-4">
-        <h2 className="h2">
+        <Typography variant="h2" className="font-medium">
           Актуальная информация <br></br> о происходящем в {title}
-        </h2>
+        </Typography>
         <div className="w-[283px]">
           <LinkButton isBlackHover href="">
             Все новости
           </LinkButton>
         </div>
       </div>
-      <div className="grid grid-cols-[repeat(4,minmax(308px,1fr))] gap-6 overflow-x-scroll md:overflow-x-visible group/item ">
-        <div className="news_card group-hover/item:bg-[#b9fa4f]  transition-all">
+      <div className="grid grid-cols-[repeat(4,minmax(308px,1fr))] gap-6 overflow-x-scroll md:overflow-x-visible">
+        <div className="news_card hover:bg-[#b9fa4f] transition-all group/item">
           <div className="h6 news_card_title">
             Музейный центр РИАМЗ приглашает на открытие выставки «Связь
             поколений»
@@ -38,40 +39,60 @@ export const News = ({ type }: Props) => {
             alt=""
           />
           <div className="news_card_date">
-            <div className="h3">24</div>
+            <Typography variant="h3" className="font-medium">
+              24
+            </Typography>
             <div className="h6">марта 2024</div>
           </div>
         </div>
-                <div className="news_card">
+        <div className="news_card hover:bg-[#b9fa4f] transition-all group/item">
           <div className="h6 news_card_title">
-            В Рязани открылся новый отдел Рязанского историко-архитектурного
-            музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
+            Музейный центр РИАМЗ приглашает на открытие выставки «Связь
+            поколений»
           </div>
-          <img className="news_card_arrows" src={"/news/arrows.svg"} alt="" />
+          <img
+            className="group-hover/item:opacity-100 opacity-0 transition-all"
+            src={"/news/arrows.svg"}
+            alt=""
+          />
           <div className="news_card_date">
-            <div className="h3">24</div>
+            <Typography variant="h3" className="font-medium">
+              24
+            </Typography>
             <div className="h6">марта 2024</div>
           </div>
         </div>
-        <div className="news_card">
+        <div className="news_card hover:bg-[#b9fa4f] transition-all group/item">
           <div className="h6 news_card_title">
-            В Рязани открылся новый отдел Рязанского историко-архитектурного
-            музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
+            Музейный центр РИАМЗ приглашает на открытие выставки «Связь
+            поколений»
           </div>
-          <img className="news_card_arrows" src={"/news/arrows.svg"} alt="" />
+          <img
+            className="group-hover/item:opacity-100 opacity-0 transition-all"
+            src={"/news/arrows.svg"}
+            alt=""
+          />
           <div className="news_card_date">
-            <div className="h3">24</div>
+            <Typography variant="h3" className="font-medium">
+              24
+            </Typography>
             <div className="h6">марта 2024</div>
           </div>
         </div>
-        <div className="news_card">
+        <div className="news_card hover:bg-[#b9fa4f] transition-all group/item">
           <div className="h6 news_card_title">
-            В Рязани открылся новый отдел Рязанского историко-архитектурного
-            музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
+            Музейный центр РИАМЗ приглашает на открытие выставки «Связь
+            поколений»
           </div>
-          <img className="news_card_arrows" src={"/news/arrows.svg"} alt="" />
+          <img
+            className="group-hover/item:opacity-100 opacity-0 transition-all"
+            src={"/news/arrows.svg"}
+            alt=""
+          />
           <div className="news_card_date">
-            <div className="h3">24</div>
+            <Typography variant="h3" className="font-medium">
+              24
+            </Typography>
             <div className="h6">марта 2024</div>
           </div>
         </div>

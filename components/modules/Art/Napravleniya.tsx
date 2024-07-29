@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { Typography } from "@/components/elements/Typography/Typography";
+
 /* eslint-disable jsx-a11y/alt-text */
 export const Napravleniya = () => {
   const cardData = [
@@ -52,7 +54,7 @@ export const Napravleniya = () => {
           </clipPath>
         </defs>
       </svg>
-      <h2 className="text-center h2 mb-16">Направления деятельности</h2>
+      <Typography variant="h2" className="mb-16 text-center">Направления деятельности</Typography>
       <div className="flex gap-5 md:justify-center md:flex-wrap justify-normal flex-nowrap overflow-x-scroll no-scrollbar">
         {cardData.map((item, index) => (
           <div

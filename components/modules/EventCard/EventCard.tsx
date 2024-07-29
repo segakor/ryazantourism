@@ -14,6 +14,7 @@ import { useState } from "react";
 import { format } from "date-fns";
 import Link from "next/link";
 import { eventCards } from "@/constants/pages/organizovannye-marshruty/eventCards";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 const eventsDates = eventCards.map((item) => item.dates).flat();
 
@@ -30,7 +31,9 @@ export const EventCard = () => {
 
   return (
     <div>
-      <div className="h3 title">Туры от туроператоров</div>
+      <Typography variant="h3" className="font-medium mb-14">
+        Туры от туроператоров
+      </Typography>
       <div className="wrapper_event">
         <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
         <div className="swiper_wrapper_event">
@@ -83,7 +86,7 @@ const Card = ({
       }}
     >
       <div className="h5">{title}</div>
-       <div>
+      <div>
         <p className="event_card_item_decs">Продолжительность: {days} д.</p>
         <p className="event_card_item_decs">
           Стоимость: {price.toLocaleString()} руб./чел.

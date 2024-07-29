@@ -1,6 +1,7 @@
 import { createShimmer } from "@/utils/shimer";
 import "./style.css";
 import Image from "next/image";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 export const HeroPage = ({
   imgUrl,
@@ -27,7 +28,7 @@ export const HeroPage = ({
       />
       <div className="hero_longread_inner">
         <div className="hero_longread_inner_body">
-          <h1 className="h1">{title}</h1>
+          <Typography variant="h1">{title}</Typography>
           {desc && <p className="text1">{desc}</p>}
         </div>
       </div>

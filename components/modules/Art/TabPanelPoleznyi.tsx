@@ -1,5 +1,6 @@
 "use client";
 
+import { Typography } from "@/components/elements/Typography/Typography";
 import { useState } from "react";
 
 const dict = [
@@ -161,7 +162,9 @@ export const TabPanelPoleznyi = () => {
 
   return (
     <div className="md:max-w-[82.5rem] md:m-auto overflow-x-scroll no-scrollbar">
-      <h2 className="text-center h2 mb-16">Чем мы можем быть полезны</h2>
+      <Typography variant="h2" className="mb-16 text-center">
+        Чем мы можем быть полезны
+      </Typography>
       <nav className="flex gap-2 justify-normal md:justify-center overflow-x-scroll no-scrollbar">
         <>
           {dict.map((item, index) => (

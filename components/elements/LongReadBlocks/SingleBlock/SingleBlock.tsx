@@ -1,6 +1,7 @@
 import { createShimmer } from "@/utils/shimer";
 import { TextBlock } from "../TextBlock/TextBlock";
 import Image from "next/image";
+import { Typography } from "../../Typography/Typography";
 
 export const SingleBlock = ({
   title,
@@ -14,8 +15,8 @@ export const SingleBlock = ({
   //TODO: Image сделать один на всех
   return (
     <div className="bg-white rounded-[30px] overflow-hidden">
-       {srcImg && (
-          <div className={`w-full relative pt-[35%]`}>
+      {srcImg && (
+        <div className={`w-full relative pt-[35%]`}>
           <Image
             src={srcImg}
             alt="img"
@@ -26,9 +27,13 @@ export const SingleBlock = ({
             priority
           />
         </div>
-        )}
+      )}
       <div className="md:py-[80px] md:px-[50px] p-[30px] grid gap-[30px]">
-        {title && <div className="h3">{title}</div>}
+        {title && (
+          <Typography variant="h3" className="font-medium">
+            {title}
+          </Typography>
+        )}
         {desc && <TextBlock text={desc} />}
       </div>
     </div>

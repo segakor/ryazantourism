@@ -9,11 +9,14 @@ import { Modal, ModalContent, ModalBody } from "@nextui-org/modal";
 import { useDisclosure } from "@nextui-org/react";
 import { createShimmer } from "@/utils/shimer";
 import Image from "next/image";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 export const Gidy = ({ data }: { data: TGid[] }) => {
   return (
     <div>
-      <div className="h3 title">Экскурсоводы и гиды Рязани</div>
+      <Typography variant="h3" className="font-medium mb-14">
+        Экскурсоводы и гиды Рязани
+      </Typography>
       <div className="gid_group">
         {data.map((item, index) => (
           <Gid key={index} item={item} />
