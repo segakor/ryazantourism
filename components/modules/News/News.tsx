@@ -42,7 +42,7 @@ export const News = ({ type }: Props) => {
             <div className="h6">марта 2024</div>
           </div>
         </div>
-        {/*         <div className="news_card">
+                <div className="news_card">
           <div className="h6 news_card_title">
             В Рязани открылся новый отдел Рязанского историко-архитектурного
             музея-заповедника — Центр науки, традиций и искусства (ЦНТИ)
@@ -74,7 +74,7 @@ export const News = ({ type }: Props) => {
             <div className="h3">24</div>
             <div className="h6">марта 2024</div>
           </div>
-        </div> */}
+        </div>
       </div>
       <svg height="0" width="0">
         <defs>
