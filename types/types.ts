@@ -47,9 +47,11 @@ export type TArchCard = {
 export type ResponsePlaceCard = { data: TPlaceCard[] };
 
 export type TNasledieCard = {
+  id: number;
   title: string;
   desc: string;
   imgUrl: string;
+  template: TLongReadBody[];
 };
 
 export type TOtvet = {

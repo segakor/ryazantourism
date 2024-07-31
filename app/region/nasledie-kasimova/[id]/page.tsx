@@ -4,14 +4,14 @@ import Loading from "../loading";
 import { HeroPage } from "@/components/modules/HeroPage";
 import Body from "./body";
 import { TNasledieCard } from "@/types/types";
-import { nasledieRyazani } from "@/constants/pages/nasledie-ryazani/nasledie-ryazani";
+import { nasledieKasimov } from "@/constants/pages/nasledie-kasimov/nasledie-kasimov";
 
 type Props = {
   params: { id: string };
 };
 
 async function getDetailsNasledie(id: string) {
-  const data = nasledieRyazani.find((item) => item.id === Number(id));
+  const data = nasledieKasimov.find((item) => item.id === Number(id));
   return data;
 }
 

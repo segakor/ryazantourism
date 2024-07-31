@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const FactBlock = ({ text }: { text: string }) => {
   return (
-    <div className="md:p-[30px] bg-[#5363f7] rounded-[30px] text-white">
+    <div className="p-[30px] bg-[#5363f7] rounded-[30px] text-white">
       <div className="grid gap-5">
         <div className="flex gap-5">
           <Image

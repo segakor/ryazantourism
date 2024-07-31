@@ -14,13 +14,12 @@ export const PochitatCard = () => {
     </div>
   );
 };
-//TODO: Image сделать один на всех
 const PochitatCardItem = (props: TPochitatCard) => {
   const { imgUrl, title, desc, linkLitres, linkOzon, fileUrl, tag } = props;
   return (
     <div className="flex flex-col gap-12 bg-[#F7F7F7] rounded-[30px] p-7">
       <div className="flex flex-col gap-7 h-full">
-         <ImageBlock srcImg={imgUrl} full/>
+        <ImageBlock srcImg={imgUrl} full />
         {tag?.map((item, index) => (
           <span key={index}>
             <div className="inline-block rounded-full text-white py-2 px-4 bg-[#5363F7]">

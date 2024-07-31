@@ -5,11 +5,18 @@ import { TNasledieCard } from "@/types/types";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
 import { Typography } from "@/components/elements/Typography/Typography";
+import Link from "next/link";
 
 //TODO: Image сделать один на всех
-const Card = ({ item }: { item: TNasledieCard }) => {
+const Card = ({
+  item,
+  href,
+}: {
+  item: TNasledieCard;
+  href: "nasledie-ryazani" | "nasledie-kasimova";
+}) => {
   return (
-    <div className="arch_card_item group/item">
+    <Link href={`/region/${href}/${item.id}`} className="arch_card_item group/item">
       <div className={`w-full relative pt-[100%]`}>
         <Image
           src={item.imgUrl}
@@ -46,15 +53,21 @@ const Card = ({ item }: { item: TNasledieCard }) => {
           <div className="text4">{item.desc}</div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
-export const NasledieCard = ({ data }: { data: TNasledieCard[] }) => {
+export const NasledieCard = ({
+  data,
+  href,
+}: {
+  data: TNasledieCard[];
+  href: "nasledie-ryazani" | "nasledie-kasimova";
+}) => {
   return (
     <div className="grid md:grid-cols-3 grid-cols-1 gap-7">
       {data.map((item, index) => (
-        <Card item={item} key={index} />
+        <Card item={item} key={index} href={href}/>
       ))}
     </div>
   );
