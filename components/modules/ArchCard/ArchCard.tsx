@@ -5,6 +5,7 @@ import { Tags } from "@/components/elements/Tags/Tags";
 import { TagList, TArchCard } from "@/types/types";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 //TODO: Image сделать один на всех
 const Card = ({ item }: { item: TArchCard }) => {
@@ -29,7 +30,7 @@ const Card = ({ item }: { item: TArchCard }) => {
           <Icons icon="goTo" />
         </div>
         <div className="arch_card_item_body">
-          <div className="h5">{item.title}</div>
+          <Typography variant="h5" className="font-semibold">{item.title}</Typography>
           <div className="text4">{item.desc}</div>
           <div className="note-text arch_address">
             <Icons icon="location" />
@@ -43,7 +44,7 @@ const Card = ({ item }: { item: TArchCard }) => {
 
 export const ArchCard = ({ data }: { data: TArchCard[] }) => {
   return (
-    <div className="arch_card_group">
+    <div className="grid md:grid-cols-3 grid-cols-1 gap-7 mb-40">
       {data.map((item, index) => (
         <Card item={item} key={index} />
       ))}

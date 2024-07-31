@@ -1,12 +1,14 @@
 "use client";
 import { data } from "@/constants/pages/nasledie-ryazani/nasledie-ryazani";
-import { ArchCard } from "@/components/modules/ArchCard/ArchCard";
+import { NasledieCard } from "@/components/modules/ArchCard/NasledieCard";
 
 const Body = () => {
 
   return (
     <section className="grid_layout">
-     {/*  <ArchCard data={data} /> */}
+      <div className="mb-40 mt-40">
+      <NasledieCard data={data} />
+      </div>
     </section>
   );
 };

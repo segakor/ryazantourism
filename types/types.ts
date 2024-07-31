@@ -46,9 +46,11 @@ export type TArchCard = {
 
 export type ResponsePlaceCard = { data: TPlaceCard[] };
 
-/* export type Response<T> = {
-  data: T;
-}; */
+export type TNasledieCard = {
+  title: string;
+  desc: string;
+  imgUrl: string;
+};
 
 export type TOtvet = {
   question: string;

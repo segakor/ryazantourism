@@ -7,11 +7,7 @@ export const metadata: Metadata = {
 };
 
 const Page = () => {
-  return (
-    <div>
-      <Body />
-    </div>
-  );
+  return <Body />;
 };
 
 export default Page;

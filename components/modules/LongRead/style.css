@@ -13,11 +13,6 @@
   }
 }
 
-.longread_sidebar {
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
 .longread_sidebar_body {
   padding-top: 180px;
   padding: 180px 20px 20px 20px;

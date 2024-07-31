@@ -1,5 +1,6 @@
 import { data } from "@/constants/pages/marshruty/samostoyatelnye-marshruty/podcast";
 import "./style.css";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 export const PodcastCard = () => {
   return (
@@ -30,7 +31,7 @@ const PodcastCardItem = ({
   return (
     <div className="podcast_card_item">
       <div className="podcast_card_item_body">
-        <h5 className="h5">{title}</h5>
+        <Typography variant="h5"className="font-semibold" >{title}</Typography>
         <p>{desc}</p>
         <div>
           <a className="podcast_card_link" href={link} target="_blank">

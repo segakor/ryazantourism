@@ -52,6 +52,7 @@ export const headerMenu = [
     item: "Инфо-центр",
     subItem: [
       { label: "Визит центр для туристов", path: "/ty-s-mestnym/cit" },
+      { label: "Новости региона", path: "/ty-s-mestnym/cit" },
       { label: "Ответы на вопросы", path: "/ty-s-mestnym/otvety-na-voprosy" },
       { label: "Ваши отзывы", path: "/ty-s-mestnym/obratnaya-svyaz" },
       {

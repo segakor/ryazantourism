@@ -7,6 +7,7 @@ import { ELEMENT_TYPE, TLongReadBody } from "@/types/types";
 import { LongReadBlock } from "@/components/elements/LongReadBlocks/LongReadBlock/LongReadBlock";
 import { ReactNode } from "react";
 import { SingleBlock } from "@/components/elements/LongReadBlocks/SingleBlock/SingleBlock";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 const createElement = (elementType: ELEMENT_TYPE, props: any) => {
   if (elementType === ELEMENT_TYPE.FACT_BLOCK) {
@@ -61,9 +62,9 @@ export const LongRead = ({ body, children, noMargin, noSidebar }: Props) => {
           ))}
           {children}
         </div>
-        {!noSidebar && <div className="longread_sidebar">
+        {!noSidebar && <div className="md:block hidden">
           <div className="longread_sidebar_body">
-            {!!sideBarItem.length && <div className="h4">Разделы</div>}
+            {!!sideBarItem.length && <Typography variant="h4">Разделы</Typography>}
             <>
               {sideBarItem?.map((item, index) => (
                 <div

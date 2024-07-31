@@ -8,10 +8,11 @@ import { TagList, TPlaceCard } from "@/types/types";
 import LinkButton from "@/components/elements/Button/LinkButton";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 export const PlaceCard = ({ data }: { data: TPlaceCard[] }) => {
   return (
-    <div className="place_card_group">
+    <div className="grid md:grid-cols-3 grid-cols-1 gap-7 mb-40">
       {data?.map((item, index) => (
         <Card item={item} key={index} />
       ))}
@@ -53,7 +54,7 @@ const Card = ({ item }: { item: TPlaceCard }) => {
       </div>
       <div className="place_card_item_body">
         <div className="place_card_item_body_inner">
-          <h5 className="h5">{item.name}</h5>
+          <Typography variant="h5" className="font-semibold">{item.name}</Typography>
           <div className="partner-card-text place_card_item_body_desc">
             <span>
               {notFullText}{" "}
