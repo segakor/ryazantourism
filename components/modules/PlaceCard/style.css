@@ -6,16 +6,6 @@
   overflow: hidden;
 }
 
-.place_card_item_header {
-  background-color: var(--color-grey);
-  height: 200px;
-  width: 408px;
-  display: flex;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-  position: relative;
-}
 .place_card_item_header_tags {
   position: absolute;
   padding: 30px;

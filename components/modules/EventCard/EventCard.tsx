@@ -34,7 +34,7 @@ export const EventCard = () => {
       <Typography variant="h3" className="font-medium mb-14">
         Туры от туроператоров
       </Typography>
-      <div className="wrapper_event">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px]">
         <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
         <div className="swiper_wrapper_event">
           {!!filterEvents.length ? (

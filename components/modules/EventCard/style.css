@@ -30,17 +30,6 @@
   padding: 0.875rem 1.25rem;
 }
 
-.wrapper_event {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-
 .swiper_wrapper_event {
   border-radius: 14px;
   overflow: hidden;
