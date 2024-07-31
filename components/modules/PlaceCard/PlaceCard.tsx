@@ -34,7 +34,7 @@ const Card = ({ item }: { item: TPlaceCard }) => {
 
   return (
     <div className="place_card_item">
-      <div className="place_card_item_header">
+      <div>
         <div className="place_card_item_header_tags">
           <Tags tags={tags} />
         </div>

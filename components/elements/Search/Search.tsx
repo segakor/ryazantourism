@@ -6,12 +6,13 @@ export const Search = ({
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
-    <div className="search_wrapper">
-      <div className="search_block">
+    <div className="pt-[60px]">
+      <div className="flex items-center gap-5 bg-white border border-black rounded-[6.25rem] md:p-[3.75rem] p-5">
         <input
           type="text"
           placeholder="Какой вопрос вас интересует?"
           onChange={onChange}
+          className="w-full border-none outline-none md:text-3xl text-lg"
         />
         <svg
           width="40"

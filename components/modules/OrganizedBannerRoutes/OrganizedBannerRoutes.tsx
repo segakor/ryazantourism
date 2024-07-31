@@ -36,8 +36,8 @@ export const OrganizedBannerRoutes = () => {
 
   return (
     <div>
-      <div className="routes_wrapper">
-        <div className="routes_info">
+      <div className="flex md:flex-row flex-col justify-between gap-[1.875rem]">
+        <div className="md:flex-[0_1_20rem] flex-[1rem]">
           <Typography variant="h3" className="mb-7 font-medium">Приезжай на один день или оставайся на выходные</Typography>
           <Button
             label={"Записаться на экскурсию"}
@@ -46,9 +46,9 @@ export const OrganizedBannerRoutes = () => {
           />
         </div>
 
-        <div className="routes_banner_group">
+        <div className="md:flex-[0_1_50rem] md:grid flex flex-wrap grid-cols-2 justify-center gap-5">
           {cards.map((item, index) => (
-            <div className="routes_banner_item" key={index}>
+            <div className="overflow-hidden" key={index}>
               <div className="routes_banner_icon">
                 <Image width={42} height={42} src={item.srcImg} alt="Icon" />
               </div>

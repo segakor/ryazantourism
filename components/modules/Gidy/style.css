@@ -2,15 +2,6 @@
   margin-bottom: 3.75rem;
 }
 
-.gid_group {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 28px;
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-}
-
 .gid_item {
   border-radius: 40px;
   display: flex;

@@ -17,7 +17,7 @@ export const Gidy = ({ data }: { data: TGid[] }) => {
       <Typography variant="h3" className="font-medium mb-14">
         Экскурсоводы и гиды Рязани
       </Typography>
-      <div className="gid_group">
+      <div className="grid md:grid-cols-3 grid-cols-1 gap-7 mb-40">
         {data.map((item, index) => (
           <Gid key={index} item={item} />
         ))}

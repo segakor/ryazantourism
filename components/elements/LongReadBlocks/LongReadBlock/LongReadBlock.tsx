@@ -4,7 +4,6 @@ import { LinkBlock } from "../LinkBlock/LinkBlock";
 import { LongReadItemBlock } from "../LongReadItemBlock/LongReadItemBlock";
 import { AddressBlock } from "../AddressBlock/AddressBlock";
 import { FactBlock } from "../FactBlock/FactBlock";
-import "./style.css";
 import { Typography } from "../../Typography/Typography";
 
 const createElement = (subElementType: SUB_ELEMENT_TYPE, props: any) => {
@@ -34,7 +33,7 @@ export const LongReadBlock = ({
   subElements: { element: string; text: string }[];
 }) => {
   return (
-    <div className="longread_block">
+    <div className="bg-white md:p-[50px] p-[30px] rounded-[30px] grid gap-7">
       <Typography variant="h3" id={title} className="font-medium">
         {title}
       </Typography>
