@@ -1,4 +1,3 @@
-"use client";
 import { TGid } from "@/types/types";
 import { OrganizedBannerRoutes } from "@/components/modules/OrganizedBannerRoutes";
 import { Gidy } from "@/components/modules/Gidy";

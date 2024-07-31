@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
 import LinkButton from "@/components/elements/Button/LinkButton";
 import "./style.css";
 import { Typography } from "@/components/elements/Typography/Typography";

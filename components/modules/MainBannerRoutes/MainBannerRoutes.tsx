@@ -1,4 +1,3 @@
-"use client";
 import Icons from "@/components/elements/Logo/Icons";
 import "./style.css";
 import Image from "next/image";

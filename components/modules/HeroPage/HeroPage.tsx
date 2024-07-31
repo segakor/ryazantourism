@@ -27,9 +27,9 @@ export const HeroPage = ({
         placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
       />
       <div className="hero_longread_inner">
-        <div className="hero_longread_inner_body">
-          <Typography variant="h1">{title}</Typography>
-          {desc && <p className="text1">{desc}</p>}
+        <div className="grid gap-5 text-white">
+          <Typography variant="h1" className="leading-snug">{title}</Typography>
+          {desc && <p className="text1 opacity-50">{desc}</p>}
         </div>
       </div>
     </div>

@@ -4,14 +4,14 @@ import Image from "next/image";
 export const FactBlock = ({ text }: { text: string }) => {
   return (
     <div className="p-[30px] bg-[#5363f7] rounded-[30px] text-white">
-      <div className="grid gap-5">
-        <div className="flex gap-5">
+      <div className="grid gap-2">
+        <div className="flex gap-2 items-center">
           <Image
             priority
             src={"/factBlock/fact.svg"}
             alt="img"
-            width={40}
-            height={40}
+            width={24}
+            height={24}
             className="image"
           />
           <Typography variant="h4">Интересный факт</Typography>

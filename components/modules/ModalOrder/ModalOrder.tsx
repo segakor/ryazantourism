@@ -2,7 +2,6 @@
 import { useState } from "react";
 import "./style.css";
 import { eachDayOfInterval, endOfMonth, format, parse } from "date-fns";
-import Button from "@/components/elements/Button/Button";
 import { ru } from "date-fns/locale";
 import ButtonSubmit from "@/components/elements/Button/ButtonSubmit";
 
