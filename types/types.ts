@@ -33,9 +33,11 @@ export type TPlaceCard = {
   image_path: string;
   tags: { id: number; name: string }[];
   category: { name: string };
+  template: TLongReadBody[];
 };
 
 export type TArchCard = {
+  id: number;
   title: string; // название карточки
   address: string; //address
   desc: string;

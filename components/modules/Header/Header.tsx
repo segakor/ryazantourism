@@ -36,7 +36,7 @@ export const Header = () => {
                 Все о туризме в Рязани <br /> и Рязанской области
               </p>
             </div>
-            <div className="md:flex flex-col gap-5 md:visible hidden">
+            <div className="lg:flex flex-col gap-5 lg:visible hidden">
               <div className="flex items-end justify-end gap-[3.125rem]">
                 <div className="flex items-center gap-[0.625rem]">
                   <p className="header_title">Моб. приложение</p>
@@ -68,7 +68,7 @@ export const Header = () => {
             </div>
             <button
               className={`rounded-full bg-[#b9fa4f] w-[2.5rem] h-[2.5rem] 
-                flex justify-center items-center z-[100] md:hidden visible ${
+                flex justify-center items-center z-[100] lg:hidden visible ${
                   isOpenMenu && "menu-open"
                 }`}
               onClick={onOpenMenu}

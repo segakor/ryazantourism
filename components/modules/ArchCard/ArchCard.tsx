@@ -6,13 +6,17 @@ import { TagList, TArchCard } from "@/types/types";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
 import { Typography } from "@/components/elements/Typography/Typography";
+import Link from "next/link";
 
 //TODO: Image сделать один на всех
 const Card = ({ item }: { item: TArchCard }) => {
   const tags = item.tags?.map((item) => item.id) as TagList[];
 
   return (
-    <div className="arch_card_item group/item">
+    <Link
+      href={`/idei-dlya-puteshestviya/chto-posmotret/${item.id}`}
+      className="arch_card_item group/item"
+    >
       <div className={`w-full relative pt-[100%]`}>
         <Image
           src={item.imgUrl}
@@ -30,7 +34,9 @@ const Card = ({ item }: { item: TArchCard }) => {
           <Icons icon="goTo" />
         </div>
         <div className="arch_card_item_body">
-          <Typography variant="h5" className="font-semibold">{item.title}</Typography>
+          <Typography variant="h5" className="font-semibold">
+            {item.title}
+          </Typography>
           <div className="text4">{item.desc}</div>
           <div className="note-text arch_address">
             <Icons icon="location" />
@@ -38,7 +44,7 @@ const Card = ({ item }: { item: TArchCard }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

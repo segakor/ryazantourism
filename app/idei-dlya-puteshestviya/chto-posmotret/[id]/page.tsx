@@ -1,15 +1,44 @@
+import { Metadata } from "next";
+import { Suspense } from "react";
+import Loading from "../loading";
+import { HeroPage } from "@/components/modules/HeroPage";
+import { TNasledieCard } from "@/types/types";
+import Body from "./body";
+import { chtoPosmotret } from "@/constants/pages/idei-dlya-puteshestviya/chto-posmotret";
 
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Что посмотреть? - Всё о туризме в Рязани и Рязанской области",
+type Props = {
+  params: { id: string };
 };
 
-const Page = () => {
+async function getDetailsNasledie(id: string) {
+  const data = chtoPosmotret.find((item) => item.id === Number(id));
+  return data;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const id = params.id;
+
+  const data = await getDetailsNasledie(id);
+
+  return {
+    title: `${data?.title} - Всё о туризме в Рязани и Рязанской области`,
+  };
+}
+
+const Page = async ({ params }: Props) => {
+  const data = (await getDetailsNasledie(params.id)) as TNasledieCard;
+
   return (
-    <div>
-      1
-    </div>
+    <Suspense fallback={<Loading />}>
+      <div className="pages">
+        <HeroPage
+          imgUrl={data?.imgUrl || "/heroPages/ty-s-mestnym/cit.jpg"}
+          title={data.title}
+          desc=""
+        />
+        <Body data={data.template} />
+      </div>
+    </Suspense>
   );
 };
 
