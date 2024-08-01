@@ -35,7 +35,7 @@ export const Tabs = ({
     onChange(id);
   };
   return (
-    <div className={`tabs ${isOtvety && "tabs_otvety"} no-scrollbar`}>
+    <div className={`flex gap-5 flex-nowrap overflow-x-auto ${isOtvety && "tabs_otvety"} no-scrollbar`}>
       {tabs.map((item, index) => (
         <Tab
           {...item}

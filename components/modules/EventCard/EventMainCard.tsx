@@ -34,7 +34,7 @@ export const EventMainCard = () => {
       <Typography variant="h2" className="font-medium">Календарь событий</Typography>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px] min-h-full">
         <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
-        <div className="swiper_wrapper_event">
+        <div className="swiper_wrapper_event md:h-auto">
           {!!filterEvents.length ? (
             <Swiper
               navigation={true}
@@ -42,7 +42,7 @@ export const EventMainCard = () => {
                 clickable: true,
               }}
               modules={[Pagination, Navigation]}
-              className="swiper"
+              className="swiper_calendar md:h-[584px] h-[350px] rounded-[14px]"
             >
               {filterEvents.map((item, index) => (
                 <SwiperSlide key={index}>
@@ -51,7 +51,7 @@ export const EventMainCard = () => {
               ))}
             </Swiper>
           ) : (
-            <div className="w-auto md:h-[584px] rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa]">
+            <div className="w-auto md:h-[584px] h-full rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa]">
               <div className="h3">
                 На сегодня нет событий - NOTE: Кирилл надо чето придумать
               </div>
@@ -74,18 +74,12 @@ const Card = ({
 }) => {
   return (
     <div
-      className="event_card_item_inner"
+      className="event_card_item_inner bg-cover md:max-h-auto max-h-450px"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${imgUrl})`,
       }}
     >
       <div className="h5">{title}</div>
-      {/*  <div>
-        <p className="event_card_item_decs">Продолжительность: {days} д.</p>
-        <p className="event_card_item_decs">
-          Стоимость: {price.toLocaleString()} руб./чел.
-        </p>
-      </div> */}
       <Link href={""} target="_blank">
         <div
           className="group/item bg-[var(--color-white)] hover:bg-[var(--color-green)] text-black

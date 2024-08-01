@@ -12,12 +12,11 @@ export const News = ({ type }: Props) => {
 
   return (
     <div
-      className={`grid md:gap-20 gap-10  ${
-        type === "art" && "md:max-w-[82.5rem] md:m-auto"
-      }`}
+      className={`grid md:gap-20 gap-10  ${type === "art" && "md:max-w-[82.5rem] md:m-auto"
+        }`}
     >
       <div className="flex md:flex-row flex-col md:gap-0 gap-4">
-        <Typography variant="h2" className="font-medium">
+        <Typography variant="h2" className="font-medium leading-tight">
           Актуальная информация <br></br> о происходящем в {title}
         </Typography>
         <div className="w-[283px]">

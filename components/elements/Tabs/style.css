@@ -1,45 +1,10 @@
-.tabs {
-  display: flex;
-  gap: 20px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-}
-
-.tab {
-  transition: all ease 0.4s;
-  background-color: var(--color-partner-card-grey);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  border-radius: 500px;
-  padding: 1.25rem 2.5rem;
-  white-space: nowrap;
-  @media (max-width: 768px) {
-    padding: clamp(1rem, 0.9007936508rem + 0.4232804233vw, 1.25rem)
-      clamp(1.5rem, 1.1031746032rem + 1.6931216931vw, 2.5rem);
-  }
-}
-
-@media (hover: hover) {
-  .tab:hover {
-    background-color: var(--color-black);
-    color: var(--color-white);
-    transition: all ease 0.4s;
-  }
-}
-
-.active {
-  background-color: var(--color-black);
-  color: var(--color-white);
-}
-
 .tabs_otvety {
-  .tab {
-    background-color: var(--color-white);
-    color: var(--color-black);
-  }
-  .active {
-    background-color: var(--color-purple);
-    color: var(--color-white);
-  }
+}
+.tabs_otvety .tab {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+.tabs_otvety .active {
+  background-color: var(--color-purple);
+  color: var(--color-white);
 }

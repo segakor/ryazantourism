@@ -1,29 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-.banner_routes_header {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  gap: 20px;
-  div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 20px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 .banner_routes_card_first,
 .banner_routes_card_second {
   display: -ms-grid;
@@ -42,15 +16,6 @@
   color: #ffff;
 }
 
-.banner_image {
-  width: 100%;
-  -o-object-fit: none;
-     object-fit: none;
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
 @media (hover: hover) {
   .banner_routes_card_first:hover {
     background-color: #252525;
@@ -58,10 +23,6 @@
     -webkit-transition: all ease 0.4s;
     -o-transition: all ease 0.4s;
     transition: all ease 0.4s;
-    .button_wrapper {
-      background-color: #ffff;
-      color: #000000;
-    }
   }
   .banner_routes_card_second:hover {
     background-color: #b9fa4f;
@@ -69,30 +30,5 @@
     -webkit-transition: all ease 0.4s;
     -o-transition: all ease 0.4s;
     transition: all ease 0.4s;
-    .button_wrapper {
-      background-color: #000000;
-      color: #ffff;
-    }
-  }
-}
-
-.banner_routes_card_first {
-  .button_wrapper {
-    background-color: #000000;
-    color: #fff;
-  }
-}
-.banner_routes_card_second {
-  .button_wrapper {
-    background-color: #ffff;
-    color: #000000;
-  }
-}
-.banner_routes_button {
-  width: 264px;
-}
-.quote{
-  @media (max-width: 768px) {
-    svg{display: none;}
   }
 }
