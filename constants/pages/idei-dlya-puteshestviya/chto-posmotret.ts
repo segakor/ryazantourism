@@ -4,7 +4,7 @@ export const chtoPosmotret = [
     title: "Рязанский кремль",
     desc: "Старейший и крупнейший музей региона, основанный в 1884 году Рязанской ученой архивной комиссией, расположен на территории Кремля — древнего центра Рязани",
     address: "Рязань, Кремль, 15",
-    imgUrl: "https://i.ibb.co/Bc0LgNr/4-D8-A5749-resized.jpg",
+    imgUrl: "https://i.postimg.cc/mkMWTm2B/4-D8-A5749-resized.jpg",
     category: {
       name: "Музеи",
     },
@@ -32,7 +32,7 @@ export const chtoPosmotret = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/xC4prbj/4-D8-A5808-resized.jpg",
+            srcImg: "https://i.postimg.cc/wBbCJC19/4-D8-A5808-resized.jpg",
           },
         ],
       },
@@ -43,7 +43,7 @@ export const chtoPosmotret = [
     title: "Музей-заповедник Сергея Есенина",
     desc: "Государственный музей-заповедник С.А.Есенина расположен на родине поэта в селе Константиново Рыбновского района Рязанской области",
     address: "Рыбновский р-н, с. Константиново",
-    imgUrl: "https://i.ibb.co/80Dnsfc/konstantinovo-2-1-410x594-d75.jpg",
+    imgUrl: "https://i.postimg.cc/fLt6v8dm/konstantinovo-2-1-410x594-d75.jpg",
     category: {
       name: "Музеи",
     },
@@ -92,7 +92,7 @@ export const chtoPosmotret = [
     title: "Рязанский художественный музей имени Ивана Пожалостина",
     desc: "Подлинные шедевры Владимира Боровиковского, Василия Тропинина, Алексея Венецианова, Ивана Айвазовского, Алексея Саврасова, Исаака Левитана, Ивана Шишкина, Василия Сурикова приглашают любителей живописи в Рязанский художественный музей",
     address: "Рязань, Свободы, 57",
-    imgUrl: "https://i.ibb.co/7vk9mnS/4d8a5439-resized-1-420x558-28c.jpg",
+    imgUrl: "https://i.postimg.cc/d1bgNGRX/4d8a5439-resized-1-420x558-28c.jpg",
     category: {
       name: "Музеи",
     },
@@ -128,7 +128,7 @@ export const chtoPosmotret = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/jTkff4S/4-D8-A5432-resized.jpg",
+            srcImg: "https://i.postimg.cc/xTSWKy1N/4-D8-A5432-resized.jpg",
           },
         ],
       },
@@ -140,7 +140,7 @@ export const chtoPosmotret = [
     desc: "Великий ученый, физиолог, первый русский лауреат Нобелевской премии родился и вырос в Рязани на улице Никольской. Сегодня эта улица переименована в его честь. Музей открылся в 1946 году",
     address: "Рязань, Павлова, 25",
     imgUrl:
-      "https://i.ibb.co/NZ1g9q6/foto-8-muzej-usadba-pavlova-voroshirin-420x558-db7.jpg",
+      "https://i.postimg.cc/sgTqdk95/foto-8-muzej-usadba-pavlova-voroshirin-420x558-db7.jpg",
     category: {
       name: "Музеи",
     },
@@ -176,7 +176,7 @@ export const chtoPosmotret = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/tbD9TyY/4-D8-A5303-resized.jpg",
+            srcImg: "https://i.postimg.cc/fTKgmGP1/4-D8-A5303-resized.jpg",
           },
         ],
       },
@@ -188,7 +188,7 @@ export const chtoPosmotret = [
     desc: "Основу экспозиции составляют реликвийные знамена воздушно-десантных дивизий и бригад, участвовавших в Великой Отечественной войне, образцы отечественного и иностранного стрелкового оружия, коллекции десантных парашютов, боевой техники",
     address: "Рязань, пл. Маргелова, 1",
     imgUrl:
-      "https://i.ibb.co/K00FWQn/21-10-03-12-25-56-voroshirin-420x558-c6c.jpg",
+      "https://i.postimg.cc/wBtfK7Bd/21-10-03-12-25-56-voroshirin-420x558-c6c.jpg",
     category: {
       name: "Музеи",
     },
@@ -223,7 +223,7 @@ export const chtoPosmotret = [
     title: "Музейный центр РИАМЗ",
     desc: "Впечатления о музейном центре начинаются с огромного трехсветного стеклянного атриума, стена которого расписана чертежами и зарисовками из блокнота К. Циолковского",
     address: "Рязань, Соборная, 22",
-    imgUrl: "https://i.ibb.co/xhzpYc6/1-3-resized-1-410x594-e6e.jpg",
+    imgUrl: "https://i.postimg.cc/sDVTjn2m/1-3-resized-1-410x594-e6e.jpg",
     category: {
       name: "Музеи",
     },
@@ -263,7 +263,7 @@ export const chtoPosmotret = [
     desc: "«Фотодом» предлагает своим посетителям интеллектуальное общение, возможность найти единомышленников и творческих партнеров",
     address: "Рязань, Почтовая, 58",
     imgUrl:
-      "https://i.ibb.co/NsRQmk3/21-09-29-16-11-14-voroshirin-410x594-4d3.jpg",
+      "https://i.postimg.cc/wjMFJ7Ls/21-09-29-16-11-14-voroshirin-410x594-4d3.jpg",
     category: {
       name: "Музеи",
     },
@@ -298,7 +298,7 @@ export const chtoPosmotret = [
     title: "Музей истории молодежного движения",
     desc: "В фондах музея собран богатый материал по истории комсомола: фотографии и письма, знамена общественных организаций и армейское обмундирование советского периода, знаки и значки социалистических молодежных организаций",
     address: "Рязань, Свободы, 79",
-    imgUrl: "https://i.ibb.co/GPcJ808/bxzl-sqlqba-410x594-08e.jpg",
+    imgUrl: "https://i.postimg.cc/SKzrT3ZS/bxzl-sqlqba-410x594-08e.jpg",
     category: {
       name: "Музеи",
     },
@@ -333,7 +333,7 @@ export const chtoPosmotret = [
     title: "Рязанский музей путешественников",
     desc: "Рязанский музей путешественников хранит память об известных первопроходцах прошлого и современности, рассказывает об истории открытия и освоения разных уголков нашей планеты от Аляски и России до островов Тихого океана",
     address: "Рязань, Ленина, 35",
-    imgUrl: "https://i.ibb.co/DfcCG5D/1-7-resized-2-410x594-599.jpg",
+    imgUrl: "https://i.postimg.cc/PJdQqxdJ/1-7-resized-2-410x594-599.jpg",
     category: {
       name: "Музеи",
     },
@@ -364,7 +364,7 @@ export const chtoPosmotret = [
     title: "Музейный центр имени Александра Солженицына",
     desc: "Экспозиция музея включает четыре раздела: история дома Салтыкова-Щедрина, судьбы людей рязанской земли в произведениях Солженицына, литературная история Рязани 19-20 века, творчество Солженицына, присуждение ему Нобелевской премии по литературе",
     address: "Рязань, Николодворянская, 24/42",
-    imgUrl: "https://i.ibb.co/b28xCjT/image.jpg",
+    imgUrl: "https://i.postimg.cc/C1gjv1B7/image.jpg",
     category: {
       name: "Музеи",
     },
@@ -395,7 +395,7 @@ export const chtoPosmotret = [
     title: "Центр науки, традиций и искусства (ЦНТИ)",
     desc: "Отдел РИАМЗ, посвященный работе с археологическими памятниками Рязанской земли",
     address: "Рязань, Крупской, 17",
-    imgUrl: "https://i.ibb.co/ngcwQ7y/image.jpg",
+    imgUrl: "https://i.postimg.cc/zBFT4rTr/image.jpg",
     category: {
       name: "Музеи",
     },
@@ -430,7 +430,7 @@ export const chtoPosmotret = [
     title: "Дом-музей И.П. Пожалостина",
     desc: "Уютная деревянная усадьба знаменитого русского гравёра XIX века. И она же — дом, в котором частенько гостил писатель Константин Паустовский",
     address: "Рязань,Порядок, 76",
-    imgUrl: "https://i.ibb.co/b1XtnJV/image.jpg",
+    imgUrl: "https://i.postimg.cc/x8jL24Pb/image.jpg",
     category: {
       name: "Музеи",
     },
@@ -461,7 +461,7 @@ export const chtoPosmotret = [
     title: "Музей истории пчеловодства",
     desc: "Такого собрания исторических экспонатов, посвященных пчеловодству, нет ни в одном музее мира. Есть тут даже подлинные ульи-колоды царской семьи Романовых XVII века!",
     address: "Рыбное, Почтовая, 22",
-    imgUrl: "https://i.ibb.co/myD7Ygs/image.jpg",
+    imgUrl: "https://i.postimg.cc/T1kgYJkN/image.jpg",
     category: {
       name: "Музеи",
     },
@@ -496,7 +496,7 @@ export const chtoPosmotret = [
     title: "Музей Константина Циолковского",
     desc: "В экспозиции представлены материалы о жизни и научной деятельности знаменитого рязанца, а также демонстрируется путь претворения его идей в жизнь",
     address: "Спасский р-н, с. Ижевское, Зеленая, 23",
-    imgUrl: "https://i.ibb.co/N7PSY73/image.jpg",
+    imgUrl: "https://i.postimg.cc/L4vzTmHk/image.jpg",
     category: {
       name: "Музеи",
     },
@@ -532,7 +532,7 @@ export const chtoPosmotret = [
       "Историко-культурный природно-ландшафтный музей-заповедник «Усадьба Худекова»",
     desc: "Усадьба Сергея Худекова — один из немногих усадебных парков, сохранившихся до наших дней на территории Рязанской области",
     address: "Кораблинский р-н, с. Ерлино, Административный центр, 5",
-    imgUrl: "https://i.ibb.co/f85vHC9/image.jpg",
+    imgUrl: "https://i.postimg.cc/ZKR6sXRG/image.jpg",
     category: {
       name: "Музеи",
     },
@@ -563,7 +563,7 @@ export const chtoPosmotret = [
     title: "Касимовский историко-культурный музей-заповедник",
     desc: "В главном музее Касимова действует полноценная краеведческая экспозиция: два этажа, 11 залов",
     address: "Касимов, пл. Соборная, 7/8",
-    imgUrl: "https://i.ibb.co/H7Spkvj/image.jpg",
+    imgUrl: "https://i.postimg.cc/y83cs90n/image.jpg",
     category: {
       name: "Музеи",
     },
@@ -602,7 +602,7 @@ export const chtoPosmotret = [
     title: "Дом-музей братьев Пироговых",
     desc: "Местная экспозиция отправляет зрителей во времена детства знаменитых оперных певцов Пироговых",
     address: "Рыбновский район, с. Новоселки, Пирогова, 17",
-    imgUrl: "https://i.ibb.co/mJDdwTJ/image.jpg",
+    imgUrl: "https://i.postimg.cc/xdrHCCRQ/image.jpg",
     category: {
       name: "Музеи",
     },
@@ -641,7 +641,7 @@ export const chtoPosmotret = [
     title: "Торговый городок",
     desc: "В двадцати минутах пешком от Кремля — почти полностью восстановленная «рязанская ВДНХ» — галерея павильонов в стиле сталинского ампира. Почти полностью — потому что работы, начавшиеся несколько лет назад, ещё продолжаются",
     address: "Рязань, Торговый городок, 1",
-    imgUrl: "https://i.ibb.co/WfDFHD9/image.jpg",
+    imgUrl: "https://i.postimg.cc/KzxMPHws/image.jpg",
     category: {
       name: "Архитектура",
     },
@@ -676,7 +676,7 @@ export const chtoPosmotret = [
     title: "Троицкий собор в поселке Гусь-Железный",
     desc: "Один из блестящих образцов псевдоготического стиля, редкого для православного зодчества России",
     address: "Касимовский р-н, пос. Гусь-Железный",
-    imgUrl: "https://i.ibb.co/mz1K0Dj/image.jpg",
+    imgUrl: "https://i.postimg.cc/gj0L56YV/image.jpg",
     category: {
       name: "Архитектура",
     },
@@ -706,7 +706,7 @@ export const chtoPosmotret = [
     title: "Старожиловский конезавод",
     desc: "Конезавод в Старожилове — бывшее владение строителей железных дорог фон Дервизов",
     address: "пос. Старожилово",
-    imgUrl: "https://i.ibb.co/3NQdfPr/image.jpg",
+    imgUrl: "https://i.postimg.cc/Y0yLwq9J/image.jpg",
     category: {
       name: "Архитектура",
     },
@@ -736,7 +736,7 @@ export const chtoPosmotret = [
     title: "Усадьба фон Дервиза в Кирицах",
     desc: "Удивительный по красоте архитектурный ансамбль был построен в 1889 г. Сергеем Павловичем фон Дервизом",
     address: "Спасский р-н, с. Кирицы, Фон Дервиза, 2к1",
-    imgUrl: "https://i.ibb.co/0yVGLmP/1.jpg",
+    imgUrl: "https://i.postimg.cc/wxWmNFV0/1.jpg",
     category: {
       name: "Архитектура",
     },
@@ -766,7 +766,7 @@ export const chtoPosmotret = [
     title: "Свято-Иоанно-Богословский мужской монастырь",
     desc: "Мужской монастырь Рязанской епархии Русской православной церкви, расположенный на правом берегу Оки, в селе Пощупово Рыбновского района",
     address: "Рыбновский р-н, с. Пощупово",
-    imgUrl: "https://i.ibb.co/pry7ZGC/image.jpg",
+    imgUrl: "https://i.postimg.cc/jdLJ4N3K/image.jpg",
     category: {
       name: "Архитектура",
     },
@@ -801,7 +801,7 @@ export const chtoPosmotret = [
     title: "Солотчинский Рождества Богородицы женский монастырь",
     desc: "Величественный главный собор и изящные белокаменные палаты за толстыми крепостными стенами производят впечатление, будто перед вами миниатюрная копия кремля!",
     address: "Рязань, Монастырская площадь, Солотча, 1а",
-    imgUrl: "https://i.ibb.co/QMrFzrP/image.jpg",
+    imgUrl: "https://i.postimg.cc/MKNfPTgB/image.jpg",
     category: {
       name: "Архитектура",
     },
@@ -844,7 +844,7 @@ export const chtoPosmotret = [
     title: "Касимов — город двух культур",
     desc: "Исторический центр, расположенный на высоком берегу Оки, по-прежнему разделен на две части: русскую на северо-западе и татарскую на юго-востоке",
     address: "Касимов",
-    imgUrl: "https://i.ibb.co/yWwBj05/image.jpg",
+    imgUrl: "https://i.postimg.cc/1tm8nNVk/image.jpg",
     category: {
       name: "Архитектура",
     },
@@ -883,7 +883,7 @@ export const chtoPosmotret = [
     title: "Старая ханская мечеть",
     desc: "Самое старое каменное строение в Касимове",
     address: "Касимов, пл. Победы, 9а",
-    imgUrl: "https://i.ibb.co/vhvrb8C/image.jpg",
+    imgUrl: "https://i.postimg.cc/fTGk7P0j/image.jpg",
     category: {
       name: "Архитектура",
     },
@@ -910,7 +910,7 @@ export const chtoPosmotret = [
     title: "Скопин — город гончаров",
     desc: "Тихий и уютный Скопин располагается на реке Вёрда в Рязанской области",
     address: "Скопин",
-    imgUrl: "https://i.ibb.co/LhBZ3h6/image.jpg",
+    imgUrl: "https://i.postimg.cc/3xQJ0DPt/image.jpg",
     category: {
       name: "Архитектура",
     },
@@ -945,7 +945,7 @@ export const chtoPosmotret = [
     title: "Улица Мюнстерская",
     desc: "Улица Мюнстерская — маленький европейский квартал в самом центре Рязани. Здесь расположены классные фотолокации и интересные арт-объекты",
     address: "Рязань, Мюнстерская",
-    imgUrl: "https://i.ibb.co/3RshDvz/image.jpg",
+    imgUrl: "https://i.postimg.cc/43JfBR4t/image.jpg",
     category: {
       name: "Архитектура",
     },
@@ -975,7 +975,7 @@ export const chtoPosmotret = [
     title: "Дом художника",
     desc: "Красивое название ему дано не ради красного словца — здание было построено в 1958 году на средства Союзов художников Рязанской и Московской областей, и сегодня здесь действительно расположены творческие мастерские",
     address: "Рязань, Первомайский просп., 42/2",
-    imgUrl: "https://i.ibb.co/sm4GSq5/image.jpg",
+    imgUrl: "https://i.postimg.cc/5tnxrKjr/image.jpg",
     category: {
       name: "Архитектура",
     },
@@ -997,7 +997,7 @@ export const chtoPosmotret = [
     title: "Курортный поселок Солотча",
     desc: "«Ворота в Мещёру», жемчужина Мещёрского края — все это о некогда небольшом селе, а ныне курортном микрорайоне в 27 километрах от Рязани — Солотче",
     address: "Рязань, пос. Солотча",
-    imgUrl: "https://i.ibb.co/ctPZDRF/image.jpg",
+    imgUrl: "https://i.postimg.cc/Jn01C3kz/image.jpg",
     category: {
       name: "Природа",
     },
@@ -1028,7 +1028,7 @@ export const chtoPosmotret = [
     title: "Национальный парк «Мещёрский»",
     desc: "Любителей активного отдыха летом ждут пешие, велосипедные или водные походы, а зимой — на лыжах и с собаками породы хаски",
     address: "Спас-Клепики, пл. Ленина, 20",
-    imgUrl: "https://i.ibb.co/L9wr29L/image.jpg",
+    imgUrl: "https://i.postimg.cc/GtsdHcz0/image.jpg",
     category: {
       name: "Природа",
     },
@@ -1059,7 +1059,7 @@ export const chtoPosmotret = [
     title: "Окский биосферный заповедник",
     desc: "Место удивительное по красоте и разнообразию природы на севере Рязанской области и в юго-восточной части Мещёры",
     address: "Спасский р-н, пос. Брыкин бор",
-    imgUrl: "https://i.ibb.co/hXzzgFY/image.jpg",
+    imgUrl: "https://i.postimg.cc/LXGhyQbp/image.jpg",
     category: {
       name: "Природа",
     },
@@ -1102,7 +1102,7 @@ export const chtoPosmotret = [
     title: "Лесопарк",
     desc: "Зеленая парковая зона, раскинувшаяся вдоль Окского шоссе",
     address: "Рязань, Проезд речников, 1в",
-    imgUrl: "https://i.ibb.co/wK4FQsk/image.jpg",
+    imgUrl: "https://i.postimg.cc/5Nd6LGz5/image.jpg",
     category: {
       name: "Природа",
     },
@@ -1145,7 +1145,7 @@ export const chtoPosmotret = [
     title: "Городище «Старая Рязань»",
     desc: "Судьба древней столицы Рязанского княжества трагична: разоренный Батыем город не смог возродиться, и уже во второй половине XVIIв. поселение, расположенное на этом месте, именуется селом, сохранив память о былом величии лишь в названии",
     address: "Спасский р-н, с. Старая Рязань",
-    imgUrl: "https://i.ibb.co/tQQmVGR/image.jpg",
+    imgUrl: "https://i.postimg.cc/PrWN44bg/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1180,7 +1180,7 @@ export const chtoPosmotret = [
     title: "Памятник Сергею Александровичу Есенину",
     desc: "Это самый необычный из памятников Сергею Есенину, а позади, в специальном углублении, растут молодые березки, рябина и клены — они тоже являются живой частью монумента",
     address: "Рязань, Трубежная набережная",
-    imgUrl: "https://i.ibb.co/M2jnh55/image.jpg",
+    imgUrl: "https://i.postimg.cc/sg3x0hwv/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1210,7 +1210,7 @@ export const chtoPosmotret = [
     title: "Памятник Ивану Петровичу Павлову",
     desc: "Памятник посвящен первому русскому Нобелевскому лауреату, академику Ивану Петровичу Павлову, который родился и вырос в Рязани",
     address: "Рязань, Ленина, 24",
-    imgUrl: "https://i.ibb.co/k8ZvMf0/image.jpg",
+    imgUrl: "https://i.postimg.cc/qBn7JLFN/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1240,7 +1240,7 @@ export const chtoPosmotret = [
     title: "Памятник Евпатию Коловрату",
     desc: "Евпатий Коловрат — русский богатырь, рязанский боярин, воевода, герой народных сказаний времен нашествия Батыя на Русь",
     address: "Рязань, Ленина, 46",
-    imgUrl: "https://i.ibb.co/THK0qdS/image.jpg",
+    imgUrl: "https://i.postimg.cc/sDrgvWFw/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1262,7 +1262,7 @@ export const chtoPosmotret = [
     title: "Памятник Константину Эдуардовичу Циолковскому",
     desc: "Памятник был возведен неподалеку от Театральной площади к 125-летию со дня рождения ученого",
     address: "Рязань, Циолковского",
-    imgUrl: "https://i.ibb.co/x7vyvTG/image.jpg",
+    imgUrl: "https://i.postimg.cc/BQBQDv4s/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1292,7 +1292,7 @@ export const chtoPosmotret = [
     title: "Памятник Олегу Рязанскому",
     desc: "Олег Иванович правил Рязанским княжеством с 1351 до 1402 года, время его княжения считается сложным и противоречивым",
     address: "Рязань, Соборная, 16",
-    imgUrl: "https://i.ibb.co/CP1L6nM/image.jpg",
+    imgUrl: "https://i.postimg.cc/QdNNqrd7/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1314,7 +1314,7 @@ export const chtoPosmotret = [
     title: "Аллея путешественников",
     desc: "По задумке авторов Аллея путешественников служит сохранению и укреплению исторической памяти о выдающихся рязанцах – людях разных эпох, чья жизнь была тесно связана с путешествиями и научными экспедициями",
     address: "Рязань, Радищева",
-    imgUrl: "https://i.ibb.co/WsbpMTb/image.jpg",
+    imgUrl: "https://i.postimg.cc/dVWsHShx/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1336,7 +1336,7 @@ export const chtoPosmotret = [
     title: "Памятник Надежде Николаевне Чумаковой",
     desc: "Возле Центральной городской библиотеки стоит памятник «хозяйке» нашего города — Надежде Николаевне Чумаковой",
     address: "Рязань, Первомайский просп., 72",
-    imgUrl: "https://i.ibb.co/JtbXfVF/image.jpg",
+    imgUrl: "https://i.postimg.cc/N05gW7Tf/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1358,7 +1358,7 @@ export const chtoPosmotret = [
     title: "Памятник Василию Филипповичу Маргелову",
     desc: "Накануне празднования Дня Победы в 2013 году в Рязани был торжественно открыт памятник, установленный в честь легендарного военачальника, генерала Василия Маргелова. Он вошел в историю нашей страны как основатель Воздушно-десантных войск",
     address: "Рязань, Сенная",
-    imgUrl: "https://i.ibb.co/LPDQHnk/image.jpg",
+    imgUrl: "https://i.postimg.cc/dQ8qP07d/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1380,7 +1380,7 @@ export const chtoPosmotret = [
     title: "Монумент Победы",
     desc: "Мемориал Победы создавался в течение почти двадцати лет. Сначала появились обелиск и стела, которые заложили 8 мая 1965 года. Следующей на площади Победы появилась скульптурная группа, созданная к 30-летию победы, символизирующая единство фронта и тыла.",
     address: "Рязань, пл. Победы",
-    imgUrl: "https://i.ibb.co/gdW8hSS/image.jpg",
+    imgUrl: "https://i.postimg.cc/MKqzW8RL/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1402,7 +1402,7 @@ export const chtoPosmotret = [
     title: "Памятник Владимиру Ленину",
     desc: "Рязань — один их немногих городов в России, где снесенный в 1993 году памятник Ленину вернулся на свое законное место",
     address: "Рязань, пл. Ленина",
-    imgUrl: "https://i.ibb.co/yp7vjqD/image.jpg",
+    imgUrl: "https://i.postimg.cc/GhKdtSxm/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1432,7 +1432,7 @@ export const chtoPosmotret = [
     title: "Памятник Петру и Февронии в селе Ласково",
     desc: "Православные святые являются образцом супружества и хранителями семейных православных традиций",
     address: "Спасс-Клепиковский р-н, с. Ласково",
-    imgUrl: "https://i.ibb.co/y6rzzw1/image.jpg",
+    imgUrl: "https://i.postimg.cc/3xw7vCtC/image.jpg",
     category: {
       name: "Памятники",
     },
@@ -1462,7 +1462,7 @@ export const chtoPosmotret = [
     title: "Дом Эраста Гарина",
     desc: "Актёр, сценарист и режиссёр родился и вырос в Рязани. В 2017 году около дома, где жил Эраст Гарин, установили режиссёрское кресло с кадрами из фильмов, к которым артист был причастен",
     address: "Рязань, Соборная, 34",
-    imgUrl: "https://i.ibb.co/NW7VL9J/image.jpg",
+    imgUrl: "https://i.postimg.cc/nhwxYj58/image.jpg",
     category: {
       name: "Арт-объекты",
     },
@@ -1492,7 +1492,7 @@ export const chtoPosmotret = [
     title: "Стела «Превратим Рязань в город высокой культуры»",
     desc: "Мотивирующие надписи в годы СССР не публиковали в соцсетях, а увековечивали в камне или в монументальных формах",
     address: "Рязань, Московское шоссе, 61",
-    imgUrl: "https://i.ibb.co/H7f4my7/image.jpg",
+    imgUrl: "https://i.postimg.cc/ZqBSfYtW/image.jpg",
     category: {
       name: "Арт-объекты",
     },
@@ -1514,7 +1514,7 @@ export const chtoPosmotret = [
     title: "Первый магазин Макса Фактора",
     desc: "В конце XIX века в Рязани открыл свой первый магазин Максимилиан Факторович, который позже приобрел мировую известность под именем Макс Фактор",
     address: "Рязань, Соборная, 48",
-    imgUrl: "https://i.ibb.co/ZBjMPGr/image.jpg",
+    imgUrl: "https://i.postimg.cc/8kw06899/image.jpg",
     category: {
       name: "Арт-объекты",
     },
@@ -1536,7 +1536,7 @@ export const chtoPosmotret = [
     title: "Грибы в городе",
     desc: "По всему городу спрятаны маленькие скульптуры-грибы. У каждого — своя история и свой неповторимый вид",
     address: "Рязань",
-    imgUrl: "https://i.ibb.co/9tTvjVG/image.jpg",
+    imgUrl: "https://i.postimg.cc/yd4wvFyG/image.jpg",
     category: {
       name: "Арт-объекты",
     },
@@ -1558,7 +1558,7 @@ export const chtoPosmotret = [
     title: "Скульптурная группа «Хлебная площадь»",
     desc: "Через сквер шагают вылитые из бронзы лавочники, неподалёку от них воробьи воруют зерно из раскрытых мешков, тут же можно найти екатерининский рубль. Если присядете на скамью, обязательно заметите люк с надписью «А у нас в Рязани и пироги с глазами»",
     address: "Рязань, Краснорядская, 2",
-    imgUrl: "https://i.ibb.co/qs6n585/image.jpg",
+    imgUrl: "https://i.postimg.cc/BbNkSRfW/image.jpg",
     category: {
       name: "Арт-объекты",
     },
@@ -1588,7 +1588,7 @@ export const chtoPosmotret = [
     title: "Скульптура «Студенты»",
     desc: "8 декабря 2015 года на площадке перед входом в главный корпус была открыта скульптура, посвященная студентам Шурику и Лиде – героям советской кинокомедии «Операция “Ы” и другие приключения Шурика»",
     address: "Рязань, Свободы, 46",
-    imgUrl: "https://i.ibb.co/1QwD6xL/image.jpg",
+    imgUrl: "https://i.postimg.cc/gkk1Sc3G/image.jpg",
     category: {
       name: "Арт-объекты",
     },
@@ -1618,7 +1618,7 @@ export const chtoPosmotret = [
     title: "Рязанский государственный областной театр кукол",
     desc: "Рязанский театр кукол – дважды лауреат Премии Правительства Российской Федерации и самый технически оснащенный театр кукол в стране",
     address: "Рязань, Есенина, 27",
-    imgUrl: "https://i.ibb.co/GcjvHkz/image.jpg",
+    imgUrl: "https://i.postimg.cc/X7HmTMgd/image.jpg",
     category: {
       name: "Театры",
     },
@@ -1657,7 +1657,7 @@ export const chtoPosmotret = [
     title: "Рязанский областной музыкальный театр",
     desc: "Музыкальный театр – это возрождение знаменитого Оперного дома, который существовал в Рязани в 18-19 веках и пользовался большим успехом у жителей Рязани и близлежащих городов, включая столицу",
     address: "Рязань, Циолковского, 12",
-    imgUrl: "https://i.ibb.co/QHG3jZm/image.jpg",
+    imgUrl: "https://i.postimg.cc/L8JwSyy7/image.jpg",
     category: {
       name: "Театры",
     },
@@ -1696,7 +1696,7 @@ export const chtoPosmotret = [
     title: "Рязанская филармония",
     desc: "Полные залы неизменно собирают Русский народный хор им. Попова и губернаторский симфонический оркестр",
     address: "Рязань, Ленина, 26",
-    imgUrl: "https://i.ibb.co/HFJrztx/image.jpg",
+    imgUrl: "https://i.postimg.cc/13bT3p2z/image.jpg",
     category: {
       name: "Театры",
     },
@@ -1731,7 +1731,7 @@ export const chtoPosmotret = [
     title: "Рязанский областной театр драмы",
     desc: "Рязанский театр драмы — один из старейших в России",
     address: "Рязань, пл. Театральная, 7а",
-    imgUrl: "https://i.ibb.co/5BBY818/image.jpg",
+    imgUrl: "https://i.postimg.cc/cJYzgvGB/image.jpg",
     category: {
       name: "Театры",
     },
@@ -1766,7 +1766,7 @@ export const chtoPosmotret = [
     title: "Рязанский театр юного зрителя",
     desc: "Здание театра было построено в 1860–1862 годах и является одним из старейших театральных зданий в России",
     address: "Рязань, Соборная, 16",
-    imgUrl: "https://i.ibb.co/zsjrSX0/image.jpg",
+    imgUrl: "https://i.postimg.cc/gJWTvGYF/image.jpg",
     category: {
       name: "Театры",
     },
@@ -1801,7 +1801,7 @@ export const chtoPosmotret = [
     title: "Театр Переход имени Геннадия Кириллова (РГУ имени С.А. Есенина)",
     desc: "Здание имеет 100-местную камерную сцену, которая создает уникальную атмосферу для зрителей",
     address: "Рязань, Касимовское ш., 25 к.2",
-    imgUrl: "https://i.ibb.co/Bqzt9LR/image.jpg",
+    imgUrl: "https://i.postimg.cc/brYVBLDm/image.jpg",
     category: {
       name: "Театры",
     },
