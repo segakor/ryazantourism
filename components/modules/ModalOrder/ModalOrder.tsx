@@ -176,7 +176,7 @@ export const ModalOrder = () => {
                     </>
                   </div>
                 </div>
-                <div className="mt-4 mb-4 flex">
+                <div className="mt-4 md:mb-4 mb-12 flex">
                   <ButtonSubmit />
                 </div>
               </form>
