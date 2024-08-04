@@ -1,34 +1,64 @@
 /* eslint-disable @next/next/no-img-element */
-import Icons from "@/components/elements/Logo/Icons";
-import "./style.css";
 import { TSinglyRoutes } from "@/types/types";
-import LinkButton from "@/components/elements/Button/LinkButton";
+import { Typography } from "@/components/elements/Typography/Typography";
+import { normalizeCount } from "@/utils/normalizeCount";
+import Link from "next/link";
 
-//TODO: просклонять время !
-//TODO: icons часики
 const Item = ({ item }: { item: TSinglyRoutes }) => {
+  const daysVal = !!item.duration.days && (
+    <>
+      {item.duration.days}{" "}
+      {normalizeCount(item.duration.days, ["день", "дня", "дней"])}{" "}
+    </>
+  );
+  const hoursVal = !!item.duration.hours && (
+    <>
+      {" "}
+      {item.duration.hours}{" "}
+      {normalizeCount(item.duration.hours, ["час", "часа", "часов"])}
+    </>
+  );
   return (
-    <div className="singly_routes_item">
-      <div className="singly_routes_item_header">
+    <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] overflow-hidden">
+      <div className="bg-[var(--color-grey)] h-[200px] md:w-[408px] w-full">
         <img
-          className="singly_routes_image"
+          className="object-cover w-full h-full aspect-auto"
           src={item.images[0].url}
           alt="Фон"
         />
       </div>
-      <div className="singly_routes_item_body">
-        <div className="singly_routes_item_body_inner">
-          <h5 className="h5">{item.title}</h5>
-          <div className="note-text singly_routes_item_body_address">
-            <Icons icon="location" />
-            {item.duration.days} дня {item.duration.hours} часа
+      <div className="p-[30px] flex flex-col justify-between gap-[30px] h-full">
+        <div className="grid gap-3">
+          <Typography variant="h5" className="font-medium">
+            {item.title}
+          </Typography>
+          <div className="note-text flex gap-3">
+            <svg
+              width="12"
+              height="16"
+              viewBox="0 0 12 16"
+              fill="black"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M0 6.85831C0 3.61134 2.71333 0.986938 5.99539 0.986938C9.28669 0.986938 12 3.61134 12 6.85831C12 8.4945 11.405 10.0135 10.4256 11.301C9.34506 12.7212 8.0133 13.9586 6.51428 14.9299C6.1712 15.1543 5.86157 15.1713 5.48503 14.9299C3.97747 13.9586 2.64571 12.7212 1.57447 11.301C0.594343 10.0135 0 8.4945 0 6.85831ZM4.01953 7.04108C4.01953 8.12882 4.90713 8.98433 5.99545 8.98433C7.08449 8.98433 7.98063 8.12882 7.98063 7.04108C7.98063 5.96182 7.08449 5.06467 5.99545 5.06467C4.90713 5.06467 4.01953 5.96182 4.01953 7.04108Z"
+                fill="black"
+              />
+            </svg>
+            {daysVal}
+            {hoursVal}
           </div>
         </div>
-        <div className="singly_routes_item_footer">
-          <LinkButton href={`/marshruty/samostoyatelnye-marshruty/${item.id}`} target="_self">
-            К сценарию
-          </LinkButton>
-        </div>
+        <Link href={`/marshruty/samostoyatelnye-marshruty/${item.id}`}>
+          <div
+            className="bg-[var(--color-green)] hover:bg-black text-black hover:text-white transition-all
+               md:py-5 py-4 px-10 inline-block rounded-full "
+          >
+            <div className="flex gap-2 items-center">К сценарию</div>
+          </div>
+        </Link>
       </div>
     </div>
   );
@@ -36,7 +66,7 @@ const Item = ({ item }: { item: TSinglyRoutes }) => {
 
 export const SinglyRoutest = ({ data }: { data: TSinglyRoutes[] }) => {
   return (
-    <div className="singly_routes_group">
+    <div className="grid md:grid-cols-3 grid-cols-1 gap-7">
       {data.map((item, index) => (
         <Item key={index} item={item} />
       ))}

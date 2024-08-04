@@ -11,7 +11,7 @@ export const HeaderNav = () => {
         {headerMenu.map((item, index) => (
           <li
             className="flex items-center gap-[0.3125rem] whitespace-nowrap 
-            font-medium leading-[121%] transition-all cursor-pointer group/item relative text-sm hover:text-[#96ee05]"
+            font-medium transition-all cursor-pointer group/item relative text-sm hover:text-[#96ee05]"
             key={index}
           >
             <span className="menu_link">

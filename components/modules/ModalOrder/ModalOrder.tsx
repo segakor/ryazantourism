@@ -1,9 +1,12 @@
 "use client";
 import { useState } from "react";
-import "./style.css";
-import { eachDayOfInterval, endOfMonth, format, parse } from "date-fns";
+import { eachDayOfInterval, endOfMonth, format } from "date-fns";
 import { ru } from "date-fns/locale";
 import ButtonSubmit from "@/components/elements/Button/ButtonSubmit";
+import { Select, SelectItem } from "@nextui-org/select";
+import { Input } from "@nextui-org/input";
+import { Field, Form } from "react-final-form";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 export const ModalOrder = () => {
   const [count, setCount] = useState(1);
@@ -20,12 +23,16 @@ export const ModalOrder = () => {
     .filter((item) => item.getDay() === 6)
     .filter((item) => item > new Date());
 
-  const onSubmit = async (formData: any) => {
+  const onSubmit = async (formData: {
+    fio: string;
+    tel: string;
+    date: string;
+  }) => {
     try {
       const formValue = {
-        fio: formData.get("fio"),
-        tel: formData.get("tel"),
-        date: formData.get("date"),
+        fio: formData.fio,
+        tel: formData.tel,
+        date: formData.date,
         count,
       };
       await fetch("/api/emails", {
@@ -34,6 +41,7 @@ export const ModalOrder = () => {
       });
       setIsSuccess(true);
     } catch (error) {
+      console.log(error);
       alert("Не удалось отправить заявку");
     } finally {
     }
@@ -42,12 +50,12 @@ export const ModalOrder = () => {
   return (
     <div>
       {!isSuccess ? (
-        <div className="modal_order">
-          <div className="modal_order_info">
-            <div className="modal_order_info_title">
+        <div className="bg-[#806fdf] text-white w-full flex md:flex-row flex-col md:p-[5rem] p-4 justify-between gap-8 rounded-[1.5rem]">
+          <div>
+            <Typography variant="h3" className="mb-4">
               Записаться на экскурсию
-            </div>
-            <div className="modal_order_info_desc">
+            </Typography>
+            <div className="text-[1rem] opacity-[0.5]">
               Проект для тех, кто приехал в Рязань ненадолго, но хочет
               познакомиться с городом поближе. Самая удобная и интересная
               прогулка с экскурсоводом, полезные подарки и скидки, которые
@@ -58,64 +66,119 @@ export const ModalOrder = () => {
               Время старта 12.00.
             </div>
           </div>
-          <form action={onSubmit}>
-            <div className="modal_order_form">
-              <div className="form_input">
-                <input
-                  placeholder="ФИО"
-                  type="text"
+          <Form
+            onSubmit={onSubmit}
+            render={({ handleSubmit }) => (
+              <form onSubmit={handleSubmit}>
+                <Field
                   name="fio"
-                  inputMode="text"
-                  required
+                  validate={(v) => {
+                    if (!v) {
+                      return "error";
+                    }
+                  }}
+                  render={({ input, meta }) => (
+                    <div>
+                      <span className="mb-1 block">ФИО</span>
+                      {/* @ts-ignore */}
+                      <Input
+                        isRequired
+                        type="text"
+                        label="ФИО"
+                        className="max-w"
+                        isInvalid={!!meta.touched && !!meta.error}
+                        errorMessage="Обязательное поле"
+                        {...input}
+                        {...meta}
+                      />
+                    </div>
+                  )}
                 />
-              </div>
-              <div className="form_input">
-                <input
-                  placeholder="Телефон"
-                  type="tel"
+                <Field
                   name="tel"
-                  required
-                  maxLength={11}
+                  validate={(v) => {
+                    if (!v) {
+                      return "error";
+                    }
+                  }}
+                  render={({ input, meta }) => (
+                    <div>
+                      <span className="mb-1 block">Номер телефона</span>
+                      {/* @ts-ignore */}
+                      <Input
+                        isRequired
+                        type="number"
+                        label="Телефон"
+                        className="max-w"
+                        isInvalid={!!meta.touched && !!meta.error}
+                        errorMessage="Обязательное поле"
+                        {...input}
+                        {...meta}
+                      />
+                    </div>
+                  )}
                 />
-              </div>
-              <select name="date" className="form_input" required>
-                <option value="" disabled selected>
-                  Дата
-                </option>
-                {optionsDate.map((item, index) => (
-                  <option
-                    value={format(item, "MM.dd.yyy")}
-                    key={index}
-                    disabled={new Date() > item}
-                  >
-                    {format(item, "d MMMM yyyy", { locale: ru })}
-                  </option>
-                ))}
-              </select>
-              <span className="mb-1 block">Колличество людей</span>
-              <div className="count_people">
-                <>
-                  {[1, 2, 3, 4, 5].map((item, index) => (
-                    <button
-                      type="button"
-                      className={`options__label ${
-                        count === item && "checked"
-                      }`}
-                      key={index}
-                      onClick={() => onChangeCount(item)}
-                    >
-                      <div className="options__text">
-                        {item != 5 ? item : item + "+"}
-                      </div>
-                    </button>
-                  ))}
-                </>
-              </div>
-              <div className="button_block">
-                <ButtonSubmit label="Записаться на экскурсию" isBlackHover />
-              </div>
-            </div>
-          </form>
+                <Field
+                  name="date"
+                  validate={(v) => {
+                    if (!v) {
+                      return "error";
+                    }
+                  }}
+                  render={({ input, meta }) => (
+                    <div>
+                      <span className="mb-1 block">Дата</span>
+                      {/* @ts-ignore */}
+                      <Select
+                        label="Выбирете дату"
+                        className="max-w"
+                        errorMessage="Обязательное поле"
+                        isInvalid={!!meta.touched && !!meta.error}
+                        {...input}
+                        {...meta}
+                      >
+                        {optionsDate.map((item) => (
+                          <SelectItem
+                            key={format(item, "d MMMM yyyy", { locale: ru })}
+                          >
+                            {format(item, "d MMMM yyyy", { locale: ru })}
+                          </SelectItem>
+                        ))}
+                      </Select>
+                    </div>
+                  )}
+                />
+                <div>
+                  <span className="mb-1 block">Колличество людей</span>
+                  <div className="flex gap-2 justify-between">
+                    <>
+                      {[1, 2, 3, 4, 5].map((item, index) => (
+                        <button
+                          type="button"
+                          className={`cursor-pointer rounded-xl transition-all p-3 bg-[#998ce4] ${
+                            count === item && "!bg-white"
+                          }`}
+                          key={index}
+                          onClick={() => onChangeCount(item)}
+                        >
+                          <div
+                            className={`min-w-[1.875rem] font-medium text-center text-white ${
+                              count === item && "!text-black"
+                            }`}
+                          >
+                            {item != 5 ? item : item + "+"}
+                          </div>
+                        </button>
+                      ))}
+                    </>
+                  </div>
+                </div>
+                <div className="mt-4 mb-4 flex">
+                  <ButtonSubmit />
+                </div>
+              </form>
+            )}
+          />
         </div>
       ) : (
         <div className="modal_order_info_title">

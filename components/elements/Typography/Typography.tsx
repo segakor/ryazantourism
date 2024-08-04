@@ -11,7 +11,7 @@ export const Typography = ({ variant, children, className, id }: Props) => {
     return (
       <h1
         id={id}
-        className={`md:text-[60px] text-[36px] ${className ? className : ""}`}
+        className={`md:text-[60px] text-[36px] leading-tight ${className ? className : ""}`}
       >
         {children}
       </h1>
@@ -21,7 +21,7 @@ export const Typography = ({ variant, children, className, id }: Props) => {
     return (
       <h2
         id={id}
-        className={`md:text-[60px] text-[40px] ${className ? className : ""}`}
+        className={`md:text-[60px] text-[40px] leading-tight ${className ? className : ""}`}
       >
         {children}
       </h2>
@@ -31,7 +31,7 @@ export const Typography = ({ variant, children, className, id }: Props) => {
     return (
       <h3
         id={id}
-        className={`md:text-[40px] text-[30px] ${className ? className : ""}`}
+        className={`md:text-[40px] text-[30px] leading-tight ${className ? className : ""}`}
       >
         {children}
       </h3>
@@ -41,7 +41,7 @@ export const Typography = ({ variant, children, className, id }: Props) => {
     return (
       <h4
         id={id}
-        className={`md:text-[32px] text-[28px] ${className ? className : ""}`}
+        className={`md:text-[32px] text-[28px] leading-tight ${className ? className : ""}`}
       >
         {children}
       </h4>
@@ -51,7 +51,7 @@ export const Typography = ({ variant, children, className, id }: Props) => {
     return (
       <h5
         id={id}
-        className={`md:text-[20px] text-[20px] ${className ? className : ""}`}
+        className={`md:text-[20px] text-[20px] leading-tight ${className ? className : ""}`}
       >
         {children}
       </h5>
@@ -61,7 +61,7 @@ export const Typography = ({ variant, children, className, id }: Props) => {
     return (
       <h5
         id={id}
-        className={`md:text-[16px] text-[16px] ${className ? className : ""}`}
+        className={`md:text-[16px] text-[16px] leading-tight ${className ? className : ""}`}
       >
         {children}
       </h5>

@@ -1,8 +1,0 @@
-.organizovannye_marshruty_page {
-  padding-top: 120px;
-  padding-bottom: 120px;
-  @media (max-width: 768px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-}

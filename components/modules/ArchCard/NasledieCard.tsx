@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Icons from "@/components/elements/Logo/Icons";
-import "./style.css";
 import { TNasledieCard } from "@/types/types";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
@@ -16,7 +14,8 @@ const Card = ({
   href: "nasledie-ryazani" | "nasledie-kasimova";
 }) => {
   return (
-    <Link href={`/region/${href}/${item.id}`} className="arch_card_item group/item">
+    <Link href={`/region/${href}/${item.id}`} className="group/item rounded-[40px] flex flex-col justify-between text-white cursor-pointer 
+      relative overflow-hidden bg-[ var(--color-grey)]">
       <div className={`w-full relative pt-[100%]`}>
         <Image
           src={item.imgUrl}
@@ -28,7 +27,7 @@ const Card = ({
           priority
         />
       </div>
-      <div className="arch_card_item_inner">
+      <div className="absolute w-full p-[40px] h-full flex justify-between flex-col">
         <div className="flex items-end justify-end">
           <div className="bg-white flex justify-end rounded-full items-center group-hover/item:bg-[var(--color-green)] transition-all">
             <svg
@@ -46,7 +45,7 @@ const Card = ({
             </svg>
           </div>
         </div>
-        <div className="arch_card_item_body">
+        <div className="grid gap-3">
           <Typography variant="h5" className="font-semibold">
             {item.title}
           </Typography>

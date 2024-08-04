@@ -1,6 +1,6 @@
 import Link from "next/link";
-import "./style.css";
 import { ImageBlock } from "@/components/elements/LongReadBlocks/ImageBlock/ImageBlock";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 export const SinglyRoutesCard = ({
   data,
@@ -14,7 +14,7 @@ export const SinglyRoutesCard = ({
   }[];
 }) => {
   return (
-    <div className="singly_routes_card_group">
+    <div className="grid md:grid-cols-2 grid-cols-1 gap-7 bg-white p-5 rounded-[30px]">
       {data.map((item, index) => (
         <SinglyRoutesCardItem {...item} key={index} />
       ))}
@@ -36,12 +36,14 @@ export const SinglyRoutesCardItem = ({
   point_y: number;
 }) => {
   return (
-    <Link href={"link"} target="_black">
-      <div className="singly_routes_card_item">
-        <div className="singly_routes_card_image">
+    <Link href={`https://maps.yandex.ru/?text=${point_x}+${point_y}`} target="_black">
+      <div className="rounded-[30px] bg-[#f5f5f5] p-[30px] cursor-pointer grid gap-5">
+        <div className="h-[150px] overflow-hidden">
           <ImageBlock srcImg={image_path} />
         </div>
-        <div className="h5">{name}</div>
+        <Typography variant="h5" className="font-medium">
+          {name}
+        </Typography>
       </div>
     </Link>
   );

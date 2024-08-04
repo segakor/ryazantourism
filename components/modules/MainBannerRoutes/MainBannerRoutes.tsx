@@ -1,7 +1,4 @@
-import Icons from "@/components/elements/Logo/Icons";
-import "./style.css";
-import Image from "next/image";
-import LinkButton from "@/components/elements/Button/LinkButton";
+import Image from "next/image"
 import { Typography } from "@/components/elements/Typography/Typography";
 import Link from "next/link";
 
@@ -12,7 +9,7 @@ export const MainBannerRoutes = () => {
         <Typography variant="h2" className="font-medium">
           Маршруты
         </Typography>
-        <div className="text2 flex">
+        <div className="text2 flex items-center gap-3">
           <svg
             width="36"
             height="31"
@@ -29,7 +26,10 @@ export const MainBannerRoutes = () => {
         </div>
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px]">
-        <div className="banner_routes_card_first group/item">
+        <div
+          className="grid gap-5 rounded-[20px] bg-[var(--color-green)] p-10 relative
+         transition-all hover:bg-[#252525] hover:text-white group/item"
+        >
           <Typography variant="h3" className="font-medium">
             Самостоятельные маршруты
           </Typography>
@@ -55,7 +55,8 @@ export const MainBannerRoutes = () => {
             className="w-full object-none md:block hidden"
           />
         </div>
-        <div className="banner_routes_card_second group/item">
+        <div className="grid gap-5 rounded-[20px] bg-[#252525] p-10 relative
+         transition-all hover:bg-[var(--color-green)] hover:text-black text-white group/item">
           <Image
             priority
             src={"/routesCard/second.svg"}

@@ -162,7 +162,7 @@ export const TabPanelPoleznyi = () => {
 
   return (
     <div className="md:max-w-[82.5rem] md:m-auto overflow-x-scroll no-scrollbar">
-      <Typography variant="h2" className="mb-16 text-center">
+      <Typography variant="h2" className="mb-16 text-center font-medium">
         Чем мы можем быть полезны
       </Typography>
       <nav className="flex gap-2 justify-normal md:justify-center overflow-x-scroll no-scrollbar">

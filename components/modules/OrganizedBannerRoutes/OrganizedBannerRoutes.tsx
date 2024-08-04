@@ -1,44 +1,22 @@
 "use client";
 import Image from "next/image";
-import "./style.css";
 import Button from "@/components/elements/Button/Button";
 import { ModalOrder as Foo } from "../ModalOrder/ModalOrder";
 import { useDisclosure } from "@nextui-org/react";
 import { Modal, ModalContent, ModalBody } from "@nextui-org/modal";
 import { Typography } from "@/components/elements/Typography/Typography";
-
-const cards = [
-  {
-    title: "Вас встретят",
-    desc: "Каждую субботу с конца апреля по конец октября мы встречаем гостейгорода около «АМАКС Конгресс-отель» (Первомайский просп., 54). Время старта 12.00.",
-    srcImg: "/routesCard/icon_1.png",
-  },
-  {
-    title: "Покажут лучшее",
-    desc: "Профессиональные гиды проведут для вас бесплатную обзорную экскурсию по Рязани и познакомят с нашими главными достопримечательностями.",
-    srcImg: "/routesCard/icon_2.png",
-  },
-  {
-    title: "Расскажут о самом полезном и выгодном",
-    desc: "Вы узнаете о локальных сервисах, которые помогут сэкономить время, деньги и нервы в вашей поездке.",
-    srcImg: "/routesCard/icon_3.png",
-  },
-  {
-    title: "Обеспечат необходимым",
-    desc: "Конечная точка экскурсии — гостеприимный визит-центр на пешеходной улице Почтовой. Здесь вы найдете материалы для отдыха или дальнейшего самостоятельного изучения города: путеводитель проекта, карту Рязани, тематические буклеты и сувениры.",
-    srcImg: "/routesCard/icon_4.png",
-  },
-];
+import { organizedBannerCard } from "@/constants/contstants";
 
 export const OrganizedBannerRoutes = () => {
-
   const { isOpen, onOpenChange } = useDisclosure();
 
   return (
     <div>
       <div className="flex md:flex-row flex-col justify-between gap-[1.875rem]">
         <div className="md:flex-[0_1_20rem] flex-[1rem]">
-          <Typography variant="h3" className="mb-7 font-medium">Приезжай на один день или оставайся на выходные</Typography>
+          <Typography variant="h3" className="mb-7 font-medium">
+            Приезжай на один день или оставайся на выходные
+          </Typography>
           <Button
             label={"Записаться на экскурсию"}
             onClick={onOpenChange}
@@ -47,14 +25,18 @@ export const OrganizedBannerRoutes = () => {
         </div>
 
         <div className="md:flex-[0_1_50rem] md:grid flex flex-wrap grid-cols-2 justify-center gap-5">
-          {cards.map((item, index) => (
+          {organizedBannerCard.map((item, index) => (
             <div className="overflow-hidden" key={index}>
-              <div className="routes_banner_icon">
+              <div
+                style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
+                className="rounded-[50%] w-[6.25rem] h-[6.25rem] 
+              flex justify-center items-center absolute shadow-sm"
+              >
                 <Image width={42} height={42} src={item.srcImg} alt="Icon" />
               </div>
 
-              <div className="routes_banner">
-                <div className="routes_banner_svg">
+              <div  style={{clipPath:`url(#svgPathRoutes)`}} className="hover:bg-[var(--color-green)] h-[24.375rem] md:w-[24.375rem] w-auto bg-[var(--color-very-light-gray)] transition-all flex items-end relative">
+                <div className="m-w-[24.375rem] absolute top-10">
                   <Image
                     width={390}
                     height={156}
@@ -62,9 +44,9 @@ export const OrganizedBannerRoutes = () => {
                     alt="Icon"
                   />
                 </div>
-                <div className="routes_banner_content">
-                  <div className="text2">{item.title}</div>
-                  <div className="text3">{item.desc}</div>
+                <div className="relative p-9 grid gap-4">
+                  <div className="text2 !font-medium">{item.title}</div>
+                  <div className="text3 opacity-[0.5] !leading-snug">{item.desc}</div>
                 </div>
               </div>
             </div>
@@ -92,7 +74,7 @@ export const OrganizedBannerRoutes = () => {
           {(onClose) => (
             <>
               <ModalBody>
-                <Foo/>
+                <Foo />
               </ModalBody>
             </>
           )}
