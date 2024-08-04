@@ -6,9 +6,12 @@ import { useDisclosure } from "@nextui-org/react";
 import { Modal, ModalContent, ModalBody } from "@nextui-org/modal";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { organizedBannerCard } from "@/constants/contstants";
+import { useMediaQuery } from "react-responsive";
 
 export const OrganizedBannerRoutes = () => {
   const { isOpen, onOpenChange } = useDisclosure();
+
+  const mdMedia = useMediaQuery({ query: "(min-width: 768px)" });
 
   return (
     <div>
@@ -35,7 +38,10 @@ export const OrganizedBannerRoutes = () => {
                 <Image width={42} height={42} src={item.srcImg} alt="Icon" />
               </div>
 
-              <div  style={{clipPath:`url(#svgPathRoutes)`}} className="hover:bg-[var(--color-green)] h-[24.375rem] md:w-[24.375rem] w-auto bg-[var(--color-very-light-gray)] transition-all flex items-end relative">
+              <div
+                style={{ clipPath: `url(#svgPathRoutes)` }}
+                className="hover:bg-[var(--color-green)] h-[24.375rem] md:w-[24.375rem] w-auto bg-[var(--color-very-light-gray)] transition-all flex items-end relative"
+              >
                 <div className="m-w-[24.375rem] absolute top-10">
                   <Image
                     width={390}
@@ -46,7 +52,9 @@ export const OrganizedBannerRoutes = () => {
                 </div>
                 <div className="relative p-9 grid gap-4">
                   <div className="text2 !font-medium">{item.title}</div>
-                  <div className="text3 opacity-[0.5] !leading-snug">{item.desc}</div>
+                  <div className="text3 opacity-[0.5] !leading-snug">
+                    {item.desc}
+                  </div>
                 </div>
               </div>
             </div>
@@ -66,9 +74,9 @@ export const OrganizedBannerRoutes = () => {
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
-        size="4xl"
-        scrollBehavior="outside"
+        size={mdMedia ? '4xl' : 'full'}
         backdrop="blur"
+        className="overflow-scroll"
       >
         <ModalContent className="bg-[#806fdf] p-0">
           {(onClose) => (

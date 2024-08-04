@@ -9,7 +9,7 @@ export const ModalContent = (data: TGid) => {
   return (
     <div className="flex gap-10 py-5 md:flex-row flex-col">
       <div className="grid gap-5">
-        <div className="md:w-[300px] md:h-[408px] w-auto h-auto overflow-hidden grid">
+        <div className="md:w-[300px] w-full h-[408px] overflow-hidden grid">
           <div className={`w-full relative pt-[100%]`}>
             <Image
               src={data.srcImg}
