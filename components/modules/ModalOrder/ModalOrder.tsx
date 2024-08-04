@@ -49,7 +49,7 @@ export const ModalOrder = () => {
   return (
     <div>
       {!isSuccess ? (
-        <div className="bg-[#806fdf] text-white w-full flex md:flex-row flex-col md:p-[5rem] p-4 justify-between gap-8 rounded-[1.5rem]">
+        <div className="bg-[#806fdf] text-white w-full flex md:flex-row flex-col md:p-[5rem] p-4 justify-between md:gap-8 gap-4 rounded-[1.5rem]">
           <div>
             <Typography variant="h3" className="mb-4">
               Записаться на экскурсию
@@ -176,7 +176,7 @@ export const ModalOrder = () => {
                     </>
                   </div>
                 </div>
-                <div className="mt-4 md:mb-4 mb-12 flex">
+                <div className="mt-4 md:mb-4 mb-14 flex">
                   <ButtonSubmit />
                 </div>
               </form>
