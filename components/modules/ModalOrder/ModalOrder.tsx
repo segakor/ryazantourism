@@ -43,7 +43,6 @@ export const ModalOrder = () => {
     } catch (error) {
       console.log(error);
       alert("Не удалось отправить заявку");
-    } finally {
     }
   };
 
@@ -86,6 +85,7 @@ export const ModalOrder = () => {
                         type="text"
                         label="ФИО"
                         className="max-w"
+                        style={{ fontSize: "16px" }}
                         isInvalid={!!meta.touched && !!meta.error}
                         errorMessage="Обязательное поле"
                         {...input}
@@ -110,6 +110,7 @@ export const ModalOrder = () => {
                         type="number"
                         label="Телефон"
                         className="max-w"
+                        style={{ fontSize: "16px" }}
                         isInvalid={!!meta.touched && !!meta.error}
                         errorMessage="Обязательное поле"
                         {...input}
@@ -132,6 +133,7 @@ export const ModalOrder = () => {
                       <Select
                         label="Выбирете дату"
                         className="max-w"
+                        style={{ fontSize: "16px" }}
                         errorMessage="Обязательное поле"
                         isInvalid={!!meta.touched && !!meta.error}
                         {...input}
@@ -139,6 +141,7 @@ export const ModalOrder = () => {
                       >
                         {optionsDate.map((item) => (
                           <SelectItem
+                            style={{ fontSize: "16px" }}
                             key={format(item, "d MMMM yyyy", { locale: ru })}
                           >
                             {format(item, "d MMMM yyyy", { locale: ru })}
