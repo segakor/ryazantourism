@@ -16,6 +16,7 @@ import {
   isEqual,
 } from "date-fns";
 import { ru } from "date-fns/locale";
+import { Typography } from "@/components/elements/Typography/Typography";
 
 type Props = {
   onChange: (e: Date) => void;
@@ -77,9 +78,9 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
     <div className="w-auto rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa] md:h-[584px]">
       {/* {currentDay.toDateString()} */}
       <div className="flex items-center justify-between">
-        <p className="h4 text-xl text-white">
-          {format(firstDayOfMonth, "LLLL yyyy", { locale: ru })}
-        </p>
+        <Typography variant="h4" className="text-white">
+          {format(currentDay, "dd LLLL yyyy", { locale: ru })}
+        </Typography>
         <div className="flex items-center justify-evenly gap-6 md:gap-12">
           <button
             aria-label="calendar backward"

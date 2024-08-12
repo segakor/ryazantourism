@@ -148,3 +148,14 @@ export type TNewsArt = {
   desc: string;
   imgUrl: string;
 };
+
+export type TPromTurizmCard = {
+  title: string;
+  desc: string;
+  address: string;
+  ageLimit: number;
+  tag: Array<"group" | "school" | "student" | "individual">;
+  imgUrl: string[];
+  popupDesc: string;
+  url: string;
+};

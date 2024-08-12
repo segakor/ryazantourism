@@ -10,8 +10,14 @@ import { heroMap } from "@/constants/contstants";
 import { EffectFade, Pagination, Autoplay } from "swiper/modules";
 import LinkButton from "@/components/elements/Button/LinkButton";
 import { Typography } from "@/components/elements/Typography/Typography";
+import { swiperStyle } from "@/constants/swiperStyle";
+import { useMediaQuery } from "react-responsive";
 
 export const HeroMain = () => {
+  const mdMedia = useMediaQuery({ query: "(min-width: 768px)" });
+
+  /* const swiperPagination = !mdMedia && { "--swiper-pagination-bottom": "80px" }; */
+
   return (
     <div className="swiper_wrapper">
       <Swiper
@@ -24,8 +30,12 @@ export const HeroMain = () => {
           clickable: true,
         }}
         modules={[Pagination, EffectFade, Autoplay]}
+        //@ts-ignore
         style={{
+          ...swiperStyle,
           height: "100vh",
+          //@ts-ignore
+          
         }}
         className="mySwiper"
       >

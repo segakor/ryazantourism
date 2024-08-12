@@ -1,20 +1,5 @@
 .swiper_wrapper {
   background-color: black;
-  .swiper-slide {
-    /* height: 100vh; */ 
-    width: 100% !important;
-  }
-  .swiper-pagination-bullet{
-    background: var(--color-grey);
-  }
-  .swiper-pagination-bullet-active {
-    background: var(--color-green);
-  }
-  .swiper-pagination{
-    @media (max-width: 768px) {
-      margin-bottom: 80px;
-    }
-  }
 }
 
 .hero_wrapper {
@@ -49,21 +34,6 @@
   color: #fff;
   max-width: 1280px;
   margin: 0 auto;
-  /* h3 {
-    font-size: 64px;
-    font-weight: 500;
-    line-height: 70px;
-  }
-  p {
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 28px;
-  }
-  @media (max-width: 768px) {
-    h3 {
-      font-size: 48px;
-    }
-  } */
 }
 
 .hero_button {

@@ -1,12 +1,9 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import "./style.css";
-import { CalendarSlide } from "@/components/elements/Calendar/CalendarSlide";
-// Import Swiper React components
+import { CalendarSlide } from "@/components/modules/Calendar/CalendarSlide";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -15,6 +12,7 @@ import { format } from "date-fns";
 import { sobytiyaCards } from "@/constants/pages/sobytiaya/sobytiya";
 import Link from "next/link";
 import { Typography } from "@/components/elements/Typography/Typography";
+import { swiperStyle } from "@/constants/swiperStyle";
 
 const eventsDates = sobytiyaCards.map((item) => item.dates).flat();
 
@@ -42,6 +40,8 @@ export const EventMainCard = () => {
                 clickable: true,
               }}
               modules={[Pagination, Navigation]}
+              //@ts-ignore
+              style={swiperStyle}
               className="swiper_calendar md:h-[584px] h-[350px] rounded-[14px]"
             >
               {filterEvents.map((item, index) => (

@@ -42,7 +42,7 @@ const NewsArtItem = (props: any) => {
         style={{
           background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${props.imgUrl})`,
         }}
-        className="flex flex-col justify-end rounded-3xl p-6 border-solid bg-cover min-h-[37.125rem]"
+        className="flex flex-col justify-end rounded-3xl p-6 border-solid bg-cover min-h-[37.125rem] bg-cover"
       >
         <div className="h5 text-white">{props.title}</div>
       </div>

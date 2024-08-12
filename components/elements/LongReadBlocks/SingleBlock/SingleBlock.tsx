@@ -22,7 +22,7 @@ export const SingleBlock = ({
             alt="img"
             objectFit="cover"
             fill
-            className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg max-h-[437px]`}
+            className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg max-h-[440px]`}
             placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
             priority
           />

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { TGid } from "@/types/types";
-import { ModalContent as Foo } from "./ModalContent";
+import { ModalGid } from "./ModalGid";
 
 import { Modal, ModalContent, ModalBody } from "@nextui-org/modal";
 import { useDisclosure } from "@nextui-org/react";
@@ -81,13 +81,9 @@ export const Gid = ({ item }: { item: TGid }) => {
         backdrop="blur"
       >
         <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalBody>
-                <Foo {...item} />
-              </ModalBody>
-            </>
-          )}
+          <ModalBody>
+            <ModalGid {...item} />
+          </ModalBody>
         </ModalContent>
       </Modal>
     </div>

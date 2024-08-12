@@ -1,12 +1,9 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 import "./style.css";
-import { CalendarSlide } from "@/components/elements/Calendar/CalendarSlide";
-// Import Swiper React components
+import { CalendarSlide } from "@/components/modules/Calendar/CalendarSlide";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -15,6 +12,7 @@ import { format } from "date-fns";
 import Link from "next/link";
 import { eventCards } from "@/constants/pages/organizovannye-marshruty/eventCards";
 import { Typography } from "@/components/elements/Typography/Typography";
+import { swiperStyle } from "@/constants/swiperStyle";
 
 const eventsDates = eventCards.map((item) => item.dates).flat();
 
@@ -36,15 +34,17 @@ export const EventCard = () => {
       </Typography>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px]">
         <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
-        <div className="swiper_wrapper_event">
+        <div className="swiper_wrapper_event md:h-auto">
           {!!filterEvents.length ? (
             <Swiper
               navigation={true}
               pagination={{
                 clickable: true,
               }}
+              //@ts-ignore
+              style={swiperStyle}
               modules={[Pagination, Navigation]}
-              className="swiper"
+               className="swiper_calendar md:h-[584px] h-[350px] rounded-[14px]"
             >
               {filterEvents.map((item, index) => (
                 <SwiperSlide key={index}>
@@ -80,7 +80,7 @@ const Card = ({
 }) => {
   return (
     <div
-      className="event_card_item_inner"
+      className="event_card_item_inner bg-cover"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${imgUrl})`,
       }}

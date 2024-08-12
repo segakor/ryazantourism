@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   title: "Здоровье - Всё о туризме в Рязани и Рязанской области",
 };
 
-async function geTPlaceCard() {
+async function getPlaceCard() {
   const response = await fetch(API_URL.ZDOROVE);
   return response.json();
 }
 
 const Page = async () => {
-  const cards = (await geTPlaceCard()) as ResponsePlaceCard;
+  const cards = (await getPlaceCard()) as ResponsePlaceCard;
 
   return (
     <>

@@ -92,16 +92,8 @@ export const headerMenu = [
   {
     item: "Проекты",
     subItem: [
-      /*  {
-        label: "Промтуризм",
-        path: "/professionalam/agentstvo-razvitiya-turizma",
-      },
-      {
-        label: "Автотуризм",
-        path: "/professionalam/agentstvo-razvitiya-turizma",
-      }, */
       { label: "Библиотека", path: "/biblioteka" },
-      /* { label: "Школа", path: "/professionalam/agentstvo-razvitiya-turizma" }, */
+      { label: "Промтуризм", path: "/promturizm" },
     ],
   },
   {
@@ -184,6 +176,29 @@ export const bibliotekaNavigation = [
     title: "Вдохновиться",
     desc: "Эти снимки могли стать еще лучше, если бы на них оказались вы",
     path: "/vdohnovitsiya",
+  },
+];
+
+export const promTurizmNavigation = [
+  {
+    imgUrl: "/promTurizmNavigation/1.jpg",
+    title: "Индивидуальным туристам",
+    path: "/promturizm/list?default=individual",
+  },
+  {
+    imgUrl: "/promTurizmNavigation/2.png",
+    title: "Туристическим группам",
+    path: "/promturizm/list?default=group",
+  },
+  {
+    imgUrl: "/promTurizmNavigation/3.png",
+    title: "Школьникам",
+    path: "/promturizm/list?default=school",
+  },
+  {
+    imgUrl: "/promTurizmNavigation/4.png",
+    title: "Студентам",
+    path: "/promturizm/list?default=student",
   },
 ];
 
@@ -270,6 +285,14 @@ export const tabsSinglyRoutes = [
   { label: "Все", id: "all" },
   { label: "Пеший", id: "Пеший" },
   { label: "Автомобильный", id: "Автомобильный" },
+];
+
+export const tabsPromTurizm = [
+  { label: "Все", id: "all" },
+  { label: "Индивидуальным туристам", id: "individual" },
+  { label: "Туристическим группам", id: "group" },
+  { label: "Школьникам", id: "school" },
+  { label: "Студентам", id: "student" },
 ];
 
 export const organizedBannerCard = [

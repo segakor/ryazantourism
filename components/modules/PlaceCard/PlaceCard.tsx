@@ -1,14 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState } from "react";
-import "./style.css";
-import Icons from "@/components/elements/Logo/Icons";
 import { Tag, Tags } from "@/components/elements/Tags/Tags";
 import { TagList, TPlaceCard } from "@/types/types";
-import LinkButton from "@/components/elements/Button/LinkButton";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
 import { Typography } from "@/components/elements/Typography/Typography";
+import Link from "next/link";
 
 export const PlaceCard = ({ data }: { data: TPlaceCard[] }) => {
   return (
@@ -33,9 +30,9 @@ const Card = ({ item }: { item: TPlaceCard }) => {
   const tags = item.tags.map((item) => item.id) as TagList[];
 
   return (
-    <div className="place_card_item">
+    <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] overflow-hidden">
       <div>
-        <div className="place_card_item_header_tags">
+        <div className="absolute p-7 z-[2]">
           <Tags tags={tags} />
         </div>
         <div className="grid h-[200px] w-full">
@@ -52,35 +49,55 @@ const Card = ({ item }: { item: TPlaceCard }) => {
           </div>
         </div>
       </div>
-      <div className="place_card_item_body">
-        <div className="place_card_item_body_inner">
-          <Typography variant="h5" className="font-semibold">{item.name}</Typography>
-          <div className="partner-card-text place_card_item_body_desc">
+      <div className="p-[30px] flex flex-col justify-between h-full">
+        <div className="grid gap-3">
+          <Typography variant="h5" className="font-semibold">
+            {item.name}
+          </Typography>
+          <div className="partner-card-text flex gap-2">
             <span>
               {notFullText}{" "}
               {textLength && !isFullText && (
-                <a onClick={() => setIsFullText(true)}>Показать полностью</a>
+                <a
+                  className="text-[var(--color-green)] cursor-pointer"
+                  onClick={() => setIsFullText(true)}
+                >
+                  Показать полностью
+                </a>
               )}
             </span>
           </div>
-          <div className="note-text place_card_item_body_address">
-            <Icons icon="location" />
+          <div className="note-text flex gap-2">
+            <svg
+              width="12"
+              height="16"
+              viewBox="0 0 12 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M0 6.85831C0 3.61134 2.71333 0.986938 5.99539 0.986938C9.28669 0.986938 12 3.61134 12 6.85831C12 8.4945 11.405 10.0135 10.4256 11.301C9.34506 12.7212 8.0133 13.9586 6.51428 14.9299C6.1712 15.1543 5.86157 15.1713 5.48503 14.9299C3.97747 13.9586 2.64571 12.7212 1.57447 11.301C0.594343 10.0135 0 8.4945 0 6.85831ZM4.01953 7.04108C4.01953 8.12882 4.90713 8.98433 5.99545 8.98433C7.08449 8.98433 7.98063 8.12882 7.98063 7.04108C7.98063 5.96182 7.08449 5.06467 5.99545 5.06467C4.90713 5.06467 4.01953 5.96182 4.01953 7.04108Z"
+                fill="black"
+              />
+            </svg>
             {item.address}
           </div>
         </div>
-        <div className="place_card_item_footer">
-          <div className="place_card_item_footer_loyalty">
+        <div className="grid">
+          <div className="flex items-center text-[var(--color-blue)] gap-3 mt-3 mb-12">
             <Tag tag={10} />
             <div className="loyalty-text">
               Скидка 20% на экскурсии и мастер-классы для участников карты
               лояльности
             </div>
           </div>
-          <div>
-            <LinkButton href={item.url} target="_blank">
-              {item.url_name}
-            </LinkButton>
-          </div>
+          <Link href={item.url} target="_blank">
+            <div className="group/item bg-[var(--color-green)] hover:bg-black hover:text-white transition-all py-5 px-10 flex items-center justify-center rounded-full ">
+              <div className="flex gap-2 items-center">Подробнее</div>
+            </div>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Button from "@/components/elements/Button/Button";
-import { ModalOrder as Foo } from "../ModalOrder/ModalOrder";
+import { ModalOrder } from "../ModalOrder/ModalOrder";
 import { useDisclosure } from "@nextui-org/react";
 import { Modal, ModalContent, ModalBody } from "@nextui-org/modal";
 import { Typography } from "@/components/elements/Typography/Typography";
@@ -79,13 +79,9 @@ export const OrganizedBannerRoutes = () => {
         className={!mdMedia ? "overflow-scroll" : ""}
       >
         <ModalContent className="bg-[#806fdf] p-0">
-          {(onClose) => (
-            <>
-              <ModalBody>
-                <Foo />
-              </ModalBody>
-            </>
-          )}
+          <ModalBody>
+            <ModalOrder />
+          </ModalBody>
         </ModalContent>
       </Modal>
     </div>
