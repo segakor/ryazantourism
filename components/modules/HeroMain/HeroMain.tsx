@@ -8,10 +8,10 @@ import "swiper/css/navigation";
 
 import { heroMap } from "@/constants/contstants";
 import { EffectFade, Pagination, Autoplay } from "swiper/modules";
-import LinkButton from "@/components/elements/Button/LinkButton";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { swiperStyle } from "@/constants/swiperStyle";
 import { useMediaQuery } from "react-responsive";
+import { ButtonLink } from "@/components/elements/ButtonNew";
 
 export const HeroMain = () => {
   const mdMedia = useMediaQuery({ query: "(min-width: 768px)" });
@@ -35,7 +35,6 @@ export const HeroMain = () => {
           ...swiperStyle,
           height: "100vh",
           //@ts-ignore
-          
         }}
         className="mySwiper"
       >
@@ -47,10 +46,14 @@ export const HeroMain = () => {
                 <div className="hero_inner_body">
                   <Typography variant="h1">{item.title}</Typography>
                   <p>{item.desc}</p>
-                  <div className="hero_button">
-                    <LinkButton href={item.link} target="_self">
+                  <div className="w-[268px]">
+                    <ButtonLink
+                      href={item.link}
+                      variant="greenWhite"
+                      wide
+                    >
                       Подробнее
-                    </LinkButton>
+                    </ButtonLink>
                   </div>
                 </div>
               </div>

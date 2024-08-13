@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import LinkButton from "@/components/elements/Button/LinkButton";
+import { ButtonLink } from "@/components/elements/ButtonNew";
 import "./style.css";
 import { Typography } from "@/components/elements/Typography/Typography";
 
@@ -8,21 +8,31 @@ type Props = {
 };
 
 export const News = ({ type }: Props) => {
-  const title = type === "city" ? "Рязани и Рязанской области" : "туризме";
+  const dict = {
+    city: {
+      title: "Актуальная информация о происходящем в регионе",
+      href: "/ty-s-mestnym/novosty-regiona",
+    },
+    art: {
+      title: "Актуальная информация о происходящем в туризме",
+      href: "/professionalam/novosti-art",
+    },
+  };
 
   return (
     <div
-      className={`grid md:gap-20 gap-10  ${type === "art" && "md:max-w-[82.5rem] md:m-auto"
-        }`}
+      className={`grid md:gap-20 gap-10  ${
+        type === "art" && "md:max-w-[82.5rem] md:m-auto"
+      }`}
     >
       <div className="flex md:flex-row flex-col md:gap-0 gap-4 justify-between">
         <Typography variant="h2" className="font-medium">
-          Актуальная информация <br></br> о происходящем в {title}
+          {dict[type].title}
         </Typography>
-        <div className="w-[283px]">
-          <LinkButton isBlackHover href="">
+        <div className="w-[247px]">
+          <ButtonLink href={dict[type].href} variant="greenBlack">
             Все новости
-          </LinkButton>
+          </ButtonLink>
         </div>
       </div>
       <div className="grid grid-cols-[repeat(4,minmax(308px,1fr))] gap-6 overflow-x-scroll md:overflow-x-visible">

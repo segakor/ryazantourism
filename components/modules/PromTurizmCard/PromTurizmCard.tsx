@@ -11,6 +11,7 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { ModalDetails } from "./ModalDetails";
+import { Button } from "@/components/elements/ButtonNew";
 
 export const PromTurizmCard = ({ data }: { data: TPromTurizmCard[] }) => {
   return (
@@ -74,18 +75,21 @@ const Card = ({ item }: { item: TPromTurizmCard }) => {
             {item.address}
           </div>
         </div>
-        <div onClick={onOpenChange} className="mt-5 cursor-pointer">
-          <div className="group/item bg-[var(--color-green)] hover:bg-black hover:text-white transition-all py-5 px-10 flex items-center justify-center rounded-full ">
-            <div className="flex gap-2 items-center">Подробнее</div>
-          </div>
-        </div>
+        <Button
+          onClick={onOpenChange}
+          variant="greenBlack"
+          wide
+          className="mt-5"
+        >
+          Подробнее
+        </Button>
       </div>
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         size="2xl"
         scrollBehavior="outside"
-        backdrop='opaque'
+        backdrop="opaque"
       >
         <ModalContent>
           <ModalBody>

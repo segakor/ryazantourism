@@ -8,14 +8,18 @@ export const HeroPage = ({
   title,
   desc,
   noFilter,
+  className,
 }: {
   imgUrl: string;
   title: string;
   desc?: string;
   noFilter?: boolean;
+  className?: string;
 }) => {
   return (
-    <div className="hero_longread_wrapper">
+    <div
+      className={`relative h-[500px] md:rounded-b-[100px] rounded-b-[50px] overflow-hidden ${className}`}
+    >
       <Image
         className={`hero_longread_image ${
           noFilter && "hero_longread_image_no_filter"

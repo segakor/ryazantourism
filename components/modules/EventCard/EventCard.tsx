@@ -9,10 +9,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useState } from "react";
 import { format } from "date-fns";
-import Link from "next/link";
 import { eventCards } from "@/constants/pages/organizovannye-marshruty/eventCards";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { swiperStyle } from "@/constants/swiperStyle";
+import { ButtonLink } from "@/components/elements/ButtonNew";
+/* import { TOrgEventCard } from "@/types/types"; */
 
 const eventsDates = eventCards.map((item) => item.dates).flat();
 
@@ -34,7 +35,7 @@ export const EventCard = () => {
       </Typography>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px]">
         <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
-        <div className="swiper_wrapper_event md:h-auto">
+        <div className="h-full overflow-hidden bg-black rounded-[14px] md:h-auto">
           {!!filterEvents.length ? (
             <Swiper
               navigation={true}
@@ -44,7 +45,7 @@ export const EventCard = () => {
               //@ts-ignore
               style={swiperStyle}
               modules={[Pagination, Navigation]}
-               className="swiper_calendar md:h-[584px] h-[350px] rounded-[14px]"
+              className="swiper_calendar md:h-[584px] h-[350px] rounded-[14px]"
             >
               {filterEvents.map((item, index) => (
                 <SwiperSlide key={index}>
@@ -65,19 +66,7 @@ export const EventCard = () => {
   );
 };
 
-const Card = ({
-  title,
-  imgUrl,
-  dates,
-  price,
-  days,
-}: {
-  title: string;
-  imgUrl: string;
-  dates: string[];
-  price: number;
-  days: number;
-}) => {
+const Card = ({ id, title, imgUrl, dates, price, days }: any) => {
   return (
     <div
       className="event_card_item_inner bg-cover"
@@ -86,20 +75,28 @@ const Card = ({
       }}
     >
       <div className="h5">{title}</div>
-      <div>
-        <p className="event_card_item_decs">Продолжительность: {days} д.</p>
-        <p className="event_card_item_decs">
-          Стоимость: {price.toLocaleString()} руб./чел.
-        </p>
+      <div className="flex flex-wrap gap-3">
+        <span>
+          <div className="inline-block rounded-full md:py-2 py-1 px-4 bg-[rgba(255,255,255,0.5)] ">
+            <div className="flex gap-2 items-center md:text-m text-sm">
+              Продолжительность: {days}
+            </div>
+          </div>
+        </span>
+        <span>
+          <div className="inline-block rounded-full md:py-2 py-1 px-4 bg-[rgba(255,255,255,0.5)] ">
+            <div className="flex gap-2 items-center md:text-m text-sm">
+              Стоимость: {price}
+            </div>
+          </div>
+        </span>
       </div>
-      <Link href={""} target="_blank">
-        <div
-          className="group/item bg-[var(--color-white)] hover:bg-[var(--color-green)] text-black
-          transition-all md:py-5 py-4 px-10 inline-block rounded-full "
-        >
-          <div className="flex gap-2 items-center">Перейти</div>
-        </div>
-      </Link>
+      <ButtonLink
+        href={`/marshruty/organizovannye-marshruty/${id}`}
+        variant="greenWhite"
+      >
+        Посмотреть
+      </ButtonLink>
     </div>
   );
 };

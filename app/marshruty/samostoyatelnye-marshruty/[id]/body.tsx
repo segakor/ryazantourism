@@ -7,7 +7,7 @@ const Body = ({ data }: { data: TSinglyRoutesDetails }) => {
 
   return (
     <section className="grid_layout">
-      <LongRead body={templates as TLongReadBody[]}>
+      <LongRead body={templates as TLongReadBody[]} noSidebar>
         <SinglyRoutesCard data={data.sights} />
       </LongRead>
     </section>

@@ -36,8 +36,11 @@ export const SinglyRoutesCardItem = ({
   point_y: number;
 }) => {
   return (
-    <Link href={`https://maps.yandex.ru/?text=${point_x}+${point_y}`} target="_black">
-      <div className="rounded-[30px] bg-[#f5f5f5] p-[30px] cursor-pointer grid gap-5">
+    <Link
+      href={`https://maps.yandex.ru/?text=${point_x}+${point_y}`}
+      target="_black"
+    >
+      <div className="rounded-[30px] bg-[#f5f5f5] hover:bg-[var(--color-green)] transition-all p-[30px] cursor-pointer grid gap-5">
         <div className="h-[150px] overflow-hidden">
           <ImageBlock srcImg={image_path} />
         </div>

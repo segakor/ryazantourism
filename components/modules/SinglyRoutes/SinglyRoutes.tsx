@@ -3,6 +3,7 @@ import { TSinglyRoutes } from "@/types/types";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { normalizeCount } from "@/utils/normalizeCount";
 import Link from "next/link";
+import { ButtonLink } from "@/components/elements/ButtonNew";
 
 const Item = ({ item }: { item: TSinglyRoutes }) => {
   const daysVal = !!item.duration.days && (
@@ -51,14 +52,12 @@ const Item = ({ item }: { item: TSinglyRoutes }) => {
             {hoursVal}
           </div>
         </div>
-        <Link href={`/marshruty/samostoyatelnye-marshruty/${item.id}`}>
-          <div
-            className="bg-[var(--color-green)] hover:bg-black text-black hover:text-white transition-all
-               md:py-5 py-4 px-10 inline-block rounded-full "
-          >
-            <div className="flex gap-2 items-center">К сценарию</div>
-          </div>
-        </Link>
+        <ButtonLink
+          href={`/marshruty/samostoyatelnye-marshruty/${item.id}`}
+          variant="greenBlack"
+        >
+          К сценарию
+        </ButtonLink>
       </div>
     </div>
   );

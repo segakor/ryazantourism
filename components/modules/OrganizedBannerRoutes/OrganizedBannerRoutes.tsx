@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import Button from "@/components/elements/Button/Button";
 import { ModalOrder } from "../ModalOrder/ModalOrder";
 import { useDisclosure } from "@nextui-org/react";
 import { Modal, ModalContent, ModalBody } from "@nextui-org/modal";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { organizedBannerCard } from "@/constants/contstants";
 import { useMediaQuery } from "react-responsive";
+import { Button } from "@/components/elements/ButtonNew";
 
 export const OrganizedBannerRoutes = () => {
   const { isOpen, onOpenChange } = useDisclosure();
@@ -20,11 +20,9 @@ export const OrganizedBannerRoutes = () => {
           <Typography variant="h3" className="mb-7 font-medium">
             Приезжай на один день или оставайся на выходные
           </Typography>
-          <Button
-            label={"Записаться на экскурсию"}
-            onClick={onOpenChange}
-            isBlackHover
-          />
+          <Button onClick={onOpenChange} variant="greenBlack">
+            Записаться на экскурсию
+          </Button>
         </div>
 
         <div className="md:flex-[0_1_50rem] md:grid flex flex-wrap grid-cols-2 justify-center gap-5">

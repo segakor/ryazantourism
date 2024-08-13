@@ -10,9 +10,9 @@ import "swiper/css/navigation";
 import { useState } from "react";
 import { format } from "date-fns";
 import { sobytiyaCards } from "@/constants/pages/sobytiaya/sobytiya";
-import Link from "next/link";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { swiperStyle } from "@/constants/swiperStyle";
+import { ButtonLink } from "@/components/elements/ButtonNew";
 
 const eventsDates = sobytiyaCards.map((item) => item.dates).flat();
 
@@ -29,10 +29,12 @@ export const EventMainCard = () => {
 
   return (
     <div className="grid md:gap-20 gap-10">
-      <Typography variant="h2" className="font-medium">Календарь событий</Typography>
+      <Typography variant="h2" className="font-medium">
+        Календарь событий
+      </Typography>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px] min-h-full">
         <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
-        <div className="swiper_wrapper_event md:h-auto">
+        <div className="h-full overflow-hidden bg-black rounded-[14px] md:h-auto">
           {!!filterEvents.length ? (
             <Swiper
               navigation={true}
@@ -80,14 +82,9 @@ const Card = ({
       }}
     >
       <div className="h5">{title}</div>
-      <Link href={""} target="_blank">
-        <div
-          className="group/item bg-[var(--color-white)] hover:bg-[var(--color-green)] text-black
-          transition-all md:py-5 py-4 px-10 inline-block rounded-full "
-        >
-          <div className="flex gap-2 items-center">Перейти</div>
-        </div>
-      </Link>
+      <ButtonLink href={""} variant="greenWhite">
+        Перейти
+      </ButtonLink>
     </div>
   );
 };

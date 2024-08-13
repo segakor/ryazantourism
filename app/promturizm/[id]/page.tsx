@@ -13,7 +13,7 @@ const Page = async () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <Body data={promTurizm} />
+        <Body data={promTurizm as any} />
       </Suspense>
     </>
   );

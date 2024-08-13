@@ -6,6 +6,7 @@ import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
 import { Typography } from "@/components/elements/Typography/Typography";
 import Link from "next/link";
+import { ButtonLink } from "@/components/elements/ButtonNew";
 
 export const PlaceCard = ({ data }: { data: TPlaceCard[] }) => {
   return (
@@ -93,11 +94,9 @@ const Card = ({ item }: { item: TPlaceCard }) => {
               лояльности
             </div>
           </div>
-          <Link href={item.url} target="_blank">
-            <div className="group/item bg-[var(--color-green)] hover:bg-black hover:text-white transition-all py-5 px-10 flex items-center justify-center rounded-full ">
-              <div className="flex gap-2 items-center">Подробнее</div>
-            </div>
-          </Link>
+          <ButtonLink href={item.url} variant="greenBlack" wide target="_blank">
+            Подробнее
+          </ButtonLink>
         </div>
       </div>
     </div>

@@ -26,6 +26,6 @@
 
 .whithoutHeader {
 }
-.whithoutHeader.loader {
+.whithoutHeader .loader {
   margin-top: 420px;
 }

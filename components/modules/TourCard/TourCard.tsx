@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { ButtonLink } from "@/components/elements/ButtonNew";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { data } from "@/constants/pages/marshruty/samostoyatelnye-marshruty/3dtour";
 import Link from "next/link";
@@ -23,14 +24,9 @@ const TourCardItem = ({
             {item.title}
           </Typography>
         </div>
-        <Link href={item.link} target="_blank">
-          <div
-            className="bg-[var(--color-green)] hover:bg-black text-black hover:text-white transition-all
-               md:py-5 py-4 px-10 inline-block rounded-full "
-          >
-            <div className="flex gap-2 items-center">К сценарию</div>
-          </div>
-        </Link>
+        <ButtonLink href={item.link} target="_blank" variant="greenBlack">
+          К сценарию
+        </ButtonLink>
       </div>
     </div>
   );

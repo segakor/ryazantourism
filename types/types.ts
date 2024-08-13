@@ -10,7 +10,6 @@ export enum SUB_ELEMENT_TYPE {
   TEXT_BLOCK = "TEXT_BLOCK",
   LONG_READ_ITEM_BLOCK = "LONG_READ_ITEM_BLOCK",
   LINK_BLOCK = "LINK_BLOCK",
-  ADDRESS_BLOCK = "ADDRESS_BLOCK",
   FACT_BLOCK = "FACT_BLOCK",
 }
 
@@ -158,4 +157,15 @@ export type TPromTurizmCard = {
   imgUrl: string[];
   popupDesc: string;
   url: string;
+};
+
+export type TOrgEventCard = {
+  id: number;
+  title: string;
+  imgUrl: string;
+  dates: string[];
+  includePrice: string;
+  price: string;
+  days: string;
+  template: TLongReadBody[];
 };
