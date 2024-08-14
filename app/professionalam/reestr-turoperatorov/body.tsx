@@ -1,28 +1,8 @@
-"use client";
-import { Tabs } from "@/components/elements/Tabs/Tabs";
-import { PlaceCard } from "@/components/modules/PlaceCard/PlaceCard";
-import { tabsZdorove } from "@/constants/contstants";
-import { useState } from "react";
-import { TPlaceCard } from "@/types/types";
+import { TLongReadBody } from "@/types/types";
+import { LongRead } from "@/components/modules/LongRead";
 
-const Body = ({ data }: { data: TPlaceCard[] }) => {
-  const [tab, setTab] = useState("all");
-
-  const onChangeTab = (e: string) => {
-    setTab(e);
-  };
-
-  const filteredData =
-    tab !== "all" ? data.filter((item) => item.category.name === tab) : data;
-
-  return (
-    <section className="grid_layout">
-      <div className="wrapper_tabs">
-        <Tabs tabs={tabsZdorove} onChange={onChangeTab} />
-      </div>
-      <PlaceCard data={filteredData} />
-    </section>
-  );
+const Body = ({ data }: { data: TLongReadBody[] }) => {
+  return <LongRead body={data} noSidebar/>;
 };
 
 export default Body;

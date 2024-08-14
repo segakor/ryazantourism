@@ -8,11 +8,13 @@ export default function RootLayout({
 }>) {
   return (
     <Layout>
-      <HeroPage
-        imgUrl="/heroPages/ty-s-mestnym/cit.jpg"
-        title="Реестр туроператоров"
-      />
-      {children}
+      <div className="pages">
+        <HeroPage
+          imgUrl="/heroPages/ty-s-mestnym/cit.jpg"
+          title="Реестр туроператоров"
+        />
+        {children}
+      </div>
     </Layout>
   );
 }

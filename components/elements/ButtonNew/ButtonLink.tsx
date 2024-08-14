@@ -7,12 +7,14 @@ export const ButtonLink = ({
   variant,
   children,
   wide,
+  className,
 }: {
   href: string;
   target?: HTMLAttributeAnchorTarget;
   variant: "whiteGreen" | "greenBlack" | "greenWhite";
   children: ReactNode;
   wide?: boolean;
+  className?: string;
 }) => {
   const dictColor = {
     whiteGreen: "bg-[var(--color-white)] hover:bg-[var(--color-green)] ",
@@ -27,7 +29,7 @@ export const ButtonLink = ({
     <Link href={href} target={target}>
       <div
         className={`group/item text-black ${dictColor[variant]}
-        transition-all md:py-5 py-3 md:px-10 px-8 rounded-full ${display}`}
+        transition-all md:py-5 py-3 md:px-10 px-8 rounded-full ${display} ${className}`}
       >
         <div className="flex gap-2 items-center">{children}</div>
       </div>

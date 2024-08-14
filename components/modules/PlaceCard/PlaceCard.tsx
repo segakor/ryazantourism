@@ -5,7 +5,6 @@ import { TagList, TPlaceCard } from "@/types/types";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
 import { Typography } from "@/components/elements/Typography/Typography";
-import Link from "next/link";
 import { ButtonLink } from "@/components/elements/ButtonNew";
 
 export const PlaceCard = ({ data }: { data: TPlaceCard[] }) => {
@@ -19,14 +18,23 @@ export const PlaceCard = ({ data }: { data: TPlaceCard[] }) => {
 };
 
 const Card = ({ item }: { item: TPlaceCard }) => {
+  const findLoyaltyIndex = item.description.indexOf("Программа лояльности:");
+  const loyaltyText =
+    findLoyaltyIndex > 0 &&
+    item.description
+      .substring(findLoyaltyIndex, item.description.length)
+      .replace("Программа лояльности:", "");
+  const text =
+    findLoyaltyIndex > 0
+      ? item.description.substring(0, findLoyaltyIndex)
+      : item.description;
+
   const [isFullText, setIsFullText] = useState(false);
 
-  const textLength = item.description.length > 254;
+  const textLength = text.length > 254;
 
   const notFullText =
-    textLength && !isFullText
-      ? item.description?.slice(0, 254) + " ..."
-      : item.description;
+    textLength && !isFullText ? text?.slice(0, 254) + " ..." : text;
 
   const tags = item.tags.map((item) => item.id) as TagList[];
 
@@ -75,6 +83,7 @@ const Card = ({ item }: { item: TPlaceCard }) => {
               viewBox="0 0 12 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="min-w-3 min-h-4"
             >
               <path
                 fillRule="evenodd"
@@ -87,14 +96,15 @@ const Card = ({ item }: { item: TPlaceCard }) => {
           </div>
         </div>
         <div className="grid">
-          <div className="flex items-center text-[var(--color-blue)] gap-3 mt-3 mb-12">
-            <Tag tag={10} />
-            <div className="loyalty-text">
-              Скидка 20% на экскурсии и мастер-классы для участников карты
-              лояльности
+          {loyaltyText && (
+            <div className="flex items-center text-[var(--color-blue)] gap-3 mt-3">
+              <div className="min-w-[40px] min-h-[40px]">
+                <Tag tag={10} />
+              </div>
+              <div className="loyalty-text">{loyaltyText}</div>
             </div>
-          </div>
-          <ButtonLink href={item.url} variant="greenBlack" wide target="_blank">
+          )}
+          <ButtonLink href={item.url} variant="greenBlack" wide target="_blank" className="mt-3">
             Подробнее
           </ButtonLink>
         </div>

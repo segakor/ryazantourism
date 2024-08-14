@@ -7,7 +7,7 @@ const LogoFooter = () => (
       src="/logoFooter.svg"
       alt="logo"
       width={69}
-      height={58}
+      height={66}
       priority
     />
   </Link>
