@@ -2,6 +2,8 @@
 import { mainNavigation } from "@/constants/contstants";
 import Link from "next/link";
 import { Typography } from "@/components/elements/Typography/Typography";
+import Image from "next/image";
+import { createShimmer } from "@/utils/shimer";
 
 export const MainNavigation = () => {
   return (
@@ -25,11 +27,17 @@ export const MainNavigation = () => {
             }`}
           >
             <div className="cursor-pointer rounded-[14px] overflow-hidden relative">
-              <img
-                className="object-cover w-full md:h-[408px] h-[350px] brightness-50 group-hover/item:scale-[115%] transition-all"
-                src={item.imgUrl}
-                alt=""
-              />
+              <div className={`w-full relative  md:pt-[408px] pt-[350px]`}>
+                <Image
+                  src={item.imgUrl}
+                  alt="img"
+                  objectFit="cover"
+                  fill
+                  className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg brightness-50 group-hover/item:scale-[115%] transition-all`}
+                  placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
+                  priority
+                />
+              </div>
               <div className="absolute w-full p-[40px] h-full flex justify-between flex-col top-0 left-0">
                 <div className="flex justify-end">
                   <div className="bg-white flex justify-center rounded-full items-center group-hover/item:bg-[var(--color-green)] transition-all">
