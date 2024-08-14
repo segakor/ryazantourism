@@ -2,7 +2,8 @@
 import { ButtonLink } from "@/components/elements/ButtonNew";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { data } from "@/constants/pages/marshruty/samostoyatelnye-marshruty/3dtour";
-import Link from "next/link";
+import { createShimmer } from "@/utils/shimer";
+import Image from "next/image";
 
 const TourCardItem = ({
   item,
@@ -12,11 +13,17 @@ const TourCardItem = ({
   return (
     <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] overflow-hidden">
       <div className="bg-[var(--color-grey)] h-[200px] md:w-[408px] w-full flex">
-        <img
-          className="w-full h-full object-cover filter-[90%]"
-          src={item.srcImg}
-          alt="Фон"
-        />
+        <div className={`w-full relative  pt-[200px]`}>
+          <Image
+            src={item.srcImg}
+            alt="img"
+            objectFit="cover"
+            fill
+            className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg brightness-[90%]`}
+            placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
+            priority
+          />
+        </div>
       </div>
       <div className="p-[30px] flex flex-col justify-between h-full gap-[30px]">
         <div className="grid gap-3">
@@ -25,7 +32,7 @@ const TourCardItem = ({
           </Typography>
         </div>
         <ButtonLink href={item.link} target="_blank" variant="greenBlack">
-          К сценарию
+          Подробнее
         </ButtonLink>
       </div>
     </div>
