@@ -52,6 +52,7 @@ export const HeroMain = () => {
                   className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg brightness-50`}
                   placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
                   priority
+                  quality={40}
                 />
               </div>
               <div className="hero_inner">

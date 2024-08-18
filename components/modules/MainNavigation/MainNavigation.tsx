@@ -36,6 +36,7 @@ export const MainNavigation = () => {
                   className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg brightness-50 group-hover/item:scale-[115%] transition-all`}
                   placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
                   priority
+                  quality={10}
                 />
               </div>
               <div className="absolute w-full p-[40px] h-full flex justify-between flex-col top-0 left-0">

@@ -2,7 +2,6 @@ import { TPromTurizmCard } from "@/types/types";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
 import { Typography } from "@/components/elements/Typography/Typography";
-import Link from "next/link";
 import { TagsPromTur } from "@/components/elements/Tags/TagsPromTur";
 import {
   Modal,

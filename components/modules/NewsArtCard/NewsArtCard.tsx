@@ -2,7 +2,7 @@ import { news } from "@/constants/pages/ty-s-mestnym/novosti-art";
 import Link from "next/link";
 
 export const NewsArtCard = () => {
-   return (
+  return (
     <div className="grid md:gap-7 gap-10 md:grid-cols-3 grid-cols-1 my-20 md:mt-40 md:mb-20">
       {news.map((item, index) => (
         <NewsArtItem {...item} key={index} />
@@ -41,8 +41,9 @@ const NewsArtItem = (props: any) => {
       <div
         style={{
           background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${props.imgUrl})`,
+          backgroundSize: "cover",
         }}
-        className="flex flex-col justify-end rounded-3xl p-6 border-solid bg-cover min-h-[37.125rem] bg-cover"
+        className="flex flex-col justify-end rounded-3xl p-6 border-solid min-h-[37.125rem] bg-cover"
       >
         <div className="h5 text-white">{props.title}</div>
       </div>

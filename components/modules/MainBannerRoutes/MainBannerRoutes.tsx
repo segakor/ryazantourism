@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 import { Typography } from "@/components/elements/Typography/Typography";
 import Link from "next/link";
 
@@ -27,8 +27,8 @@ export const MainBannerRoutes = () => {
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px]">
         <div
-          className="grid gap-5 rounded-[20px] bg-[var(--color-green)] p-10 relative
-         transition-all hover:bg-[#252525] hover:text-white group/item"
+          className="grid gap-5 rounded-[20px] bg-[#252525] p-10 relative
+         transition-all hover:bg-[var(--color-green)] text-white hover:text-black group/item"
         >
           <Typography variant="h3" className="font-medium">
             Самостоятельные маршруты
@@ -40,7 +40,7 @@ export const MainBannerRoutes = () => {
           </p>
           <Link href={"/marshruty/organizovannye-marshruty"}>
             <div
-              className="bg-[var(--color-black)] group-hover/item:bg-white group-hover/item:text-black text-white transition-all
+              className="bg-[var(--color-white)] group-hover/item:bg-black group-hover/item:text-white text-black transition-all
                md:py-5 py-4 px-10 inline-block rounded-full "
             >
               <div className="flex gap-2 items-center">Перейти</div>
@@ -55,8 +55,10 @@ export const MainBannerRoutes = () => {
             className="w-full object-none md:block hidden"
           />
         </div>
-        <div className="grid gap-5 rounded-[20px] bg-[#252525] p-10 relative
-         transition-all hover:bg-[var(--color-green)] hover:text-black text-white group/item">
+        <div
+          className="grid gap-5 rounded-[20px] bg-[#252525] p-10 relative
+         transition-all hover:bg-[var(--color-green)] hover:text-black text-white group/item"
+        >
           <Image
             priority
             src={"/routesCard/second.svg"}

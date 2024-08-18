@@ -6,6 +6,7 @@ import Icons from "@/components/elements/Logo/Icons";
 import LogoHeader from "@/components/elements/Logo/LogoHeader";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { LangSwitch } from "@/components/elements/LangSwitch/LangSwitch";
 
 export const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -37,7 +38,7 @@ export const Header = () => {
               </p>
             </div>
             <div className="lg:flex flex-col gap-5 lg:visible hidden">
-              <div className="flex items-end justify-end gap-[3.125rem]">
+              <div className="flex items-center justify-end gap-[3.125rem]">
                 <div className="flex items-center gap-[0.625rem]">
                   <p className="header_title">Моб. приложение</p>
                   <div className="flex items-center gap-[0.3125rem]">
@@ -62,6 +63,9 @@ export const Header = () => {
                       <Icons icon="ok" />
                     </a>
                   </div>
+                </div>
+                <div>
+                  <LangSwitch />
                 </div>
               </div>
               <HeaderNav />

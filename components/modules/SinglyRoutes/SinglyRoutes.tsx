@@ -23,7 +23,7 @@ const Item = ({ item }: { item: TSinglyRoutes }) => {
   return (
     <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] overflow-hidden">
       <div className="bg-[var(--color-grey)] h-[200px] md:w-[408px] w-full">
-        <div className={`w-full relative  pt-[200px]`}>
+        <div className={`w-full relative pt-[200px]`}>
           <Image
             src={item.images[0].url}
             alt="img"
