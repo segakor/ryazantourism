@@ -4,6 +4,7 @@ import "./typography.css";
 import Layout from "@/components/layouts/Layout";
 import { NextUIProvider } from "@nextui-org/react";
 import NextTopLoader from "nextjs-toploader";
+import { GoogleTranslateScript } from "./GoogleTranslateScript";
 
 const inter = Inter({ subsets: ["latin"], display: "fallback" });
 
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextUIProvider>
           <NextTopLoader color="#aeed50" />
+          <GoogleTranslateScript />
           <Layout>{children}</Layout>
         </NextUIProvider>
       </body>

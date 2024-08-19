@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { parseCookies, setCookie } from "nookies";
+import { Skeleton } from "@nextui-org/react";
 
 const COOKIE_NAME = "googtrans";
 
@@ -8,14 +9,22 @@ interface LanguageDescriptor {
   title: string;
 }
 
-declare global {
+/* declare global {
   namespace globalThis {
     var __GOOGLE_TRANSLATION_CONFIG__: {
       languages: LanguageDescriptor[];
       defaultLanguage: string;
     };
   }
-}
+} */
+
+const config = {
+  languages: [
+    { title: "Ru", name: "ru" },
+    { title: "En", name: "en" },
+  ],
+  defaultLanguage: "ru",
+};
 
 const LangSwitch = () => {
   const [currentLanguage, setCurrentLanguage] = useState<string>();
@@ -23,7 +32,6 @@ const LangSwitch = () => {
 
   useEffect(() => {
     const cookies = parseCookies();
-    console.log(cookies)
     const existingLanguageCookieValue = cookies[COOKIE_NAME];
 
     let languageValue;
@@ -33,19 +41,25 @@ const LangSwitch = () => {
         languageValue = sp[2];
       }
     }
-    if (global.__GOOGLE_TRANSLATION_CONFIG__ && !languageValue) {
-      languageValue = global.__GOOGLE_TRANSLATION_CONFIG__.defaultLanguage;
+    if (config && !languageValue) {
+      languageValue = config.defaultLanguage;
     }
     if (languageValue) {
       setCurrentLanguage(languageValue);
     }
-    if (global.__GOOGLE_TRANSLATION_CONFIG__) {
-      setLanguageConfig(global.__GOOGLE_TRANSLATION_CONFIG__);
+
+    console.log('languageValue', languageValue)
+    if (config) {
+      setLanguageConfig(config);
     }
   }, []);
 
   if (!currentLanguage || !languageConfig) {
-    return null;
+    return (
+      <div>
+        <Skeleton className="flex rounded-sm w-[52px] h-[26px]"/>
+      </div>  
+    );
   }
 
   const switchLanguage = (lang: string) => () => {
@@ -56,30 +70,29 @@ const LangSwitch = () => {
   return (
     <div className="text-center notranslate">
       <div className="flex border-1 border-solid border-[#C9C9C9] cursor-pointer rounded-sm text-xs">
-       {languageConfig?.languages.map((ld: LanguageDescriptor, i: number) => (
-        <>
-          {currentLanguage === ld.name ||
-          (currentLanguage === "auto" &&
-            languageConfig.defaultLanguage === ld) ? (
-            <div key={`l_s_${ld}`} className="p-1 bg-[var(--color-green)] transition-all">
-              {ld.title.toUpperCase()}
-            </div>
-          ) : (
-            <div
-              key={`l_s_${ld}`}
-              onClick={switchLanguage(ld.name)}
-              className="p-1 transition-all"
-            >
-              {ld.title.toUpperCase()}
-            </div>
-          )}
-        </>
-      ))}
+        {languageConfig?.languages.map((ld: LanguageDescriptor, i: number) => (
+          <>
+            {currentLanguage === ld.name ||
+            (currentLanguage === "auto" &&
+              languageConfig.defaultLanguage === ld) ? (
+              <div
+                key={`l_s_${ld}`}
+                className="p-1 bg-[var(--color-green)] transition-all"
+              >
+                {ld.title.toUpperCase()}
+              </div>
+            ) : (
+              <div
+                key={`l_s_${ld}`}
+                onClick={switchLanguage(ld.name)}
+                className="p-1 transition-all"
+              >
+                {ld.title.toUpperCase()}
+              </div>
+            )}
+          </>
+        ))}
       </div>
-     {/*  <div className="flex border-1 border-solid border-[#C9C9C9] cursor-pointer rounded-sm">
-        <div className={`${languageConfig.defaultLanguage === ld && 'bg-[var(--color-green)]'} transition-all p-1` }>RU</div>
-        <div className="bg-[var(--color-green)] transition-all p-1">EN</div>
-      </div> */}
     </div>
   );
 };
