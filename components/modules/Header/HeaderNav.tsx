@@ -3,6 +3,7 @@ import { HeaderMenu } from "./HeaderMenu";
 import { useState } from "react";
 import Icons from "@/components/elements/Logo/Icons";
 import Link from "next/link";
+import { useRouter } from 'next/navigation'
 
 export const HeaderNav = () => {
   return (
@@ -48,6 +49,8 @@ export const HeaderNav = () => {
 export const HeaderNavMobile = () => {
   const [indexOpen, setIndexOpen] = useState<number | null>(null);
 
+  const router = useRouter();
+
   const onOpenSubMenu = (value: number) => {
     if (value === indexOpen) {
       setIndexOpen(null);
@@ -63,7 +66,7 @@ export const HeaderNavMobile = () => {
           <div key={index} className="menu_item_mobile_item">
             <li
               className="menu_item_mobile"
-              onClick={() => onOpenSubMenu(index)}
+              onClick={() => {!!item.subItem.length ? onOpenSubMenu(index): router.push(item.path || '/')}}
             >
               <span className="menu_link">{item.item}</span>
               {!!item.subItem.length && (
@@ -97,30 +100,32 @@ export const HeaderNavMobile = () => {
           </div>
         ))}
       </ul>
-      <div className="icon_adaptive">
-        <div className="header_block">
-          <p className="header_title">Моб. приложение</p>
-          <div className="header_block header_icon">
-            <a href={url.apple} target="_blank">
+      <div className="grid gap-3 justify-center">
+        <div className="grid gap-1">
+          <div className="opacity-60 text-sm mb-2 mt-2">
+            Мобильное приложение
+          </div>
+          <div className="flex gap-2 justify-center">
+            <Link href={url.apple} target="_blank">
               <Icons icon="apple" />
-            </a>
-            <a href={url.android} target="_blank">
+            </Link>
+            <Link href={url.android} target="_blank">
               <Icons icon="android" />
-            </a>
+            </Link>
           </div>
         </div>
-        <div className="header_block">
-          <p className="header_title">Мы в соц. сетях</p>
-          <div className="header_block header_icon">
-            <a href={url.vk} target="_blank">
+        <div className="grid gap-1 justify-center">
+          <div className="opacity-60 text-sm mb-2 mt-2">Мы в соц. сетях</div>
+          <div className="flex gap-2 justify-center">
+            <Link href={url.vk} target="_blank">
               <Icons icon="vk" />
-            </a>
-            <a href={url.tg} target="_blank">
+            </Link>
+            <Link href={url.tg} target="_blank">
               <Icons icon="tg" />
-            </a>
-            <a href={url.ok} target="_blank">
+            </Link>
+            <Link href={url.ok} target="_blank">
               <Icons icon="ok" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
