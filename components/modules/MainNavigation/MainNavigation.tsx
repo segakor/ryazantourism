@@ -27,7 +27,7 @@ export const MainNavigation = () => {
             }`}
           >
             <div className="cursor-pointer rounded-[14px] overflow-hidden relative">
-              <div className={`w-full relative  md:pt-[408px] pt-[350px]`}>
+              <div className={`w-full relative  md:pt-[408px] pt-[250px]`}>
                 <Image
                   src={item.imgUrl}
                   alt="img"
@@ -39,7 +39,7 @@ export const MainNavigation = () => {
                   quality={10}
                 />
               </div>
-              <div className="absolute w-full p-[40px] h-full flex justify-between flex-col top-0 left-0">
+              <div className="absolute w-full md:p-10 p-5 h-full flex justify-between flex-col top-0 left-0">
                 <div className="flex justify-end">
                   <div className="bg-white flex justify-center rounded-full items-center group-hover/item:bg-[var(--color-green)] transition-all">
                     <svg

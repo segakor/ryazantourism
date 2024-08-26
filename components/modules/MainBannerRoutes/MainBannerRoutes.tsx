@@ -27,7 +27,7 @@ export const MainBannerRoutes = () => {
       </div>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px]">
         <div
-          className="grid gap-5 rounded-[20px] bg-[#252525] p-10 relative
+          className="grid gap-5 rounded-[20px] bg-[#252525] md:p-10 p-5 relative
          transition-all hover:bg-[var(--color-green)] text-white hover:text-black group/item"
         >
           <Typography variant="h3" className="font-medium">
@@ -56,7 +56,7 @@ export const MainBannerRoutes = () => {
           />
         </div>
         <div
-          className="grid gap-5 rounded-[20px] bg-[#252525] p-10 relative
+          className="grid gap-5 rounded-[20px] bg-[#252525] md:p-10 p-5 relative
          transition-all hover:bg-[var(--color-green)] hover:text-black text-white group/item"
         >
           <Image

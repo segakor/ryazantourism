@@ -10,7 +10,7 @@ export const BibliotekaNavigation = () => {
           <Link
             key={index}
             href={item.path}
-            className="group/item cursor-pointer flex md:h-[510px] h-96 rounded-[40px] p-[40px] color-white bg-cover shadow-lg"
+            className="group/item cursor-pointer flex md:h-[510px] h-80 rounded-[40px] md:p-10 p-5 color-white bg-cover shadow-lg"
             style={{ backgroundImage: `url(${item.imgUrl})` }}
           >
             <div

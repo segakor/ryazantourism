@@ -3,7 +3,7 @@ import { SinglyRoutesCard } from "@/components/modules/SinglyRoutesCard/SinglyRo
 import { TLongReadBody, TSinglyRoutesDetails } from "@/types/types";
 
 const Body = ({ data }: { data: TSinglyRoutesDetails }) => {
-  const templates = [{ element: "LEAD_BLOCK", desc: data.description }];
+  const templates = [{ element: "LEAD_BLOCK", text: data.description }];
 
   return (
     <section className="grid_layout">

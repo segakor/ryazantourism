@@ -46,7 +46,7 @@ export const Gid = ({ item }: { item: TGid }) => {
             priority
           />
         </div>
-        <div className="absolute w-full p-[40px] h-full flex justify-between flex-col">
+        <div className="absolute w-full md:p-10 p-5 h-full flex justify-between flex-col">
           <div className="flex justify-end">
             <div className="bg-white flex justify-end rounded-full items-center group-hover/item:bg-[var(--color-green)] transition-all">
               <svg

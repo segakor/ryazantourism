@@ -54,7 +54,7 @@ const LangSwitch = () => {
   }, []);
 
   if (!currentLanguage || !languageConfig) {
-    return <Skeleton className="flex rounded-sm w-[52px] h-[26px]" />;
+    return <Skeleton className="flex rounded-sm w-[50px] h-[26px]" />;
   }
 
   const switchLanguage = (lang: string) => () => {
@@ -63,7 +63,7 @@ const LangSwitch = () => {
   };
 
   return (
-    <div className="text-center notranslate w-[52px] overflow-hidden">
+    <div className="text-center notranslate w-[50px]">
       <div className="flex border-1 border-solid border-[#C9C9C9] cursor-pointer rounded-sm text-xs">
         {languageConfig?.languages.map((ld: LanguageDescriptor, i: number) => (
           <>
