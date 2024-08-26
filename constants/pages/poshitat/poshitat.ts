@@ -14,4 +14,11 @@ export const poshitat = [
     link: "https://travel.mts.ru/media/guides/ryazanskaya-oblast",
     linkName: "travel.mts.ru",
   },
+  {
+    title: "В Рязань и обратно",
+    desc: "Книга из серии «Заметки в картинках для путешественников» приглашает совершить путешествие в Рязянь, один из древнейших городов, с которым связана летопись России.",
+    imgUrl: "https://i.ibb.co/SsxsPSF/9b99b99a-026e-48c4-980c-f461723a0243.jpg",
+    linkLitres: "https://www.litres.ru/book/varvara-ledneva/v-ryazan-i-obratno-26917966/",
+    linkOzon: "https://www.ozon.ru/product/v-ryazan-i-obratno-ledneva-varvara-elektronnaya-kniga-934404121/",
+  },
 ];
