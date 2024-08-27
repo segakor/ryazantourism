@@ -6,13 +6,11 @@ export const HeroPage = ({
   imgUrl,
   title,
   desc,
-  noFilter,
   className,
 }: {
   imgUrl: string;
   title: string;
   desc?: string;
-  noFilter?: boolean;
   className?: string;
 }) => {
   return (
@@ -20,7 +18,6 @@ export const HeroPage = ({
       className={`relative md:h-[550px] h-[500px] md:rounded-b-[100px] rounded-b-[50px] overflow-hidden ${className}`}
     >
       <Image
-        className={`brightness-50 ${noFilter && "brightness-100"}`}
         src={imgUrl}
         alt="hero_img"
         fill

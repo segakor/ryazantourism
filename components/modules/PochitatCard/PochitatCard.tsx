@@ -15,7 +15,7 @@ export const PochitatCard = () => {
   );
 };
 const PochitatCardItem = (props: TPochitatCard) => {
-  const { imgUrl, title, desc, linkLitres, linkOzon, fileUrl, tag } = props;
+  const { imgUrl, title, desc, linkLitres, linkOzon, fileUrl, tag, defaultLink } = props;
   return (
     <div className="flex flex-col gap-12 bg-[#F7F7F7] rounded-[30px] p-7">
       <div className="flex flex-col gap-7 h-full">
@@ -54,6 +54,7 @@ const PochitatCardItem = (props: TPochitatCard) => {
             {linkLitres && <ChipsService type="litres" link={linkLitres} />}
             {linkOzon && <ChipsService type="ozon" link={linkOzon} />}
             {fileUrl && <ButtonDownload link={fileUrl} />}
+            {defaultLink && <ChipsService type='default' link={defaultLink} />}
           </div>
         </div>
       </div>

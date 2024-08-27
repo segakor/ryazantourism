@@ -49,7 +49,7 @@ export const HeroMain = () => {
                   alt="img"
                   objectFit="cover"
                   fill
-                  className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg brightness-50`}
+                  className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg`}
                   placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
                   priority
                   quality={40}

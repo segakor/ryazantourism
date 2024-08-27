@@ -51,7 +51,7 @@ export const headerMenu = [
   {
     item: "Инфо-центр",
     subItem: [
-      { label: "Визит центр для туристов", path: "/ty-s-mestnym/cit" },
+      { label: "Визит-центр для туристов", path: "/ty-s-mestnym/cit" },
       { label: "Новости региона", path: "/ty-s-mestnym/novosty-regiona" },
       { label: "Ответы на вопросы", path: "/ty-s-mestnym/otvety-na-voprosy" },
       { label: "Ваши отзывы", path: "/ty-s-mestnym/obratnaya-svyaz" },
@@ -78,7 +78,7 @@ export const headerMenu = [
     item: "Профессионалам",
     subItem: [
       {
-        label: "Агенство развития туризма",
+        label: "Агентство развития туризма",
         path: "/professionalam/agentstvo-razvitiya-turizma",
       },
       { label: "База знаний", path: "/professionalam/baza-znanij" },
@@ -154,28 +154,28 @@ export const bibliotekaNavigation = [
     imgUrl: "/bibliotekaNavigation/1.png",
     title: "Посмотреть",
     desc: "В Рязань любят приезжать блогеры и журналисты. Смотрите, зачем",
-    path: "/posmotret",
+    path: "/biblioteka/posmotret",
   },
   {
     id: "pochitat",
     imgUrl: "/bibliotekaNavigation/2.png",
     title: "Почитать",
     desc: "Что нужно узнать о Рязани и области, прежде чем собраться в гости",
-    path: "/pochitat",
+    path: "/biblioteka/pochitat",
   },
   {
     id: "poslushat",
     imgUrl: "/bibliotekaNavigation/3.png",
     title: "Послушать",
     desc: "Для тех, кто любит ушами: аудиогиды, подкасты и личные истории",
-    path: "/poslushat",
+    path: "/biblioteka/poslushat",
   },
   {
     id: "vdohnovitsiya",
     imgUrl: "/bibliotekaNavigation/4.png",
     title: "Вдохновиться",
     desc: "Эти снимки могли стать еще лучше, если бы на них оказались вы",
-    path: "/vdohnovitsiya",
+    path: "/biblioteka/vdohnovitsiya",
   },
 ];
 

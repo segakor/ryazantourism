@@ -203,13 +203,14 @@ const dictService = {
       Скачать
     </>
   ),
+  default: <>Читать</>,
 };
 
 export const ChipsService = ({
   type,
   link,
 }: {
-  type: "ya" | "izi" | "litres" | "ozon" | "vk" | "local";
+  type: "ya" | "izi" | "litres" | "ozon" | "vk" | "local" | "default";
   link: string;
 }) => {
   return (

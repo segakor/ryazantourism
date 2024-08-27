@@ -37,6 +37,8 @@ const colStartClasses = [
 export const CalendarSlide = ({ onChange, eventDates }: Props) => {
   const today = startOfToday();
 
+  const parseDates = eventDates.map(item => item.split('.').reverse().join('-'))
+
   const [currentDay, setCurrentDay] = useState<Date>(startOfDay(new Date()));
 
   const onClickDay = (e: Date) => {
@@ -72,14 +74,14 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
   };
 
   const isEventDay = (day: Date) =>
-    eventDates?.map((item) => isEqual(startOfDay(item), day)).includes(true);
+    parseDates?.map((item) => isEqual(startOfDay(item), day)).includes(true);
 
   return (
     <div className="w-auto rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa] md:h-[584px]">
-      {/* {currentDay.toDateString()} */}
       <div className="flex items-center justify-between">
         <Typography variant="h4" className="text-white">
-          {format(currentDay, "dd LLLL yyyy", { locale: ru })}
+          {format(parse(currMonth, "MMM-yyyy", new Date()), 'LLLL yyyy', { locale: ru })}
+        {/*   {format(currentDay, "dd LLLL yyyy", { locale: ru })} */}
         </Typography>
         <div className="flex items-center justify-evenly gap-6 md:gap-12">
           <button
@@ -147,16 +149,16 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
             <div
               key={idx}
               className={colStartClasses[getDay(day - 1)]}
-              /* onClick={() => {
+              onClick={() => {
                 isEventDay(day) && onClickDay(day);
-              }} */
-              onClick={() => onClickDay(day)}
+              }}
+             /*  onClick={() => onClickDay(day)} */
             >
               <p
                 className={`w-[40px] h-[40px] 
                   text-xl cursor-pointer
                   flex items-center justify-center 
-                  font-medium h-8 w-8 rounded-full  
+                  font-medium rounded-full  
                   hover:text-gray-900
                   
                   ${isSameMonth(day, today) ? "text-white" : "text-[#a598fb]"} 

@@ -15,3 +15,14 @@ export const API_URL_SINGLY_ROUTES =
 
 export const API_URL_DETAILS_SINGLY_ROUTES =
   "https://api.tr.plenexy.digital/api/routes";
+
+const now = new Date();
+const currentDate = now.toLocaleString().slice(0, 10);
+const nextYearDate = new Date(now.setFullYear(now.getFullYear() + 1))
+  .toLocaleString()
+  .slice(0, 10);
+
+export const API_URL_CALENDAR = `https://api.tr.plenexy.digital/api/event_dates?event_date_from=${currentDate}&event_date_to=${nextYearDate}`;
+
+export const API_URL_CALENDAR_DETAIL = `
+https://api.tr.plenexy.digital/api/events?page=1&limit=10&with=category,tags&event_date=$date_raplace`;

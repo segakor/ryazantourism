@@ -12,7 +12,6 @@ export default function RootLayout({
         imgUrl="/heroPages/biblioteka/poslushat.png"
         title="Послушать"
         desc="Для тех, кто любит ушами: аудиогиды, подкасты и личные истории"
-        noFilter
       />
       {children}
     </Layout>

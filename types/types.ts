@@ -139,6 +139,7 @@ export type TPochitatCard = {
   linkOzon?: string;
   tag?: string[];
   fileUrl?: string;
+  defaultLink?: string;
 };
 
 export type TNewsArt = {

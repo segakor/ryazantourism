@@ -1,6 +1,5 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import "./style.css";
 import { CalendarSlide } from "@/components/modules/Calendar/CalendarSlide";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
@@ -69,12 +68,12 @@ export const EventCard = () => {
 const Card = ({ id, title, imgUrl, dates, price, days }: any) => {
   return (
     <div
-      className="event_card_item_inner bg-cover"
+      className="text-white p-[40px] flex h-full flex-col justify-end bg-cover gap-4"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${imgUrl})`,
       }}
     >
-      <div className="h5">{title}</div>
+      <Typography variant="h4">{title}</Typography>
       <div className="flex flex-wrap gap-3">
         <span>
           <div className="inline-block rounded-full md:py-2 py-1 px-4 bg-[rgba(255,255,255,0.5)] ">

@@ -1,31 +1,58 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
-import "./style.css";
 import { CalendarSlide } from "@/components/modules/Calendar/CalendarSlide";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useState } from "react";
-import { format } from "date-fns";
-import { sobytiyaCards } from "@/constants/pages/sobytiaya/sobytiya";
+import { useCallback, useEffect, useState } from "react";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { swiperStyle } from "@/constants/swiperStyle";
 import { ButtonLink } from "@/components/elements/ButtonNew";
-
-const eventsDates = sobytiyaCards.map((item) => item.dates).flat();
+import { API_URL_CALENDAR, API_URL_CALENDAR_DETAIL } from "@/constants/apiUrl";
+import { Tags } from "@/components/elements/Tags/Tags";
+import { TagList } from "@/types/types";
 
 export const EventMainCard = () => {
-  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+  const [dates, setDates] = useState([]);
+  const [details, setDetails] = useState<
+    {
+      name: string;
+      buy_ticket_url: string;
+      image_path: string;
+      tags: { id: number }[];
+    }[]
+  >([]);
 
-  const onChangeDate = (e: Date) => {
-    setSelectedDate(e);
+  const onChangeDate = useCallback((e: Date) => {
+    getDetails(e.toLocaleDateString());
+  }, []);
+
+  const getDetails = async (date: string) => {
+    try {
+      const res = await fetch(
+        API_URL_CALENDAR_DETAIL.replace("$date_raplace", date)
+      );
+      const data = await res.json();
+      setDetails(data.data);
+    } catch (error) {}
   };
 
-  const filterEvents = sobytiyaCards.filter((item) =>
-    item.dates.includes(format(selectedDate, "yyyy-MM-dd"))
-  );
+  const getDates = async () => {
+    try {
+      const res = await fetch(API_URL_CALENDAR);
+      const data = await res.json();
+      setDates(data);
+    } catch (error) {}
+  };
+
+  useEffect(() => {
+    getDates();
+    onChangeDate(new Date());
+  }, [onChangeDate]);
+
+  //TODO:порефакторить
 
   return (
     <div className="grid md:gap-20 gap-10">
@@ -33,9 +60,9 @@ export const EventMainCard = () => {
         Календарь событий
       </Typography>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px] min-h-full">
-        <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
+        <CalendarSlide onChange={onChangeDate} eventDates={dates} />
         <div className="h-full overflow-hidden bg-black rounded-[14px] md:h-auto">
-          {!!filterEvents.length ? (
+          {!!details.length ? (
             <Swiper
               navigation={true}
               pagination={{
@@ -46,7 +73,7 @@ export const EventMainCard = () => {
               style={swiperStyle}
               className="swiper_calendar md:h-[584px] h-[350px] rounded-[14px]"
             >
-              {filterEvents.map((item, index) => (
+              {details.map((item, index) => (
                 <SwiperSlide key={index}>
                   <Card {...item} />
                 </SwiperSlide>
@@ -66,25 +93,32 @@ export const EventMainCard = () => {
 };
 
 const Card = ({
-  title,
-  imgUrl,
-  dates,
+  name,
+  buy_ticket_url,
+  image_path,
+  tags,
 }: {
-  title: string;
-  imgUrl: string;
-  dates: string[];
+  name: string;
+  buy_ticket_url: string;
+  image_path: string;
+  tags: { id: number }[];
 }) => {
+  const tagList = tags?.map((item) => item.id) as TagList[];
+
   return (
     <div
-      className="event_card_item_inner bg-cover md:max-h-auto max-h-450px"
+      className="text-white p-[40px] flex h-full flex-col justify-between bg-cover md:max-h-auto max-h-450px"
       style={{
-        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${imgUrl})`,
+        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${image_path})`,
       }}
     >
-      <div className="h5">{title}</div>
-      <ButtonLink href={""} variant="greenWhite">
-        Перейти
-      </ButtonLink>
+      <Tags tags={tagList} />
+      <div className="grid gap-4">
+        <Typography variant="h4">{name}</Typography>
+        <ButtonLink href={buy_ticket_url} variant="greenWhite" target="_blank">
+          Перейти
+        </ButtonLink>
+      </div>
     </div>
   );
 };
