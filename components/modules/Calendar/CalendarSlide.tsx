@@ -77,7 +77,7 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
     parseDates?.map((item) => isEqual(startOfDay(item), day)).includes(true);
 
   return (
-    <div className="w-auto rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa] md:h-[584px]">
+    <div className="w-auto rounded-[14px] md:p-10 p-5 border-solid bg-[#7f6cfa] md:h-[584px]">
       <div className="flex items-center justify-between">
         <Typography variant="h4" className="text-white">
           {format(parse(currMonth, "MMM-yyyy", new Date()), 'LLLL yyyy', { locale: ru })}

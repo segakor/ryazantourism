@@ -11,7 +11,7 @@ export const ButtonLink = ({
 }: {
   href: string;
   target?: HTMLAttributeAnchorTarget;
-  variant: "whiteGreen" | "greenBlack" | "greenWhite";
+  variant: "whiteGreen" | "greenBlack" | "greenWhite" | "blackWhite";
   children: ReactNode;
   wide?: boolean;
   className?: string;
@@ -21,6 +21,7 @@ export const ButtonLink = ({
     greenBlack:
       "bg-[var(--color-green)] hover:bg-[var(--color-black)] hover:text-white",
     greenWhite: "bg-[var(--color-green)] hover:bg-[var(--color-white)]",
+    blackWhite: "bg-[var(--color-black)] hover:bg-[var(--color-white)] hover:text-black text-white",
   };
 
   const display = wide ? "flex justify-center" : "inline-block";

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 import Loading from "../loading";
 import Body from "./body";
-import { news } from "@/constants/pages/professionalam/novosti-art";
+import { news } from "@/constants/pages/ty-s-mestnym/novosri-regiona";
 import { TNewsArt } from "@/types/types";
 
 type Props = {

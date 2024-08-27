@@ -49,19 +49,6 @@ export const headerMenu = [
     ],
   },
   {
-    item: "Инфо-центр",
-    subItem: [
-      { label: "Визит-центр для туристов", path: "/ty-s-mestnym/cit" },
-      { label: "Новости региона", path: "/ty-s-mestnym/novosty-regiona" },
-      { label: "Ответы на вопросы", path: "/ty-s-mestnym/otvety-na-voprosy" },
-      { label: "Ваши отзывы", path: "/ty-s-mestnym/obratnaya-svyaz" },
-      {
-        label: "Мобильное приложение",
-        path: "/ty-s-mestnym/mobilnoe-prilozhenie",
-      },
-    ],
-  },
-  {
     item: "Маршруты",
     subItem: [
       {
@@ -71,6 +58,19 @@ export const headerMenu = [
       {
         label: "Самостоятельные машруты",
         path: "/marshruty/samostoyatelnye-marshruty",
+      },
+    ],
+  },
+  {
+    item: "Туристам",
+    subItem: [
+      { label: "Визит-центр для туристов", path: "/ty-s-mestnym/cit" },
+      { label: "Новости региона", path: "/ty-s-mestnym/novosty-regiona" },
+      { label: "Ответы на вопросы", path: "/ty-s-mestnym/otvety-na-voprosy" },
+      { label: "Ваши отзывы", path: "/ty-s-mestnym/obratnaya-svyaz" },
+      {
+        label: "Мобильное приложение",
+        path: "/ty-s-mestnym/mobilnoe-prilozhenie",
       },
     ],
   },
@@ -86,7 +86,7 @@ export const headerMenu = [
         label: "Реестр туроператоров",
         path: "/professionalam/reestr-turoperatorov",
       },
-      { label: "Новости арт", path: "/professionalam/novosti-art" },
+      { label: "Новости АРТ", path: "/professionalam/novosti-art" },
     ],
   },
   {
@@ -206,31 +206,31 @@ export const heroMap = [
   {
     title: "История",
     desc: "Тысячелетнее путешествие во времени: громкие имена, интересные факты, невероятные сюжеты",
-    imgUrl: "/hero/hero1.jpg",
+    imgUrl: "/hero/history.png",
     link: "/region/istoriya",
   },
   {
     title: "Культура",
     desc: "Что? Где? Когда? Список заведений и событий, которые стоит включить в план вашей поездки",
-    imgUrl: "/hero/hero2.jpg",
+    imgUrl: "/hero/culture.png",
     link: "/region/kultura",
   },
   {
     title: "Природа",
     desc: "Вам дворцов заманчивые своды не заменят никогда свободы? Выбирайте, куда выбраться из города",
-    imgUrl: "/hero/hero3.jpg",
+    imgUrl: "/hero/nature.png",
     link: "/region/priroda",
   },
   {
     title: "Кухня рязанского края",
     desc: "Гастрономический фестиваль и лучшие локальные блюда в меню местных ресторанов",
-    imgUrl: "/hero/hero4.jpg",
+    imgUrl: "/hero/food.png",
     link: "/region/kuhnya-ryazanskogo-kraya",
   },
   {
     title: "Архитектура",
     desc: "Путеводитель по значимым постройкам с XVI века до наших дней. В объективе Рязань и область",
-    imgUrl: "/hero/hero5.jpg",
+    imgUrl: "/hero/architecture.png",
     link: "/region/arhitektura",
   },
 ];

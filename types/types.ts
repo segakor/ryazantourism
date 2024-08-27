@@ -170,3 +170,11 @@ export type TOrgEventCard = {
   days: string;
   template: TLongReadBody[];
 };
+
+export type TNews = {
+  id: number;
+  title: string;
+  desc: string;
+  imgUrl: string;
+  date: string;
+}

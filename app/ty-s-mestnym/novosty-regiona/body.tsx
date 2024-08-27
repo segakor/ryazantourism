@@ -1,8 +1,11 @@
-import { TLongReadBody } from "@/types/types";
-import { LongRead } from "@/components/modules/LongRead";
+import { NewsCard } from "@/components/modules/NewsCard/NewsCard";
 
-const Body = ({ data }: { data: TLongReadBody[] }) => {
-  return <LongRead body={data} />;
+const Body = ({ data }: { data: any }) => {
+  return (
+    <section className="grid_layout">
+      <NewsCard news={data} type="region" />
+    </section>
+  );
 };
 
 export default Body;

@@ -72,7 +72,7 @@ export const OrganizedBannerRoutes = () => {
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
-        size={mdMedia ? "4xl" : "full"}
+        size={mdMedia ? "5xl" : "full"}
         backdrop="blur"
         className={!mdMedia ? "overflow-scroll" : ""}
       >

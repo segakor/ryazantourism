@@ -1,20 +1,34 @@
-import { news } from "@/constants/pages/ty-s-mestnym/novosti-art";
+import { TNews } from "@/types/types";
 import Link from "next/link";
 
-export const NewsArtCard = () => {
+export const NewsCard = ({
+  news,
+  type,
+}: {
+  news: TNews[];
+  type: "art" | "region";
+}) => {
+  console.log(type);
   return (
     <div className="grid md:gap-7 gap-10 md:grid-cols-3 grid-cols-1 my-20 md:mt-40 md:mb-20">
-      {news.map((item, index) => (
-        <NewsArtItem {...item} key={index} />
+      {news?.map((item, index) => (
+        <NewsItem item={item} key={index} type={type} />
       ))}
     </div>
   );
 };
 
-const NewsArtItem = (props: any) => {
+const NewsItem = ({ item, type }: { item: TNews; type: "art" | "region" }) => {
+  const hrefDict = {
+    art: `/professionalam/novosti-art/${item.id}`,
+    region: `/ty-s-mestnym/novosty-regiona/${item.id}`,
+  };
+
+  const href = hrefDict[type];
+
   return (
     <Link
-      href={`/professionalam/novosti-art/${props.id}`}
+      href={href}
       className="h-full relative cursor-pointer group/item"
     >
       <div className="absolute w-full h-full flex justify-center items-center">
@@ -40,12 +54,13 @@ const NewsArtItem = (props: any) => {
       </div>
       <div
         style={{
-          background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${props.imgUrl})`,
+          background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${item.imgUrl})`,
           backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
-        className="flex flex-col justify-end rounded-3xl p-6 border-solid min-h-[37.125rem] bg-cover"
+        className="flex flex-col justify-end rounded-3xl p-6 border-solid min-h-[37.125rem]"
       >
-        <div className="h5 text-white">{props.title}</div>
+        <div className="h5 text-white">{item.title}</div>
       </div>
     </Link>
   );

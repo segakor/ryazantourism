@@ -3,6 +3,7 @@ import { HeroMain } from "@/components/modules/HeroMain";
 import { MainBannerRoutes } from "@/components/modules/MainBannerRoutes";
 import { MainNavigation } from "@/components/modules/MainNavigation";
 import { News } from "@/components/modules/News";
+import { news } from "@/constants/pages/ty-s-mestnym/novosri-regiona";
 
 import type { Metadata } from "next";
 
@@ -21,7 +22,7 @@ const Main = async () => {
         <MainNavigation />
         <MainBannerRoutes />
         <EventMainCard />
-        <News type="city" />
+        <News type="city" news={news.reverse().slice(0,4)} />
       </div>
     </>
   );

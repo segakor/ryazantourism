@@ -1,9 +1,9 @@
-import { NewsArtCard } from "@/components/modules/NewsArtCard/NewsArtCard";
+import { NewsCard } from "@/components/modules/NewsCard/NewsCard";
 
-const Body = () => {
+const Body = ({ data }: { data: any }) => {
   return (
     <section className="grid_layout">
-      <NewsArtCard />
+      <NewsCard news={data} type="art" />
     </section>
   );
 };

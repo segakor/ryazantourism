@@ -1,3 +1,4 @@
+import { ButtonLink } from "@/components/elements/ButtonNew";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { bibliotekaNavigation } from "@/constants/contstants";
 import Link from "next/link";
@@ -44,6 +45,27 @@ export const BibliotekaNavigation = () => {
             </div>
           </Link>
         ))}
+        <div
+          className="md:col-span-2 col-span-1 md:h-[356px] rounded-[40px] md:p-20 p-5"
+          style={{
+            background: `url(/bibliotekaNavigation/gotrip.png)`,
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="flex md:items-center md:justify-between md:flex-row flex-col md:gap-0 gap-5">
+            <div className="grid gap-3 md:w-[453px] w-auto">
+              <Typography variant="h4" className="text-black font-medium">
+                Уже вдохновились? Пора планировать путешествие в Рязань!
+              </Typography>
+              <div className="text-black opacity-50">
+                Подскажем, где остановиться, поесть и куда сходить. Авторские
+                маршруты, локальная кухня, интересные музеи и всего 2,5 часа от
+                Москвы
+              </div>
+            </div>
+           <ButtonLink href="/" variant='blackWhite'>Поехали!</ButtonLink>
+          </div>
+        </div>
       </div>
     </section>
   );

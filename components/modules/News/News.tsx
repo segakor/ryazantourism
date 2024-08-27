@@ -2,12 +2,16 @@
 import { ButtonLink } from "@/components/elements/ButtonNew";
 import "./style.css";
 import { Typography } from "@/components/elements/Typography/Typography";
+import { TNews } from "@/types/types";
+import { parse } from "date-fns";
+import Link from "next/link";
 
 type Props = {
   type: "city" | "art";
+  news: TNews[];
 };
 
-export const News = ({ type }: Props) => {
+export const News = ({ type, news }: Props) => {
   const dict = {
     city: {
       title: "Актуальная информация о происходящем в регионе",
@@ -17,6 +21,18 @@ export const News = ({ type }: Props) => {
       title: "Актуальная информация о происходящем в туризме",
       href: "/professionalam/novosti-art",
     },
+  };
+
+  const getDate = (date: string) => {
+    const d = parse(date, "dd.MM.yyyy", new Date());
+
+    return d
+      .toLocaleString("default", {
+        day: "numeric",
+        year: "numeric",
+        month: "long",
+      })
+      .split(" ");
   };
 
   return (
@@ -36,74 +52,28 @@ export const News = ({ type }: Props) => {
         </div>
       </div>
       <div className="grid grid-cols-[repeat(4,minmax(308px,1fr))] gap-6 overflow-x-scroll md:overflow-x-visible">
-        <div className="news_card hover:bg-[#b9fa4f] transition-all group/item">
-          <div className="h6 news_card_title">
-            Музейный центр РИАМЗ приглашает на открытие выставки «Связь
-            поколений»
-          </div>
-          <img
-            className="group-hover/item:opacity-100 opacity-0 transition-all"
-            src={"/news/arrows.svg"}
-            alt=""
-          />
-          <div className="news_card_date">
-            <Typography variant="h3" className="font-medium">
-              24
-            </Typography>
-            <div className="h6">марта 2024</div>
-          </div>
-        </div>
-        <div className="news_card hover:bg-[#b9fa4f] transition-all group/item">
-          <div className="h6 news_card_title">
-            Музейный центр РИАМЗ приглашает на открытие выставки «Связь
-            поколений»
-          </div>
-          <img
-            className="group-hover/item:opacity-100 opacity-0 transition-all"
-            src={"/news/arrows.svg"}
-            alt=""
-          />
-          <div className="news_card_date">
-            <Typography variant="h3" className="font-medium">
-              24
-            </Typography>
-            <div className="h6">марта 2024</div>
-          </div>
-        </div>
-        <div className="news_card hover:bg-[#b9fa4f] transition-all group/item">
-          <div className="h6 news_card_title">
-            Музейный центр РИАМЗ приглашает на открытие выставки «Связь
-            поколений»
-          </div>
-          <img
-            className="group-hover/item:opacity-100 opacity-0 transition-all"
-            src={"/news/arrows.svg"}
-            alt=""
-          />
-          <div className="news_card_date">
-            <Typography variant="h3" className="font-medium">
-              24
-            </Typography>
-            <div className="h6">марта 2024</div>
-          </div>
-        </div>
-        <div className="news_card hover:bg-[#b9fa4f] transition-all group/item">
-          <div className="h6 news_card_title">
-            Музейный центр РИАМЗ приглашает на открытие выставки «Связь
-            поколений»
-          </div>
-          <img
-            className="group-hover/item:opacity-100 opacity-0 transition-all"
-            src={"/news/arrows.svg"}
-            alt=""
-          />
-          <div className="news_card_date">
-            <Typography variant="h3" className="font-medium">
-              24
-            </Typography>
-            <div className="h6">марта 2024</div>
-          </div>
-        </div>
+        {news.map((item, index) => (
+          <Link
+            href={`${dict[type].href}/${item.id}`}
+            className="news_card hover:bg-[#b9fa4f] transition-all group/item"
+            key={index}
+          >
+            <div className="h6 news_card_title">{item.title}</div>
+            <img
+              className="group-hover/item:opacity-100 opacity-0 transition-all"
+              src={"/news/arrows.svg"}
+              alt=""
+            />
+            <div className="grid gap-1">
+              <Typography variant="h3" className="font-medium">
+                {getDate(item.date)[0]}
+              </Typography>
+              <Typography variant="h6" className="font-medium">
+                {getDate(item.date)[1]} {getDate(item.date)[2]}
+              </Typography>
+            </div>
+          </Link>
+        ))}
       </div>
       <svg height="0" width="0">
         <defs>

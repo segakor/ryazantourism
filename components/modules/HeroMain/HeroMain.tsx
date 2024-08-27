@@ -43,7 +43,7 @@ export const HeroMain = () => {
         {heroMap.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="hero_wrapper">
-              <div className={`w-full relative h-svh`}>
+              <div className={`w-full relative h-screen`}>
                 <Image
                   src={item.imgUrl}
                   alt="img"
@@ -52,7 +52,6 @@ export const HeroMain = () => {
                   className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg`}
                   placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
                   priority
-                  quality={40}
                 />
               </div>
               <div className="hero_inner">
