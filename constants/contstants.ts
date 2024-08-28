@@ -151,28 +151,28 @@ export const mainNavigation = [
 export const bibliotekaNavigation = [
   {
     id: "posmotret",
-    imgUrl: "/bibliotekaNavigation/1.png",
+    imgUrl: "/bibliotekaNavigation/posmotret_small.jpg",
     title: "Посмотреть",
     desc: "В Рязань любят приезжать блогеры и журналисты. Смотрите, зачем",
     path: "/biblioteka/posmotret",
   },
   {
     id: "pochitat",
-    imgUrl: "/bibliotekaNavigation/2.png",
+    imgUrl: "/bibliotekaNavigation/pochitat_small.jpg",
     title: "Почитать",
     desc: "Что нужно узнать о Рязани и области, прежде чем собраться в гости",
     path: "/biblioteka/pochitat",
   },
   {
     id: "poslushat",
-    imgUrl: "/bibliotekaNavigation/3.png",
+    imgUrl: "/bibliotekaNavigation/poslushat_small.jpg",
     title: "Послушать",
     desc: "Для тех, кто любит ушами: аудиогиды, подкасты и личные истории",
     path: "/biblioteka/poslushat",
   },
   {
     id: "vdohnovitsiya",
-    imgUrl: "/bibliotekaNavigation/4.png",
+    imgUrl: "/bibliotekaNavigation/vdohnovitsiya_small.jpg",
     title: "Вдохновиться",
     desc: "Эти снимки могли стать еще лучше, если бы на них оказались вы",
     path: "/biblioteka/vdohnovitsiya",

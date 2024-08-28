@@ -11,7 +11,7 @@ const NasledieRyazani = () => {
   return (
     <div className="pages">
       <HeroPage
-        imgUrl="/heroPages/region/arhitektura.jpg"
+        imgUrl="/heroPages/region/nasledie_rzn.jpg"
         title="Наследие Рязани"
       />
       <Body />
