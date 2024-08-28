@@ -14,7 +14,6 @@ export const template = [
   },
   {
     element: "LONG_READ_BLOCK",
-    title: " «Бристоль»",
     subElements: [
       {
         element: "LONG_READ_ITEM_BLOCK",
