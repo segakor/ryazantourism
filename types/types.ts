@@ -178,3 +178,11 @@ export type TNews = {
   imgUrl: string;
   date: string;
 }
+
+export type TMailBody = {
+  tour:string;
+  fio: string;
+  tel: string;
+  date: string;
+  count: string;
+}

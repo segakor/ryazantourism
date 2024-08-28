@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <Layout>
       <HeroPage
-        imgUrl="/heroPages/ty-s-mestnym/cit.jpg"
+        imgUrl="/heroPages/professionalam/baza_znaniy.jpg"
         title="База знаний"
       />
       {children}

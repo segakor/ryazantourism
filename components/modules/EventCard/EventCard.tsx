@@ -12,7 +12,6 @@ import { eventCards } from "@/constants/pages/organizovannye-marshruty/eventCard
 import { Typography } from "@/components/elements/Typography/Typography";
 import { swiperStyle } from "@/constants/swiperStyle";
 import { ButtonLink } from "@/components/elements/ButtonNew";
-/* import { TOrgEventCard } from "@/types/types"; */
 
 const eventsDates = eventCards.map((item) => item.dates).flat();
 
@@ -48,7 +47,7 @@ export const EventCard = () => {
             >
               {filterEvents.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <Card {...item} />
+                  <Card {...item} startDate={selectedDate} />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -65,7 +64,7 @@ export const EventCard = () => {
   );
 };
 
-const Card = ({ id, title, imgUrl, dates, price, days }: any) => {
+const Card = ({ id, title, imgUrl, price, days, startDate }: any) => {
   return (
     <div
       className="text-white md:p-10 p-5 flex h-full flex-col justify-end bg-cover gap-4"
@@ -91,7 +90,10 @@ const Card = ({ id, title, imgUrl, dates, price, days }: any) => {
         </span>
       </div>
       <ButtonLink
-        href={`/marshruty/organizovannye-marshruty/${id}`}
+        href={{
+          pathname: `/marshruty/organizovannye-marshruty/${id}`,
+          query: { startDate: startDate.toLocaleDateString("ru") },
+        }}
         variant="greenWhite"
       >
         Посмотреть

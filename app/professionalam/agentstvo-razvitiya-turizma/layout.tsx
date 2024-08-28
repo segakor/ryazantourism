@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <Layout>
       <HeroPage
-        imgUrl="/heroPages/ty-s-mestnym/cit.jpg"
+        imgUrl="/heroPages/professionalam/agentstvo.jpg"
         title="Агентство развития туризма Рязанской области"
         desc="Повышаем туристическую привлекательность региона через реализацию образовательных, коммуникационных, обучающих и методических проектов с участием бизнеса, общественности и власти"
       />

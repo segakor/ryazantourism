@@ -10,7 +10,7 @@ export default function RootLayout({
     <Layout>
       <div className="pages">
         <HeroPage
-          imgUrl="/heroPages/ty-s-mestnym/mobilnoe-prilozhenie.png"
+          imgUrl="/heroPages/ty-s-mestnym/mob_prilozh.jpg"
           title="Мобильное приложение"
         />
         {children}
