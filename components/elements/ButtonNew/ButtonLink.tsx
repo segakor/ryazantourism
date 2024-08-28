@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HTMLAttributeAnchorTarget, ReactNode } from "react";
+import { UrlObject } from "url";
 
 export const ButtonLink = ({
   href,
@@ -9,7 +10,7 @@ export const ButtonLink = ({
   wide,
   className,
 }: {
-  href: string;
+  href: string | UrlObject;
   target?: HTMLAttributeAnchorTarget;
   variant: "whiteGreen" | "greenBlack" | "greenWhite" | "blackWhite";
   children: ReactNode;

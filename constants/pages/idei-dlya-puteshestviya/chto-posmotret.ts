@@ -43,7 +43,7 @@ export const chtoPosmotret = [
     title: "Музей-заповедник Сергея Есенина",
     desc: "Государственный музей-заповедник С.А.Есенина расположен на родине поэта в селе Константиново Рыбновского района Рязанской области",
     address: "Рыбновский р-н, с. Константиново",
-    imgUrl: "https://i.postimg.cc/fLt6v8dm/konstantinovo-2-1-410x594-d75.jpg",
+    imgUrl: "https://i.postimg.cc/5NcV6Z4L/original.jpg",
     category: {
       name: "Музеи",
     },

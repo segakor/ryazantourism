@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <Layout>
       <div className="pages">
-        <HeroPage imgUrl="/heroPages/ty-s-mestnym/cit.jpg" title="Контакты" />
+        <HeroPage imgUrl="/heroPages/ty-s-mestnym/vizit_center.jpg" title="Контакты" />
         {children}
       </div>
     </Layout>

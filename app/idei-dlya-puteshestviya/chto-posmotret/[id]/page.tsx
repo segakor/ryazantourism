@@ -35,6 +35,7 @@ const Page = async ({ params }: Props) => {
           imgUrl={data?.imgUrl || "/heroPages/ty-s-mestnym/cit.jpg"}
           title={data.title}
           desc=""
+          classNameImage="brightness-50"
         />
         <Body data={data.template} />
       </div>

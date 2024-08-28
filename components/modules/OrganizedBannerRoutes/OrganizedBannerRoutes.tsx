@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { ModalOrder } from "../ModalOrder/ModalOrder";
+import { ModalRyazanPlus } from "../ModalOrder";
 import { useDisclosure } from "@nextui-org/react";
 import { Modal, ModalContent, ModalBody } from "@nextui-org/modal";
 import { Typography } from "@/components/elements/Typography/Typography";
@@ -78,7 +78,7 @@ export const OrganizedBannerRoutes = () => {
       >
         <ModalContent className="bg-[#806fdf] p-0">
           <ModalBody>
-            <ModalOrder />
+            <ModalRyazanPlus />
           </ModalBody>
         </ModalContent>
       </Modal>

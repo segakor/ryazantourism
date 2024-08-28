@@ -14,7 +14,7 @@ const Page = async () => {
     <>
       <Suspense fallback={<Loading />}>
         <HeroPage
-          imgUrl="/heroPages/ty-s-mestnym/cit.jpg"
+         imgUrl="/heroPages/professionalam/novosti_art.jpg"
           title="Новости АРТ"
         />
         <Body data={news}/>
