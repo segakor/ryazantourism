@@ -6,7 +6,7 @@ import { TLongReadBody } from "@/types/types";
 const Sobytia = () => {
   return (
     <div className="pages">
-      <HeroPage imgUrl="/heroPages/region/arhitektura.jpg" title="События" />
+      <HeroPage imgUrl="/heroPages/region/sobytiya.jpg" title="События" />
       <LongRead body={template as TLongReadBody[]} />
     </div>
   );

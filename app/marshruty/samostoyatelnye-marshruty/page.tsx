@@ -23,7 +23,7 @@ const Page = async () => {
     <>
       <Suspense fallback={<Loading />}>
         <HeroPage
-          imgUrl="/heroPages/ty-s-mestnym/cit.jpg"
+          imgUrl="/heroPages/marshruty/samostoyatelnye_marshruty.jpg"
           title="Самостоятельные маршруты"
           desc="Готовые тематические сценарии для самостоятельных увлекательных путешествий. Рекомендуется для легких на подъем и любопытных искателей приключений"
         />

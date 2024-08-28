@@ -11,7 +11,7 @@ export default function RootLayout({
       <HeroPage
         imgUrl="/heroPages/idei-dlya-puteshestviya/zdorove.jpg"
         title="Здоровье"
-        desc="Самые вкусные заведения Рязанской области"
+        desc="Информация для тех, кто совмещает отдых и заботу об организме"
       />
       {children}
     </Layout>

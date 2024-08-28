@@ -7,6 +7,7 @@ import { TOtvet } from "@/types/types";
 
 const Body = ({ data }: { data: TOtvet[] }) => {
   const [tab, setTab] = useState("all");
+  const [searchValue, setSearchValue] = useState("");
 
   const onChangeTab = (e: string) => {
     setTab(e);
@@ -24,12 +25,20 @@ const Body = ({ data }: { data: TOtvet[] }) => {
     });
   });
 
-  const filteredData =
-    tab !== "all" ? data.filter((item) => item.category.name === tab) : data;
+  const filteredData = searchValue
+    ? data.filter((item) =>
+        item.keyword.join(' ').includes(searchValue.toLocaleLowerCase())
+      )
+    : tab !== "all"
+    ? data.filter((item) => item.category.name === tab)
+    : data;
+
+  const onSearch = (e: React.ChangeEvent<HTMLInputElement>) =>
+    setSearchValue(e.target.value);
 
   return (
     <section className="grid_layout">
-      <Search />
+      <Search onChange={onSearch} />
       <Tabs tabs={tabs} onChange={onChangeTab} isOtvety />
       <Otvety data={filteredData} />
     </section>
