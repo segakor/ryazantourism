@@ -24,7 +24,7 @@ export const LinkBlock = ({
             </Typography>
             <div className="note-text">{desc}</div>
           </div>
-          <div className="rounded-[30px] h-[98px] md:w-[200px] w-full overflow-hidden">
+          {/* <div className="rounded-[30px] h-[98px] md:w-[200px] w-full overflow-hidden">
             <div className={`w-full relative md:pt-[100%] pt-[50%]`}>
               <Image
                 src={srcImg}
@@ -36,7 +36,7 @@ export const LinkBlock = ({
                 priority
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Link>
