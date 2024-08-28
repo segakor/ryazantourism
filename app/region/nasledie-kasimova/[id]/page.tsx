@@ -32,10 +32,9 @@ const Page = async ({ params }: Props) => {
     <Suspense fallback={<Loading />}>
       <div className="pages">
         <HeroPage
-          imgUrl={data?.imgUrl}
+          imgUrl="/heroPages/region/nasledie_kasimov.jpg"
           title={data.title}
           desc=""
-          classNameImage="brightness-50"
         />
         <Body data={data.template} />
       </div>
