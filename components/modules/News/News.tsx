@@ -27,7 +27,7 @@ export const News = ({ type, news }: Props) => {
     const d = parse(date, "dd.MM.yyyy", new Date());
 
     return d
-      .toLocaleString("default", {
+      .toLocaleString("ru", {
         day: "numeric",
         year: "numeric",
         month: "long",

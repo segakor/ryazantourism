@@ -17,7 +17,7 @@ const Page = async () => {
           imgUrl="/heroPages/ty-s-mestnym/cit.jpg"
           title="Новости региона"
         />
-        <Body data={news.reverse()}/>
+        <Body data={news}/>
       </Suspense>
     </>
   );

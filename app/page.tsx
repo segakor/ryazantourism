@@ -22,7 +22,7 @@ const Main = async () => {
         <MainNavigation />
         <MainBannerRoutes />
         <EventMainCard />
-        <News type="city" news={news.reverse().slice(0,4)} />
+        <News type="city" news={news.slice(0,4)} />
       </div>
     </>
   );
