@@ -52,14 +52,13 @@ const tagsText = {
 
 //TODO: поправить ховер на центр
 
-export const Tag = ({ tag, sizeTag }: { tag: TagList; sizeTag?: string }) => {
+export const Tag = ({ tag }: { tag: TagList; }) => {
   return (
     <div className="relative cursor-pointer group/item2">
       <Image
         priority
         src={tagsMap[tag]}
         alt={"tag"}
-        width={Number(sizeTag)}
       />
       <div className="group-hover/item2:opacity-100 opacity-0 absolute bg-white shadow-2xl mt-3 ml-[-100%]  transition-all w-[270px] p-6 rounded-[0.875rem] pointer-events-none cursor-default group-hover/item2:pointer-events-auto">
         <div className="flex flex-col justify-center gap-4 items-center">
@@ -77,15 +76,13 @@ export const Tag = ({ tag, sizeTag }: { tag: TagList; sizeTag?: string }) => {
 
 export const Tags = ({
   tags,
-  sizeTag,
 }: {
   tags: TagList[];
-  sizeTag?: string;
 }) => {
   return (
     <div className="flex gap-2 flex-wrap">
       {tags?.map((tag, index) => (
-        <Tag tag={tag} key={index} sizeTag={sizeTag}/>
+        <Tag tag={tag} key={index} />
       ))}
     </div>
   );

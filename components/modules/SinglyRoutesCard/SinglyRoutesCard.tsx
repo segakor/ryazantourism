@@ -14,7 +14,7 @@ export const SinglyRoutesCard = ({
   }[];
 }) => {
   return (
-    <div className="grid md:grid-cols-2 grid-cols-1 gap-7 bg-white p-5 rounded-[30px]">
+    <div className="grid md:grid-cols-2 grid-cols-1 gap-7 bg-white p-5 rounded-[30px] shadow-md">
       {data.map((item, index) => (
         <SinglyRoutesCardItem {...item} key={index} />
       ))}

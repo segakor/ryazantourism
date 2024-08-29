@@ -112,9 +112,9 @@ const Card = ({
         backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${image_path})`,
       }}
     >
-      <Tags tags={tagList} sizeTag="69"/>
-      <div className="grid gap-4">
-        <Typography variant="h4">{name}</Typography>
+      <Tags tags={tagList}/>
+      <div className="grid gap-5">
+        <Typography variant="h5">{name}</Typography>
         <ButtonLink href={buy_ticket_url} variant="greenWhite" target="_blank">
           Перейти
         </ButtonLink>

@@ -29,7 +29,7 @@ export const LongReadBlock = ({
   subElements: { element: string; text: string }[];
 }) => {
   return (
-    <div className="bg-white md:p-[50px] p-[30px] rounded-[30px] grid gap-7">
+    <div className="bg-white md:p-[50px] p-[30px] rounded-[30px] grid gap-7 shadow-md">
       {title && (
         <Typography variant="h3" id={title} className="font-medium">
           {title}

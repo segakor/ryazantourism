@@ -14,7 +14,7 @@ export const SingleBlock = ({
 }) => {
   //TODO: Image сделать один на всех
   return (
-    <div className="bg-white rounded-[30px] overflow-hidden">
+    <div className="bg-white rounded-[30px] overflow-hidden shadow-md">
       {srcImg && (
         <div className={`w-full relative pt-[35%]`}>
           <Image

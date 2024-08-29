@@ -1,7 +1,6 @@
 import { Typography } from "../../Typography/Typography";
 import { ImageBlock } from "../ImageBlock/ImageBlock";
 import { TextBlock } from "../TextBlock/TextBlock";
-import "./style.css";
 
 export const LongReadItemBlock = ({
   title,
@@ -13,7 +12,7 @@ export const LongReadItemBlock = ({
   srcImg: string;
 }) => {
   return (
-    <div className="longread_item_block">
+    <div className="grid gap-6">
       {title && (
         <Typography variant="h5" className="font-semibold">
           {title}
