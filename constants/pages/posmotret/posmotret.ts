@@ -6,7 +6,7 @@ export const posmotret = [
     date: "02.07.2023",
     linkName: "1tv.ru",
     link: "https://www.1tv.ru/shows/neputevye-zametki/vypuski/ryazan-chast-1-neputevye-zametki-vypusk-ot-02-07-2023",
-    imgUrl: "https://i.ibb.co/B2SWtKm/1.jpg",
+    imgUrl: "https://i.ibb.co/y0sCb7Y/photo-5364230328559983320-y.jpg",
   },
   {
     title: "«Непутевые заметки». Рязанская область",
@@ -15,7 +15,7 @@ export const posmotret = [
     date: "23.07.2023",
     linkName: "1tv.ru",
     link: "https://www.1tv.ru/shows/neputevye-zametki/vypuski/ryazan-chast-2-neputevye-zametki-vypusk-ot-23-07-2023 ",
-    imgUrl: "https://i.ibb.co/B2SWtKm/1.jpg",
+    imgUrl: "https://i.ibb.co/JRMJwms/photo-5364230328559983321-y.jpg",
   },
   {
     title: "«Повара на колесах»",
@@ -24,7 +24,7 @@ export const posmotret = [
     date: "05.09.2023",
     linkName: "YouTube",
     link: "https://www.youtube.com/watch?v=7aWD_nfANMg",
-    imgUrl: "https://i.ibb.co/B2SWtKm/1.jpg",
+    imgUrl: "https://i.ibb.co/SK5R1ZD/photo-5366482128373668784-y.jpg",
   },
   {
     title: "«Поехали»",
@@ -33,7 +33,7 @@ export const posmotret = [
     date: "25.03.2023",
     linkName: "1tv.ru",
     link: "https://www.1tv.ru/shows/poehali/vypuski/poehali-vypusk-ot-25-03-2023",
-    imgUrl: "https://i.ibb.co/B2SWtKm/1.jpg",
+    imgUrl: "https://i.ibb.co/GCjt9CX/photo-5364230328559984064-y.jpg",
   },
   {
     title: "«Поедим, поедим»",
@@ -42,7 +42,7 @@ export const posmotret = [
     date: "11.11.2023",
     linkName: "ntv.ru",
     link: "https://www.ntv.ru/peredacha/poedem_poedim/m24320/o746489",
-    imgUrl: "https://i.ibb.co/B2SWtKm/1.jpg",
+    imgUrl: "https://i.ibb.co/2j0pML7/photo-5364230328559984074-y.jpg",
   },
   {
     title: "«ПутеРодитель». Выпуск 2",
@@ -51,7 +51,7 @@ export const posmotret = [
     date: "26.05.2023",
     linkName: "VK.com",
     link: "https://vk.com/puteroditel?w=wall-218612400_1782",
-    imgUrl: "https://i.ibb.co/B2SWtKm/1.jpg",
+    imgUrl: "https://i.ibb.co/kBph8t4/photo-5366482128373668704-y.jpg",
   },
   {
     title: "«Уникальные места России». Выпуск 1",
@@ -60,7 +60,7 @@ export const posmotret = [
     date: "2023",
     linkName: "rutube.ru",
     link: "https://rutube.ru/video/ca49eba73bde0cde449aa29b4f62a6d3/?t=2",
-    imgUrl: "https://i.ibb.co/B2SWtKm/1.jpg",
+    imgUrl: "https://i.ibb.co/S643mKb/photo-5366482128373668736-y.jpg",
   },
   {
     title: "«Уникальные места России». Выпуск 3",
@@ -69,7 +69,7 @@ export const posmotret = [
     date: "2023",
     linkName: "rutube.ru",
     link: "https://rutube.ru/video/7b64cdc6872204e2b4ee57f38ae50587/",
-    imgUrl: "https://i.ibb.co/B2SWtKm/1.jpg",
+    imgUrl: "https://i.ibb.co/CWN66jZ/photo-5366482128373668768-y.jpg",
   },
   {
     title: "«Бросаю вызов»",
@@ -78,6 +78,6 @@ export const posmotret = [
     date: "2023",
     linkName: "VK.com",
     link: "https://vk.com/video-95314533_456239232",
-    imgUrl: "https://i.ibb.co/B2SWtKm/1.jpg",
+    imgUrl: "https://i.ibb.co/K9dCyTH/photo-5366482128373668760-x.jpg",
   },
 ];
