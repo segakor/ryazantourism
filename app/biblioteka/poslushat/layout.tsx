@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <Layout>
       <HeroPage
-        imgUrl="/heroPages/biblioteka/poslushat.png"
+        imgUrl="/heroPages/biblioteka/poslushat.jpg"
         title="Послушать"
         desc="Для тех, кто любит ушами: аудиогиды, подкасты и личные истории"
       />
