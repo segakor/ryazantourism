@@ -73,7 +73,7 @@ const LangSwitch = () => {
   };
 
   const onRemove = () => {
-    destroyCookie(null, COOKIE_NAME, "");
+    destroyCookie(null, COOKIE_NAME, { path: '/', })
     window.location.reload();
   };
 
