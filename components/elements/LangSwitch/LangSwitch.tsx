@@ -73,9 +73,16 @@ const LangSwitch = () => {
   };
 
   const onRemove = () => {
-    setCookie(null, COOKIE_NAME, "");
+    destroyCookie(null, COOKIE_NAME, "");
     window.location.reload();
   };
+
+  const onSetEn = () => {
+    setCookie(null, COOKIE_NAME, "/ru/en");
+    window.location.reload();
+  };
+
+
 
   return (
     <div className="text-center notranslate w-[50px]">
