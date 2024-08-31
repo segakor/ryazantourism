@@ -3,7 +3,7 @@ export const template = [
     element: "LEAD_BLOCK",
     text:
       "Рязанская область, как инь и ян, разделена на две половины рекой Окой. Большее по территории правобережье широко развернулось лесостепной зоной. Здесь бескрайние поля, затянутые ярким ароматным разнотравьем, чередуются с островками лиственного леса.\nЛевобережье Оки заповедное, по преимуществу хвойное, богато водными притоками, манит рыбой, дичью, грибами. Именно ут раскинулась воспетая Константином Паустовским Мещёра.",
-    srcImg: "https://i.ibb.co/2Z6f9tn/1.jpg",
+    srcImg: "https://i.postimg.cc/dQ8c7Mzw/1.jpg",
   },
   {
     element: "QUOTE_BLOCK",
@@ -29,7 +29,7 @@ export const template = [
         element: "LONG_READ_ITEM_BLOCK",
         title: "Тропа Паустовского",
         text: "Константин Паустовский приезжал в Солотчу в течение 25 лет и исходил здешние леса вдоль и поперек. Восемь прогулочных и туристических маршрутов позволяют пройтись по стопам писателя, своими глазами увидеть места, попавшие на страницы его книг, и с новым интересом взглянуть на красоты рязанской природы. В зависимости от любознательности и физической подготовки можно выбрать тропу протяженностью от 6 до 50 километров.",
-        srcImg: "https://i.ibb.co/0t2Zntc/3.jpg",
+        srcImg: "https://i.postimg.cc/0NLhQZnz/3.jpg",
       },
     ],
   },
@@ -53,7 +53,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/khZQNkz/4.jpg",
+        srcImg: "https://i.postimg.cc/7LTQp04w/4.jpg",
       },
     ],
   },
@@ -67,7 +67,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/T0bXLnG/5.jpg",
+        srcImg: "https://i.postimg.cc/J0R6DFkz/5.jpg",
       },
     ],
   },
@@ -91,7 +91,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/k6cwm7Z/6.jpg",
+        srcImg: "https://i.postimg.cc/8PKKctPT/6.jpg",
       },
     ],
   },
@@ -105,7 +105,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/s6221cg/7.jpg",
+        srcImg: "https://i.postimg.cc/59ppKnz8/7.jpg",
       },
     ],
   },
@@ -119,7 +119,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/0sRyvJr/8.jpg",
+        srcImg: "https://i.postimg.cc/3RYCnvJL/8.jpg",
       },
       {
         element: "FACT_BLOCK",

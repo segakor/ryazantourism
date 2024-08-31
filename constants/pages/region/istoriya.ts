@@ -13,7 +13,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/B2SWtKm/1.jpg",
+        srcImg: "https://i.postimg.cc/tJdk9NvG/1.jpg",
       },
     ],
   },
@@ -41,7 +41,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/wz3vbNB/2.jpg",
+        srcImg: "https://i.postimg.cc/Df1BQ7vp/2.jpg",
       },
     ],
   },
@@ -59,7 +59,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/kKV8Gh1/3.jpg",
+        srcImg: "https://i.postimg.cc/xTR57gbK/3.jpg",
       },
     ],
   },
@@ -87,7 +87,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/zJYq0fS/4.jpg",
+        srcImg: "https://i.postimg.cc/Bn7gZ6pb/4.jpg",
       },
     ],
   },
@@ -101,7 +101,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/YjR3FxY/5.jpg",
+        srcImg: "https://i.postimg.cc/NMm7xxc2/5.jpg",
       },
     ],
   },

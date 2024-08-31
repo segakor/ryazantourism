@@ -9,7 +9,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/CBqY0dH/1-12-resized.jpg",
+        srcImg: "https://i.postimg.cc/rsz4PC69/1-12-resized.jpg",
       },
     ],
   },
@@ -23,7 +23,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/1q9trRs/1-141-resized.jpg",
+        srcImg: "https://i.postimg.cc/qqYKVh4H/1-141-resized.jpg",
       },
     ],
   },
@@ -37,7 +37,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/Qfwz8HX/4-D8-A4750-resized.jpg",
+        srcImg: "https://i.postimg.cc/zBGHySf1/4-D8-A4750-resized.jpg",
       },
     ],
   },
@@ -51,7 +51,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/wLfWcrX/5.jpg",
+        srcImg: "https://i.postimg.cc/c1jtJ3yV/5.jpg",
       },
     ],
   },
@@ -65,7 +65,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/g7FD8mX/1.jpg",
+        srcImg: "https://i.postimg.cc/ZKdBvqJ0/1.jpg",
       },
     ],
   },
@@ -79,7 +79,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/q01FJMh/4-D8-A6880-resized.jpg",
+        srcImg: "https://i.postimg.cc/zGYLC1f7/4-D8-A6880-resized.jpg",
       },
     ],
   },
@@ -93,7 +93,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/G3sgV3v/2.jpg",
+        srcImg: "https://i.postimg.cc/GmP4zS8C/2.jpg",
       },
     ],
   },
@@ -107,7 +107,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/jGNwJcC/3.jpg",
+        srcImg: "https://i.postimg.cc/q7jzHhxD/3.jpg",
       },
     ],
   },
@@ -121,7 +121,7 @@ export const template = [
       },
       {
         element: "LONG_READ_ITEM_BLOCK",
-        srcImg: "https://i.ibb.co/SXp3FzS/4.jpg",
+        srcImg: "https://i.postimg.cc/7hT6zB8j/4.jpg",
       },
     ],
   },

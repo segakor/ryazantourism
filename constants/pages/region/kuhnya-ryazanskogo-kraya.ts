@@ -2,7 +2,7 @@ export const template = [
   {
     element: "LEAD_BLOCK",
     text: "Вопросом, что бы такого попробовать из местной кухни, задается любой путешественник. В 2018 году ответом всерьез озадачились и рязанские рестораторы. Итогом стал гастрономический фестиваль «Кухня Рязанского края», который теперь проходит каждую весну на площадках ведущих ресторанов города.\n\nКаждый год с 1 по 31 мая Рязань особенно хлебосольна. В течение месяца шеф-повара местных ресторанов, пабов и кафе презентуют новое прочтение локальных продуктов и угощают жителей и гостей города неожиданными, но непременно вкусными блюдами высокой кухни.\n\nКаждый ресторан-участник представляет особый гастрономический сет из региональных продуктов стоимостью от 1500 до 2500 рублей. А презентация блюд помогает с неожиданной стороны взглянуть на историю и культуру Рязанского края.\n\n<a href='http://akrk62.ru/' target='_blank'>akrk62.ru</a>\n\nЕсли вы решили, что опоздали к раздаче всего самого вкусного, и начали терять интерес, то не расстраивайтесь — лучшие находки входят в постоянное меню заведений и радуют туристов и местных жителей круглый год.",
-    srcImg: "https://i.ibb.co/D9LbynM/1.jpg",
+    srcImg: "https://i.postimg.cc/hvn8Z7Dy/1.jpg",
   },
   {
     element: "QUOTE_BLOCK",
@@ -17,7 +17,7 @@ export const template = [
       {
         element: "LONG_READ_ITEM_BLOCK",
         text: "<ul><li>Телячьи щеки томленые</li><li>Котлета из щуки</li><li>Перепела</li><li>Пшеничная катанка с белыми грибами</li><li>Калинник</li><li>Калач</li></ul>",
-        srcImg: "https://i.ibb.co/YTLJmx8/rhr1.jpg",
+        srcImg: "https://i.postimg.cc/hPSb9x3h/rhr1.jpg",
       },
       {
         element: "LINK_BLOCK",
@@ -35,7 +35,7 @@ export const template = [
       {
         element: "LONG_READ_ITEM_BLOCK",
         text: "<ul><li>Перепел запеченный в капустном листе</li><li>Томленая утиная ножка с морковью и пюре из моркови с облепихой</li><li>Перловая каша с белыми грибами и крошкой из бородинского хлеба</li><li>Калинник с мороженым соленая карамель</li></ul>",
-        srcImg: "https://i.ibb.co/CtNcGZM/rhr2.jpg",
+        srcImg: "https://i.postimg.cc/6pqrPKKX/rhr2.jpg",
       },
       {
         element: "LINK_BLOCK",
@@ -53,7 +53,7 @@ export const template = [
       {
         element: "LONG_READ_ITEM_BLOCK",
         text: "<ul><li>Грибные пончики с хвойной сметаной</li><li>Суп грибной со сметаной, гречневым хлебцем с грибным паштетом</li><li>Тушеные говяжьи щечки, печеный маринованный помидор</li></ul>",
-        srcImg: "https://i.ibb.co/mTZQc84/rhr3.jpg",
+        srcImg: "https://i.postimg.cc/dVf2PfQT/rhr3.jpg",
       },
       {
         element: "LINK_BLOCK",
@@ -71,7 +71,7 @@ export const template = [
       {
         element: "LONG_READ_ITEM_BLOCK",
         text: "<ul><li>Паштет из печени птицы</li><li>Щи томленые</li><li>Похлебка грибная с полбой</li><li>Рагу с кроликом и муссом из печеного чеснока</li></ul>",
-        srcImg: "https://i.ibb.co/K6n1Hyt/rhr4.jpg",
+        srcImg: "https://i.postimg.cc/B692t1KS/rhr4.jpg",
       },
       {
         element: "LINK_BLOCK",
@@ -107,7 +107,7 @@ export const template = [
       {
         element: "LONG_READ_ITEM_BLOCK",
         text: "<ul><li>Курник</li><li>Перепела с брусничным соусом</li><li>Сом из печи</li><li>Калинник</li></ul>",
-        srcImg: "https://i.ibb.co/hXCDRJn/rhr5.jpg",
+        srcImg: "https://i.postimg.cc/J0KXT6d0/rhr5.jpg",
       },
       {
         element: "LINK_BLOCK",
