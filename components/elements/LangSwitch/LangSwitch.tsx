@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { parseCookies, setCookie } from "nookies";
+import { parseCookies, setCookie, destroyCookie } from "nookies";
 import { Skeleton } from "@nextui-org/react";
 
 const COOKIE_NAME = "googtrans";
@@ -58,15 +58,21 @@ const LangSwitch = () => {
   }
 
   const switchLanguage = (lang: string) => () => {
+    if (lang === "ru") {
+      destroyCookie({}, COOKIE_NAME);
+      window.location.reload();
+    }
     setCookie(null, COOKIE_NAME, "/auto/" + lang);
     window.location.reload();
   };
+
+  console.log(currentLanguage);
 
   return (
     <div className="text-center notranslate w-[50px]">
       <div className="flex border-1 border-solid border-[#C9C9C9] cursor-pointer rounded-sm text-xs">
         {languageConfig?.languages.map((ld: LanguageDescriptor, i: number) => (
-          <>
+          <div key={i}>
             {currentLanguage === ld.name ||
             (currentLanguage === "auto" &&
               languageConfig.defaultLanguage === ld) ? (
@@ -85,7 +91,7 @@ const LangSwitch = () => {
                 {ld.title.toUpperCase()}
               </div>
             )}
-          </>
+          </div>
         ))}
       </div>
     </div>
