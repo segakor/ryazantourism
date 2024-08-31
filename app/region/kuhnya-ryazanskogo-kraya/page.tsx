@@ -14,7 +14,7 @@ const Kuhnya = () => {
     <div className="pages">
       <HeroPage
         imgUrl="/heroPages/region/kuhnya.jpg"
-        title="Кухня рязанского края"
+        title="Кухня Рязанского края"
       />
       <LongRead body={template as TLongReadBody[]} />
     </div>

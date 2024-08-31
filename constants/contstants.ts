@@ -223,7 +223,7 @@ export const heroMap = [
     link: "/region/priroda",
   },
   {
-    title: "Кухня рязанского края",
+    title: "Кухня Рязанского края",
     desc: "Гастрономический фестиваль и лучшие локальные блюда в меню местных ресторанов",
     imgUrl: "/hero/food.png",
     link: "/region/kuhnya-ryazanskogo-kraya",

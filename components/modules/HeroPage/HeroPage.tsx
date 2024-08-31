@@ -32,7 +32,7 @@ export const HeroPage = ({
        flex flex-col justify-center translate-y-[-50%] translate-x-[-50%] md:px-8 px-5">
         <div className="grid gap-5 text-white">
           <Typography variant="h1">{title}</Typography>
-          {desc && <p className="text1 opacity-50">{desc}</p>}
+          {desc && <p className="text1 opacity-70">{desc}</p>}
         </div>
       </div>
     </div>

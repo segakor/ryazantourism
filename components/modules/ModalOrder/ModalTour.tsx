@@ -36,11 +36,15 @@ export const ModalTour = ({
         date: formData.date,
         count,
       };
-      await fetch("/api/emails", {
+      const res = await fetch("/api/emails", {
         method: "POST",
         body: JSON.stringify(formValue),
       });
-      setScreen("success");
+      if (res.ok) {
+        setScreen("success");
+        return;
+      }
+      return alert("Не удалось отправить заявку");
     } catch (error) {
       alert("Что-то пошло не так, попробуйте позже");
     }
