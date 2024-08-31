@@ -51,6 +51,7 @@ const LangSwitch = () => {
     if (config) {
       setLanguageConfig(config);
     }
+    console.log({languageValue})
   }, []);
 
   if (!currentLanguage || !languageConfig) {
@@ -58,15 +59,18 @@ const LangSwitch = () => {
   }
 
   const switchLanguage = (lang: string) => () => {
-    if (lang === "ru") {
-      destroyCookie({}, COOKIE_NAME);
+    if (lang === "en") {
+      setCookie(null, COOKIE_NAME, "/ru/en");
       window.location.reload();
+      return;
     }
-    setCookie(null, COOKIE_NAME, "/auto/" + lang);
-    window.location.reload();
-  };
 
-  console.log(currentLanguage);
+    if (lang === "ru") {
+      setCookie(null, COOKIE_NAME, "/auto/ru");
+      window.location.reload();
+      return;
+    }
+  };
 
   return (
     <div className="text-center notranslate w-[50px]">
