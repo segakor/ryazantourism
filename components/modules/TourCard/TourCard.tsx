@@ -22,6 +22,7 @@ const TourCardItem = ({
             className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg brightness-[90%]`}
             placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
             priority
+            unoptimized
           />
         </div>
       </div>

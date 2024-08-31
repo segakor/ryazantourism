@@ -17,6 +17,7 @@ export const QuoteBlock = ({
           width={24}
           height={24}
           className="image md:block hidden"
+          unoptimized
         />
         <div>
           <div className="quote-text">{text}</div>

@@ -33,7 +33,7 @@ export const OrganizedBannerRoutes = () => {
                 className="rounded-[50%] w-[6.25rem] h-[6.25rem] 
               flex justify-center items-center absolute shadow-sm"
               >
-                <Image width={42} height={42} src={item.srcImg} alt="Icon" />
+                <Image width={42} height={42} src={item.srcImg} alt="Icon" unoptimized/>
               </div>
 
               <div
@@ -46,6 +46,7 @@ export const OrganizedBannerRoutes = () => {
                     height={156}
                     src={"/routesCard/organized.svg"}
                     alt="Icon"
+                    unoptimized
                   />
                 </div>
                 <div className="relative p-9 grid gap-4">

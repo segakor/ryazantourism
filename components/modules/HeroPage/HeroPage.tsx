@@ -27,6 +27,7 @@ export const HeroPage = ({
         objectFit="cover"
         placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
         className={classNameImage}
+        unoptimized
       />
       <div className="absolute left-1/2 top-[55%] z-[1] max-w-[1280px] w-full m-[0_auto]
        flex flex-col justify-center translate-y-[-50%] translate-x-[-50%] md:px-8 px-5">

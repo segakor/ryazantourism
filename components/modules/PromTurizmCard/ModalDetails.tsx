@@ -131,6 +131,7 @@ export const ModalDetails = (data: TPromTurizmCard) => {
                       className={`w-full h-full top-0 left-0 object-cover rounded-[30px]`}
                       placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
                       priority
+                      unoptimized
                     />
                   </div>
                 </div>

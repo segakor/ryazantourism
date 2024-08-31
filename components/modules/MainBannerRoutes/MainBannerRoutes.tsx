@@ -53,6 +53,7 @@ export const MainBannerRoutes = () => {
             width={512}
             height={202}
             className="w-full object-none md:block hidden"
+            unoptimized
           />
         </div>
         <div

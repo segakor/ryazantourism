@@ -37,6 +37,7 @@ export const MainNavigation = () => {
                   placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
                   priority
                   quality={10}
+                  unoptimized
                 />
               </div>
               <div className="absolute w-full md:p-10 p-5 h-full flex justify-between flex-col top-0 left-0">

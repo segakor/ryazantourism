@@ -9,6 +9,7 @@ const LogoFooter = () => (
       width={69}
       height={66}
       priority
+      unoptimized
     />
   </Link>
 );

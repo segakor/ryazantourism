@@ -10,6 +10,7 @@ const LogoHeader = () => (
       height={66}
       priority
       className="logo"
+      unoptimized
     />
   </Link>
 );

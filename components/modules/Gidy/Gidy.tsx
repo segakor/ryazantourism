@@ -44,6 +44,7 @@ export const Gid = ({ item }: { item: TGid }) => {
             className={`w-full h-full top-0 left-0 object-cover rounded-[30px] group-hover/item:scale-[115%] group-hover/item:transition-all transition-all`}
             placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
             priority
+            unoptimized
           />
         </div>
         <div className="absolute w-full md:p-10 p-5 h-full flex justify-between flex-col">

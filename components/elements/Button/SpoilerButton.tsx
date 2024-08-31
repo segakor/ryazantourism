@@ -10,6 +10,7 @@ const ButtonSpoiler = () => {
           width={12}
           height={11}
           className="button_spoiler_arrow"
+          unoptimized
         />
     </button>
   );

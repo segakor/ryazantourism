@@ -11,6 +11,7 @@ export const FactBlock = ({ text }: { text: string }) => {
           width={24}
           height={24}
           className="image"
+          unoptimized
         />
         <div className="text3">{text}</div>
       </div>

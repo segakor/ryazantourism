@@ -1,15 +1,11 @@
 import Link from "next/link";
 import { Typography } from "../../Typography/Typography";
-import { createShimmer } from "@/utils/shimer";
-import Image from "next/image";
 
 export const LinkBlock = ({
-  srcImg,
   title,
   desc,
   link,
 }: {
-  srcImg: string;
   title: string;
   desc: string;
   link: string;
@@ -24,19 +20,6 @@ export const LinkBlock = ({
             </Typography>
             <div className="note-text">{desc}</div>
           </div>
-          {/* <div className="rounded-[30px] h-[98px] md:w-[200px] w-full overflow-hidden">
-            <div className={`w-full relative md:pt-[100%] pt-[50%]`}>
-              <Image
-                src={srcImg}
-                alt="img"
-                objectFit="cover"
-                fill
-                className={`w-full h-full top-0 left-0 object-cover max-h-[437px]`}
-                placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
-                priority
-              />
-            </div>
-          </div> */}
         </div>
       </div>
     </Link>
