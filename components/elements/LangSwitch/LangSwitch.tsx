@@ -72,6 +72,11 @@ const LangSwitch = () => {
     }
   };
 
+  const onRemove = () => {
+    setCookie(null, COOKIE_NAME, "");
+    window.location.reload();
+  };
+
   return (
     <div className="text-center notranslate w-[50px]">
       <div className="flex border-1 border-solid border-[#C9C9C9] cursor-pointer rounded-sm text-xs">
@@ -97,6 +102,7 @@ const LangSwitch = () => {
             )}
           </div>
         ))}
+        <div onClick={onRemove}>RURURU</div>
       </div>
     </div>
   );
