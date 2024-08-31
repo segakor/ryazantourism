@@ -73,7 +73,17 @@ const LangSwitch = () => {
   };
 
   const onRemove = () => {
-    destroyCookie(null, COOKIE_NAME, { path: '/', })
+    /* destroyCookie(null, COOKIE_NAME, { path: '/', }) */
+    var pathBits = location.pathname.split('/');
+    var pathCurrent = ' path=';
+
+    // do a simple pathless delete first.
+    document.cookie = COOKIE_NAME + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT;';
+
+    for (var i = 0; i < pathBits.length; i++) {
+        pathCurrent += ((pathCurrent.substr(-1) != '/') ? '/' : '') + pathBits[i];
+        document.cookie = COOKIE_NAME + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT;' + pathCurrent + ';';
+    }
     window.location.reload();
   };
 
