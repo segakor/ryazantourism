@@ -29,19 +29,19 @@ const config = {
 const LangSwitch = () => {
   const [currentLanguage, setCurrentLanguage] = useState<string>();
   const [languageConfig, setLanguageConfig] = useState<any>();
-/*   const [disableCookieValue, setDisableCookieValue] = useState(false); */
+  const [disableCookieValue, setDisableCookieValue] = useState("1");
 
   useEffect(() => {
     const cookies = parseCookies();
     const existingLanguageCookieValue = cookies[COOKIE_NAME];
-/*     const disableCookieValue = cookies[COOKIE_NAME + "disabled"];
+    const disableCookieValue = cookies[COOKIE_NAME + "disabled"];
 
     if (disableCookieValue === "1") {
-      setDisableCookieValue(true);
+      setDisableCookieValue("1");
     } else {
-      setDisableCookieValue(false);
+      setDisableCookieValue("0");
     }
- */
+
     let languageValue;
     if (existingLanguageCookieValue) {
       const sp = existingLanguageCookieValue.split("/");
@@ -84,7 +84,7 @@ const LangSwitch = () => {
   return (
     <div className="text-center notranslate w-[50px]">
       <div className="flex border-1 border-solid border-[#C9C9C9] cursor-pointer rounded-sm text-xs">
-        {languageConfig?.languages.map((ld: LanguageDescriptor, i: number) => (
+        {/*  {languageConfig?.languages.map((ld: LanguageDescriptor, i: number) => (
           <div key={i}>
             {currentLanguage === ld.name ||
             (currentLanguage === "auto" &&
@@ -105,7 +105,24 @@ const LangSwitch = () => {
               </div>
             )}
           </div>
-        ))}
+        ))} */}
+        <div
+          onClick={switchLanguage("ru")}
+          className={`p-1 transition-all ${
+            currentLanguage === "ru" &&
+            disableCookieValue === "1" &&
+            "bg-[var(--color-green)]"
+          }`}
+        >
+          RU
+        </div>
+        <div onClick={switchLanguage("en")}  className={`p-1 transition-all ${
+            currentLanguage === "en" &&
+            disableCookieValue === "0" &&
+            "bg-[var(--color-green)]"
+          }`}>
+          EN
+        </div>
       </div>
     </div>
   );
