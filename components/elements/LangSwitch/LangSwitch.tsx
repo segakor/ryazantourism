@@ -109,7 +109,6 @@ const LangSwitch = () => {
         <div
           onClick={switchLanguage("ru")}
           className={`p-1 transition-all ${
-            currentLanguage === "ru" &&
             disableCookieValue === "1" &&
             "bg-[var(--color-green)]"
           }`}
