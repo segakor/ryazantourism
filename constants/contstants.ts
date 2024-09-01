@@ -94,7 +94,7 @@ export const headerMenu = [
     subItem: [
       { label: "Рязань в медиа", path: "/biblioteka" },
       { label: "Промтуризм", path: "/promturizm" },
-      { label: "Мампус", path: "http://apps-rzn.site/mampus" },
+      { label: "Мампус", path: "http://apps-rzn.site/mampus", target:'_blank' },
     ],
   },
   {

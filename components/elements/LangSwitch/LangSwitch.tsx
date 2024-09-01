@@ -51,7 +51,7 @@ const LangSwitch = () => {
     if (config) {
       setLanguageConfig(config);
     }
-    console.log({languageValue})
+    console.log({ languageValue });
   }, []);
 
   if (!currentLanguage || !languageConfig) {
@@ -60,39 +60,40 @@ const LangSwitch = () => {
 
   const switchLanguage = (lang: string) => () => {
     if (lang === "en") {
-      setCookie(null, COOKIE_NAME, "/ru/en");
+      setCookie(null, COOKIE_NAME, "/ru/en", {
+        domain: "rznnext.ru",
+      });
       window.location.reload();
       return;
     }
 
     if (lang === "ru") {
-      setCookie(null, COOKIE_NAME, "/auto/ru");
+      setCookie(null, COOKIE_NAME, "/auto/ru", {
+        domain: "rznnext.ru",
+      });
       window.location.reload();
       return;
     }
   };
 
   const onRemove = () => {
-    /* destroyCookie(null, COOKIE_NAME, { path: '/', }) */
-    var pathBits = location.pathname.split('/');
-    var pathCurrent = ' path=';
+    destroyCookie(null, COOKIE_NAME)
+    /* var pathBits = location.pathname.split("/");
+    var pathCurrent = " path=";
 
     // do a simple pathless delete first.
-    document.cookie = COOKIE_NAME + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT;';
+    document.cookie = COOKIE_NAME + "=; expires=Thu, 01-Jan-1970 00:00:01 GMT;";
 
     for (var i = 0; i < pathBits.length; i++) {
-        pathCurrent += ((pathCurrent.substr(-1) != '/') ? '/' : '') + pathBits[i];
-        document.cookie = COOKIE_NAME + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT;' + pathCurrent + ';';
-    }
+      pathCurrent += (pathCurrent.substr(-1) != "/" ? "/" : "") + pathBits[i];
+      document.cookie =
+        COOKIE_NAME +
+        "=; expires=Thu, 01-Jan-1970 00:00:01 GMT;" +
+        pathCurrent +
+        ";";
+    } */
     window.location.reload();
   };
-
-  const onSetEn = () => {
-    setCookie(null, COOKIE_NAME, "/ru/en");
-    window.location.reload();
-  };
-
-
 
   return (
     <div className="text-center notranslate w-[50px]">
@@ -119,7 +120,7 @@ const LangSwitch = () => {
             )}
           </div>
         ))}
-        <div onClick={onRemove}>RURURU</div>
+        <div onClick={onRemove}>RU</div>
       </div>
     </div>
   );
