@@ -9,7 +9,7 @@ export const GoogleTranslateScript = () => {
     return { name: cookie.name, value: cookie.value };
   });
 
-  if (cookieStoreArr.find((item) => item.name === "googtransdisabled")) {
+  if (cookieStoreArr.find((item) => item.name === COOKIE_NAME + 'disabled')?.value === '1') {
     return null;
   }
 

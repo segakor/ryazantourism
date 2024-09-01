@@ -29,11 +29,19 @@ const config = {
 const LangSwitch = () => {
   const [currentLanguage, setCurrentLanguage] = useState<string>();
   const [languageConfig, setLanguageConfig] = useState<any>();
+/*   const [disableCookieValue, setDisableCookieValue] = useState(false); */
 
   useEffect(() => {
     const cookies = parseCookies();
     const existingLanguageCookieValue = cookies[COOKIE_NAME];
+/*     const disableCookieValue = cookies[COOKIE_NAME + "disabled"];
 
+    if (disableCookieValue === "1") {
+      setDisableCookieValue(true);
+    } else {
+      setDisableCookieValue(false);
+    }
+ */
     let languageValue;
     if (existingLanguageCookieValue) {
       const sp = existingLanguageCookieValue.split("/");
@@ -51,7 +59,6 @@ const LangSwitch = () => {
     if (config) {
       setLanguageConfig(config);
     }
-    console.log({ languageValue });
   }, []);
 
   if (!currentLanguage || !languageConfig) {
@@ -61,36 +68,17 @@ const LangSwitch = () => {
   const switchLanguage = (lang: string) => () => {
     if (lang === "en") {
       setCookie(null, COOKIE_NAME, "/ru/en");
-      localStorage.setItem("googtrans", "");
+      setCookie(null, COOKIE_NAME + "disabled", "0");
       window.location.reload();
       return;
     }
 
     if (lang === "ru") {
-      setCookie(null, COOKIE_NAME + 'disabled', "true");
-      localStorage.setItem("googtrans", "ru");
+      setCookie(null, COOKIE_NAME, "/auto/" + lang);
+      setCookie(null, COOKIE_NAME + "disabled", "1");
       window.location.reload();
       return;
     }
-  };
-
-  const onRemove = () => {
-    destroyCookie(null, COOKIE_NAME);
-    /* var pathBits = location.pathname.split("/");
-    var pathCurrent = " path=";
-
-    // do a simple pathless delete first.
-    document.cookie = COOKIE_NAME + "=; expires=Thu, 01-Jan-1970 00:00:01 GMT;";
-
-    for (var i = 0; i < pathBits.length; i++) {
-      pathCurrent += (pathCurrent.substr(-1) != "/" ? "/" : "") + pathBits[i];
-      document.cookie =
-        COOKIE_NAME +
-        "=; expires=Thu, 01-Jan-1970 00:00:01 GMT;" +
-        pathCurrent +
-        ";";
-    } */
-    window.location.reload();
   };
 
   return (
@@ -118,7 +106,6 @@ const LangSwitch = () => {
             )}
           </div>
         ))}
-        <div onClick={onRemove}>RU</div>
       </div>
     </div>
   );
