@@ -1,12 +1,15 @@
 import Script from "next/script";
+import { cookies } from "next/headers";
 
 export const GoogleTranslateScript = () => {
+  const COOKIE_NAME = "googtrans";
 
-  const initialState = {
-    googtrans: typeof window !== "undefined" ? window.localStorage.getItem('googtrans') : false,
-  };
+  const cookieStore = cookies();
+  const cookieStoreArr = cookieStore.getAll().map((cookie) => {
+    return { name: cookie.name, value: cookie.value };
+  });
 
-  if (initialState.googtrans === "ru") {
+  if (cookieStoreArr.find((item) => item.name === "googtransdisabled")) {
     return null;
   }
 

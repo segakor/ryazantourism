@@ -67,7 +67,7 @@ const LangSwitch = () => {
     }
 
     if (lang === "ru") {
-      setCookie(null, COOKIE_NAME, "/auto/ru");
+      setCookie(null, COOKIE_NAME + 'disabled', "true");
       localStorage.setItem("googtrans", "ru");
       window.location.reload();
       return;
