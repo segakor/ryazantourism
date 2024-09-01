@@ -60,24 +60,22 @@ const LangSwitch = () => {
 
   const switchLanguage = (lang: string) => () => {
     if (lang === "en") {
-      setCookie(null, COOKIE_NAME, "/ru/en", {
-        domain: "rznnext.ru",
-      });
+      setCookie(null, COOKIE_NAME, "/ru/en");
+      localStorage.setItem("googtrans", "");
       window.location.reload();
       return;
     }
 
     if (lang === "ru") {
-      setCookie(null, COOKIE_NAME, "/auto/ru", {
-        domain: "rznnext.ru",
-      });
+      setCookie(null, COOKIE_NAME, "/auto/ru");
+      localStorage.setItem("googtrans", "ru");
       window.location.reload();
       return;
     }
   };
 
   const onRemove = () => {
-    destroyCookie(null, COOKIE_NAME)
+    destroyCookie(null, COOKIE_NAME);
     /* var pathBits = location.pathname.split("/");
     var pathCurrent = " path=";
 
