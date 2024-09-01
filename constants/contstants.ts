@@ -94,7 +94,11 @@ export const headerMenu = [
     subItem: [
       { label: "Рязань в медиа", path: "/biblioteka" },
       { label: "Промтуризм", path: "/promturizm" },
-      { label: "Мампус", path: "http://apps-rzn.site/mampus", target:'_blank' },
+      {
+        label: "Мампус",
+        path: "http://apps-rzn.site/mampus",
+        target: "_blank",
+      },
     ],
   },
   {
@@ -252,6 +256,14 @@ export const tabsChemZanyatsya = [
   { label: "Творчество", id: "Творчество" },
   { label: "Частные музеи", id: "Частные музеи" },
   { label: "Активный отдых", id: "Активный отдых" },
+];
+
+export const tabsVdohnovitsiya = [
+  { label: "Все", id: "all" },
+  { label: "Рязань", id: "Рязань" },
+  { label: "Солотча", id: "Солотча" },
+  { label: "Деревянное зодчество", id: "Деревянное зодчество" },
+  { label: "Касимов", id: "Касимов" },
 ];
 
 export const tabsGdePoest = [

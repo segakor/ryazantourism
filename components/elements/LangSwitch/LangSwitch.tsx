@@ -1,22 +1,8 @@
 import { useEffect, useState } from "react";
-import { parseCookies, setCookie, destroyCookie } from "nookies";
+import { parseCookies, setCookie } from "nookies";
 import { Skeleton } from "@nextui-org/react";
 
 const COOKIE_NAME = "googtrans";
-
-interface LanguageDescriptor {
-  name: string;
-  title: string;
-}
-
-/* declare global {
-  namespace globalThis {
-    var __GOOGLE_TRANSLATION_CONFIG__: {
-      languages: LanguageDescriptor[];
-      defaultLanguage: string;
-    };
-  }
-} */
 
 const config = {
   languages: [
@@ -29,16 +15,22 @@ const config = {
 const LangSwitch = () => {
   const [currentLanguage, setCurrentLanguage] = useState<string>();
   const [languageConfig, setLanguageConfig] = useState<any>();
-  const [disableCookieValue, setDisableCookieValue] = useState("1");
+  const [disableCookieValue, setDisableCookieValue] = useState("");
 
   useEffect(() => {
     const cookies = parseCookies();
     const existingLanguageCookieValue = cookies[COOKIE_NAME];
     const disableCookieValue = cookies[COOKIE_NAME + "disabled"];
 
+    if (!disableCookieValue) {
+      setDisableCookieValue("1");
+    }
+
     if (disableCookieValue === "1") {
       setDisableCookieValue("1");
-    } else {
+    }
+
+    if (disableCookieValue === "0") {
       setDisableCookieValue("0");
     }
 
@@ -84,42 +76,22 @@ const LangSwitch = () => {
   return (
     <div className="text-center notranslate w-[50px]">
       <div className="flex border-1 border-solid border-[#C9C9C9] cursor-pointer rounded-sm text-xs">
-        {/*  {languageConfig?.languages.map((ld: LanguageDescriptor, i: number) => (
-          <div key={i}>
-            {currentLanguage === ld.name ||
-            (currentLanguage === "auto" &&
-              languageConfig.defaultLanguage === ld) ? (
-              <div
-                key={`l_s_${ld}`}
-                className="p-1 bg-[var(--color-green)] transition-all"
-              >
-                {ld.title.toUpperCase()}
-              </div>
-            ) : (
-              <div
-                key={`l_s_${ld}`}
-                onClick={switchLanguage(ld.name)}
-                className="p-1 transition-all"
-              >
-                {ld.title.toUpperCase()}
-              </div>
-            )}
-          </div>
-        ))} */}
         <div
           onClick={switchLanguage("ru")}
           className={`p-1 transition-all ${
-            disableCookieValue === "1" &&
-            "bg-[var(--color-green)]"
+            disableCookieValue === "1" && "bg-[var(--color-green)]"
           }`}
         >
           RU
         </div>
-        <div onClick={switchLanguage("en")}  className={`p-1 transition-all ${
+        <div
+          onClick={switchLanguage("en")}
+          className={`p-1 transition-all ${
             currentLanguage === "en" &&
             disableCookieValue === "0" &&
             "bg-[var(--color-green)]"
-          }`}>
+          }`}
+        >
           EN
         </div>
       </div>

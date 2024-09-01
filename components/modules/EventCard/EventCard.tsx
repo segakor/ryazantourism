@@ -54,7 +54,7 @@ export const EventCard = () => {
           ) : (
             <div className="w-auto md:h-[584px] rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa]">
               <div className="h3">
-                На сегодня нет событий - NOTE: Кирилл надо чето придумать
+                На сегодня нет событий
               </div>
             </div>
           )}
