@@ -38,6 +38,7 @@ export const ModalRyazanPlus = () => {
         count,
         tour: "Бронирование Рязань+",
       };
+
       const res = await fetch("/api/emails", {
         method: "POST",
         body: JSON.stringify(formValue),
@@ -162,7 +163,7 @@ export const ModalRyazanPlus = () => {
                   )}
                 />
                 <div className="mb-3">
-                  <span className="mb-1 block">Колличество людей</span>
+                  <span className="mb-1 block">Количество людей</span>
                   <div className="flex gap-2 justify-between">
                     <>
                       {[1, 2, 3, 4, 5].map((item, index) => (

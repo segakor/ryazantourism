@@ -71,7 +71,7 @@ const Body = ({ data }: { data: TOrgEventCard }) => {
       >
         <ModalContent className="bg-[#806fdf] p-0">
           <ModalBody>
-            <ModalTour name={data.title} startDate={startDate} />
+            <ModalTour tourName={data.title} startDate={startDate} />
           </ModalBody>
         </ModalContent>
       </Modal>
