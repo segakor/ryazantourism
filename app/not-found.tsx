@@ -1,6 +1,14 @@
 import { HeroPage } from "@/components/modules/HeroPage";
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Всё о туризме в Рязани и Рязанской области",
+  description: "",
+};
+
+//NOTE: проставил href прямиком, ибо / не работал
 export default function NotFound() {
   return (
     <div className="pages">
@@ -15,7 +23,7 @@ export default function NotFound() {
           страница была перемещена. Вы можете вернуться на{" "}
           <Link
             className="underline hover:text-[var(--color-green)] transition-all"
-            href="/"
+            href="https://ryazantourism.ru/"
           >
             главную
           </Link>
