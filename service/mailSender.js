@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer'
+import nodemailer from "nodemailer";
 
 export async function sendMail(subject, text) {
   const transporter = nodemailer.createTransport({
@@ -6,28 +6,28 @@ export async function sendMail(subject, text) {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: 'mickslip2@yandex.ru',
-      pass: 'afpgpzokangixjbb',
+      user: "rzn.visit@yandex.ru",
+      pass: "atmwmibkbgxxictu",
     },
     tls: {
-        rejectUnauthorized: false
-      }
-  })
+      rejectUnauthorized: false,
+    },
+  });
 
   const mailOptions = {
-    from: 'mickslip2@yandex.ru',
-    to: 'kornienko955@gmail.com',
+    from: "rzn.visit@yandex.ru",
+    to: "rzn.visit@yandex.ru",
     subject: subject,
-    text: text,
-  }
+    html: text,
+  };
 
   await new Promise((resolve, reject) => {
     transporter.sendMail(mailOptions, (err, response) => {
       if (err) {
-        reject(err)
+        reject(err);
       } else {
-        resolve(response)
+        resolve(response);
       }
-    })
-  })
+    });
+  });
 }

@@ -77,7 +77,7 @@ export const ModalDetails = (data: TPromTurizmCard) => {
               <SwiperSlide key={index}>
                 <div className="w-full md:h-[420px] min-h-[200px] overflow-hidden grid">
                   <div className={`w-full relative`}>
-                    <div className="navigation flex justify-between absolute w-full p-3 top-[40%]">
+                    {/* <div className="navigation flex justify-between absolute w-full p-3 top-[40%]">
                       <div
                         className={`md:w-[50px] md:h-[50px] w-[30px] h-[30px] flex items-center justify-center 
                           bg-[rgba(255,255,255,0.5)] 
@@ -122,7 +122,7 @@ export const ModalDetails = (data: TPromTurizmCard) => {
                           />
                         </svg>
                       </div>
-                    </div>
+                    </div> */}
                     <Image
                       src={item}
                       alt="img"
