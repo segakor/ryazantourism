@@ -135,7 +135,7 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
             <div
               key={idx}
               className={`font-semibold ${
-                idx === 5 || idx === 6 ? "text-red-600" : "text-white"
+                idx === 5 || idx === 6 ? "text-[#FAA66B]" : "text-white"
               }`}
             >
               {capitalizeFirstLetter(day)}

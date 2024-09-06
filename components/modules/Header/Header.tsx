@@ -109,7 +109,7 @@ export const Header = () => {
   return (
     <div
       className="fixed w-full top-[20px] left-0 right-0 bg-white 
-    z-10 md:max-w-[101.25rem] max-w-[95%] rounded-[0.75rem] mx-auto shadow-2xl"
+    z-10 md:max-w-[90rem] max-w-[95%] rounded-[0.75rem] mx-auto shadow-2xl"
     >
       <header className="rounded-[0.75rem]">
         <div className="max-w-[82.5rem] mx-auto md:px-auto px-[1.25rem]">

@@ -5,6 +5,7 @@ import { useState } from "react";
 import { TPromTurizmCard } from "@/types/types";
 import { PromTurizmCard } from "@/components/modules/PromTurizmCard/PromTurizmCard";
 import { useSearchParams } from "next/navigation";
+import { WrapperTabs } from "@/components/wrapper";
 
 const Body = ({ data }: { data: TPromTurizmCard[] }) => {
   const searchParams = useSearchParams();
@@ -20,13 +21,13 @@ const Body = ({ data }: { data: TPromTurizmCard[] }) => {
 
   return (
     <section className="grid_layout">
-      <div className="wrapper_tabs">
+      <WrapperTabs>
         <Tabs
           tabs={tabsPromTurizm}
           onChange={onChangeTab}
           defaultValue={defaultParams || "all"}
         />
-      </div>
+      </WrapperTabs>
       <PromTurizmCard data={filteredData} />
     </section>
   );

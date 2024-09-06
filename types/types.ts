@@ -177,12 +177,20 @@ export type TNews = {
   desc: string;
   imgUrl: string;
   date: string;
-}
+};
 
 export type TMailBody = {
-  tour:string;
+  tour: string;
   fio: string;
   tel: string;
   date: string;
   count: string;
-}
+};
+
+export type TEventCardMain = {
+  name: string;
+  buy_ticket_url: string;
+  image_path: string;
+  tags: { id: number }[];
+  description: string;
+};

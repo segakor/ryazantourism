@@ -69,7 +69,7 @@ const Card = ({ id, title, imgUrl, price, days, startDate }: any) => {
     <div
       className="text-white md:p-10 p-5 flex h-full flex-col justify-end bg-cover gap-4"
       style={{
-        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${imgUrl})`,
+        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url('${imgUrl}')`,
       }}
     >
       <Typography variant="h4">{title}</Typography>

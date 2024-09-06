@@ -4,6 +4,7 @@ import { PlaceCard } from "@/components/modules/PlaceCard/PlaceCard";
 import { tabsZdorove } from "@/constants/contstants";
 import { useState } from "react";
 import { TPlaceCard } from "@/types/types";
+import { WrapperTabs } from "@/components/wrapper";
 
 const Body = ({ data }: { data: TPlaceCard[] }) => {
   const [tab, setTab] = useState("all");
@@ -17,9 +18,9 @@ const Body = ({ data }: { data: TPlaceCard[] }) => {
 
   return (
     <section className="grid_layout">
-      <div className="wrapper_tabs">
+      <WrapperTabs>
         <Tabs tabs={tabsZdorove} onChange={onChangeTab} />
-      </div>
+      </WrapperTabs>
       <PlaceCard data={filteredData} />
     </section>
   );

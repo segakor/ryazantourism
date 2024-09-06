@@ -82,7 +82,7 @@ const LangSwitch = () => {
             disableCookieValue === "1" && "bg-[var(--color-green)]"
           }`}
         >
-          RU
+          <div className="opacity-70 font-medium">RU</div>
         </div>
         <div
           onClick={switchLanguage("en")}
@@ -92,7 +92,7 @@ const LangSwitch = () => {
             "bg-[var(--color-green)]"
           }`}
         >
-          EN
+          <div className="opacity-70 font-medium">EN</div>
         </div>
       </div>
     </div>

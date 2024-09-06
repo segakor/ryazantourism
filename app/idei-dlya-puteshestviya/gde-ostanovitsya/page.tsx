@@ -10,7 +10,9 @@ export const metadata: Metadata = {
 };
 
 async function getPlaceCard() {
-  const response = await fetch(API_URL.GDE_OSTANOVYTSYA);
+  const response = await fetch(API_URL.GDE_OSTANOVYTSYA, {
+    next: { revalidate: 3600 },
+  });
   return response.json();
 }
 

@@ -2,6 +2,7 @@
 import { Tabs } from "@/components/elements/Tabs/Tabs";
 import { BibliotekaNavigationFlat } from "@/components/modules/BibliotekaNavigation/BibliotekaNavigation";
 import { VdohnovitsiyaGalery } from "@/components/modules/VdohnovitsiyaGalery/VdohnovitsiyaGalery";
+import { WrapperTabs } from "@/components/wrapper";
 import { tabsVdohnovitsiya } from "@/constants/contstants";
 import { vdohnovitsiya } from "@/constants/pages/biblioteka/vdohnovitsiya/vdohnovitsiya";
 import { shuffle } from "@/utils/shuffle";
@@ -21,9 +22,9 @@ const Body = () => {
 
   return (
     <section className="grid_layout">
-      <div className="wrapper_tabs">
+      <WrapperTabs>
         <Tabs tabs={tabsVdohnovitsiya} onChange={onChangeTab} />
-      </div>
+      </WrapperTabs>
       <VdohnovitsiyaGalery data={filteredData} />
       <BibliotekaNavigationFlat exclude="vdohnovitsiya" />
     </section>

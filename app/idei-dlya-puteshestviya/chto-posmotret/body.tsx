@@ -4,6 +4,7 @@ import { tabsChtoPosmotret } from "@/constants/contstants";
 import { useState } from "react";
 import { chtoPosmotret } from "@/constants/pages/idei-dlya-puteshestviya/chto-posmotret";
 import { ArchCard } from "@/components/modules/ArchCard/ArchCard";
+import { WrapperTabs } from "@/components/wrapper";
 
 const Body = () => {
   const [tab, setTab] = useState("all");
@@ -17,9 +18,9 @@ const Body = () => {
 
   return (
     <section className="grid_layout">
-      <div className="wrapper_tabs">
+      <WrapperTabs>
         <Tabs tabs={tabsChtoPosmotret} onChange={onChangeTab} />
-      </div>
+      </WrapperTabs>
       <ArchCard data={filteredData} />
     </section>
   );

@@ -15,7 +15,7 @@ const Card = ({ item }: { item: TArchCard }) => {
     <Link
       href={`/idei-dlya-puteshestviya/chto-posmotret/${item.id}`}
       className="group/item rounded-[40px] flex flex-col justify-between text-white cursor-pointer 
-      relative overflow-hidden bg-[ var(--color-grey)]"
+      relative overflow-hidden bg-[ var(--color-grey)] shadow-lg"
     >
       <div className={`w-full relative pt-[100%]`}>
         <Image
