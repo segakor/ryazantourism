@@ -80,12 +80,6 @@ svg circle {
   }
 }
 
-.pages {
-  background-color: var(--color-longread-grey);
-  padding-bottom: 160px;
-  height: 100%;
-}
-
 :root {
   --color-black: rgba(0, 0, 0, 1);
   --color-white: rgba(255, 255, 255, 1);

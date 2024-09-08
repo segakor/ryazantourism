@@ -18,7 +18,7 @@ export const VdohnovitsiyaGalery = ({ data }: Props) => {
 
   return (
     <>
-      <div className="grid grid-rows-2 grid-flow-row grid-cols-3 gap-4">
+      <div className="grid grid-rows-2 grid-flow-row md:grid-cols-3 grid-cols-1 gap-4">
         {data.map((item, index) => (
           <div
             className={`grid h-[272px] w-full cursor-pointer group/item`}

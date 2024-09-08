@@ -158,19 +158,18 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
                 className={`w-[40px] h-[40px] 
                   text-xl cursor-pointer
                   flex items-center justify-center 
-                  font-medium rounded-full  
-                  hover:text-gray-900
+                  font-medium rounded-full
                   
                   ${isSameMonth(day, today) ? "text-white" : "text-[#a598fb]"} 
                   ${!isToday(day) && "hover:bg-[#b6acfc]"} 
                   ${
                     isEqual(currentDay, day) &&
-                    "bg-[var(--color-green)] text-white"
+                    "bg-[var(--color-green)] text-gray-900"
                   } 
                   ${
                     !isEqual(currentDay, day) &&
                     isEventDay(day) &&
-                    "border-dashed border-2 border-indigo-600"
+                    "bg-[#b6acfc]  hover:text-gray-900"
                   }`}
               >
                 {format(day, "d")}

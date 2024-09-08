@@ -33,7 +33,13 @@ export const OrganizedBannerRoutes = () => {
                 className="rounded-[50%] w-[6.25rem] h-[6.25rem] 
               flex justify-center items-center absolute shadow-sm"
               >
-                <Image width={42} height={42} src={item.srcImg} alt="Icon" unoptimized/>
+                <Image
+                  width={42}
+                  height={42}
+                  src={item.srcImg}
+                  alt="Icon"
+                  unoptimized
+                />
               </div>
 
               <div
@@ -76,6 +82,7 @@ export const OrganizedBannerRoutes = () => {
         size={mdMedia ? "5xl" : "full"}
         backdrop="blur"
         className={!mdMedia ? "overflow-scroll" : ""}
+        classNames={{ closeButton: "bg-white" }}
       >
         <ModalContent className="bg-[#806fdf] p-0">
           <ModalBody>

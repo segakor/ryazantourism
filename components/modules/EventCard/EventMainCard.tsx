@@ -13,6 +13,7 @@ import { ButtonLink } from "@/components/elements/ButtonNew";
 import { API_URL_CALENDAR, API_URL_CALENDAR_DETAIL } from "@/constants/apiUrl";
 import { Tags } from "@/components/elements/Tags/Tags";
 import { TagList, TEventCardMain } from "@/types/types";
+import { format } from "date-fns";
 
 export const EventMainCard = () => {
   const [dates, setDates] = useState([]);
@@ -96,7 +97,7 @@ const Card = (props: TEventCardMain) => {
       <Tags tags={tagList} />
       <div className="grid gap-5">
         <Typography variant="h5">{props.name}</Typography>
-        <Typography variant="h6">{props.description}</Typography>
+        <Typography variant="h6">{props.event_date.substring(11,16)}</Typography>
         <ButtonLink
           href={props.buy_ticket_url}
           variant="greenWhite"

@@ -1,6 +1,8 @@
 import Script from "next/script";
 import { cookies } from "next/headers";
 
+//TODO: из-за этого все становится ssr
+
 export const GoogleTranslateScript = () => {
   const COOKIE_NAME = "googtrans";
 

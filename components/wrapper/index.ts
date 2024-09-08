@@ -1,1 +1,1 @@
-export * from './WrapperTabs'
+export * from './Wrappers'

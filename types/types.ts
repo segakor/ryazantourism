@@ -193,4 +193,5 @@ export type TEventCardMain = {
   image_path: string;
   tags: { id: number }[];
   description: string;
+  event_date:string;
 };

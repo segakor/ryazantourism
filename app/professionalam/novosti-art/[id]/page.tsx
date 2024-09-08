@@ -4,6 +4,7 @@ import Loading from "../loading";
 import Body from "./body";
 import { news } from "@/constants/pages/professionalam/novosti-art";
 import { TNewsArt } from "@/types/types";
+import { WrapperGreyPages } from "@/components/wrapper";
 
 type Props = {
   params: { id: string };
@@ -29,9 +30,9 @@ const Page = async ({ params }: Props) => {
 
   return (
     <Suspense fallback={<Loading />}>
-      <div className="pages md:pt-48 pt-36">
+      <WrapperGreyPages className="md:pt-48 pt-36">
         <Body data={data} />
-      </div>
+      </WrapperGreyPages>
     </Suspense>
   );
 };

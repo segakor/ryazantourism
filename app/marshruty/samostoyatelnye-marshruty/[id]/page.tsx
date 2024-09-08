@@ -5,6 +5,7 @@ import Loading from "../loading";
 import { HeroPage } from "@/components/modules/HeroPage";
 import Body from "./body";
 import { ResponseSinglyRoutesDetails } from "@/types/types";
+import { WrapperGreyPages } from "@/components/wrapper";
 
 type Props = {
   params: { id: string };
@@ -30,14 +31,14 @@ const Page = async ({ params }: Props) => {
 
   return (
     <Suspense fallback={<Loading />}>
-      <div className="pages">
+      <WrapperGreyPages>
         <HeroPage
           imgUrl={data?.images[0]?.url || "/heroPages/ty-s-mestnym/cit.jpg"}
           title={data.title}
           desc=""
         />
         <Body data={data} />
-      </div>
+      </WrapperGreyPages>
     </Suspense>
   );
 };

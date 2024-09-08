@@ -8,7 +8,7 @@ type Props = {
   imgUrl: string;
 };
 export const ModalViewPhoto = ({ isOpen, onClose, imgUrl }: Props) => (
-  <Modal size="2xl" isOpen={isOpen} onClose={onClose}>
+  <Modal size="2xl" isOpen={isOpen} onClose={onClose} placement='center' classNames={{ closeButton: "bg-white" }}>
     <ModalContent>
       <img src={imgUrl} />
     </ModalContent>

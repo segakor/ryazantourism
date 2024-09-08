@@ -1,5 +1,6 @@
 import Layout from "@/components/layouts/PageLayout";
 import { HeroPage } from "@/components/modules/HeroPage";
+import { WrapperGreyPages } from "@/components/wrapper";
 
 export default function RootLayout({
   children,
@@ -8,10 +9,10 @@ export default function RootLayout({
 }>) {
   return (
     <Layout>
-      <div className="pages">
+      <WrapperGreyPages>
         <HeroPage imgUrl="/heroPages/ty-s-mestnym/vizit_center.jpg" title="Контакты" />
         {children}
-      </div>
+      </WrapperGreyPages>
     </Layout>
   );
 }

@@ -2,6 +2,7 @@ import { HeroPage } from "@/components/modules/HeroPage";
 import Link from "next/link";
 
 import type { Metadata } from "next";
+import { WrapperGreyPages } from "@/components/wrapper";
 
 export const metadata: Metadata = {
   title: "Всё о туризме в Рязани и Рязанской области",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <div className="pages">
+    <WrapperGreyPages>
       <HeroPage
         imgUrl="/heroPages/notfound.jpg"
         title="Ошибка 404"
@@ -29,6 +30,6 @@ export default function NotFound() {
           , или воспользоваться меню.
         </div>
       </div>
-    </div>
+    </WrapperGreyPages>
   );
 }
