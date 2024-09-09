@@ -12,11 +12,6 @@ const config = {
   defaultLanguage: "ru",
 };
 
-interface LanguageDescriptor {
-  name: string;
-  title: string;
-}
-
 const LangSwitch = () => {
   const [currentLanguage, setCurrentLanguage] = useState<string>();
   const [languageConfig, setLanguageConfig] = useState<any>();
@@ -65,20 +60,20 @@ const LangSwitch = () => {
   const switchLanguage = (lang: string) => () => {
     if (lang === "en") {
       setCookie(null, COOKIE_NAME, "/ru/en");
-      /* setCookie(null, COOKIE_NAME + "disabled", "0"); */
+      setCookie(null, COOKIE_NAME + "disabled", "0");
       window.location.reload();
       return;
     }
 
     if (lang === "ru") {
       setCookie(null, COOKIE_NAME, "/auto/" + lang);
-      /* setCookie(null, COOKIE_NAME + "disabled", "1"); */
+      setCookie(null, COOKIE_NAME + "disabled", "1");
       window.location.reload();
       return;
     }
   };
 
- /*  return (
+  return (
     <div className="text-center notranslate w-[50px]">
       <div className="flex border-1 border-solid border-[#C9C9C9] cursor-pointer rounded-sm text-xs">
         <div
@@ -99,34 +94,6 @@ const LangSwitch = () => {
         >
           <div className="opacity-70 font-medium">EN</div>
         </div>
-      </div>
-    </div>
-  ); */
-  return (
-    <div className="text-center notranslate w-[50px]">
-      <div className="flex border-1 border-solid border-[#C9C9C9] cursor-pointer rounded-sm text-xs">
-        {languageConfig?.languages.map((ld: LanguageDescriptor, i: number) => (
-          <div key={i}>
-            {currentLanguage === ld.name ||
-            (currentLanguage === "auto" &&
-              languageConfig.defaultLanguage === ld) ? (
-              <div
-                key={`l_s_${ld}`}
-                className="p-1 bg-[var(--color-green)] transition-all"
-              >
-                {ld.title.toUpperCase()}
-              </div>
-            ) : (
-              <div
-                key={`l_s_${ld}`}
-                onClick={switchLanguage(ld.name)}
-                className="p-1 transition-all"
-              >
-                {ld.title.toUpperCase()}
-              </div>
-            )}
-          </div>
-        ))}
       </div>
     </div>
   );
