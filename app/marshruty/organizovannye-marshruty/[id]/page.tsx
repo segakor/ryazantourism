@@ -5,6 +5,7 @@ import Body from "./body";
 import { TOrgEventCard } from "@/types/types";
 import { eventCards } from "@/constants/pages/organizovannye-marshruty/eventCards";
 import { HeroPage } from "@/components/modules/HeroPage";
+import { WrapperGreyPages } from "@/components/wrapper";
 
 type Props = {
   params: { id: string };
@@ -30,14 +31,14 @@ const Page = async ({ params }: Props) => {
 
   return (
     <Suspense fallback={<Loading />}>
-     <div className="pages">
+     <WrapperGreyPages>
         <HeroPage
           imgUrl={data?.imgUrl || "/heroPages/ty-s-mestnym/cit.jpg"}
           title={data.title}
           desc=""
         />
         <Body data={data} />
-      </div>
+      </WrapperGreyPages>
     </Suspense>
   );
 };

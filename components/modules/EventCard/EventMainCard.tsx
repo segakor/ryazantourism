@@ -12,18 +12,12 @@ import { swiperStyle } from "@/constants/swiperStyle";
 import { ButtonLink } from "@/components/elements/ButtonNew";
 import { API_URL_CALENDAR, API_URL_CALENDAR_DETAIL } from "@/constants/apiUrl";
 import { Tags } from "@/components/elements/Tags/Tags";
-import { TagList } from "@/types/types";
+import { TagList, TEventCardMain } from "@/types/types";
+import { format } from "date-fns";
 
 export const EventMainCard = () => {
   const [dates, setDates] = useState([]);
-  const [details, setDetails] = useState<
-    {
-      name: string;
-      buy_ticket_url: string;
-      image_path: string;
-      tags: { id: number }[];
-    }[]
-  >([]);
+  const [details, setDetails] = useState<TEventCardMain[]>([]);
 
   const onChangeDate = useCallback((e: Date) => {
     getDetails(e.toLocaleDateString());
@@ -81,9 +75,7 @@ export const EventMainCard = () => {
             </Swiper>
           ) : (
             <div className="w-auto md:h-[584px] h-full rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa]">
-              <div className="h3">
-                На сегодня нет событий - NOTE: Кирилл надо чето придумать
-              </div>
+              <div className="h3">На сегодня нет событий</div>
             </div>
           )}
         </div>
@@ -92,30 +84,25 @@ export const EventMainCard = () => {
   );
 };
 
-const Card = ({
-  name,
-  buy_ticket_url,
-  image_path,
-  tags,
-}: {
-  name: string;
-  buy_ticket_url: string;
-  image_path: string;
-  tags: { id: number }[];
-}) => {
-  const tagList = tags?.map((item) => item.id) as TagList[];
+const Card = (props: TEventCardMain) => {
+  const tagList = props.tags?.map((item) => item.id) as TagList[];
 
   return (
     <div
       className="text-white md:p-10 p-5 flex h-full flex-col justify-between bg-cover md:max-h-auto max-h-450px"
       style={{
-        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${image_path})`,
+        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url('${props.image_path}')`,
       }}
     >
-      <Tags tags={tagList}/>
+      <Tags tags={tagList} />
       <div className="grid gap-5">
-        <Typography variant="h5">{name}</Typography>
-        <ButtonLink href={buy_ticket_url} variant="greenWhite" target="_blank">
+        <Typography variant="h5">{props.name}</Typography>
+        <Typography variant="h6">{props.event_date.substring(11,16)}</Typography>
+        <ButtonLink
+          href={props.buy_ticket_url}
+          variant="greenWhite"
+          target="_blank"
+        >
           Перейти
         </ButtonLink>
       </div>

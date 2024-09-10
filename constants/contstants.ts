@@ -94,7 +94,11 @@ export const headerMenu = [
     subItem: [
       { label: "Рязань в медиа", path: "/biblioteka" },
       { label: "Промтуризм", path: "/promturizm" },
-      { label: "Мампус", path: "http://apps-rzn.site/mampus" },
+      {
+        label: "Мампус",
+        path: "http://apps-rzn.site/mampus",
+        target: "_blank",
+      },
     ],
   },
   {
@@ -254,6 +258,14 @@ export const tabsChemZanyatsya = [
   { label: "Активный отдых", id: "Активный отдых" },
 ];
 
+export const tabsVdohnovitsiya = [
+  { label: "Все", id: "all" },
+  { label: "Рязань", id: "Рязань" },
+  { label: "Солотча", id: "Солотча" },
+  { label: "Деревянное зодчество", id: "Деревянное зодчество" },
+  { label: "Касимов", id: "Касимов" },
+];
+
 export const tabsGdePoest = [
   { label: "Все", id: "all" },
   { label: "Рестораны", id: "Рестораны" },
@@ -299,7 +311,7 @@ export const tabsPromTurizm = [
 export const organizedBannerCard = [
   {
     title: "Вас встретят",
-    desc: "Каждую субботу с конца апреля по конец октября мы встречаем гостейгорода около «АМАКС Конгресс-отель» (Первомайский просп., 54). Время старта 12.00.",
+    desc: "Каждую субботу с конца апреля по конец октября мы встречаем гостей города около «АМАКС Конгресс-отель» (Первомайский просп., 54). Время старта 12.00.",
     srcImg: "/routesCard/icon_1.png",
   },
   {

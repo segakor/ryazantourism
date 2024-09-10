@@ -60,8 +60,8 @@
   align-items: center;
 }
 .otvet_body_content_inner_title_number {
-  width: 28px;
-  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
   font-size: 16px;
   display: flex;
   align-items: center;

@@ -2,7 +2,7 @@
 import { ButtonDownload } from "@/components/elements/ButtonNew";
 import { ChipsService } from "@/components/elements/ChipsService/ChipsService";
 import { ImageBlock } from "@/components/elements/LongReadBlocks/ImageBlock/ImageBlock";
-import { poshitat } from "@/constants/pages/poshitat/poshitat";
+import { poshitat } from "@/constants/pages/biblioteka/poshitat/poshitat";
 import { TPochitatCard } from "@/types/types";
 
 export const PochitatCard = () => {

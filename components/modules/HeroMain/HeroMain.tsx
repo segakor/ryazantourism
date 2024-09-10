@@ -56,7 +56,7 @@ export const HeroMain = () => {
                 />
               </div>
               <div className="hero_inner">
-                <div className="hero_inner_body">
+                <div className="grid gap-10 text-white m-[0_auto] md:w-[1280px] w-auto">
                   <Typography variant="h1">{item.title}</Typography>
                   <p>{item.desc}</p>
                   <div className="w-[268px]">

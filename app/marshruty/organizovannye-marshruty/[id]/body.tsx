@@ -16,7 +16,7 @@ const Body = ({ data }: { data: TOrgEventCard }) => {
   const { isOpen, onOpenChange } = useDisclosure();
   const mdMedia = useMediaQuery({ query: "(min-width: 768px)" });
   const searchParams = useSearchParams();
-  const startDate = searchParams.get("startDate") || '';
+  const startDate = searchParams.get("startDate") || "";
 
   return (
     <section className="grid gap-7 mt-[-7.5rem]">
@@ -68,10 +68,11 @@ const Body = ({ data }: { data: TOrgEventCard }) => {
         size={mdMedia ? "5xl" : "full"}
         backdrop="blur"
         className={!mdMedia ? "overflow-scroll" : ""}
+        classNames={{ closeButton: "bg-white" }}
       >
         <ModalContent className="bg-[#806fdf] p-0">
           <ModalBody>
-            <ModalTour name={data.title} startDate={startDate} />
+            <ModalTour tourName={data.title} startDate={startDate} />
           </ModalBody>
         </ModalContent>
       </Modal>

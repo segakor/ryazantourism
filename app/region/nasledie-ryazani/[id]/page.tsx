@@ -5,6 +5,7 @@ import { HeroPage } from "@/components/modules/HeroPage";
 import Body from "./body";
 import { TNasledieCard } from "@/types/types";
 import { nasledieRyazani } from "@/constants/pages/nasledie-ryazani/nasledie-ryazani";
+import { WrapperGreyPages } from "@/components/wrapper";
 
 type Props = {
   params: { id: string };
@@ -30,14 +31,14 @@ const Page = async ({ params }: Props) => {
 
   return (
     <Suspense fallback={<Loading />}>
-      <div className="pages">
+      <WrapperGreyPages>
         <HeroPage
           imgUrl="/heroPages/region/nasledie_rzn.jpg"
           title={data.title}
           desc=""
         />
         <Body data={data.template} />
-      </div>
+      </WrapperGreyPages>
     </Suspense>
   );
 };

@@ -36,7 +36,7 @@ export const LongReadBlock = ({
         </Typography>
       )}
       {subElements.map((item, index) => (
-        <div key={index}>
+        <div key={index}  className={`subElement_${index} overflow-auto`}>
           {createElement(item.element as SUB_ELEMENT_TYPE, item)}
         </div>
       ))}

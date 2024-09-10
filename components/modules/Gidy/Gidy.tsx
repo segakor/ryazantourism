@@ -35,7 +35,7 @@ export const Gid = ({ item }: { item: TGid }) => {
       relative overflow-hidden"
         onClick={onOpenChange}
       >
-        <div className={`w-full relative pt-[100%]`}>
+        <div className={`w-full relative pt-[130%]`}>
           <Image
             src={item.srcImg}
             alt="img"

@@ -1,5 +1,6 @@
 import { HeroPage } from "@/components/modules/HeroPage";
 import { LongRead } from "@/components/modules/LongRead";
+import { WrapperGreyPages } from "@/components/wrapper";
 import { template } from "@/constants/pages/region/arhitektura";
 import { TLongReadBody } from "@/types/types";
 
@@ -11,13 +12,13 @@ export const metadata: Metadata = {
 
 const Arhitektura = () => {
   return (
-    <div className="pages">
+    <WrapperGreyPages>
       <HeroPage
         imgUrl="/heroPages/region/arhitektura.jpg"
         title="Архитектура"
       />
       <LongRead body={template as TLongReadBody[]} />
-    </div>
+    </WrapperGreyPages>
   );
 };
 

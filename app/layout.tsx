@@ -4,7 +4,7 @@ import "./typography.css";
 import Layout from "@/components/layouts/Layout";
 import { NextUIProvider } from "@nextui-org/react";
 import NextTopLoader from "nextjs-toploader";
-import { GoogleTranslateScript } from "./GoogleTranslateScript";
+import { GoogleTranslateScript, YaMetricSript } from "./scripts";
 
 const inter = Inter({ subsets: ["latin"], display: "fallback" });
 
@@ -19,6 +19,7 @@ export default function RootLayout({
         <NextUIProvider>
           <NextTopLoader color="#aeed50" />
           <GoogleTranslateScript />
+          <YaMetricSript />
           <Layout>{children}</Layout>
         </NextUIProvider>
       </body>

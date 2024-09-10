@@ -54,7 +54,7 @@ export const EventCard = () => {
           ) : (
             <div className="w-auto md:h-[584px] rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa]">
               <div className="h3">
-                На сегодня нет событий - NOTE: Кирилл надо чето придумать
+                На сегодня нет событий
               </div>
             </div>
           )}
@@ -69,7 +69,7 @@ const Card = ({ id, title, imgUrl, price, days, startDate }: any) => {
     <div
       className="text-white md:p-10 p-5 flex h-full flex-col justify-end bg-cover gap-4"
       style={{
-        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${imgUrl})`,
+        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url('${imgUrl}')`,
       }}
     >
       <Typography variant="h4">{title}</Typography>

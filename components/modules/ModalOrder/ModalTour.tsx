@@ -12,10 +12,10 @@ import { SuccessOrder } from "./components/SuccessOrder";
 
 export const ModalTour = ({
   startDate,
-  name,
+  tourName,
 }: {
   startDate: string;
-  name: String;
+  tourName: String;
 }) => {
   const [count, setCount] = useState(1);
   const [screen, setScreen] = useState<"main" | "success" | "info">("main");
@@ -35,6 +35,7 @@ export const ModalTour = ({
         tel: formData.tel,
         date: formData.date,
         count,
+        tour: tourName,
       };
       const res = await fetch("/api/emails", {
         method: "POST",
@@ -65,7 +66,7 @@ export const ModalTour = ({
               Заказать тур
             </Typography>
             <Typography variant="h3" className="opacity-[0.5]">
-              {name}
+              {tourName}
             </Typography>
           </div>
           <Form
@@ -155,7 +156,7 @@ export const ModalTour = ({
                   )}
                 />
                 <div className="mb-3">
-                  <span className="mb-1 block">Колличество людей</span>
+                  <span className="mb-1 block">Количество людей</span>
                   <div className="flex gap-2 justify-between">
                     <>
                       {[1, 2, 3, 4, 5].map((item, index) => (

@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { ChipsService } from "@/components/elements/ChipsService/ChipsService";
 import { ImageBlock } from "@/components/elements/LongReadBlocks/ImageBlock/ImageBlock";
-import { poslushat } from "@/constants/pages/poslushat/poslushat";
+import { poslushat } from "@/constants/pages/biblioteka/poslushat/poslushat";
 import { TPoslushatCard } from "@/types/types";
 
 export const PoslushatCard = () => {

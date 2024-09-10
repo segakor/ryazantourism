@@ -51,12 +51,12 @@ export const LongRead = ({ body, children, noMargin, noSidebar }: Props) => {
     <section className="grid_layout">
       <div className="logread_wrapper">
         <div
-          className={`longread_body ${noMargin ? "mt-auto" : "mt-[-7.5rem]"} ${
-            noSidebar ? "w-full" : "md:w-[80%] w-full"
+          className={`longread_body ${noMargin ? "mt-auto" : "mt-[-7.5rem]"} md:w-[80%] w-full ${
+            noSidebar && "no_sidebar"
           }`}
         >
           {body?.map((item, index) => (
-            <div key={index}>
+            <div key={index} className={`element_${index}`}>
               {createElement(item.element as ELEMENT_TYPE, item)}
             </div>
           ))}

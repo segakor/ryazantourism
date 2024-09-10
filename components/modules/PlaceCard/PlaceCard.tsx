@@ -39,8 +39,8 @@ const Card = ({ item }: { item: TPlaceCard }) => {
   const tags = item.tags.map((item) => item.id) as TagList[];
 
   return (
-    <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] overflow-hidden">
-      <div>
+    <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] overflow-hidden shadow-lg">
+      <div className="relative">
         <div className="absolute p-7 z-[2]">
           <Tags tags={tags} />
         </div>
@@ -69,7 +69,7 @@ const Card = ({ item }: { item: TPlaceCard }) => {
               {notFullText}{" "}
               {textLength && !isFullText && (
                 <a
-                  className="text-[var(--color-green)] cursor-pointer"
+                  className="text-[var(--color-purple)] cursor-pointer"
                   onClick={() => setIsFullText(true)}
                 >
                   Показать полностью

@@ -1,4 +1,4 @@
-import { posmotret } from "@/constants/pages/posmotret/posmotret";
+import { posmotret } from "@/constants/pages/biblioteka/posmotret/posmotret";
 import { TPosmotretCard } from "@/types/types";
 import Link from "next/link";
 import { ImageBlock } from "@/components/elements/LongReadBlocks/ImageBlock/ImageBlock";

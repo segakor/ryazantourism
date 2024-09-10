@@ -14,7 +14,8 @@ const Card = ({
   href: "nasledie-ryazani" | "nasledie-kasimova";
 }) => {
   return (
-    <Link href={`/region/${href}/${item.id}`} className="group/item rounded-[40px] flex flex-col justify-between text-white cursor-pointer 
+    <Link href={`/region/${href}/${item.id}`} className="group/item rounded-[40px] flex flex-col justify-between 
+    text-white cursor-pointer shadow-lg
       relative overflow-hidden bg-[ var(--color-grey)]">
       <div className={`w-full relative pt-[100%]`}>
         <Image
