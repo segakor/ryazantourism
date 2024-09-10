@@ -232,13 +232,13 @@ export const eventCards = [
     title:
       "Заповедные места",
     email: "dobrodeyrzn@yandex.ru",
-    imgUrl: "https://i.postimg.cc/BntTwtLN/1-4.jpg",
+    imgUrl: "https://imageup.ru/img28/4911708/14.jpg",
     dates: [
       "2024-09-22",
     ],
     includePrice:
       "транспортное обслуживание, экскурсионное обслуживание по программе, работа гида-сопровождающего.",
-    price: "3 400 руб./чел., скидка школьникам 400 руб., пенсионерам 200 руб.",
+    price: "3 400 руб./чел., скидка школьникам и пенсионерам",
     days: "1 день",
     template: [
       {
@@ -251,7 +251,7 @@ export const eventCards = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.postimg.cc/L56YY0jv/1-3.jpg",
+            srcImg: "https://imageup.ru/img270/4911710/13.jpg",
           },
         ],
       },
