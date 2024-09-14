@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import Loading from "../loading";
 import { HeroPage } from "@/components/modules/HeroPage";
 import Body from "./body";
-import { ResponseSinglyRoutesDetails, TSinglyRoutes } from "@/types/types";
+import { TSinglyRoutes } from "@/types/types";
 import { WrapperGreyPages } from "@/components/wrapper";
 import { scenarii } from "@/constants/pages/organizovannye-marshruty/scenarii";
 
