@@ -45,15 +45,16 @@ export const LongRead = ({ body, children, noMargin, noSidebar }: Props) => {
 
   const sideBarItem = body
     ?.filter((item) => item.element === ELEMENT_TYPE.LONG_READ_BLOCK)
-    ?.map((item) => item?.title);
+    ?.map((item) => item && item?.title).filter(function (item) {
+      return typeof item === 'string';
+    })
 
   return (
     <section className="grid_layout">
       <div className="logread_wrapper">
         <div
-          className={`longread_body ${noMargin ? "mt-auto" : "mt-[-7.5rem]"} md:w-[80%] w-full ${
-            noSidebar && "no_sidebar"
-          }`}
+          className={`longread_body ${noMargin ? "mt-auto" : "mt-[-7.5rem]"} md:w-[80%] w-full ${noSidebar && "no_sidebar"
+            }`}
         >
           {body?.map((item, index) => (
             <div key={index} className={`element_${index}`}>

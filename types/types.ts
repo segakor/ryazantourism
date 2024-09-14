@@ -81,8 +81,9 @@ export type TSinglyRoutes = {
   id: number;
   title: string;
   category: { name: string };
-  duration: { days: number; hours: number; minutes: number };
-  images: { url: string }[];
+  /*   duration: { days: number; hours: number; minutes: number }; */
+  imgUrl: string;
+  template: TLongReadBody[];
 };
 
 export type TSinglyRoutesDetails = {
@@ -193,5 +194,5 @@ export type TEventCardMain = {
   image_path: string;
   tags: { id: number }[];
   description: string;
-  event_date:string;
+  event_date: string;
 };

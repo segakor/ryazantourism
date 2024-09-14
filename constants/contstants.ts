@@ -296,8 +296,8 @@ export const tabsZdorove = [
 
 export const tabsSinglyRoutes = [
   { label: "Все", id: "all" },
-  { label: "Пеший", id: "Пеший" },
-  { label: "Автомобильный", id: "Автомобильный" },
+  { label: "Однодневные", id: "Однодневные" },
+  { label: "Многодневные", id: "Многодневные" },
 ];
 
 export const tabsPromTurizm = [
