@@ -255,7 +255,7 @@ export const eventCards = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://imageup.ru/img270/4911710/13.jpg",
+            srcImg: "https://i.postimg.cc/m2BxN8mx/13.jpg",
           },
         ],
       },
