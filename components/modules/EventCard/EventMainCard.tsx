@@ -30,7 +30,7 @@ export const EventMainCard = () => {
       );
       const data = await res.json();
       setDetails(data.data);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   const getDates = async () => {
@@ -38,7 +38,7 @@ export const EventMainCard = () => {
       const res = await fetch(API_URL_CALENDAR);
       const data = await res.json();
       setDates(data);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   useEffect(() => {
@@ -75,7 +75,7 @@ export const EventMainCard = () => {
             </Swiper>
           ) : (
             <div className="w-auto md:h-[584px] h-full rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa]">
-              <div className="h3">На сегодня нет событий</div>
+              <div className="h3 text-white">На сегодня нет событий</div>
             </div>
           )}
         </div>
@@ -97,7 +97,7 @@ const Card = (props: TEventCardMain) => {
       <Tags tags={tagList} />
       <div className="grid gap-5">
         <Typography variant="h5">{props.name}</Typography>
-        <Typography variant="h6">{props.event_date.substring(11,16)}</Typography>
+        <Typography variant="h6">{props.event_date.substring(11, 16)}</Typography>
         <ButtonLink
           href={props.buy_ticket_url}
           variant="greenWhite"

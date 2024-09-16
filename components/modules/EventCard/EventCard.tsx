@@ -53,7 +53,7 @@ export const EventCard = () => {
             </Swiper>
           ) : (
             <div className="w-auto md:h-[584px] rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa]">
-              <div className="h3">
+              <div className="h3 text-white">
                 На сегодня нет событий
               </div>
             </div>
