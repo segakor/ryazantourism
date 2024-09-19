@@ -7,10 +7,12 @@ export const SingleBlock = ({
   title,
   desc,
   srcImg,
+  date
 }: {
   title: string;
   desc: string;
   srcImg?: string;
+  date: string
 }) => {
   //TODO: Image сделать один на всех
   return (
@@ -30,6 +32,7 @@ export const SingleBlock = ({
         </div>
       )}
       <div className="md:py-[80px] md:px-[50px] p-[30px] grid gap-[30px]">
+        {date && <div>{date}</div>}
         {title && (
           <Typography variant="h3" className="font-medium">
             {title}

@@ -8,7 +8,6 @@ export const NewsCard = ({
   news: TNews[];
   type: "art" | "region";
 }) => {
-  console.log(type);
   return (
     <div className="grid md:gap-7 gap-10 md:grid-cols-3 grid-cols-1 my-20 md:mt-40 md:mb-20">
       {news?.map((item, index) => (
