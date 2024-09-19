@@ -81,6 +81,7 @@ export type TSinglyRoutes = {
   id: number;
   title: string;
   category: { name: string };
+  desc: string;
   /*   duration: { days: number; hours: number; minutes: number }; */
   imgUrl: string;
   template: TLongReadBody[];

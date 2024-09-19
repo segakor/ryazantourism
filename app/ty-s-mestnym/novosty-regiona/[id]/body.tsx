@@ -8,6 +8,7 @@ const Body = ({ data }: { data: TNewsArt }) => {
       desc: data.desc,
       srcImg: data.imgUrl,
       title: data.title,
+      date: data.date
     },
   ];
 

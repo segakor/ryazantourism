@@ -29,6 +29,9 @@ const Item = ({ item }: { item: TSinglyRoutes }) => {
           <Typography variant="h5" className="font-medium">
             {item.title}
           </Typography>
+          <div className="partner-card-text opacity-50">
+            {item.desc}
+          </div>
         </div>
         <ButtonLink
           href={`/marshruty/samostoyatelnye-marshruty/${item.id}`}
