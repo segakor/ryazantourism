@@ -1,19 +1,19 @@
 import Script from "next/script";
-import { cookies } from "next/headers";
+/* import { cookies } from "next/headers"; */
 
 //TODO: из-за этого все становится ssr
 
 export const GoogleTranslateScript = () => {
-  const COOKIE_NAME = "googtrans";
-
-  const cookieStore = cookies();
-  const cookieStoreArr = cookieStore.getAll().map((cookie) => {
-    return { name: cookie.name, value: cookie.value };
-  });
-
-  if (cookieStoreArr.find((item) => item.name === COOKIE_NAME + 'disabled')?.value === '1') {
-    return null;
-  }
+  /*   const COOKIE_NAME = "googtrans";
+  
+    const cookieStore = cookies();
+    const cookieStoreArr = cookieStore.getAll().map((cookie) => {
+      return { name: cookie.name, value: cookie.value };
+    });
+  
+    if (cookieStoreArr.find((item) => item.name === COOKIE_NAME + 'disabled')?.value === '1') {
+      return null;
+    } */
 
   return (
     <>

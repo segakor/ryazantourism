@@ -61,6 +61,7 @@ const LangSwitch = () => {
     if (lang === "en") {
       setCookie(null, COOKIE_NAME, "/ru/en");
       setCookie(null, COOKIE_NAME + "disabled", "0");
+      localStorage.setItem(COOKIE_NAME + "disabled", "0")
       window.location.reload();
       return;
     }
@@ -68,6 +69,7 @@ const LangSwitch = () => {
     if (lang === "ru") {
       setCookie(null, COOKIE_NAME, "/auto/" + lang);
       setCookie(null, COOKIE_NAME + "disabled", "1");
+      localStorage.setItem(COOKIE_NAME + "disabled", "1")
       window.location.reload();
       return;
     }
@@ -78,19 +80,17 @@ const LangSwitch = () => {
       <div className="flex border-1 border-solid border-[#C9C9C9] cursor-pointer rounded-sm text-xs">
         <div
           onClick={switchLanguage("ru")}
-          className={`p-1 transition-all ${
-            disableCookieValue === "1" && "bg-[var(--color-green)]"
-          }`}
+          className={`p-1 transition-all ${disableCookieValue === "1" && "bg-[var(--color-green)]"
+            }`}
         >
           <div className="opacity-70 font-medium">RU</div>
         </div>
         <div
           onClick={switchLanguage("en")}
-          className={`p-1 transition-all ${
-            currentLanguage === "en" &&
+          className={`p-1 transition-all ${currentLanguage === "en" &&
             disableCookieValue === "0" &&
             "bg-[var(--color-green)]"
-          }`}
+            }`}
         >
           <div className="opacity-70 font-medium">EN</div>
         </div>
