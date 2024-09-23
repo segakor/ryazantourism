@@ -1,4 +1,3 @@
-import { API_URL_DETAILS_SINGLY_ROUTES } from "@/constants/apiUrl";
 import { Metadata } from "next";
 import { Suspense } from "react";
 import Loading from "../loading";

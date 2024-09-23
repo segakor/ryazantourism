@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Body from "./body";
 import Loading from "./loading";
-import { ResponseSinglyRoutes, TSinglyRoutes } from "@/types/types";
-import { API_URL_SINGLY_ROUTES } from "@/constants/apiUrl";
+import { TSinglyRoutes } from "@/types/types";
 import { Suspense } from "react";
 import { HeroPage } from "@/components/modules/HeroPage";
 import { scenarii } from "@/constants/pages/organizovannye-marshruty/scenarii";

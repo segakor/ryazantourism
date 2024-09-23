@@ -1,20 +1,14 @@
-const BASE_URL =
+const IDEI_DLYA_PUTECHESTV =
   "https://api.tr.plenexy.digital/api/sights?page=1&limit=100&with=category,tags&category_id=";
 
 export const API_URL = {
-  CHEM_ZANYATSYA: BASE_URL + "7",
-  GDE_POEST: BASE_URL + "12",
-  GDE_OSTANOVYTSYA: BASE_URL + "16",
-  VECHER_V_GORODE: BASE_URL + "26",
-  ZDOROVE: BASE_URL + "21",
-  SUVENIRY: BASE_URL + "30",
+  CHEM_ZANYATSYA: IDEI_DLYA_PUTECHESTV + "7",
+  GDE_POEST: IDEI_DLYA_PUTECHESTV + "12",
+  GDE_OSTANOVYTSYA: IDEI_DLYA_PUTECHESTV + "16",
+  VECHER_V_GORODE: IDEI_DLYA_PUTECHESTV + "26",
+  ZDOROVE: IDEI_DLYA_PUTECHESTV + "21",
+  SUVENIRY: IDEI_DLYA_PUTECHESTV + "30",
 };
-
-export const API_URL_SINGLY_ROUTES =
-  "https://api.tr.plenexy.digital/api/routes?page=1&limit=10&with=category";
-
-export const API_URL_DETAILS_SINGLY_ROUTES =
-  "https://api.tr.plenexy.digital/api/routes";
 
 const now = new Date();
 const currentDate = now.toLocaleString().slice(0, 10);
