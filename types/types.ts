@@ -144,14 +144,6 @@ export type TPochitatCard = {
   defaultLink?: string;
 };
 
-export type TNewsArt = {
-  id: number;
-  title: string;
-  desc: string;
-  date: string;
-  imgUrl: string;
-};
-
 export type TPromTurizmCard = {
   title: string;
   desc: string;
@@ -177,8 +169,10 @@ export type TOrgEventCard = {
 export type TNews = {
   id: number;
   title: string;
-  desc: string;
-  imgUrl: string;
+  bodyText: string;
+  storage_image: {
+    imagePath: string;
+  }
   date: string;
 };
 

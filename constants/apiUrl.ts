@@ -20,3 +20,6 @@ export const API_URL_CALENDAR = `https://api.tr.plenexy.digital/api/event_dates?
 
 export const API_URL_CALENDAR_DETAIL = `
 https://api.tr.plenexy.digital/api/events?page=1&limit=10&with=category,tags&event_date=$date_raplace`;
+
+export const API_URL_NOVOSTI_REGION = '/api-v2/newsRegion'
+export const API_URL_NOVOSTI_ART = '/api-v2/newsArt'

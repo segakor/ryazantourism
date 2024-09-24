@@ -1,4 +1,5 @@
 import { TNews } from "@/types/types";
+import { getImageUrl } from "@/utils/getImageUrl";
 import Link from "next/link";
 
 export const NewsCard = ({
@@ -24,6 +25,8 @@ const NewsItem = ({ item, type }: { item: TNews; type: "art" | "region" }) => {
   };
 
   const href = hrefDict[type];
+
+  const image = getImageUrl(item.storage_image.imagePath)
 
   return (
     <Link
@@ -53,7 +56,7 @@ const NewsItem = ({ item, type }: { item: TNews; type: "art" | "region" }) => {
       </div>
       <div
         style={{
-          background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${item.imgUrl})`,
+          background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${image})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

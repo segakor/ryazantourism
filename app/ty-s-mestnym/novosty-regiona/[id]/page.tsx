@@ -2,23 +2,22 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 import Loading from "../loading";
 import Body from "./body";
-import { news } from "@/constants/pages/ty-s-mestnym/novosri-regiona";
-import { TNewsArt } from "@/types/types";
+import { TNews } from "@/types/types";
 import { WrapperGreyPages } from "@/components/wrapper";
 
 type Props = {
   params: { id: string };
 };
 
-async function getNews(id: string) {
-  const data = news.find((item) => item.id === Number(id));
-  return data;
+async function getNewsDetail(id: number) {
+  const response = await fetch(`https://ryazantourism.ru/api-v2/newsRegion/${id}`, {
+    next: { revalidate: 3600 },
+  });
+  return response.json();
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const id = params.id;
-
-  const data = news.find((item) => item.id === Number(id));
+  const data = (await getNewsDetail(Number(params.id))) as TNews;
 
   return {
     title: `${data?.title} - Всё о туризме в Рязани и Рязанской области`,
@@ -26,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const Page = async ({ params }: Props) => {
-  const data = (await getNews(params.id)) as TNewsArt;
+  const data = (await getNewsDetail(Number(params.id))) as TNews;
 
   return (
     <Suspense fallback={<Loading />}>

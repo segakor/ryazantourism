@@ -1,14 +1,16 @@
 import { LongRead } from "@/components/modules/LongRead";
-import { TLongReadBody, TNewsArt } from "@/types/types";
+import { TLongReadBody, TNews } from "@/types/types";
+import { getImageUrl } from "@/utils/getImageUrl";
+import { format, parseISO } from "date-fns";
 
-const Body = ({ data }: { data: TNewsArt }) => {
+const Body = ({ data }: { data: TNews }) => {
   const templates = [
     {
       element: "SINGLE_BLOCK",
-      desc: data.desc,
-      srcImg: data.imgUrl,
+      desc: data.bodyText,
+      srcImg: getImageUrl(data.storage_image?.imagePath),
       title: data.title,
-      date: data.date
+      date: format(parseISO(data.date), 'dd.MM.yyyy')
     },
   ];
 

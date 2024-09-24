@@ -3,17 +3,18 @@ import { ButtonLink } from "@/components/elements/ButtonNew";
 import "./style.css";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { TNews } from "@/types/types";
-import { parse } from "date-fns";
+import { format } from "date-fns";
 import Link from "next/link";
+import { ru } from "date-fns/locale";
 
 type Props = {
-  type: "city" | "art";
+  type: "region" | "art";
   news: TNews[];
 };
 
 export const News = ({ type, news }: Props) => {
   const dict = {
-    city: {
+    region: {
       title: "Актуальная информация о происходящем в регионе",
       href: "/ty-s-mestnym/novosty-regiona",
     },
@@ -24,22 +25,18 @@ export const News = ({ type, news }: Props) => {
   };
 
   const getDate = (date: string) => {
-    const d = parse(date, "dd.MM.yyyy", new Date());
+    const y = format(date, "yyyy");
+    const d = format(date, "dd");
+    const m = format(date, 'MMMM', { locale: ru });
 
-    return d
-      .toLocaleString("ru", {
-        day: "numeric",
-        year: "numeric",
-        month: "long",
-      })
-      .split(" ");
+    return { y, m, d }
+
   };
 
   return (
     <div
-      className={`grid md:gap-20 gap-10  ${
-        type === "art" && "md:max-w-[82.5rem] md:m-auto"
-      }`}
+      className={`grid md:gap-20 gap-10  ${type === "art" && "md:max-w-[82.5rem] md:m-auto"
+        }`}
     >
       <div className="flex md:flex-row flex-col md:gap-0 gap-4 justify-between">
         <Typography variant="h2" className="font-medium">
@@ -66,10 +63,10 @@ export const News = ({ type, news }: Props) => {
             />
             <div className="grid gap-1">
               <Typography variant="h3" className="font-medium">
-                {getDate(item.date)[0]}
+                {getDate(item.date).d}
               </Typography>
               <Typography variant="h6" className="font-medium">
-                {getDate(item.date)[1]} {getDate(item.date)[2]}
+                {getDate(item.date).m} {getDate(item.date).y}
               </Typography>
             </div>
           </Link>

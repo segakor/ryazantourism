@@ -13,7 +13,6 @@ import { ButtonLink } from "@/components/elements/ButtonNew";
 import { API_URL_CALENDAR, API_URL_CALENDAR_DETAIL } from "@/constants/apiUrl";
 import { Tags } from "@/components/elements/Tags/Tags";
 import { TagList, TEventCardMain } from "@/types/types";
-import { format } from "date-fns";
 
 export const EventMainCard = () => {
   const [dates, setDates] = useState([]);
