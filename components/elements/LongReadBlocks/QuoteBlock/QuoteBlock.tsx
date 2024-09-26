@@ -1,12 +1,7 @@
 import Image from "next/image";
+import { TextBlock } from "../TextBlock/TextBlock";
 
-export const QuoteBlock = ({
-  text,
-  authorText,
-}: {
-  text: string;
-  authorText: string;
-}) => {
+export const QuoteBlock = ({ text }: { text: string }) => {
   return (
     <div className="p-[30px] bg-[#252525] text-white rounded-[30px]">
       <div className="flex gap-5 items-baseline">
@@ -19,10 +14,7 @@ export const QuoteBlock = ({
           className="image md:block hidden"
           unoptimized
         />
-        <div>
-          <div className="quote-text">{text}</div>
-          <div className="quote-author-text">{authorText}</div>
-        </div>
+        <TextBlock text={text} />
       </div>
     </div>
   );

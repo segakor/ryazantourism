@@ -56,7 +56,7 @@ const NewsItem = ({ item, type }: { item: TNews; type: "art" | "region" }) => {
       </div>
       <div
         style={{
-          background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url(${image})`,
+          backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url('${image}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

@@ -6,6 +6,8 @@ import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { ButtonLink } from "@/components/elements/ButtonNew";
+import program from "../../../public/tags/program.svg";
+import Link from "next/link";
 
 export const PlaceCard = ({ data }: { data: TPlaceCard[] }) => {
   return (
@@ -39,12 +41,12 @@ const Card = ({ item }: { item: TPlaceCard }) => {
   const tags = item.tags.map((item) => item.id) as TagList[];
 
   return (
-    <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] overflow-hidden shadow-lg">
+    <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] shadow-lg">
       <div className="relative">
         <div className="absolute p-7 z-[2]">
           <Tags tags={tags} />
         </div>
-        <div className="grid h-[200px] w-full">
+        <div className="grid h-[200px] w-full rounded-t-[40px] overflow-hidden">
           <div className={`w-full relative`}>
             <Image
               src={item.image_path}
@@ -98,14 +100,30 @@ const Card = ({ item }: { item: TPlaceCard }) => {
         </div>
         <div className="grid">
           {loyaltyText && (
-            <div className="flex items-center text-[var(--color-blue)] gap-3 mt-3">
+            <Link
+              href="https://t.me/visitRyazanBot"
+              target="_blank"
+              className="flex items-center text-[var(--color-blue)] hover:text-[var(--color-green)] transition-all gap-3 mt-3 styled_link"
+            >
               <div className="min-w-[40px] min-h-[40px]">
-                <Tag tag={10} />
+                <Image
+                  priority
+                  src={program}
+                  alt={"tag"}
+                  width={40}
+                  unoptimized
+                />
               </div>
               <div className="loyalty-text">{loyaltyText}</div>
-            </div>
+            </Link>
           )}
-          <ButtonLink href={item.url} variant="greenBlack" wide target="_blank" className="mt-3">
+          <ButtonLink
+            href={item.url}
+            variant="greenBlack"
+            wide
+            target="_blank"
+            className="mt-3"
+          >
             Подробнее
           </ButtonLink>
         </div>
