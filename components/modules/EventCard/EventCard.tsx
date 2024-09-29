@@ -6,12 +6,14 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { format } from "date-fns";
 import { eventCards } from "@/constants/pages/organizovannye-marshruty/eventCards";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { swiperStyle } from "@/constants/swiperStyle";
 import { ButtonLink } from "@/components/elements/ButtonNew";
+import { parseCookies } from "nookies";
+import { MODE_VISUALLY_KEY_NAME } from "@/components/elements/ModeVisually/ModeVisually";
 
 const eventsDates = eventCards.map((item) => item.dates).flat();
 
@@ -26,13 +28,28 @@ export const EventCard = () => {
     item.dates.includes(format(selectedDate, "yyyy-MM-dd"))
   );
 
+  const [modeVisually, setModeVisually] = useState("");
+
+  useEffect(() => {
+    const cookies = parseCookies();
+    const value = cookies[MODE_VISUALLY_KEY_NAME];
+
+    setModeVisually(value);
+  }, []);
+
+  const isModeEnabled = modeVisually === "1";
+
   return (
     <div>
       <Typography variant="h3" className="font-medium mb-14">
         Туры от туроператоров
       </Typography>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px]">
-        <CalendarSlide onChange={onChangeDate} eventDates={eventsDates} />
+        <CalendarSlide
+          onChange={onChangeDate}
+          eventDates={eventsDates}
+          isModeEnabled={isModeEnabled}
+        />
         <div className="h-full overflow-hidden bg-black rounded-[14px] md:h-auto">
           {!!filterEvents.length ? (
             <Swiper
@@ -52,9 +69,16 @@ export const EventCard = () => {
               ))}
             </Swiper>
           ) : (
-            <div className="w-auto md:h-[584px] rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa]">
-              <div className="h3 text-white">
-                На сегодня нет событий
+            <div
+              className={`w-auto flex justify-center md:h-[584px] h-full rounded-[14px] 
+                p-6 md:p-10 border-solid ${isModeEnabled ? "bg-black" : "bg-[#7f6cfa]"
+                }`}
+            >
+              <div className="flex flex-col items-center justify-center gap-5">
+                <Typography className={"text-white"} variant="h4">
+                  В этот день событий нет
+                </Typography>
+                <div className={"text-white"}>Попробуйте выбрать другой</div>
               </div>
             </div>
           )}

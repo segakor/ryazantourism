@@ -1,0 +1,62 @@
+.logread_wrapper {
+  display: flex;
+  gap: 28px;
+}
+
+.longread_body {
+  display: grid;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.longread_sidebar_body {
+  padding-top: 180px;
+  padding: 180px 20px 20px 20px;
+  position: sticky;
+  top: 0;
+  display: grid;
+  gap: 30px;
+}
+.longread_sidebar_item {
+  cursor: pointer;
+  color: var(--color-grey);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.longread_sidebar_item:hover {
+  color: var(--color-black);
+  transition: all 0.3s ease-in-out;
+}
+
+.longread_sidebar_item:before {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #b9fa4f;
+  content: "";
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.longread_sidebar_item:hover::before {
+  opacity: 1;
+}
+
+blockquote::before {
+  content: "";
+  background-image: url("/factBlock/fact.svg");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  display: flex;
+  margin-top: 20px;
+  /* position: absolute;
+  top: 50%; */
+  min-width: 24px;
+  height: 24px;
+}

@@ -74,7 +74,7 @@ const svgArrows = (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_428_18104)">
+    <g clipPath="url(#clip0_428_18104)">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -82,7 +82,7 @@ const svgArrows = (
         fill=""
       ></path>
     </g>
-    <g clip-path="url(#clip1_428_18104)">
+    <g clipPath="url(#clip1_428_18104)">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -91,7 +91,7 @@ const svgArrows = (
         fillOpacity="0.5"
       ></path>
     </g>
-    <g clip-path="url(#clip2_428_18104)">
+    <g clipPath="url(#clip2_428_18104)">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -100,7 +100,7 @@ const svgArrows = (
         fillOpacity="0.2"
       ></path>
     </g>
-    <g clip-path="url(#clip3_428_18104)">
+    <g clipPath="url(#clip3_428_18104)">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -173,17 +173,15 @@ export const TabPanelPoleznyi = () => {
               id={item.id}
               onClick={() => onClick(item.id)}
               className={`flex flex-col flex-[0_0_15.625rem] md:flex-[0_1_15.625rem] bg-[#4f60fa] rounded-2xl cursor-pointer relative  before:absolute 
-              before:bg-[url('/art/tabFooter.svg')] before:top-full before:left-[30%] before:w-[86px] mb-[10px]  ${
-                isOpen === item.id && "before:h-[10px]"
-              } `}
+              before:bg-[url('/art/tabFooter.svg')] before:top-full before:left-[30%] before:w-[86px] mb-[10px]  ${isOpen === item.id && "before:h-[10px]"
+                } `}
             >
               <div className="p-5">
                 <div
-                  className={`mb-12  ${
-                    isOpen === item.id
+                  className={`mb-12  ${isOpen === item.id
                       ? "[&>svg]:fill-white"
                       : "[&>svg]:fill-black"
-                  }`}
+                    }`}
                 >
                   {svgArrows}
                 </div>

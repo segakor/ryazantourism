@@ -2,12 +2,12 @@
 import { url } from "@/constants/contstants";
 import "./style.css";
 import { HeaderNav, HeaderNavMobile } from "./HeaderNav";
-import Icons from "@/components/elements/Logo/Icons";
-import LogoHeader from "@/components/elements/Logo/LogoHeader";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LangSwitch } from "@/components/elements/LangSwitch/LangSwitch";
 import Link from "next/link";
+import { MODE_VISUALLY_KEY_NAME, ModeVisually } from "@/components/elements/ModeVisually/ModeVisually";
+import { parseCookies } from "nookies";
 
 //TODO: icon в одно место
 
@@ -93,6 +93,25 @@ const ok = (
   </svg>
 );
 
+const dzen = (
+  <svg
+    width="26"
+    height="27"
+    viewBox="0 0 26 27"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="group-hover/item:fill-black fill-[var(--color-green)] transition-all"
+  >
+    <rect y="0.5" width="26" height="26" rx="13" />
+    <g clipPath="url(#clip0_1035_8899)">
+      <path
+        d="M20.9268 13.2805C20.9268 13.2012 20.8623 13.1354 20.7829 13.1317C17.9348 13.0238 16.2014 12.6606 14.9888 11.4479C13.7736 10.2328 13.4116 8.49813 13.3037 5.64383C13.3012 5.56448 13.2355 5.5 13.1549 5.5H12.8226C12.7433 5.5 12.6775 5.56448 12.6738 5.64383C12.566 8.49689 12.2039 10.2328 10.9888 11.4479C9.77489 12.6618 8.04272 13.0238 5.19461 13.1317C5.11526 13.1342 5.05078 13.1999 5.05078 13.2805V13.6128C5.05078 13.6922 5.11526 13.7579 5.19461 13.7616C8.04272 13.8695 9.77613 14.2328 10.9888 15.4454C12.2014 16.6581 12.5635 18.3878 12.6726 21.2309C12.6751 21.3102 12.7408 21.3747 12.8214 21.3747H13.1549C13.2343 21.3747 13.3 21.3102 13.3037 21.2309C13.4128 18.3878 13.7749 16.6581 14.9875 15.4454C16.2014 14.2315 17.9335 13.8695 20.7817 13.7616C20.8611 13.7591 20.9255 13.6934 20.9255 13.6128V13.2805H20.9268Z"
+        fill="white"
+      />
+    </g>
+  </svg>
+);
+
 export const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
@@ -106,17 +125,48 @@ export const Header = () => {
     setIsOpenMenu(false);
   }, [pathname]);
 
+  const [modeVisually, setModeVisually] = useState("");
+
+  useEffect(() => {
+    const cookies = parseCookies();
+    const value = cookies[MODE_VISUALLY_KEY_NAME];
+
+    setModeVisually(value);
+  }, []);
+
+  const isModeEnabled = modeVisually === "1";
+
   return (
     <div
       className="fixed w-full top-[20px] left-0 right-0 bg-white 
-    z-10 md:max-w-[90rem] max-w-[95%] rounded-[0.75rem] mx-auto shadow-2xl"
+      z-10 md:max-w-[90rem] max-w-[95%] rounded-[0.75rem] mx-auto shadow-2xl"
     >
       <header className="rounded-[0.75rem]">
         <div className="max-w-[82.5rem] mx-auto md:px-auto px-[1.25rem]">
           <div className="flex justify-between py-[1.5625rem]">
             <div className="flex items-center gap-4">
               <div className="md:w-auto md:h-auto w-[40px] h-[38px]">
-                <LogoHeader />
+                <Link href="/">
+                  <div
+                    className={`flex md:w-[69px] md:h-[66px] w-auto h-auto ${isModeEnabled && "[&>*]:fill-black"
+                      }`}
+                  >
+                    <svg
+                      viewBox="0 0 69 66"
+                      fill="#B9FA4F"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clipPath="url(#clip0_1052_6)">
+                        <path d="M20.2419 50.8894L19.8622 50.445L19.482 50.8889L11.3295 60.408C6.89157 61.6318 3.48092 63.0726 0.50266 64.5837C0.52912 60.7224 0.768954 57.5199 1.92159 54.0562C8.48134 47.3331 15.8996 46.1724 21.3455 46.1724C27.1864 46.1724 33.5018 47.4477 39.8807 48.7377L39.9109 48.7438C46.2561 50.027 52.6636 51.3228 58.6141 51.3228C61.1632 51.3228 63.7139 51.0789 66.3182 50.5364C68.1407 54.8057 68.4796 58.09 68.4991 62.2856C64.3767 63.0812 60.7364 63.3866 57.3904 63.3866C51.4187 63.3866 46.4985 62.3741 41.6862 61.2702C41.2028 61.1594 40.7202 61.0475 40.2377 60.9356C35.9849 59.9497 31.7306 58.9635 26.8728 58.6496L20.2419 50.8894ZM51.2539 31.6522L51.2555 31.6536C56.1067 35.9168 61.0254 40.7538 64.2238 46.3551C62.7016 46.6078 60.8444 46.7536 58.7441 46.7536C53.5276 46.7536 47.711 45.5938 41.666 44.3884C41.5012 44.3556 41.3363 44.3227 41.1711 44.2898C34.9728 43.0546 28.5576 41.8067 22.4391 41.8067C15.1949 41.8067 9.6898 43.7139 5.43959 46.55C8.66795 41.1939 13.2689 36.4007 19.2338 30.9989L19.2354 30.9974C20.7659 29.599 22.1515 28.3511 23.4019 27.225C26.5305 24.4073 28.8124 22.3522 30.3994 20.6094C31.5179 19.3812 32.3188 18.28 32.8374 17.1455C33.3596 16.0033 33.5851 14.8505 33.5851 13.5334V13.3388L33.4536 13.1954L29.7042 9.10866L34.5 0.983652L39.2958 9.10866L35.5464 13.1954L35.4149 13.3388V13.5334C35.4149 14.9159 35.6532 16.0941 36.2195 17.2493C36.781 18.3948 37.6518 19.4908 38.8745 20.7288C40.3316 22.2041 42.3427 23.9317 45.0162 26.2282C46.7924 27.7541 48.8611 29.5311 51.2539 31.6522ZM19.8588 65.2319L16.0698 60.8476L19.8588 56.4101L23.5892 60.8477L19.8588 65.2319Z" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1052_6">
+                          <rect width="69" height="66" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </Link>
               </div>
               <p className="header_title">
                 Все о туризме в Рязани <br /> и Рязанской области
@@ -130,14 +180,16 @@ export const Header = () => {
                     <Link
                       href={url.apple}
                       target="_blank"
-                      className="group/item"
+                      className={`group/item ${isModeEnabled && "[&>*]:fill-black"
+                        }`}
                     >
                       {apple}
                     </Link>
                     <Link
                       href={url.android}
                       target="_blank"
-                      className="group/item"
+                      className={`group/item ${isModeEnabled && "[&>*]:fill-black"
+                        }`}
                     >
                       {android}
                     </Link>
@@ -146,16 +198,42 @@ export const Header = () => {
                 <div className="flex items-center gap-[0.625rem]">
                   <p className="header_title">Мы в соц. сетях</p>
                   <div className="flex items-center gap-[0.3125rem]">
-                    <Link href={url.vk} target="_blank" className="group/item">
+                    <Link
+                      href={url.vk}
+                      target="_blank"
+                      className={`group/item ${isModeEnabled && "[&>*]:fill-black"
+                        }`}
+                    >
                       {vk}
                     </Link>
-                    <Link href={url.tg} target="_blank" className="group/item">
+                    <Link
+                      href={url.tg}
+                      target="_blank"
+                      className={`group/item ${isModeEnabled && "[&>*]:fill-black"
+                        }`}
+                    >
                       {tg}
                     </Link>
-                    <Link href={url.ok} target="_blank" className="group/item">
+                    <Link
+                      href={url.ok}
+                      target="_blank"
+                      className={`group/item ${isModeEnabled && "[&>*]:fill-black"
+                        }`}
+                    >
                       {ok}
                     </Link>
+                    <Link
+                      href={url.dzen}
+                      target="_blank"
+                      className={`group/item ${isModeEnabled && "[&>*]:fill-black"
+                        }`}
+                    >
+                      {dzen}
+                    </Link>
                   </div>
+                </div>
+                <div>
+                  <ModeVisually />
                 </div>
                 <div>
                   <LangSwitch />
@@ -165,8 +243,7 @@ export const Header = () => {
             </div>
             <button
               className={`rounded-full bg-[#b9fa4f] w-[2.5rem] h-[2.5rem] 
-                flex justify-center items-center z-[100] lg:hidden visible ${
-                  isOpenMenu && "menu-open"
+                flex justify-center items-center z-[100] lg:hidden visible ${isOpenMenu && "menu-open"
                 }`}
               onClick={onOpenMenu}
             >

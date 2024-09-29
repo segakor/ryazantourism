@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   add,
   eachDayOfInterval,
@@ -17,10 +17,13 @@ import {
 } from "date-fns";
 import { ru } from "date-fns/locale";
 import { Typography } from "@/components/elements/Typography/Typography";
+import { parseCookies } from "nookies";
+import { MODE_VISUALLY_KEY_NAME } from "@/components/elements/ModeVisually/ModeVisually";
 
 type Props = {
   onChange: (e: Date) => void;
   eventDates: string[];
+  isModeEnabled: boolean;
 };
 
 const days = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
@@ -34,7 +37,7 @@ const colStartClasses = [
   "col-start-7",
 ];
 
-export const CalendarSlide = ({ onChange, eventDates }: Props) => {
+export const CalendarSlide = ({ onChange, eventDates, isModeEnabled }: Props) => {
   const today = startOfToday();
 
   const parseDates = eventDates.map(item => item.split('.').reverse().join('-'))
@@ -54,8 +57,8 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
     end: endOfWeek(endOfMonth(firstDayOfMonth), { weekStartsOn: 1 }),
   });
 
- /*  const disabledPrev = true;
-  const disabledNext = true; *///TODO: возможно стоит ограничить клик
+  /*  const disabledPrev = true;
+   const disabledNext = true; *///TODO: возможно стоит ограничить клик
 
   const getPrevMonth = (event: any) => {
     event.preventDefault();
@@ -77,16 +80,16 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
     parseDates?.map((item) => isEqual(startOfDay(item), day)).includes(true);
 
   return (
-    <div className="w-auto rounded-[14px] md:p-10 p-5 border-solid bg-[#7f6cfa] md:h-[584px]">
+    <div className={`w-auto rounded-[14px] md:p-10 p-5 border-solid ${isModeEnabled ? 'bg-black' : 'bg-[#7f6cfa]'} md:h-[584px]`}>
       <div className="flex items-center justify-between">
         <Typography variant="h4" className="text-white">
           {format(parse(currMonth, "MMM-yyyy", new Date()), 'LLLL yyyy', { locale: ru })}
-        {/*   {format(currentDay, "dd LLLL yyyy", { locale: ru })} */}
+          {/*   {format(currentDay, "dd LLLL yyyy", { locale: ru })} */}
         </Typography>
         <div className="flex items-center justify-evenly gap-6 md:gap-12">
           <button
             aria-label="calendar backward"
-            className="hover:text-gray-400 text-gray-800 dark:text-gray-100 text-white"
+            className="hover:text-gray-400 dark:text-gray-100 text-white"
             onClick={getPrevMonth}
           >
             <svg
@@ -107,7 +110,7 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
           </button>
           <button
             aria-label="calendar forward"
-            className="hover:text-gray-400 ml-3 text-gray-800 dark:text-gray-100 text-white"
+            className="hover:text-gray-400 ml-3 dark:text-gray-100 text-white"
             onClick={getNextMonth}
           >
             <svg
@@ -134,9 +137,8 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
           return (
             <div
               key={idx}
-              className={`font-semibold ${
-                idx === 5 || idx === 6 ? "text-[#FAA66B]" : "text-white"
-              }`}
+              className={`font-semibold ${idx === 5 || idx === 6 ? "text-[#FAA66B]" : "text-white"
+                }`}
             >
               {capitalizeFirstLetter(day)}
             </div>
@@ -152,7 +154,7 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
               onClick={() => {
                 isEventDay(day) && onClickDay(day);
               }}
-             /*  onClick={() => onClickDay(day)} */
+            /*  onClick={() => onClickDay(day)} */
             >
               <p
                 className={`w-[40px] h-[40px] 
@@ -162,14 +164,12 @@ export const CalendarSlide = ({ onChange, eventDates }: Props) => {
                   
                   ${isSameMonth(day, today) ? "text-white" : "text-[#a598fb]"} 
                   ${!isToday(day) && "hover:bg-[#b6acfc]"} 
-                  ${
-                    isEqual(currentDay, day) &&
-                    "bg-[var(--color-green)] text-gray-900"
+                  ${isEqual(currentDay, day) &&
+                  `bg-[var(--color-green)] text-gray-900`
                   } 
-                  ${
-                    !isEqual(currentDay, day) &&
-                    isEventDay(day) &&
-                    "bg-[#b6acfc]  hover:text-gray-900"
+                  ${!isEqual(currentDay, day) &&
+                  isEventDay(day) &&
+                  "bg-[#b6acfc]  hover:text-gray-900"
                   }`}
               >
                 {format(day, "d")}

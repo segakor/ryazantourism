@@ -3,7 +3,7 @@ import { HeaderMenu } from "./HeaderMenu";
 import { useState } from "react";
 import Icons from "@/components/elements/Logo/Icons";
 import Link from "next/link";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 
 export const HeaderNav = () => {
   return (
@@ -66,7 +66,11 @@ export const HeaderNavMobile = () => {
           <div key={index} className="menu_item_mobile_item">
             <li
               className="menu_item_mobile"
-              onClick={() => {!!item.subItem.length ? onOpenSubMenu(index): router.push(item.path || '/')}}
+              onClick={() => {
+                !!item.subItem.length
+                  ? onOpenSubMenu(index)
+                  : router.push(item.path || "/");
+              }}
             >
               <span className="menu_link">{item.item}</span>
               {!!item.subItem.length && (
@@ -125,6 +129,9 @@ export const HeaderNavMobile = () => {
             </Link>
             <Link href={url.ok} target="_blank">
               <Icons icon="ok" />
+            </Link>
+            <Link href={url.dzen} target="_blank">
+              <Icons icon="dzen" />
             </Link>
           </div>
         </div>
