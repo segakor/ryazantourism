@@ -15,6 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <meta name="yandex-verification" content="9f0fc5722c61797d" />
       <body className={inter.className}>
         <NextUIProvider>
           <NextTopLoader color="#aeed50" />

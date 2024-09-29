@@ -5,6 +5,7 @@ export const url = {
   vk: "https://vk.com/ryazantourism",
   tg: "https://t.me/visitryazan",
   ok: "https://ok.ru/groupryazantourism",
+  dzen: "https://dzen.ru/tiruzmrzn",
 };
 
 export const headerMenu = [

@@ -13,6 +13,8 @@ import { ButtonLink } from "@/components/elements/ButtonNew";
 import { API_URL_CALENDAR, API_URL_CALENDAR_DETAIL } from "@/constants/apiUrl";
 import { Tags } from "@/components/elements/Tags/Tags";
 import { TagList, TEventCardMain } from "@/types/types";
+import { parseCookies } from "nookies";
+import { MODE_VISUALLY_KEY_NAME } from "@/components/elements/ModeVisually/ModeVisually";
 
 export const EventMainCard = () => {
   const [dates, setDates] = useState([]);
@@ -47,13 +49,24 @@ export const EventMainCard = () => {
 
   //TODO:порефакторить
 
+  const [modeVisually, setModeVisually] = useState("");
+
+  useEffect(() => {
+    const cookies = parseCookies();
+    const value = cookies[MODE_VISUALLY_KEY_NAME];
+
+    setModeVisually(value);
+  }, []);
+
+  const isModeEnabled = modeVisually === "1";
+
   return (
     <div className="grid md:gap-20 gap-10">
       <Typography variant="h2" className="font-medium">
         Календарь событий
       </Typography>
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px] min-h-full">
-        <CalendarSlide onChange={onChangeDate} eventDates={dates} />
+        <CalendarSlide onChange={onChangeDate} eventDates={dates} isModeEnabled={isModeEnabled} />
         <div className="h-full overflow-hidden bg-black rounded-[14px] md:h-auto">
           {!!details.length ? (
             <Swiper
@@ -73,8 +86,15 @@ export const EventMainCard = () => {
               ))}
             </Swiper>
           ) : (
-            <div className="w-auto md:h-[584px] h-full rounded-[14px] p-6 md:p-10 border-solid bg-[#7f6cfa]">
-              <div className="h3 text-white">На сегодня нет событий</div>
+            <div className={`w-auto flex justify-center md:h-[584px] h-full rounded-[14px] 
+              p-6 md:p-10 border-solid ${isModeEnabled ? "bg-black" : "bg-[#7f6cfa]"
+              }`}>
+              <div className="flex flex-col items-center justify-center gap-5">
+                <Typography className={"text-white"} variant="h4">
+                  В этот день событий нет
+                </Typography>
+                <div className={"text-white"}>Попробуйте выбрать другой</div>
+              </div>
             </div>
           )}
         </div>
@@ -96,7 +116,9 @@ const Card = (props: TEventCardMain) => {
       <Tags tags={tagList} />
       <div className="grid gap-5">
         <Typography variant="h5">{props.name}</Typography>
-        <Typography variant="h6">{props.event_date.substring(11, 16)}</Typography>
+        <Typography variant="h6">
+          {props.event_date.substring(11, 16)}
+        </Typography>
         <ButtonLink
           href={props.buy_ticket_url}
           variant="greenWhite"

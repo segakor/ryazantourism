@@ -1,11 +1,26 @@
-/* eslint-disable @next/next/no-img-element */
+"use client";
 import { mainNavigation } from "@/constants/contstants";
 import Link from "next/link";
 import { Typography } from "@/components/elements/Typography/Typography";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
 
+import { parseCookies } from "nookies";
+import { MODE_VISUALLY_KEY_NAME } from "@/components/elements/ModeVisually/ModeVisually";
+import { useEffect, useState } from "react";
+
 export const MainNavigation = () => {
+  const [modeVisually, setModeVisually] = useState("");
+
+  useEffect(() => {
+    const cookies = parseCookies();
+    const value = cookies[MODE_VISUALLY_KEY_NAME];
+
+    setModeVisually(value);
+  }, []);
+
+  const isModeEnabled = modeVisually === "1";
+
   return (
     <div className="grid md:gap-20 gap-10 md:mt-20 mt-10">
       <div className="grid gap-5">
@@ -22,9 +37,8 @@ export const MainNavigation = () => {
           <Link
             key={index}
             href={item.path}
-            className={`group/item ${
-              (index === 0 || index === 3) && "md:col-span-2 col-span-1"
-            }`}
+            className={`group/item ${(index === 0 || index === 3) && "md:col-span-2 col-span-1"
+              }`}
           >
             <div className="cursor-pointer rounded-[14px] overflow-hidden relative">
               <div className={`w-full relative  md:pt-[408px] pt-[250px]`}>
@@ -33,7 +47,9 @@ export const MainNavigation = () => {
                   alt="img"
                   objectFit="cover"
                   fill
-                  className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg brightness-50 group-hover/item:scale-[115%] transition-all`}
+                  className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg 
+                    ${isModeEnabled ? "brightness-[0.25]" : "brightness-50"
+                    } group-hover/item:scale-[115%] transition-all`}
                   placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
                   priority
                   quality={10}

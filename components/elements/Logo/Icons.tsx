@@ -103,35 +103,6 @@ const icons = {
       </defs>
     </svg>
   ),
-  goTo: (
-    <svg
-      width="40"
-      height="40"
-      viewBox="0 0 40 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="20" cy="20" r="20" fill="white" />
-      <path
-        d="M25.5303 20.5303C25.8232 20.2374 25.8232 19.7626 25.5303 19.4697L20.7574 14.6967C20.4645 14.4038 19.9896 14.4038 19.6967 14.6967C19.4038 14.9896 19.4038 15.4645 19.6967 15.7574L23.9393 20L19.6967 24.2426C19.4038 24.5355 19.4038 25.0104 19.6967 25.3033C19.9896 25.5962 20.4645 25.5962 20.7574 25.3033L25.5303 20.5303ZM15 20.75H25V19.25H15V20.75Z"
-        fill="black"
-      />
-    </svg>
-  ),
-  quote: (
-    <svg
-      width="36"
-      height="31"
-      viewBox="0 0 36 31"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M7.375 0H16.125L12.375 19.7045V31H0.5V19.7045L7.375 0ZM26.75 0H35.5L31.75 19.7045V31H19.875V19.7045L26.75 0Z"
-        fill="#B9FA4F"
-      />
-    </svg>
-  ),
   location: (
     <svg
       width="12"
@@ -148,29 +119,10 @@ const icons = {
       />
     </svg>
   ),
-  arrow_button_round: (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g clip-path="url(#clip0_453_18124)">
-        <path
-          d="M-3.49691e-07 8L12 1.0718L12 14.9282L-3.49691e-07 8Z"
-          fill="white"
-        ></path>
-      </g>
-      <defs>
-        <clipPath id="clip0_453_18124">
-          <rect width="16" height="16" fill="white"></rect>
-        </clipPath>
-      </defs>
-    </svg>
-  ),
   eye: (
-    <div style={{display:'flex', alignItems:'center', flexDirection:'column'}}>
+    <div
+      style={{ display: "flex", alignItems: "center", flexDirection: "column" }}
+    >
       <svg
         width="77"
         height="49"
@@ -246,6 +198,24 @@ const icons = {
       </svg>
     </div>
   ),
+  dzen: (
+    <svg
+      width="26"
+      height="26"
+      viewBox="0 0 26 27"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="group-hover/item:fill-black fill-[var(--color-green)] transition-all"
+    >
+      <rect y="0.5" width="26" height="26" rx="13" />
+      <g clipPath="url(#clip0_1035_8899)">
+        <path
+          d="M20.9268 13.2805C20.9268 13.2012 20.8623 13.1354 20.7829 13.1317C17.9348 13.0238 16.2014 12.6606 14.9888 11.4479C13.7736 10.2328 13.4116 8.49813 13.3037 5.64383C13.3012 5.56448 13.2355 5.5 13.1549 5.5H12.8226C12.7433 5.5 12.6775 5.56448 12.6738 5.64383C12.566 8.49689 12.2039 10.2328 10.9888 11.4479C9.77489 12.6618 8.04272 13.0238 5.19461 13.1317C5.11526 13.1342 5.05078 13.1999 5.05078 13.2805V13.6128C5.05078 13.6922 5.11526 13.7579 5.19461 13.7616C8.04272 13.8695 9.77613 14.2328 10.9888 15.4454C12.2014 16.6581 12.5635 18.3878 12.6726 21.2309C12.6751 21.3102 12.7408 21.3747 12.8214 21.3747H13.1549C13.2343 21.3747 13.3 21.3102 13.3037 21.2309C13.4128 18.3878 13.7749 16.6581 14.9875 15.4454C16.2014 14.2315 17.9335 13.8695 20.7817 13.7616C20.8611 13.7591 20.9255 13.6934 20.9255 13.6128V13.2805H20.9268Z"
+          fill="white"
+        />
+      </g>
+    </svg>
+  ),
 };
 
 const Icons = ({
@@ -253,16 +223,14 @@ const Icons = ({
   className,
 }: {
   icon:
-    | "apple"
-    | "android"
-    | "vk"
-    | "tg"
-    | "ok"
-    | "goTo"
-    | "quote"
-    | "location"
-    | "arrow_button_round"
-    | "eye";
+  | "apple"
+  | "android"
+  | "vk"
+  | "tg"
+  | "ok"
+  | "location"
+  | "eye"
+  | "dzen";
   className?: string;
 }) => {
   return (
