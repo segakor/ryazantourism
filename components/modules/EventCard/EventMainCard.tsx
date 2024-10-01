@@ -116,9 +116,9 @@ const Card = (props: TEventCardMain) => {
       <Tags tags={tagList} />
       <div className="grid gap-5">
         <Typography variant="h5">{props.name}</Typography>
-        <Typography variant="h6">
+        {/* <Typography variant="h6">
           {props.event_date.substring(11, 16)}
-        </Typography>
+        </Typography> */}
         <ButtonLink
           href={props.buy_ticket_url}
           variant="greenWhite"
