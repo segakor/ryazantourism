@@ -53,11 +53,11 @@ export const headerMenu = [
     item: "Маршруты",
     subItem: [
       {
-        label: "Организованные машруты",
+        label: "Организованные маршруты",
         path: "/marshruty/organizovannye-marshruty",
       },
       {
-        label: "Самостоятельные машруты",
+        label: "Самостоятельные маршруты",
         path: "/marshruty/samostoyatelnye-marshruty",
       },
     ],

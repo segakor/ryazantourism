@@ -49,7 +49,7 @@ export const MainNavigation = () => {
                   fill
                   className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg 
                     ${isModeEnabled ? "brightness-[0.25]" : "brightness-50"
-                    } group-hover/item:scale-[115%] transition-all`}
+                    } group-hover/item:scale-[115%] transition-all duration-1000 group-hover/item:duration-1000`}
                   placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
                   priority
                   quality={10}

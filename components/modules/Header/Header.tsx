@@ -145,10 +145,10 @@ export const Header = () => {
         <div className="max-w-[82.5rem] mx-auto md:px-auto px-[1.25rem]">
           <div className="flex justify-between py-[1.5625rem]">
             <div className="flex items-center gap-4">
-              <div className="md:w-auto md:h-auto w-[40px] h-[38px]">
+              <div>
                 <Link href="/">
                   <div
-                    className={`flex md:w-[69px] md:h-[66px] w-auto h-auto ${isModeEnabled && "[&>*]:fill-black"
+                    className={`flex md:w-[69px] md:h-[66px] w-[40px] h-[40px] ${isModeEnabled && "[&>*]:fill-black"
                       }`}
                   >
                     <svg

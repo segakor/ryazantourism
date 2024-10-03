@@ -23,7 +23,7 @@ const Card = ({ item }: { item: TArchCard }) => {
           alt="img"
           objectFit="cover"
           fill
-          className={`w-full h-full top-0 left-0 object-cover rounded-[30px] brightness-[60%] group-hover/item:scale-[115%] group-hover/item:transition-all transition-all`}
+          className={`w-full h-full top-0 left-0 object-cover rounded-[30px] brightness-[60%] duration-1000 group-hover/item:scale-[115%] group-hover/item:duration-1000 group-hover/item:transition-all transition-all`}
           placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
           priority
           unoptimized
