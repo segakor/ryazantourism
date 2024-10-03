@@ -649,7 +649,7 @@ export const scenarii = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.postimg.cc/Mpw09rt6/2-1-resized.jpg",
+            srcImg: "https://i.postimg.cc/fyH2nds4/image.png",
           },
           {
             element: "TEXT_BLOCK",
