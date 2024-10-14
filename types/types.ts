@@ -53,6 +53,7 @@ export type TNasledieCard = {
   desc: string;
   imgUrl: string;
   template: TLongReadBody[];
+  sideBarText: string;
 };
 
 export type TOtvet = {

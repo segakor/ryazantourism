@@ -1,6 +1,10 @@
 import Script from "next/script";
 
 export const YaMetricSript = () => {
+  const devMode = process.env.NODE_ENV === 'development'
+  if (devMode) {
+    return null
+  }
   return (
     <Script id="metrika-counter" strategy="afterInteractive">
       {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

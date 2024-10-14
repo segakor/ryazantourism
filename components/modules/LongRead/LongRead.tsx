@@ -33,9 +33,10 @@ type Props = {
   children?: ReactNode;
   noMargin?: boolean;
   noSidebar?: boolean;
+  sideBarText?: string;
 };
 
-export const LongRead = ({ body, children, noMargin, noSidebar }: Props) => {
+export const LongRead = ({ body, children, noMargin, noSidebar, sideBarText }: Props) => {
   const scrollIntoView = (elementId?: string) => {
     //@ts-ignore
     document
@@ -77,6 +78,12 @@ export const LongRead = ({ body, children, noMargin, noSidebar }: Props) => {
                 </div>
               ))}
             </>
+          </div>
+        </div>}
+        {sideBarText && <div className="md:block hidden max-w-[200px]">
+          <div className="longread_sidebar_body">
+            <Typography variant="h4">Контакты</Typography>
+            <div className="text1 text-[var(--color-grey)]">{sideBarText}</div>
           </div>
         </div>}
       </div>
