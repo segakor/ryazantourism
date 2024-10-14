@@ -37,7 +37,7 @@ const Page = async ({ params }: Props) => {
           title={data.title}
           desc=""
         />
-        <Body data={data.template} sideBarText={data.sideBarText} />
+        <Body data={data.template} sideBarText={data.sideBarText || ''} />
       </WrapperGreyPages>
     </Suspense>
   );
