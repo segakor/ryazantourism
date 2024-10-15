@@ -605,7 +605,7 @@ export const chtoPosmotret = [
         ],
       },
     ],
-    sideBarText: "Рыбное, Почтовая, 22,\n\n +7 930 888 99 53"
+    sideBarText: "Спасский р-н, с. Ижевское, Зеленая, 2"
   },
   {
     id: 16,
@@ -838,7 +838,7 @@ export const chtoPosmotret = [
         ],
       },
     ],
-    sideBarText: "Касимовский р-н, пос. Гусь-Железный",
+    sideBarText: "Старожиловский р-он, р.п. Старожилово, 4А,\n\n+7 (49151) 2 17 9",
   },
   {
     id: 22,
@@ -869,7 +869,7 @@ export const chtoPosmotret = [
         ],
       },
     ],
-    sideBarText: "пос. Старожилово,\n\n +7 (49151) 2 17 95",
+    sideBarText: "Спасский р-н, с. Кирицы, Фон Дервиза, 2, корп. 1",
   },
   {
     id: 23,
