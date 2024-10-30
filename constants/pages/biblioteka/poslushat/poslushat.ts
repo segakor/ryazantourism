@@ -4,7 +4,7 @@ export const poslushat = [
     desc: "Маршрут, который ты пройдешь, классика для первого знакомства с городом. Мы постарались раскрыть для тебя историю наиболее важных достопримечательностей и мест.",
     prolongation: 70,
     date: "2022",
-    imgUrl: "https://i.ibb.co/P5gFgfC/700c02b113a8727489cdc6855e619e9b.png",
+    imgUrl: "https://i.ibb.co/Lt1rG04/telegram-cloud-photo-size-2-5262764170028377907-y.jpg",
     linkIzi: "https://www.izi.travel/ru/4c8f-ryazan-klassika/ru#tour_details_first",
   },
   {
@@ -20,7 +20,7 @@ export const poslushat = [
     desc: "Мы уверены, что ты обязательно найдешь в Рязани что-то интересное для себя и испытаешь самые невероятные эмоции и впечатления от прогулки по городу. Этот маршрут идеально подходит для первого знакомства с городом.",
     prolongation: 60,
     date: "2022",
-    imgUrl: "https://i.ibb.co/BgDTNk1/1695a669-6085-4e60-941a-fcd808790cdd-800x600.jpg",
+    imgUrl: "https://i.ibb.co/2nzyD7c/telegram-cloud-photo-size-2-5262764170028377909-y.jpg",
     linkIzi: "https://www.izi.travel/ru/c1f5-ryazan-layt/ru ",
   },
   {
