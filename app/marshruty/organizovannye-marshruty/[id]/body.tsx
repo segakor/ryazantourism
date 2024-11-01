@@ -20,7 +20,7 @@ const Body = ({ data }: { data: TOrgEventCard }) => {
 
   return (
     <section className="grid gap-7 mt-[-7.5rem]">
-      <div className="grid_layout max-w-[1280px] m-[0_auto] p-[0_10px]">
+      <div className="grid_layout max-w-[1280px] w-full m-[0_auto] p-[0_10px]">
         <div className="bg-white md:p-[50px] p-[30px] rounded-[30px] grid z-[2] md:gap-7 gap-4 w-full relative">
           <div className="flex md:gap-16 gap-4 md:flex-row flex-col">
             <div>
@@ -61,6 +61,7 @@ const Body = ({ data }: { data: TOrgEventCard }) => {
         body={data.template as TLongReadBody[]}
         noMargin
         noSidebar
+        fullW
       ></LongRead>
       <Modal
         isOpen={isOpen}

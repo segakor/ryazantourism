@@ -31,11 +31,12 @@ const Page = async ({ params }: Props) => {
 
   return (
     <Suspense fallback={<Loading />}>
-     <WrapperGreyPages>
+      <WrapperGreyPages>
         <HeroPage
           imgUrl={data?.imgUrl || "/heroPages/ty-s-mestnym/cit.jpg"}
           title={data.title}
           desc=""
+          classNameImage="brightness-50"
         />
         <Body data={data} />
       </WrapperGreyPages>

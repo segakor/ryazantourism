@@ -8,6 +8,11 @@ export const url = {
   dzen: "https://dzen.ru/tiruzmrzn",
 };
 
+export const emails = {
+  art: "art@ryazantourism.ru",
+  cit: "info@ryazantourism.ru",
+};
+
 export const headerMenu = [
   {
     item: "Регион",

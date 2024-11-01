@@ -1,3 +1,5 @@
+import { emails } from "@/constants/contstants";
+
 export const template = [
   {
     element: "LONG_READ_BLOCK",
@@ -15,7 +17,7 @@ export const template = [
     subElements: [
       {
         element: "TEXT_BLOCK",
-        text: "Рязань, Почтовая, 54.\n\nГрафик работы: пн-вс 10.00—18.00\n\nТелефон: +7 (4912) 77 74 14, +7 (910) 577 03 03\n\nМожно написать нашим сотрудникам в Телеграм и WhatsApp. Мы на связи в рабочее время с 10.00 до 18.00.\n\nE-mail: rzn.visit@gmail.com ",
+        text: `Находится в самом центре Рязани на Почтовой, 54.\n\n Пн-вс 10.00—18.00\n\n+7 (4912) 77 74 14, +7 (910) 577 03 03\n\nМожно написать нашим сотрудникам в <a href='https://play.google.com/store/apps/details?id=app.turizm.ryzan&pli=1' target='_blank'>Телеграм</a> и <a href='https://play.google.com/store/apps/details?id=app.turizm.ryzan&pli=1' target='_blank'>WhatsApp</a>. Мы на связи в рабочее время с 10.00 до 18.00.\n\n<a href='mailto:${emails.cit}'>${emails.cit}</a>`,
       },
       {
         element: "LONG_READ_ITEM_BLOCK",

@@ -11,7 +11,7 @@ export const Typography = ({ variant, children, className, id }: Props) => {
     return (
       <h1
         id={id}
-        className={`md:text-[60px] text-[36px] leading-tight ${className ? className : ""}`}
+        className={`md:text-[60px] text-[32px] leading-tight ${className ? className : ""}`}
       >
         {children}
       </h1>

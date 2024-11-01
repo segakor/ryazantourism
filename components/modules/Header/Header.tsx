@@ -1,12 +1,15 @@
 "use client";
-import { url } from "@/constants/contstants";
+import { emails, url } from "@/constants/contstants";
 import "./style.css";
 import { HeaderNav, HeaderNavMobile } from "./HeaderNav";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { LangSwitch } from "@/components/elements/LangSwitch/LangSwitch";
 import Link from "next/link";
-import { MODE_VISUALLY_KEY_NAME, ModeVisually } from "@/components/elements/ModeVisually/ModeVisually";
+import {
+  MODE_VISUALLY_KEY_NAME,
+  ModeVisually,
+} from "@/components/elements/ModeVisually/ModeVisually";
 import { parseCookies } from "nookies";
 
 //TODO: icon в одно место
@@ -265,11 +268,11 @@ export const Header = () => {
               +7 (4912) 77 74 14
             </Link>
             <Link
-              href="mailto: rzn.visit@gmail.com"
+              href={`mailto: ${emails.cit}`}
               className="font-medium 
                 hover:text-[var(--color-green)] transition-all text-xl"
             >
-              rzn.visit@gmail.com
+              {emails.cit}
             </Link>
           </div>
           <div className="menu_body">

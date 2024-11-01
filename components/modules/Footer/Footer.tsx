@@ -1,5 +1,5 @@
 import { Typography } from "@/components/elements/Typography/Typography";
-import { headerMenu, url } from "@/constants/contstants";
+import { emails, headerMenu, url } from "@/constants/contstants";
 import Link from "next/link";
 
 //TODO: icon в одно место
@@ -137,11 +137,11 @@ export const Footer = () => {
               +7 (4912) 77 74 14
             </Link>
             <Link
-              href="mailto: rzn.visit@gmail.com"
+              href={`mailto: ${emails.cit}`}
               className="font-medium 
                 hover:text-[var(--color-green)] transition-all text-xl"
             >
-              rzn.visit@gmail.com
+              {emails.cit}
             </Link>
             <div>
               <div className="opacity-60 text-sm mb-2 mt-10">
