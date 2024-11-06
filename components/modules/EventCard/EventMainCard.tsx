@@ -21,7 +21,7 @@ export const EventMainCard = () => {
   const [details, setDetails] = useState<TEventCardMain[]>([]);
 
   const onChangeDate = useCallback((e: Date) => {
-    getDetails(e.toLocaleDateString());
+    getDetails(e.toLocaleDateString('ru'));
   }, []);
 
   const getDetails = async (date: string) => {

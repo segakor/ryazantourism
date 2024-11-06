@@ -11,10 +11,9 @@ export const API_URL = {
 };
 
 const now = new Date();
-const currentDate = now.toLocaleString().slice(0, 10);
+const currentDate = now.toLocaleDateString('ru');
 const nextYearDate = new Date(now.setFullYear(now.getFullYear() + 1))
-  .toLocaleString()
-  .slice(0, 10);
+  .toLocaleDateString('ru')
 
 export const API_URL_CALENDAR = `https://api.tr.plenexy.digital/api/event_dates?event_date_from=${currentDate}&event_date_to=${nextYearDate}`;
 
