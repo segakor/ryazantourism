@@ -199,7 +199,7 @@ export const Header = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-[0.625rem]">
-                  <p className="header_title">Мы в соц. сетях</p>
+                  <p className="header_title">Мы в соцсетях</p>
                   <div className="flex items-center gap-[0.3125rem]">
                     <Link
                       href={url.vk}

@@ -119,7 +119,7 @@ export const HeaderNavMobile = () => {
           </div>
         </div>
         <div className="grid gap-1 justify-center">
-          <div className="opacity-60 text-sm mb-2 mt-2">Мы в соц. сетях</div>
+          <div className="opacity-60 text-sm mb-2 mt-2">Мы в соцсетях</div>
           <div className="flex gap-2 justify-center">
             <Link href={url.vk} target="_blank">
               <Icons icon="vk" />
