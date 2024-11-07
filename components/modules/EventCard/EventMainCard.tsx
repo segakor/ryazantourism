@@ -108,7 +108,7 @@ const Card = (props: TEventCardMain) => {
 
   return (
     <div
-      className="text-white md:p-10 p-5 flex h-full flex-col justify-between bg-cover md:max-h-auto max-h-450px"
+      className="text-white md:p-10 p-6 flex h-full flex-col justify-between bg-cover md:max-h-auto max-h-450px"
       style={{
         backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url('${props.image_path}')`,
       }}

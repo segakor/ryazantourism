@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Tag, Tags } from "@/components/elements/Tags/Tags";
+import { Tags } from "@/components/elements/Tags/Tags";
 import { TagList, TPlaceCard } from "@/types/types";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
@@ -41,7 +41,7 @@ const Card = ({ item }: { item: TPlaceCard }) => {
   const tags = item.tags.map((item) => item.id) as TagList[];
 
   return (
-    <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] shadow-lg">
+    <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] shadow-lg overflow-hidden">
       <div className="relative">
         <div className="absolute p-7 z-[2]">
           <Tags tags={tags} />

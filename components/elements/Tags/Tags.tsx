@@ -54,16 +54,16 @@ const tagsText = {
 
 export const Tag = ({ tag }: { tag: TagList; }) => {
   return (
-    <div className="relative cursor-pointer group/item2">
+    <div className="cursor-pointer group/item2">
       <Image
         priority
         src={tagsMap[tag]}
         alt={"tag"}
       />
-      <div className="group-hover/item2:opacity-100 opacity-0 absolute bg-white shadow-2xl mt-3 ml-[-100%]  transition-all w-[270px] p-6 rounded-[0.875rem] pointer-events-none cursor-default group-hover/item2:pointer-events-auto">
+      <div className="group-hover/item2:opacity-100 opacity-0 absolute left-[120%] bg-white shadow-2xl mt-3 transition-all w-[270px] p-6 rounded-[0.875rem] pointer-events-none cursor-default group-hover/item2:pointer-events-auto">
         <div className="flex flex-col justify-center gap-4 items-center">
           <div className="m-w-[66px]">
-            <Image priority src={tagsMap[tag]} alt={"tag"} width={66} unoptimized/>
+            <Image priority src={tagsMap[tag]} alt={"tag"} width={66} unoptimized />
           </div>
           <div className="text-black text-center opacity-60 font-medium">
             {tagsText[tag]}
@@ -80,7 +80,7 @@ export const Tags = ({
   tags: TagList[];
 }) => {
   return (
-    <div className="flex gap-2 flex-wrap">
+    <div className="flex gap-2 flex-wrap relative">
       {tags?.map((tag, index) => (
         <Tag tag={tag} key={index} />
       ))}
