@@ -102,7 +102,7 @@ export const headerMenu = [
       { label: "Промтуризм", path: "/promturizm" },
       {
         label: "Мампус",
-        path: "http://apps-rzn.site/mampus",
+        path: "https://mampus.ryazantourism.ru/",
         target: "_blank",
       },
     ],
