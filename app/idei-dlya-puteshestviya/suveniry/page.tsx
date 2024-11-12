@@ -22,7 +22,7 @@ const Page = async () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <Body data={cards.data} />
+        <Body data={cards.data?.filter((item) => item.active)} />
       </Suspense>
     </>
   );

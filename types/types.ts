@@ -33,6 +33,7 @@ export type TPlaceCard = {
   tags: { id: number; name: string }[];
   category: { name: string };
   template: TLongReadBody[];
+  active: boolean;
 };
 
 export type TArchCard = {
@@ -173,7 +174,7 @@ export type TNews = {
   bodyText: string;
   storage_image: {
     imagePath: string;
-  }
+  };
   date: string;
 };
 
@@ -192,4 +193,5 @@ export type TEventCardMain = {
   tags: { id: number }[];
   description: string;
   event_date: string;
+  active: boolean;
 };

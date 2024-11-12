@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 async function getPlaceCard() {
-  const response = await fetch(API_URL.VECHER_V_GORODE,{
+  const response = await fetch(API_URL.VECHER_V_GORODE, {
     next: { revalidate: 3600 },
   });
   return response.json();
@@ -22,7 +22,7 @@ const Page = async () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <Body data={cards.data} />
+        <Body data={cards.data?.filter((item) => item.active)} />
       </Suspense>
     </>
   );

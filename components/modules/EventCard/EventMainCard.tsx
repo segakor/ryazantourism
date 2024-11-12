@@ -29,8 +29,8 @@ export const EventMainCard = () => {
       const res = await fetch(
         API_URL_CALENDAR_DETAIL.replace("$date_raplace", date)
       );
-      const data = await res.json();
-      setDetails(data.data);
+      const data: { data: TEventCardMain[] } = await res.json();
+      setDetails(data.data?.filter(item => item.active));
     } catch (error) { }
   };
 
