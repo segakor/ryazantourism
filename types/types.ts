@@ -21,7 +21,7 @@ export type TLongReadBody = {
   title?: string;
 };
 
-export type TagList = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+export type TagList = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13;
 
 export type TPlaceCard = {
   name: string; // название карточки
@@ -87,6 +87,8 @@ export type TSinglyRoutes = {
   /*   duration: { days: number; hours: number; minutes: number }; */
   imgUrl: string;
   template: TLongReadBody[];
+  tags: number[];
+  path?: string;
 };
 
 export type TSinglyRoutesDetails = {

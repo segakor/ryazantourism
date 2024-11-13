@@ -1,27 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
-import { TSinglyRoutes } from "@/types/types";
+import { TagList, TSinglyRoutes } from "@/types/types";
 import { Typography } from "@/components/elements/Typography/Typography";
-import { normalizeCount } from "@/utils/normalizeCount";
 import { ButtonLink } from "@/components/elements/ButtonNew";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
+import { Tags } from "@/components/elements/Tags/Tags";
 
 const Item = ({ item }: { item: TSinglyRoutes }) => {
 
   return (
-    <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] overflow-hidden">
-      <div className="bg-[var(--color-grey)] h-[200px] md:w-[408px] w-full">
-        <div className={`w-full relative pt-[200px]`}>
-          <Image
-            src={item.imgUrl}
-            alt="img"
-            objectFit="cover"
-            fill
-            className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg brightness-[90%]`}
-            placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
-            priority
-            unoptimized
-          />
+    <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] shadow-lg overflow-hidden">
+      <div className="relative">
+        <div className="absolute p-7 z-[2]">
+          <Tags tags={item.tags as TagList[]} />
+        </div>
+        <div className="bg-[var(--color-grey)] h-[200px] md:w-[408px] w-full">
+          <div className={`w-full relative pt-[200px]`}>
+            <Image
+              src={item.imgUrl}
+              alt="img"
+              objectFit="cover"
+              fill
+              className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg brightness-[90%]`}
+              placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
+              priority
+              unoptimized
+            />
+          </div>
         </div>
       </div>
       <div className="p-[30px] flex flex-col justify-between gap-7 h-full">
@@ -34,8 +39,9 @@ const Item = ({ item }: { item: TSinglyRoutes }) => {
           </div>
         </div>
         <ButtonLink
-          href={`/marshruty/samostoyatelnye-marshruty/${item.id}`}
+          href={!item.path ? `/marshruty/samostoyatelnye-marshruty/${item.id}` : item.path}
           variant="greenBlack"
+          target={item.path && '_blank'}
         >
           К сценарию
         </ButtonLink>

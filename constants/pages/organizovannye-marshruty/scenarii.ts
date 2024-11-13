@@ -7,6 +7,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [11],
     template: [
       {
         element: "LEAD_BLOCK",
@@ -88,6 +89,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [11],
     template: [
       {
         element: "LEAD_BLOCK",
@@ -161,6 +163,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [11],
     template: [
       {
         element: "LEAD_BLOCK",
@@ -233,6 +236,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [11],
     template: [
       {
         element: "LEAD_BLOCK",
@@ -301,6 +305,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [11, 12],
     template: [
       {
         element: "LEAD_BLOCK",
@@ -436,6 +441,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [],
     template: [
       {
         element: "LEAD_BLOCK",
@@ -627,6 +633,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [11],
     template: [
       {
         element: "LONG_READ_BLOCK",
@@ -712,6 +719,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [12],
     template: [
       {
         element: "LEAD_BLOCK",
@@ -793,6 +801,7 @@ export const scenarii = [
     category: {
       name: "Многодневные",
     },
+    tags: [12],
     template: [
       {
         element: "LONG_READ_BLOCK",
@@ -930,6 +939,7 @@ export const scenarii = [
     category: {
       name: "Многодневные",
     },
+    tags: [12],
     template: [
       {
         element: "LONG_READ_BLOCK",
@@ -1051,6 +1061,7 @@ export const scenarii = [
     category: {
       name: "Многодневные",
     },
+    tags: [13],
     template: [
       {
         element: "LONG_READ_BLOCK",
@@ -1202,6 +1213,7 @@ export const scenarii = [
     category: {
       name: "Многодневные",
     },
+    tags: [11],
     template: [
       {
         element: "LONG_READ_BLOCK",
@@ -1300,6 +1312,7 @@ export const scenarii = [
     category: {
       name: "Многодневные",
     },
+    tags: [11],
     template: [
       {
         element: "LONG_READ_BLOCK",
@@ -1434,6 +1447,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [12, 13],
     template: [
       {
         element: "LONG_READ_BLOCK",
@@ -1692,6 +1706,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [12, 13],
     template: [
       {
         element: "LONG_READ_BLOCK",
@@ -1896,6 +1911,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [12, 13],
     template: [
       {
         element: "LONG_READ_BLOCK",
@@ -2051,6 +2067,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [12, 13],
     template: [
       {
         element: "LONG_READ_BLOCK",
@@ -2233,6 +2250,7 @@ export const scenarii = [
     category: {
       name: "Однодневные",
     },
+    tags: [12],
     template: [
       {
         element: "LONG_READ_BLOCK",
@@ -2385,4 +2403,40 @@ export const scenarii = [
       },
     ],
   },
+  /* {
+    id: 19,
+    title: "https://projects.rzn.info/offroad/",
+    desc: "https://projects.rzn.info/offroad/",
+    imgUrl: "https://i.postimg.cc/tRr63Dfh/4D8A4394.jpg",
+    category: {
+      name: "Однодневные",
+    },
+    tags: [13],
+    template: [],
+    path: 'https://projects.rzn.info/offroad/'
+  },
+  {
+    id: 20,
+    title: "https://pages.rzn.info/pra/",
+    desc: "https://pages.rzn.info/pra/",
+    imgUrl: "https://i.postimg.cc/tRr63Dfh/4D8A4394.jpg",
+    category: {
+      name: "Однодневные",
+    },
+    tags: [13],
+    template: [],
+    path: 'https://pages.rzn.info/pra/'
+  },
+  {
+    id: 21,
+    title: "https://projects.rzn.info/horces/",
+    desc: "https://projects.rzn.info/horces/",
+    imgUrl: "https://i.postimg.cc/tRr63Dfh/4D8A4394.jpg",
+    category: {
+      name: "Однодневные",
+    },
+    tags: [13],
+    template: [],
+    path: 'hhttps://projects.rzn.info/horces/'
+  }, */
 ];

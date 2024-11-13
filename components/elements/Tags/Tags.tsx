@@ -8,6 +8,9 @@ import program from "../../../public/tags/program.svg";
 import pushkin from "../../../public/tags/pushkin.svg";
 import rekomenduem from "../../../public/tags/rekomenduem.svg";
 import zavtrak from "../../../public/tags/zavtrak.svg";
+import avto from "../../../public/tags/avto.svg";
+import colab from "../../../public/tags/colab.svg";
+import peshkom from "../../../public/tags/peshkom.svg";
 
 import Image from "next/image";
 import { TagList } from "@/types/types";
@@ -23,6 +26,9 @@ const tagsMap = {
   8: priroda,
   9: rekomenduem,
   10: program,
+  11: peshkom,
+  12: avto,
+  13: colab,
 };
 
 const tagsText = {
@@ -36,6 +42,9 @@ const tagsText = {
   8: "Зеленые локации для отдыха от городской суеты",
   9: "Проверили сами и советуем всем",
   10: "«Выгодный путь» — скидки и предложения наших партнеров для гостей региона",
+  11: "Весь маршрут можно пройти пешком",
+  12: "Отправляйтесь в путешествие на машине",
+  13: "Маршрут от наших партнеров",
 };
 /* const tagsMap = {
   dogFrendli: dogFrendli,
@@ -52,18 +61,20 @@ const tagsText = {
 
 //TODO: поправить ховер на центр
 
-export const Tag = ({ tag }: { tag: TagList; }) => {
+export const Tag = ({ tag }: { tag: TagList }) => {
   return (
     <div className="cursor-pointer group/item2">
-      <Image
-        priority
-        src={tagsMap[tag]}
-        alt={"tag"}
-      />
-      <div className="group-hover/item2:opacity-100 opacity-0 absolute left-[120%] bg-white shadow-2xl mt-3 transition-all w-[270px] p-6 rounded-[0.875rem] pointer-events-none cursor-default group-hover/item2:pointer-events-auto">
+      <Image priority src={tagsMap[tag]} alt={"tag"} />
+      <div className="border-solid group-hover/item2:opacity-100 opacity-0 absolute left-[16%] bg-white shadow-2xl mt-3 transition-all w-[270px] p-6 rounded-[0.875rem] pointer-events-none cursor-default group-hover/item2:pointer-events-auto">
         <div className="flex flex-col justify-center gap-4 items-center">
           <div className="m-w-[66px]">
-            <Image priority src={tagsMap[tag]} alt={"tag"} width={66} unoptimized />
+            <Image
+              priority
+              src={tagsMap[tag]}
+              alt={"tag"}
+              width={66}
+              unoptimized
+            />
           </div>
           <div className="text-black text-center opacity-60 font-medium">
             {tagsText[tag]}
@@ -74,11 +85,7 @@ export const Tag = ({ tag }: { tag: TagList; }) => {
   );
 };
 
-export const Tags = ({
-  tags,
-}: {
-  tags: TagList[];
-}) => {
+export const Tags = ({ tags }: { tags: TagList[] }) => {
   return (
     <div className="flex gap-2 flex-wrap relative">
       {tags?.map((tag, index) => (
