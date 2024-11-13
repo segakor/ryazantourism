@@ -7,6 +7,7 @@ import { TSinglyRoutes } from "@/types/types";
 import { PodcastCard } from "@/components/modules/PodcastCard/PodcastCard";
 import { TourCard } from "@/components/modules/TourCard/TourCard";
 import { Typography } from "@/components/elements/Typography/Typography";
+import { WrapperTabs } from "@/components/wrapper";
 
 const Body = ({ data }: { data: TSinglyRoutes[] }) => {
   const [tab, setTab] = useState("all");
@@ -23,23 +24,21 @@ const Body = ({ data }: { data: TSinglyRoutes[] }) => {
       <section className="grid_layout">
         <Typography
           variant="h4"
-          className="font-medium md:text-center opacity-[0.5] text-[var(--color-grey)] p-3"
+          className="font-medium text-center opacity-[0.5] text-[var(--color-grey)]"
         >
           Мы собрали десятки сценариев путешествий по Рязанской области для
           разных людей и разных ситуаций. И продумали их до мелочей
         </Typography>
-        <div className="singly_routes_card">
-          <Typography variant="h3" className="mb-5 font-medium">
-            Найдите свой сценарий
-          </Typography>
-          <div className="md:mb-8 mb-5">
-            <Tabs tabs={tabsSinglyRoutes} onChange={onChangeTab} />
-          </div>
-          <SinglyRoutest data={filteredData} />
+        <Typography variant="h3" className="font-medium">
+          Найдите свой сценарий
+        </Typography>
+        <div className='flex flex-nowrap overflow-x-auto'>
+          <Tabs tabs={tabsSinglyRoutes} onChange={onChangeTab} />
         </div>
+        <SinglyRoutest data={filteredData} />
         <Typography
           variant="h4"
-          className="font-medium md:text-center opacity-[0.5] text-[var(--color-grey)] p-3"
+          className="font-medium text-center opacity-[0.5] text-[var(--color-grey)]"
         >
           Знакомство с городом с лучшим бесплатным приложением для свободного
           путешественника! Отправляйтесь гулять и слушайте истории о том, что
