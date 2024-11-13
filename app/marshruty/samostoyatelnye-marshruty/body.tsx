@@ -23,7 +23,7 @@ const Body = ({ data }: { data: TSinglyRoutes[] }) => {
       <section className="grid_layout">
         <Typography
           variant="h4"
-          className="font-medium text-center opacity-[0.5] text-[var(--color-grey)] p-3"
+          className="font-medium md:text-center opacity-[0.5] text-[var(--color-grey)] p-3"
         >
           Мы собрали десятки сценариев путешествий по Рязанской области для
           разных людей и разных ситуаций. И продумали их до мелочей
@@ -39,7 +39,7 @@ const Body = ({ data }: { data: TSinglyRoutes[] }) => {
         </div>
         <Typography
           variant="h4"
-          className="font-medium text-center opacity-[0.5] text-[var(--color-grey)] p-3"
+          className="font-medium md:text-center opacity-[0.5] text-[var(--color-grey)] p-3"
         >
           Знакомство с городом с лучшим бесплатным приложением для свободного
           путешественника! Отправляйтесь гулять и слушайте истории о том, что
