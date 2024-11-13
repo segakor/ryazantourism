@@ -30,7 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   /* scrollbar-gutter: stable; */
-  top: 0px !important; 
+  top: 0px !important;
 }
 
 a {
@@ -97,37 +97,34 @@ svg circle {
   --color-partner-card-grey: rgba(247, 247, 247, 1);
 }
 
-.styled_link {
-  a {
-    transition: all ease 0.4s;
-    text-decoration: underline;
-    color: var(--color-blue);
-  }
-
-  a:hover {
-    transition: all ease 0.4s;
-    color: var(--color-green);
-  }
+.styled_link a {
+  transition: all ease 0.4s;
+  text-decoration: underline;
+  color: var(--color-blue);
+}
+.styled_link a:hover {
+  transition: all ease 0.4s;
+  color: var(--color-green);
 }
 
-.styled_list {
-  li {
-    position: relative;
-  }
-  li:before {
-    position: absolute;
-    left: 0;
-    top: 5px;
-    content: "";
-    background-image: url("/listBlock/list.svg");
-    background-size: cover;
-    height: 0.875rem;
-    width: 0.875rem;
-  }
-  ul > li {
-    margin-bottom: 1.25rem;
-    padding-left: 1.875rem;
-  }
+.styled_list li {
+  position: relative;
+}
+
+.styled_list li:before {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  content: "";
+  background-image: url("/listBlock/list.svg");
+  background-size: cover;
+  height: 0.875rem;
+  width: 0.875rem;
+}
+
+.styled_list ul > li {
+  margin-bottom: 1.25rem;
+  padding-left: 1.875rem;
 }
 
 .lock_body {
