@@ -1,11 +1,10 @@
-import { LongRead } from "@/components/modules/LongRead";
-import { TLongReadBody } from "@/types/types";
+import { LongReadRender } from "@/components/modules/LongReadRender/LongReadRender";
 
 const Body = ({ data, sideBarText }: { data: any, sideBarText: string }) => {
 
   return (
     <section className="grid_layout">
-      <LongRead body={data as TLongReadBody[]} noSidebar sideBarText={sideBarText} />
+      <LongReadRender body={data} noSidebar sideBarText={sideBarText} />
     </section>
   );
 };

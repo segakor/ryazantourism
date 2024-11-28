@@ -2,11 +2,11 @@
 import { Tabs } from "@/components/elements/Tabs/Tabs";
 import { tabsChtoPosmotret } from "@/constants/contstants";
 import { useState } from "react";
-import { chtoPosmotret } from "@/constants/pages/idei-dlya-puteshestviya/chto-posmotret";
 import { ArchCard } from "@/components/modules/ArchCard/ArchCard";
 import { WrapperTabs } from "@/components/wrapper";
+import { TArchCard } from "@/types/types";
 
-const Body = () => {
+const Body = ({ data }: { data: TArchCard[] }) => {
   const [tab, setTab] = useState("all");
 
   const onChangeTab = (e: string) => {
@@ -14,7 +14,7 @@ const Body = () => {
   };
 
   const filteredData =
-    tab !== "all" ? chtoPosmotret.filter((item) => item.category.name === tab) : chtoPosmotret;
+    tab !== "all" ? data.filter((item) => item.category === tab) : data;
 
   return (
     <section className="grid_layout">

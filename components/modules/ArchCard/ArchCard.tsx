@@ -1,16 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import Icons from "@/components/elements/Logo/Icons";
 import { Tags } from "@/components/elements/Tags/Tags";
-import { TagList, TArchCard } from "@/types/types";
+import { TArchCard } from "@/types/types";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
 import { Typography } from "@/components/elements/Typography/Typography";
 import Link from "next/link";
+import { getImageUrl } from "@/utils/getImageUrl";
 
 //TODO: Image сделать один на всех
 const Card = ({ item }: { item: TArchCard }) => {
-  const tags = item.tags?.map((item) => item.id) as TagList[];
-
   return (
     <Link
       href={`/idei-dlya-puteshestviya/chto-posmotret/${item.id}`}
@@ -19,7 +18,7 @@ const Card = ({ item }: { item: TArchCard }) => {
     >
       <div className={`w-full relative pt-[100%]`}>
         <Image
-          src={item.imgUrl}
+          src={getImageUrl(item.storage_image?.imagePath)}
           alt="img"
           objectFit="cover"
           fill
@@ -31,7 +30,7 @@ const Card = ({ item }: { item: TArchCard }) => {
       </div>
       <div className="absolute w-full p-[40px] h-full flex justify-between flex-col">
         <div className="flex justify-between">
-          <Tags tags={tags} />
+          <Tags tags={item.tags} />
           <div className="bg-white flex justify-end rounded-full items-center group-hover/item:bg-[var(--color-green)] transition-all">
             <svg
               width="40"
@@ -55,7 +54,7 @@ const Card = ({ item }: { item: TArchCard }) => {
           <div className="text4">{item.desc}</div>
           <div className="note-text flex gap-[10px]">
             <Icons icon="location" />
-            {item.address}
+            {item.subTitle}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 import "./style.css";
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import { Typography } from "@/components/elements/Typography/Typography";
 
 type Props = {
@@ -8,6 +8,7 @@ type Props = {
   children?: ReactNode;
   noMargin?: boolean;
   noSidebar?: boolean;
+  sideBarText?: string;
 };
 
 export const LongReadRender = ({
@@ -15,6 +16,7 @@ export const LongReadRender = ({
   children,
   noMargin,
   noSidebar,
+  sideBarText,
 }: Props) => {
   const scrollIntoView = (elementId?: string) => {
     //@ts-ignore
@@ -23,24 +25,13 @@ export const LongReadRender = ({
       .scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
-  /* const sideBarItem = body
-    ?.filter((item) => item.element === ELEMENT_TYPE.LONG_READ_BLOCK)
-    ?.map((item) => item && item?.title).filter(function (item) {
-      return typeof item === 'string';
-    }) */
-
   const bodyWithStyles = body
-    .replaceAll(
-      "<h1>",
-      "<h1 class='md:text-[40px] text-[30px] leading-tight'>"
-    )
+    .replaceAll("<h1>", "<h1 class='md:text-[40px] text-[30px] leading-tight>")
     .replaceAll("<p>", "<p class='text3 styled_list styled_link'>")
     .replaceAll(
-      "<blockquote>",
-      "<blockquote class='p-[30px] bg-[#5363f7] rounded-[30px] text-white flex gap-4 relative'>"
+      "<img",
+      "<img class='rounded-[30px] max-h-[456px] object-cover w-full'"
     );
-
-  console.log(bodyWithStyles);
 
   const bodyItem = body ? (
     <div
@@ -52,6 +43,8 @@ export const LongReadRender = ({
     <div></div>
   );
 
+  const sideBarItem = ["1", "2"];//TODO: вытащить h1
+
   return (
     <section className="grid_layout">
       <div className="logread_wrapper">
@@ -59,11 +52,37 @@ export const LongReadRender = ({
         {!noSidebar && (
           <div className="md:block hidden">
             <div className="longread_sidebar_body">
-              <Typography variant="h4">Разделы</Typography>
+              {!!sideBarItem.length && (
+                <Typography variant="h4">Разделы</Typography>
+              )}
+              <>
+                {sideBarItem?.map((item, index) => (
+                  <div
+                    className="longread_sidebar_item text1"
+                    key={index}
+                    onClick={() => scrollIntoView(item)}
+                  >
+                    {item}
+                  </div>
+                ))}
+              </>
+            </div>
+          </div>
+        )}
+        {sideBarText && (
+          <div className="md:block hidden max-w-[200px]">
+            <div className="longread_sidebar_body">
+              <Typography variant="h4">Контакты</Typography>
+              <div
+                className="text1 text-[var(--color-grey)]"
+                dangerouslySetInnerHTML={{ __html: sideBarText }}
+              />
             </div>
           </div>
         )}
       </div>
+      <div className="invisible before:content-[url('/factBlock/fact.svg')]" />
+      <div className="invisible before:content-[url('/quoteBlock/quote.svg')]" />
     </section>
   );
 };

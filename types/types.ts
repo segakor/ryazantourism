@@ -38,12 +38,14 @@ export type TPlaceCard = {
 
 export type TArchCard = {
   id: number;
-  title: string; // название карточки
-  address: string; //address
-  desc: string;
-  imgUrl: string;
-  tags: { id: number; name: number }[];
-  category: { name: string };
+  title: string;
+  subTitle: string;
+  address: string;
+  storage_image: TStorageImage;
+  category: string;
+  tags: TagList[];
+  template: string;
+  contacts: string;
 };
 
 export type ResponsePlaceCard = { data: TPlaceCard[] };
@@ -169,14 +171,14 @@ export type TOrgEventCard = {
   days: string;
   template: TLongReadBody[];
 };
-
+export type TStorageImage = {
+  imagePath: string;
+}
 export type TNews = {
   id: number;
   title: string;
   bodyText: string;
-  storage_image: {
-    imagePath: string;
-  };
+  storage_image: TStorageImage;
   date: string;
 };
 

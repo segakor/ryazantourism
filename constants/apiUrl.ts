@@ -22,3 +22,4 @@ https://api.tr.plenexy.digital/api/events?page=1&limit=10&with=category,tags&eve
 
 export const API_URL_NOVOSTI_REGION = '/api-v2/newsRegion'
 export const API_URL_NOVOSTI_ART = '/api-v2/newsArt'
+export const API_URL_CHTO_POSMOTRET = '/api-v2/chtoposmotret'
