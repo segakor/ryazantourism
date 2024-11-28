@@ -51,10 +51,10 @@ const Card = ({ item }: { item: TArchCard }) => {
           <Typography variant="h5" className="font-semibold">
             {item.title}
           </Typography>
-          <div className="text4">{item.desc}</div>
+          <div className="text4">{item.subTitle}</div>
           <div className="note-text flex gap-[10px]">
             <Icons icon="location" />
-            {item.subTitle}
+            {item.address}
           </div>
         </div>
       </div>
