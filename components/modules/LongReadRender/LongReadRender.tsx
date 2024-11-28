@@ -28,6 +28,7 @@ export const LongReadRender = ({
   const bodyWithStyles = body
     .replaceAll("<h1>", "<h1 class='md:text-[40px] text-[30px] leading-tight>")
     .replaceAll("<p>", "<p class='text3 styled_list styled_link'>")
+    .replaceAll("quoteBlock", "quoteBlock")
     .replaceAll(
       "<img",
       "<img class='rounded-[30px] max-h-[456px] object-cover w-full'"
@@ -81,8 +82,8 @@ export const LongReadRender = ({
           </div>
         )}
       </div>
-      <div className="invisible before:content-[url('/factBlock/fact.svg')]" />
-      <div className="invisible before:content-[url('/quoteBlock/quote.svg')]" />
+      <div className=" absolute invisible before:content-[url('/factBlock/fact.svg')]" />
+      <div className="absolute invisible before:content-[url('/quoteBlock/quote.svg')]" />
     </section>
   );
 };

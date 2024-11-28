@@ -5,7 +5,7 @@
 
 .longread_body {
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   flex-direction: column;
   gap: 40px;
   position: relative;
