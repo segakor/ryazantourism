@@ -4,7 +4,8 @@
 }
 
 .longread_body {
-  display: grid;
+  display: flex;
+  align-items: flex-start;
   gap: 40px;
   position: relative;
   z-index: 2;

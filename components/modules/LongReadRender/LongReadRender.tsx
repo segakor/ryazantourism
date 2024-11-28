@@ -1,6 +1,6 @@
 "use client";
 import "./style.css";
-import { ReactNode, useRef } from "react";
+import { ReactNode } from "react";
 import { Typography } from "@/components/elements/Typography/Typography";
 
 type Props = {
