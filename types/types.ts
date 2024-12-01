@@ -60,10 +60,10 @@ export type TNasledieCard = {
 };
 
 export type TOtvet = {
-  question: string;
-  answer: { title: string; desc: string }[];
-  keyword: string[];
-  category: { name: string };
+  title: string;
+  answers: { title: string; template: string }[];
+  keywords: string;
+  category: string;
 };
 
 export type TDocument = {

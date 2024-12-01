@@ -16,22 +16,22 @@ const Body = ({ data }: { data: TOtvet[] }) => {
   const tabs = [{ label: "Все", id: "all" }];
 
   data.forEach((item) => {
-    if (tabs.find((tab) => tab.id === item.category.name)) {
+    if (tabs.find((tab) => tab.id === item.category)) {
       return;
     }
     tabs.push({
-      id: item.category.name,
-      label: item.category.name,
+      id: item.category,
+      label: item.category,
     });
   });
 
   const filteredData = searchValue
     ? data.filter((item) =>
-        item.keyword.join(' ').includes(searchValue.toLocaleLowerCase())
-      )
+      item.keywords.includes(searchValue.toLocaleLowerCase())
+    )
     : tab !== "all"
-    ? data.filter((item) => item.category.name === tab)
-    : data;
+      ? data.filter((item) => item.category === tab)
+      : data;
 
   const onSearch = (e: React.ChangeEvent<HTMLInputElement>) =>
     setSearchValue(e.target.value);
@@ -40,7 +40,7 @@ const Body = ({ data }: { data: TOtvet[] }) => {
     <section className="grid_layout">
       <Search onChange={onSearch} />
       <Tabs tabs={tabs} onChange={onChangeTab} isOtvety />
-      <Otvety data={filteredData} />
+      <Otvety data={filteredData} tabs={tabs} />
     </section>
   );
 };
