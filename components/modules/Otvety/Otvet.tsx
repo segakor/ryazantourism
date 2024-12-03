@@ -1,29 +1,26 @@
 "use client";
 import ButtonSpoiler from "@/components/elements/Button/SpoilerButton";
 import "./style.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { TOtvet } from "@/types/types";
 
-export const Otvety = ({ data, tabs }: { data: TOtvet[], tabs: any }) => {
+export const Otvety = ({ data }: { data: TOtvet[] }) => {
   return (
     <div className="otvety_group">
-      {data.map((item, index) => (
-        <Otvet key={index} item={item} tabs={tabs} />
+      {data.map((item) => (
+        <Otvet key={item.id} item={item} />
       ))}
     </div>
   );
 };
 
-export const Otvet = ({ item, tabs }: { item: TOtvet, tabs: any }) => {
+export const Otvet = ({ item }: { item: TOtvet }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
     setIsOpen((prev) => !prev);
   };
 
-  useEffect(() => {
-    setIsOpen(false)
-  }, [tabs])
 
   return (
     <div className="otvet_wrapper">

@@ -60,6 +60,7 @@ export type TNasledieCard = {
 };
 
 export type TOtvet = {
+  id: number;
   title: string;
   answers: { title: string; template: string }[];
   keywords: string;

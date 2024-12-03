@@ -40,7 +40,7 @@ const Body = ({ data }: { data: TOtvet[] }) => {
     <section className="grid_layout">
       <Search onChange={onSearch} />
       <Tabs tabs={tabs} onChange={onChangeTab} isOtvety />
-      <Otvety data={filteredData} tabs={tabs} />
+      <Otvety data={filteredData} />
     </section>
   );
 };
