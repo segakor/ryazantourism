@@ -58,9 +58,9 @@ export const HeroMain = () => {
               <div className="hero_inner">
                 <div className="grid gap-10 text-white m-[0_auto] md:w-[1280px] w-auto">
                   <Typography variant="h1">{item.title}</Typography>
-                  <p>{item.desc}</p>
+                  <Typography variant="h6">{item.desc}</Typography>
                   <div className="w-[268px]">
-                    <ButtonLink href={item.link} variant="greenWhite" wide>
+                    <ButtonLink href={!item.path ? item.link : item.path} variant="greenWhite" wide target={item.path && '_blank'}>
                       Подробнее
                     </ButtonLink>
                   </div>

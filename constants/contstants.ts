@@ -215,6 +215,13 @@ export const promTurizmNavigation = [
 
 export const heroMap = [
   {
+    title: "Зима в Рязани",
+    desc: "Один клик — и коллекция идей для культурного, познавательного, активного и ленивого отдыха \nв городе и области у тебя в кармане",
+    imgUrl: "/hero/newyear2025.jpg",
+    link: "",
+    path: "https://new-year.ryazantourism.ru",
+  },
+  {
     title: "История",
     desc: "Тысячелетнее путешествие во времени: громкие имена, интересные факты, невероятные сюжеты",
     imgUrl: "/hero/history.png",

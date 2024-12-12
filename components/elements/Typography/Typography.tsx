@@ -61,7 +61,7 @@ export const Typography = ({ variant, children, className, id }: Props) => {
     return (
       <h5
         id={id}
-        className={`md:text-[16px] text-[16px] leading-tight ${className ? className : ""}`}
+        className={`md:text-[16px] text-[16px] whitespace-pre-line leading-tight ${className ? className : ""}`}
       >
         {children}
       </h5>
