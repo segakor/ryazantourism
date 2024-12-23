@@ -11,6 +11,7 @@ import {
   ModeVisually,
 } from "@/components/elements/ModeVisually/ModeVisually";
 import { parseCookies } from "nookies";
+import { NewYearLink } from "./NewYearLink";
 
 //TODO: icon в одно место
 
@@ -176,7 +177,8 @@ export const Header = () => {
               </p>
             </div>
             <div className="lg:flex flex-col gap-5 lg:visible hidden">
-              <div className="flex items-center justify-end gap-[3.125rem]">
+              <div className="flex items-center justify-end gap-5">
+                <NewYearLink />
                 <div className="flex items-center gap-[0.625rem]">
                   <p className="header_title">Моб. приложение</p>
                   <div className="flex items-center gap-[0.3125rem]">
