@@ -222,6 +222,13 @@ export const heroMap = [
     path: "https://new-year.ryazantourism.ru",
   },
   {
+    title: "Детский путеводитель по Рязани",
+    desc: "Забери свой экземпляр в ТИЦ — и исследуй город вместе с Мампусом!",
+    imgUrl: "/hero/mampus.jpg",
+    link: "",
+    path: "https://mampus.ryazantourism.ru/",
+  },
+  {
     title: "История",
     desc: "Тысячелетнее путешествие во времени: громкие имена, интересные факты, невероятные сюжеты",
     imgUrl: "/hero/history.png",
