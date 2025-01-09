@@ -27,7 +27,7 @@ export const template = [
     subElements: [
       {
         element: "TEXT_BLOCK",
-        text: "Рязань, Семинарская, 15, корп. 2\n\nПн-чт 9.00—18.00, пт 9.00—16.45\n\n+7 (4912) 70 71 30 (отдел развития туризма)\n\n<a href='nvestturkom.ryazan.gov.ru'>investturkom.ryazan.gov.ru</a>",
+        text: "Рязань, Семинарская, 15, корп. 2\n\nПн-чт 9.00—18.00, пт 9.00—16.45\n\n+7 (4912) 70 71 30 (отдел развития туризма)\n\n<a target='_blank' href='https://investturkom.ryazan.gov.ru'>investturkom.ryazan.gov.ru</a>",
       },
     ],
   },
