@@ -2,24 +2,33 @@ import { Metadata } from "next";
 import { Suspense } from "react";
 import Loading from "../loading";
 import Body from "./body";
-import { TOrgEventCard } from "@/types/types";
-import { eventCards } from "@/constants/pages/organizovannye-marshruty/eventCards";
+import { TOrganizovannyeMarshruty } from "@/types/types";
 import { HeroPage } from "@/components/modules/HeroPage";
 import { WrapperGreyPages } from "@/components/wrapper";
+import { redirect } from "next/navigation";
+import { getImageUrl } from "@/utils/getImageUrl";
 
 type Props = {
   params: { id: string };
 };
 
+
 async function getEventCard(id: string) {
-  const data = eventCards.find((item) => item.id === Number(id));
-  return data;
+  const response = await fetch(
+    `https://ryazantourism.ru/api-v2/organizovannyeMarshruty/${id}`,
+    {
+      next: { revalidate: 3600 },
+    }
+  );
+
+  if (!response.ok) {
+    redirect("/not-found");
+  }
+  return response.json();
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const id = params.id;
-
-  const data = eventCards.find((item) => item.id === Number(id));
+  const data = (await getEventCard(params.id)) as TOrganizovannyeMarshruty;
 
   return {
     title: `${data?.title} - Всё о туризме в Рязани и Рязанской области`,
@@ -27,13 +36,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const Page = async ({ params }: Props) => {
-  const data = (await getEventCard(params.id)) as TOrgEventCard;
+  const data = (await getEventCard(params.id)) as TOrganizovannyeMarshruty;
 
   return (
     <Suspense fallback={<Loading />}>
       <WrapperGreyPages>
         <HeroPage
-          imgUrl={data?.imgUrl || "/heroPages/ty-s-mestnym/cit.jpg"}
+          imgUrl={getImageUrl(data.storage_image.imagePath) || "/heroPages/ty-s-mestnym/cit.jpg"}
           title={data.title}
           desc=""
           classNameImage="brightness-50"

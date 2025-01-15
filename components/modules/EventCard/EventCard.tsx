@@ -8,31 +8,45 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
-import { eventCards } from "@/constants/pages/organizovannye-marshruty/eventCards";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { swiperStyle } from "@/constants/swiperStyle";
 import { ButtonLink } from "@/components/elements/ButtonNew";
 import { parseCookies } from "nookies";
 import { MODE_VISUALLY_KEY_NAME } from "@/components/elements/ModeVisually/ModeVisually";
-
-const eventsDates = eventCards.map((item) => item.dates).flat();
+import { getImageUrl } from "@/utils/getImageUrl";
+import { TOrganizovannyeMarshruty } from "@/types/types";
 
 export const EventCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+  const [data, setData] = useState<TOrganizovannyeMarshruty[]>([]);
 
   const onChangeDate = (e: Date) => {
     setSelectedDate(e);
   };
 
-  const filterEvents = eventCards.filter((item) =>
+  const filterEvents = data.filter((item: any) =>
     item.dates.includes(format(selectedDate, "yyyy-MM-dd"))
   );
 
   const [modeVisually, setModeVisually] = useState("");
 
+  const getDates = async () => {
+    try {
+      const res = await fetch(
+        "https://ryazantourism.ru/api-v2/organizovannyeMarshruty"
+      );
+      const data = await res.json();
+      setData(data?.rows);
+    } catch (error) { }
+  };
+
+  //TODO: отрефакторить!!!
+
   useEffect(() => {
     const cookies = parseCookies();
     const value = cookies[MODE_VISUALLY_KEY_NAME];
+
+    getDates();
 
     setModeVisually(value);
   }, []);
@@ -47,7 +61,7 @@ export const EventCard = () => {
       <div className="grid md:grid-cols-2 grid-cols-1 gap-[28px]">
         <CalendarSlide
           onChange={onChangeDate}
-          eventDates={eventsDates}
+          eventDates={data?.map((item) => item.dates).flat() || []}
           isModeEnabled={isModeEnabled}
         />
         <div className="h-full overflow-hidden bg-black rounded-[14px] md:h-auto">
@@ -88,12 +102,14 @@ export const EventCard = () => {
   );
 };
 
-const Card = ({ id, title, imgUrl, price, days, startDate }: any) => {
+const Card = ({ id, title, storage_image, price, days, startDate }: any) => {
   return (
     <div
       className="text-white md:p-10 p-5 flex h-full flex-col justify-end bg-cover gap-4"
       style={{
-        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url('${imgUrl}')`,
+        backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0) 5.16%, rgba(0, 0, 0, 0.8) 78.18%, rgba(0, 0, 0, 0.8) 78.19%), url('${getImageUrl(
+          storage_image?.imagePath
+        )}')`,
       }}
     >
       <Typography variant="h4">{title}</Typography>

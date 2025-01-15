@@ -4,15 +4,23 @@ import Loading from "../loading";
 import Body from "./body";
 import { TNews } from "@/types/types";
 import { WrapperGreyPages } from "@/components/wrapper";
+import { redirect } from "next/navigation";
 
 type Props = {
   params: { id: string };
 };
 
 async function getNewsDetail(id: number) {
-  const response = await fetch(`https://ryazantourism.ru/api-v2/newsRegion/${id}`, {
-    next: { revalidate: 3600 },
-  });
+  const response = await fetch(
+    `https://ryazantourism.ru/api-v2/newsRegion/${id}`,
+    {
+      next: { revalidate: 3600 },
+    }
+  );
+
+  if (!response.ok) {
+    redirect("/not-found");
+  }
   return response.json();
 }
 

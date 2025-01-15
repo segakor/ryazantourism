@@ -1,8 +1,7 @@
 "use client";
 import { Button } from "@/components/elements/ButtonNew";
-import { LongRead } from "@/components/modules/LongRead";
 import { ModalTour } from "@/components/modules/ModalOrder";
-import { TLongReadBody, TOrgEventCard } from "@/types/types";
+import { TOrganizovannyeMarshruty } from "@/types/types";
 import {
   Modal,
   ModalBody,
@@ -11,8 +10,9 @@ import {
 } from "@nextui-org/react";
 import { useMediaQuery } from "react-responsive";
 import { useSearchParams } from "next/navigation";
+import { LongReadRender } from "@/components/modules/LongReadRender/LongReadRender";
 
-const Body = ({ data }: { data: TOrgEventCard }) => {
+const Body = ({ data }: { data: TOrganizovannyeMarshruty }) => {
   const { isOpen, onOpenChange } = useDisclosure();
   const mdMedia = useMediaQuery({ query: "(min-width: 768px)" });
   const searchParams = useSearchParams();
@@ -57,12 +57,7 @@ const Body = ({ data }: { data: TOrgEventCard }) => {
           </div>
         </div>
       </div>
-      <LongRead
-        body={data.template as TLongReadBody[]}
-        noMargin
-        noSidebar
-        fullW
-      ></LongRead>
+      <LongReadRender body={data.template} noSidebar noMargin fullW />
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}

@@ -9,6 +9,7 @@ type Props = {
   noMargin?: boolean;
   noSidebar?: boolean;
   sideBarText?: string;
+  fullW?: boolean;
 };
 
 export const LongReadRender = ({
@@ -17,6 +18,7 @@ export const LongReadRender = ({
   noMargin,
   noSidebar,
   sideBarText,
+  fullW
 }: Props) => {
   const scrollIntoView = (elementId?: string) => {
     //@ts-ignore
@@ -37,7 +39,7 @@ export const LongReadRender = ({
   const bodyItem = body ? (
     <div
       className={`longread_body ${noMargin ? "mt-auto" : "mt-[-7.5rem]"
-        } md:w-[80%] w-full ${noSidebar && "no_sidebar"}`}
+        } md:w-[80%] w-full ${noSidebar && "no_sidebar"} ${fullW && 'md:w-full'}`}
       dangerouslySetInnerHTML={{ __html: bodyWithStyles }}
     />
   ) : (

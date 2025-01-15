@@ -5,6 +5,7 @@ import { HeroPage } from "@/components/modules/HeroPage";
 import { TArchCard } from "@/types/types";
 import Body from "./body";
 import { WrapperGreyPages } from "@/components/wrapper";
+import { redirect } from "next/navigation";
 
 type Props = {
   params: { id: string };
@@ -17,13 +18,17 @@ async function getDetailsChtoPosmotret(id: string) {
       next: { revalidate: 3600 },
     }
   );
+
+  if (!response.ok) {
+    redirect("/not-found");
+  }
   return response.json();
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = params.id;
 
-  const data = await getDetailsChtoPosmotret(id) as TArchCard;
+  const data = (await getDetailsChtoPosmotret(id)) as TArchCard;
 
   return {
     title: `${data?.title} - Всё о туризме в Рязани и Рязанской области`,

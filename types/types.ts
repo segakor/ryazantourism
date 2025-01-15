@@ -162,19 +162,9 @@ export type TPromTurizmCard = {
   url: string;
 };
 
-export type TOrgEventCard = {
-  id: number;
-  title: string;
-  imgUrl: string;
-  dates: string[];
-  includePrice: string;
-  price: string;
-  days: string;
-  template: TLongReadBody[];
-};
 export type TStorageImage = {
   imagePath: string;
-}
+};
 export type TNews = {
   id: number;
   title: string;
@@ -199,4 +189,18 @@ export type TEventCardMain = {
   description: string;
   event_date: string;
   active: boolean;
+};
+
+export type TOrganizovannyeMarshruty = {
+  id: number;
+  title: string;
+  email: string;
+  dates: string[];
+  price: string;
+  includePrice: string;
+  days: string;
+  storage_image: {
+    imagePath: string;
+  };
+  template: string;
 };
