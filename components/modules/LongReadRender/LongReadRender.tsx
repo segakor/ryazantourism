@@ -28,7 +28,7 @@ export const LongReadRender = ({
   };
 
   const bodyWithStyles = body
-    .replaceAll("<h1>", "<h1 class='md:text-[40px] text-[30px] leading-tight>")
+    .replaceAll("<h1>", "<h1 class='md:text-[40px] text-[30px] leading-tight'>")
     .replaceAll("<p>", "<p class='text3 styled_list styled_link'>")
     .replaceAll("quoteBlock", "quoteBlock")
     .replaceAll(
