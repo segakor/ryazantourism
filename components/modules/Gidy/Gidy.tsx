@@ -8,6 +8,7 @@ import { useDisclosure } from "@nextui-org/react";
 import { createShimmer } from "@/utils/shimer";
 import Image from "next/image";
 import { Typography } from "@/components/elements/Typography/Typography";
+import { getImageUrl } from "@/utils/getImageUrl";
 
 export const Gidy = ({ data }: { data: TGid[] }) => {
   return (
@@ -28,6 +29,10 @@ export const Gidy = ({ data }: { data: TGid[] }) => {
 export const Gid = ({ item }: { item: TGid }) => {
   const { isOpen, onOpenChange } = useDisclosure();
 
+  if (!item.isActive) {
+    return null
+  }
+
   return (
     <div>
       <div
@@ -37,7 +42,7 @@ export const Gid = ({ item }: { item: TGid }) => {
       >
         <div className={`w-full relative pt-[130%]`}>
           <Image
-            src={item.srcImg}
+            src={getImageUrl(item.storage_image.imagePath)}
             alt="img"
             objectFit="cover"
             fill
@@ -69,7 +74,7 @@ export const Gid = ({ item }: { item: TGid }) => {
             <Typography variant="h5" className="font-medium">
               {item.fio}
             </Typography>
-            <div className="text4">{item.shortDecs}</div>
+            <div className="text4">{item.title}</div>
             <div className="note-text">{item.phone}</div>
           </div>
         </div>

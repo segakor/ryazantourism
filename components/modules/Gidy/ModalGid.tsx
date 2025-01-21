@@ -3,6 +3,7 @@ import { createShimmer } from "@/utils/shimer";
 import Image from "next/image";
 import { Typography } from "@/components/elements/Typography/Typography";
 import Link from "next/link";
+import { getImageUrl } from "@/utils/getImageUrl";
 
 //TODO: Image сделать один на всех
 export const ModalGid = (data: TGid) => {
@@ -12,7 +13,7 @@ export const ModalGid = (data: TGid) => {
         <div className="md:w-[300px] w-full h-[408px] overflow-hidden grid">
           <div className={`w-full relative pt-[100%]`}>
             <Image
-              src={data.srcImg}
+              src={getImageUrl(data.storage_image.imagePath)}
               alt="img"
               objectFit="cover"
               fill
@@ -28,7 +29,10 @@ export const ModalGid = (data: TGid) => {
         <Typography variant="h4" className="font-medium mb-5">
           {data.fio}
         </Typography>
-        <p className="text4 mb-5">{data.desc}</p>
+        <p
+          className="text4 mb-5"
+          dangerouslySetInnerHTML={{ __html: data.bodyText }}
+        />
         <Typography variant="h5">
           <Link
             className="text-[var(--color-blue)] hover:text-[var(--color-green)] transition-all"

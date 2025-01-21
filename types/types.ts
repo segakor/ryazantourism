@@ -75,11 +75,14 @@ export type TDocument = {
 };
 
 export type TGid = {
+  id: number;
+  title: string;
   fio: string;
-  shortDecs: string;
-  desc: string;
   phone: string;
-  srcImg: string;
+  isActive: boolean;
+  bodyText: string;
+  imageId: number;
+  storage_image: TStorageImage;
 };
 
 export type TSinglyRoutes = {
@@ -199,8 +202,6 @@ export type TOrganizovannyeMarshruty = {
   price: string;
   includePrice: string;
   days: string;
-  storage_image: {
-    imagePath: string;
-  };
+  storage_image: TStorageImage;
   template: string;
 };
