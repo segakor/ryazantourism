@@ -11,6 +11,7 @@ import zavtrak from "../../../public/tags/zavtrak.svg";
 import avto from "../../../public/tags/avto.svg";
 import colab from "../../../public/tags/colab.svg";
 import peshkom from "../../../public/tags/peshkom.svg";
+import pobeda from "../../../public/tags/pobeda.svg";
 
 import Image from "next/image";
 import { TagList } from "@/types/types";
@@ -29,6 +30,7 @@ const tagsMap = {
   11: peshkom,
   12: avto,
   13: colab,
+  14: pobeda
 };
 
 const tagsText = {
@@ -45,6 +47,7 @@ const tagsText = {
   11: "Весь маршрут можно пройти пешком",
   12: "Отправляйтесь в путешествие на машине",
   13: "Маршрут от наших партнеров",
+  14: "Рассказываем о жизни региона в годы Великой Отечественной войны"
 };
 /* const tagsMap = {
   dogFrendli: dogFrendli,
