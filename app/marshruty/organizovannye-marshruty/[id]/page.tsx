@@ -7,7 +7,6 @@ import { HeroPage } from "@/components/modules/HeroPage";
 import { WrapperGreyPages } from "@/components/wrapper";
 import { redirect } from "next/navigation";
 import { getImageUrl } from "@/utils/getImageUrl";
-import { API_URL_ORG_MARSH } from "@/constants/apiUrl";
 
 type Props = {
   params: { id: string };
@@ -16,7 +15,7 @@ type Props = {
 
 async function getEventCard(id: string) {
   const response = await fetch(
-    `${API_URL_ORG_MARSH}/${id}`,
+    `https://ryazantourism.ru/api-v2/organizovannyeMarshruty/${id}`,
     {
       next: { revalidate: 3600 },
     }

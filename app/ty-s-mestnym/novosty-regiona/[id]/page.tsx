@@ -5,7 +5,6 @@ import Body from "./body";
 import { TNews } from "@/types/types";
 import { WrapperGreyPages } from "@/components/wrapper";
 import { redirect } from "next/navigation";
-import { API_URL_NOVOSTI_REGION } from "@/constants/apiUrl";
 
 type Props = {
   params: { id: string };
@@ -13,7 +12,7 @@ type Props = {
 
 async function getNewsDetail(id: number) {
   const response = await fetch(
-    `${API_URL_NOVOSTI_REGION}/${id}`,
+    `https://ryazantourism.ru/api-v2/newsRegion/${id}`,
     {
       next: { revalidate: 3600 },
     }

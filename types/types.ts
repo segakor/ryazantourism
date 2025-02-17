@@ -88,13 +88,13 @@ export type TGid = {
 export type TSinglyRoutes = {
   id: number;
   title: string;
-  category: string;
-  subTitle: string;
+  category: { name: string };
+  desc: string;
+  /*   duration: { days: number; hours: number; minutes: number }; */
+  imgUrl: string;
   template: TLongReadBody[];
   tags: number[];
-  linkPath?: string;
-  imageId: number;
-  storage_image: TStorageImage;
+  path?: string;
 };
 
 export type TSinglyRoutesDetails = {

@@ -5,9 +5,9 @@ import { ButtonLink } from "@/components/elements/ButtonNew";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
 import { Tags } from "@/components/elements/Tags/Tags";
-import { getImageUrl } from "@/utils/getImageUrl";
 
 const Item = ({ item }: { item: TSinglyRoutes }) => {
+
   return (
     <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] shadow-lg overflow-hidden">
       <div className="relative">
@@ -17,7 +17,7 @@ const Item = ({ item }: { item: TSinglyRoutes }) => {
         <div className="bg-[var(--color-grey)] h-[200px] md:w-[408px] w-full">
           <div className={`w-full relative pt-[200px]`}>
             <Image
-              src={getImageUrl(item.storage_image.imagePath)}
+              src={item.imgUrl}
               alt="img"
               objectFit="cover"
               fill
@@ -34,19 +34,14 @@ const Item = ({ item }: { item: TSinglyRoutes }) => {
           <Typography variant="h5" className="font-medium">
             {item.title}
           </Typography>
-          <div
-            className='partner-card-text opacity-50'
-            dangerouslySetInnerHTML={{ __html: item.subTitle }}
-          />
+          <div className="partner-card-text opacity-50">
+            {item.desc}
+          </div>
         </div>
         <ButtonLink
-          href={
-            !item.linkPath
-              ? `/marshruty/samostoyatelnye-marshruty/${item.id}`
-              : item.linkPath
-          }
+          href={!item.path ? `/marshruty/samostoyatelnye-marshruty/${item.id}` : item.path}
           variant="greenBlack"
-          target={item.linkPath && "_blank"}
+          target={item.path && '_blank'}
         >
           К сценарию
         </ButtonLink>

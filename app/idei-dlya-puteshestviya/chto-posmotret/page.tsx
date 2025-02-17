@@ -4,7 +4,6 @@ import Body from "./body";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import Loading from "./loading";
-import { API_URL_CHTO_POSMOTRET } from "@/constants/apiUrl";
 
 export const metadata: Metadata = {
   title: "Что посмотреть? - Всё о туризме в Рязани и Рязанской области",
@@ -12,7 +11,7 @@ export const metadata: Metadata = {
 
 async function getChtoPosmotret() {
   const response = await fetch(
-    API_URL_CHTO_POSMOTRET,
+    "https://ryazantourism.ru/api-v2/chtoPosmotret",
     {
       next: { revalidate: 3600 },
     }
