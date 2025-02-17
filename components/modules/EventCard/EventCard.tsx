@@ -15,6 +15,7 @@ import { parseCookies } from "nookies";
 import { MODE_VISUALLY_KEY_NAME } from "@/components/elements/ModeVisually/ModeVisually";
 import { getImageUrl } from "@/utils/getImageUrl";
 import { TOrganizovannyeMarshruty } from "@/types/types";
+import { API_URL_ORG_MARSH } from "@/constants/apiUrl";
 
 export const EventCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
@@ -33,7 +34,7 @@ export const EventCard = () => {
   const getDates = async () => {
     try {
       const res = await fetch(
-        "https://ryazantourism.ru/api-v2/organizovannyeMarshruty"
+        API_URL_ORG_MARSH
       );
       const data = await res.json();
       setData(data?.rows);

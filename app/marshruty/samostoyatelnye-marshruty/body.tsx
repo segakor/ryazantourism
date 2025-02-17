@@ -7,7 +7,6 @@ import { TSinglyRoutes } from "@/types/types";
 import { PodcastCard } from "@/components/modules/PodcastCard/PodcastCard";
 import { TourCard } from "@/components/modules/TourCard/TourCard";
 import { Typography } from "@/components/elements/Typography/Typography";
-import { WrapperTabs } from "@/components/wrapper";
 
 const Body = ({ data }: { data: TSinglyRoutes[] }) => {
   const [tab, setTab] = useState("all");
@@ -17,7 +16,7 @@ const Body = ({ data }: { data: TSinglyRoutes[] }) => {
   };
 
   const filteredData =
-    tab !== "all" ? data.filter((item) => item.category.name === tab) : data;
+    tab !== "all" ? data.filter((item) => item.category === tab) : data;
 
   return (
     <div className="md:pt-[120px] md:pb-[120px] pt-[80px] pb-[80px]">
