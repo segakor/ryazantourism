@@ -2,7 +2,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Шакуловых",
     desc: "Касимов, Победы, 20/22",
-    imgUrl: "https://i.ibb.co/LJJNhwG/2.png",
+    imgUrl: "https://i.postimg.cc/SRFF0nqD/1-129.jpg",
     id: 1,
     template: [
       {
@@ -31,7 +31,7 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/SVH1ZCZ/photo-5323481216453827066-w.jpg",
+            srcImg: "https://i.postimg.cc/Twhnqd49/3.jpg",
           },
         ],
       },
@@ -52,7 +52,7 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/44KNPxx/photo-5323481216453827085-w.jpg",
+            srcImg: "https://i.postimg.cc/4xgfzWS2/5.jpg",
           },
         ],
       },
@@ -73,7 +73,7 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/2M3tKwT/photo-5323481216453827086-w.jpg",
+            srcImg: "https://i.postimg.cc/tCtQHpBD/7.jpg",
           },
         ],
       },
@@ -82,7 +82,7 @@ export const nasledieKasimov = [
   {
     title: "Центр Ишимбаева",
     desc: "Касимов, Большакова, 31",
-    imgUrl: "https://i.ibb.co/LJJNhwG/2.png",
+    imgUrl: "https://i.postimg.cc/ZRy2sS98/1-94.jpg",
     id: 5,
     template: [
       {
@@ -99,7 +99,7 @@ export const nasledieKasimov = [
   {
     title: "Три корпуса торговых рядов",
     desc: "Касимов, пл. Соборная, 3б",
-    imgUrl: "https://i.ibb.co/wMKgXz2/photo-5323481216453827123-w.jpg",
+    imgUrl: "https://i.postimg.cc/tRkN0chW/photo-5323481216453827123-w.jpg",
     id: 6,
     template: [
       {
@@ -111,7 +111,8 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/sVxtxY5/photo-5323481216453827124-w.jpg",
+            srcImg:
+              "https://i.postimg.cc/wjmNB4sW/photo-5323481216453827124-w.jpg",
           },
         ],
       },
@@ -120,7 +121,7 @@ export const nasledieKasimov = [
   {
     title: "Старая татарская мечеть",
     desc: "Касимов, пл. Победы, 9а",
-    imgUrl: "https://i.ibb.co/239wrbs/photo-5323481216453827148-w.jpg",
+    imgUrl: "https://i.postimg.cc/FR8dmjHt/photo-5323481216453827148-w.jpg",
     id: 7,
     template: [
       {
@@ -132,7 +133,8 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/7Cnxbjw/photo-5323481216453827149-w.jpg",
+            srcImg:
+              "https://i.postimg.cc/nctrkVs1/photo-5323481216453827149-w.jpg",
           },
         ],
       },
@@ -141,7 +143,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Золотова",
     desc: "Касимов, пл. Соборная, 10а",
-    imgUrl: "https://i.ibb.co/LJJNhwG/2.png",
+    imgUrl: "https://i.postimg.cc/B6Gkzz2R/1-159.jpg",
     id: 8,
     template: [
       {
@@ -151,7 +153,6 @@ export const nasledieKasimov = [
             element: "TEXT_BLOCK",
             text: "Здание входит в архитектурный ансамбль Соборной площади и примечательно своим владельцем. А.Т.Золотов — рано осиротевший крестьянин Зарайского уезда — приехал на заработки в Касимов. Начав коробейником, он скопил денег и приобрел сначала пивоваренный, а позже винокуренный заводы, дослужившись до звания купца 2-ой гильдии.\n\nНа втором этаже здания на центральной площади работала гостиница, на первом — трактир. Последний пользовался большой популярностью. В трактире существовала услуга читки газет, специально выписываемых хозяином из столицы. Послушать свежие новости собирался широкий круг желающих.",
           },
-
         ],
       },
     ],
@@ -159,7 +160,7 @@ export const nasledieKasimov = [
   {
     title: "Обелиски Петровской заставы",
     desc: "Касимов, Набережная",
-    imgUrl: "https://i.ibb.co/2s60zhp/photo-5323481216453827155-w.jpg",
+    imgUrl: "https://i.postimg.cc/yY4q3kJ7/photo-5323481216453827155-w.jpg",
     id: 9,
     template: [
       {
@@ -171,7 +172,8 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/Pm0wFXv/photo-5323481216453827154-w.jpg",
+            srcImg:
+              "https://i.postimg.cc/YSSTBFPz/photo-5323481216453827154-w.jpg",
           },
         ],
       },
@@ -180,7 +182,7 @@ export const nasledieKasimov = [
   {
     title: "Текие Шах-Али хана",
     desc: "Касимов, пл. Победы, 9б",
-    imgUrl: "https://i.ibb.co/vvpV99n/photo-5323481216453827159-w.jpg",
+    imgUrl: "https://i.postimg.cc/bJDMshpG/photo-5323481216453827159-w.jpg",
     id: 10,
     template: [
       {
@@ -192,7 +194,8 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/Jxg1RWC/photo-5323481216453827160-w.jpg",
+            srcImg:
+              "https://i.postimg.cc/gj3THHwm/photo-5323481216453827160-w.jpg",
           },
         ],
       },
@@ -201,7 +204,7 @@ export const nasledieKasimov = [
   {
     title: "Троицкая церковь",
     desc: "Касимов, Свердлова, 1б",
-    imgUrl: "https://i.ibb.co/fdYsvqX/photo-5323481216453827162-w.jpg",
+    imgUrl: "https://i.postimg.cc/sgT0mX2Q/photo-5323481216453827162-w.jpg",
     id: 11,
     template: [
       {
@@ -222,7 +225,7 @@ export const nasledieKasimov = [
   {
     title: "Гимназия Мансуровой",
     desc: "Касимов, Московская, 1",
-    imgUrl: "https://i.ibb.co/LJJNhwG/2.png",
+    imgUrl: "https://i.postimg.cc/B6Gkzz2R/1-159.jpg",
     id: 12,
     template: [
       {
@@ -232,7 +235,6 @@ export const nasledieKasimov = [
             element: "TEXT_BLOCK",
             text: "Здание с высокими стрельчатыми окнами принадлежало дворянскому роду Мансуровых. В 1904 году владелица помещения Ольга Александровна открыла в нем частную мужскую прогимназию. Учебное заведение давало неполное среднее образование и не поддерживало религиозных и сословных различий. Здесь получили образование православные, мусульмане и иудеи; сыновья дворян и купцов учились вместе с мещанами. Изрядная дороговизна компенсировалась блестящим преподавательским составом.\n\nЗаведение проработало лишь до 1912 года, однако его востребованность заставила касимовские власти добиться открытия в городе мужской гимназии.",
           },
-
         ],
       },
     ],
@@ -240,7 +242,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Пастернака",
     desc: "Касимов, Карла Либкнехта, 9",
-    imgUrl: "https://i.ibb.co/LJJNhwG/2.png",
+    imgUrl: "https://i.postimg.cc/ZYFj7QW3/1-245.jpg",
     id: 13,
     template: [
       {
@@ -250,7 +252,6 @@ export const nasledieKasimov = [
             element: "TEXT_BLOCK",
             text: "В скромном здании начала XX века жил земский врач, а позже заведующий Касимовской земской больницей И.И.Кауфман. В годы Первой мировой войны он безвозмездно руководил местным лазаретом.\n\nИменно сюда летом 1920 года, спасаясь от ужаса гражданской войны, приехали племянники медика — писатель и переводчик, будущий лауреат Нобелевской премии Б.Л.Пастернак со своей младшей сестрой Лидией. Здесь до начала осени молодой писатель занимался огородом, поправлял здоровье и собирал материал для предстоящего романа. Ряд исследователей считают, что именно Касимов стал прообразом города Юрятин в книге «Доктор Живаго».",
           },
-
         ],
       },
     ],
@@ -258,7 +259,7 @@ export const nasledieKasimov = [
   {
     title: "Кинотеатр «Марс»",
     desc: "Касимов, Советская, 25",
-    imgUrl: "https://i.ibb.co/LJJNhwG/2.png",
+    imgUrl: "https://i.postimg.cc/mrHyQpxP/1-260.jpg",
     id: 14,
     template: [
       {
@@ -268,7 +269,6 @@ export const nasledieKasimov = [
             element: "TEXT_BLOCK",
             text: "Изящное здание с башенкой, шпилем и флюгером было построено в 1910 году и изначально планировалось как доходный дом. Однако владелец отвел под магазины только первый этаж, открыв на втором электротеатр — так раньше назывались кинотеатры — «Арс», который вскоре сменил название на «Марс».\n\nС самого начала работы «Марс» не ограничивался показом фильмов. Помимо новинок синематографа здесь игрались театральные постановки и проводились общественные собрания, в годы Великой Отечественной войны работала читальня и играл оркестр. «Марс» был закрыт лишь в 2004 году, став одним из самых старых кинотеатров страны.",
           },
-
         ],
       },
     ],
@@ -276,7 +276,7 @@ export const nasledieKasimov = [
   {
     title: "Благовещенская церковь",
     desc: "Касимов, пл. Соборная, 13а",
-    imgUrl: "https://i.ibb.co/cYkV87B/photo-5323481216453827166-w.jpg",
+    imgUrl: "https://i.postimg.cc/mZwNNFny/photo-5323481216453827166-w.jpg",
     id: 15,
     template: [
       {
@@ -288,7 +288,8 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "hhttps://i.ibb.co/BjqFPCk/photo-5323481216453827167-w.jpg",
+            srcImg:
+              "https://i.postimg.cc/BbQFwMzc/photo-5323481216453827167-w.jpg",
           },
         ],
       },
@@ -297,7 +298,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Смирнова",
     desc: "Касимов, Советская, 7",
-    imgUrl: "https://i.ibb.co/LJJNhwG/2.png",
+    imgUrl: "https://i.postimg.cc/yN4ZzV5N/1-228.jpg",
     id: 16,
     template: [
       {
@@ -307,7 +308,6 @@ export const nasledieKasimov = [
             element: "TEXT_BLOCK",
             text: "Роскошное трехэтажное здание было построено по заказу потомственного почетного гражданина, городского главы и председателя Рязанской губернской земской управы А.В.Алянчикова в 1860-х годах. Около 30 лет величественная постройка на центральной улице служила деловой резиденцией и подчеркивала исключительный статус богатейшей семьи города.\n\nПосле смерти хозяина дом был продан мещанину В.А.Смирнову, под чьей фамилией он и вошел в историю. Часть помещений некогда элитного особняка начала сдаваться в аренду и стала доступна для посещения всеми желающими. Здесь разместились трактир, фотосалон, гостиница, магазины.",
           },
-
         ],
       },
     ],
@@ -315,7 +315,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Дьяконова",
     desc: "Касимов, Советская, 15",
-    imgUrl: "https://i.ibb.co/BPDP0NJ/photo-5323481216453827170-w.jpg",
+    imgUrl: "https://i.postimg.cc/yd6WVWT7/photo-5323481216453827170-w.jpg",
     id: 17,
     template: [
       {
@@ -327,7 +327,8 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/zPC7SYW/photo-5323481216453827169-w.jpg",
+            srcImg:
+              "https://i.postimg.cc/KcH42G3y/photo-5323481216453827169-w.jpg",
           },
         ],
       },
@@ -336,7 +337,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Кастрова",
     desc: "Касимов, Набережная, 77б",
-    imgUrl: "https://i.ibb.co/jvMLFdT/photo-5323481216453827173-w.jpg",
+    imgUrl: "https://i.postimg.cc/cJh450G2/photo-5323481216453827173-w.jpg",
     id: 18,
     template: [
       {
@@ -348,7 +349,8 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/xqcbKVH/photo-5323481216453827174-w.jpg",
+            srcImg:
+              "https://i.postimg.cc/J0DrnXHC/photo-5323481216453827174-w.jpg",
           },
         ],
       },
@@ -357,7 +359,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Кастрова",
     desc: "Касимов, Большакова, 33",
-    imgUrl: "https://i.ibb.co/LJJNhwG/2.png",
+    imgUrl: "https://i.postimg.cc/7PFGzPHn/1-100.jpg",
     id: 19,
     template: [
       {
@@ -367,7 +369,6 @@ export const nasledieKasimov = [
             element: "TEXT_BLOCK",
             text: "Кастровы — выходцы из крепостных татарских крестьян. Получив вольную, семейство занялось пошивом тулупов, а позже перешло на выделку овечьих шкур, став крупнейшим производителем мерлушки в городе. В 1840 году глава семьи причислился в третью гильдию касимовского купечества и всего за 20 лет был возведен в потомственное почетное гражданство.\n\nДвухэтажное здание с высоким цоколем и дворовыми помещениями для выделки мерлушки — одна из наследственных усадеб семейства. После революции здесь разместился детский дом. Долгие годы в помещении работало родильное отделение и женская консультация районной больницы.",
           },
-
         ],
       },
     ],
@@ -385,7 +386,6 @@ export const nasledieKasimov = [
             element: "TEXT_BLOCK",
             text: "Одна из усадеб Татарской слободы, принадлежавшая богатейшей династии Кастровых. Представляет собой типичный купеческий дом образца конца XVIII – начала XIX века. Жилье было призвано подчеркнуть высоту социального статуса владельца и одновременно служило служебным помещением для хозяйского предприятия.\n\nДом Кастровых — это добротный деревянных объем, стоящий на каменном подклете. Во дворе находились служебные помещения для выделки овечьих шкур — семья занималась производством мерлушки. Примечательны богато украшенные въездные ворота, которые не имели повторений в городе и являлись визитной карточкой усадьбы.",
           },
-
         ],
       },
     ],
@@ -393,7 +393,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Качкова",
     desc: "Касимов, Набережная, 35",
-    imgUrl: "https://i.ibb.co/CncNGgm/photo-5323481216453827287-w.jpg",
+    imgUrl: "https://i.postimg.cc/4y6JVgPW/photo-5323481216453827287-w.jpg",
     id: 21,
     template: [
       {
@@ -414,7 +414,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Алянчиковых",
     desc: "Касимов, пл. Соборная, 7/8",
-    imgUrl: "https://i.ibb.co/RQqxwF4/photo-5323481216453827288-w.jpg",
+    imgUrl: "https://i.postimg.cc/T3hzXxbB/photo-5323481216453827288-w.jpg",
     id: 22,
     template: [
       {
@@ -426,7 +426,8 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/BnQwnbv/photo-5323481216453827289-w.jpg",
+            srcImg:
+              "https://i.postimg.cc/FRX8cJ6Q/photo-5323481216453827289-w.jpg",
           },
         ],
       },
@@ -435,7 +436,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Салазкиных",
     desc: "Касимов, Советская, 17",
-    imgUrl: "https://i.ibb.co/LJJNhwG/2.png",
+    imgUrl: "https://i.postimg.cc/zX2Q7QQ7/1-238.jpg",
     id: 23,
     template: [
       {
@@ -445,7 +446,6 @@ export const nasledieKasimov = [
             element: "TEXT_BLOCK",
             text: "Особняк Салазкиных с украшенным ионическими колоннами портиком, аркадой окон первого этажа и миловидой на крыше всегда служил украшением улицы. Не случайно именно здесь были приготовлены комнаты для размещения наследника престола Александра II во время его визита в Касимов.\n\nИзящное здание было построено архитектором-самоучкой И.С.Гагиным для богатейших купцов и владельцев железоторговой фирмы Барковых. Однако к 1860 году дела семьи пришли в упадок, собственность пошла с молотка. Новым хозяином дома стал их приказчик С.Л.Салазкин.\n\nВ советское время здесь располагались Дом медицины, гостиница, стоматология.",
           },
-
         ],
       },
     ],
@@ -453,7 +453,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Шишкиных",
     desc: "Касимов, Набережная, 34",
-    imgUrl: "https://i.ibb.co/grbg7wz/photo-5323481216453827296-w.jpg",
+    imgUrl: "https://i.postimg.cc/63BztVST/photo-5323481216453827296-w.jpg",
     id: 24,
     template: [
       {
@@ -465,7 +465,8 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/H7Kn9p1/photo-5323481216453827295-w.jpg",
+            srcImg:
+              "https://i.postimg.cc/WbqmRf3X/photo-5323481216453827295-w.jpg",
           },
         ],
       },
@@ -474,7 +475,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Вереиных",
     desc: "Касимов, Набережная, 29",
-    imgUrl: "https://i.ibb.co/LJJNhwG/2.png",
+    imgUrl: "https://i.postimg.cc/FzMLsNRG/1-141.jpg",
     id: 25,
     template: [
       {
@@ -484,7 +485,6 @@ export const nasledieKasimov = [
             element: "TEXT_BLOCK",
             text: "Вереины принадлежали к числу старейших промышленных династий, оставивших значительный след в истории Касимова. Запустив в 1794 году кожевенное производство и сколотив изрядное состояние, к XX веку Вереины числились меценатами, попечителями городских училищ. Последний представитель многочисленного семейства дослужился до гласного Касимовской городской думы и позже был расстрелян за участие в белогвардейском мятеже.\n\nФамильное семейное гнездо пережило хозяев. После муниципализации особняк на Набережной улице был перепланирован, в служебных помещениях первого этажа и жилых комнатах второго разместились квартиры.",
           },
-
         ],
       },
     ],
@@ -492,7 +492,7 @@ export const nasledieKasimov = [
   {
     title: "Дом Якунчиковых",
     desc: "Касимов, Советская, 18",
-    imgUrl: "https://i.ibb.co/SVgrCmq/photo-5323481216453827304-w.jpg",
+    imgUrl: "https://i.postimg.cc/5t4FtP4c/photo-5323481216453827304-w.jpg",
     id: 26,
     template: [
       {
@@ -504,7 +504,8 @@ export const nasledieKasimov = [
           },
           {
             element: "LONG_READ_ITEM_BLOCK",
-            srcImg: "https://i.ibb.co/wCkYvXx/photo-5323481216453827302-w.jpg",
+            srcImg:
+              "https://i.postimg.cc/vZLP1Hn4/photo-5323481216453827302-w.jpg",
           },
         ],
       },

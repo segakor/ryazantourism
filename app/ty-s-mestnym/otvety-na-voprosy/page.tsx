@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Body from "./body";
 import Loading from "./loading";
 import { Suspense } from "react";
+import { API_URL_ANSWER } from "@/constants/apiUrl";
 
 export const metadata: Metadata = {
   title: "Ответы на вопросы - Всё о туризме в Рязани и Рязанской области",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 async function getAnswers() {
   const response = await fetch(
-    "https://ryazantourism.ru/api-v2/answer", {
+    API_URL_ANSWER, {
     next: { revalidate: 3600 },
   })
   if (!response.ok) {

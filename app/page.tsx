@@ -3,6 +3,7 @@ import { HeroMain } from "@/components/modules/HeroMain";
 import { MainBannerRoutes } from "@/components/modules/MainBannerRoutes";
 import { MainNavigation } from "@/components/modules/MainNavigation";
 import { News } from "@/components/modules/News";
+import { API_URL_NOVOSTI_REGION } from "@/constants/apiUrl";
 import { Spinner } from "@nextui-org/react";
 
 import type { Metadata } from "next";
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 
 
 async function getNewsRegion() {
-  const response = await fetch('https://ryazantourism.ru/api-v2/newsRegion', {
+  const response = await fetch(API_URL_NOVOSTI_REGION, {
     next: { revalidate: 3600 },
   });
   return response.json();

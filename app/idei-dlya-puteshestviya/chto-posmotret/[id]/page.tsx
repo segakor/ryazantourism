@@ -6,6 +6,7 @@ import { TArchCard } from "@/types/types";
 import Body from "./body";
 import { WrapperGreyPages } from "@/components/wrapper";
 import { redirect } from "next/navigation";
+import { API_URL_CHTO_POSMOTRET } from "@/constants/apiUrl";
 
 type Props = {
   params: { id: string };
@@ -13,7 +14,7 @@ type Props = {
 
 async function getDetailsChtoPosmotret(id: string) {
   const response = await fetch(
-    `https://ryazantourism.ru/api-v2/chtoPosmotret/${id}`,
+    `${API_URL_CHTO_POSMOTRET}/${id}`,
     {
       next: { revalidate: 3600 },
     }
