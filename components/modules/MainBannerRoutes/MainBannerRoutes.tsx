@@ -54,7 +54,7 @@ export const MainBannerRoutes = () => {
             путешествий. Рекомендуется для легких на подъем и любопытных
             искателей приключений
           </p>
-          <Link href={"/marshruty/organizovannye-marshruty"}>
+          <Link href={"/marshruty/samostoyatelnye-marshruty"}>
             <div
               className={`bg-[var(--color-white)] ${!isModeEnabled &&
                 "group-hover/item:bg-black group-hover/item:text-white"
