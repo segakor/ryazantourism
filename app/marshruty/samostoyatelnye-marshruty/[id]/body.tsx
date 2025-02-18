@@ -1,11 +1,9 @@
-import { LongRead } from "@/components/modules/LongRead";
-import { TLongReadBody } from "@/types/types";
+import { LongReadRender } from "@/components/modules/LongReadRender/LongReadRender";
 
-const Body = ({ data }: { data: TLongReadBody[] }) => {
-
+const Body = ({ data }: { data: string }) => {
   return (
     <section className="grid_layout">
-      <LongRead body={data as TLongReadBody[]} />
+      <LongReadRender body={data} />
     </section>
   );
 };

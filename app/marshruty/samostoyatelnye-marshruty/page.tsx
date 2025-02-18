@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Body from "./body";
 import Loading from "./loading";
-import { TSinglyRoutes } from "@/types/types";
+import { TSamostoyatelnyeMarshruty } from "@/types/types";
 import { Suspense } from "react";
 import { HeroPage } from "@/components/modules/HeroPage";
-import { API_URL_NOVOSTI_REGION, API_URL_SAM_MARSH } from "@/constants/apiUrl";
+import { API_URL_SAM_MARSH } from "@/constants/apiUrl";
 
 export const metadata: Metadata = {
   title:
@@ -29,7 +29,7 @@ const Page = async () => {
           title="Самостоятельные маршруты"
           desc="Готовые тематические сценарии для самостоятельных увлекательных путешествий. Рекомендуется для легких на подъем и любопытных искателей приключений"
         />
-        <Body data={items.rows as TSinglyRoutes[]} />
+        <Body data={items.rows as TSamostoyatelnyeMarshruty[]} />
       </Suspense>
     </>
   );

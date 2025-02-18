@@ -3,23 +3,34 @@ import { Suspense } from "react";
 import Loading from "../loading";
 import { HeroPage } from "@/components/modules/HeroPage";
 import Body from "./body";
-import { TSinglyRoutes } from "@/types/types";
+import { TSamostoyatelnyeMarshruty } from "@/types/types";
 import { WrapperGreyPages } from "@/components/wrapper";
-import { scenarii } from "@/constants/pages/organizovannye-marshruty/scenarii";
+import { API_URL_SAM_MARSH } from "@/constants/apiUrl";
+import { redirect } from "next/navigation";
+import { getImageUrl } from "@/utils/getImageUrl";
 
 type Props = {
   params: { id: string };
 };
 
-async function getSinglyRoutesDetails(id: string) {
-  const data = scenarii.find((item) => item.id === Number(id));
-  return data;
+async function getSamMarshDetail(id: string) {
+  const response = await fetch(
+    `${API_URL_SAM_MARSH}/${id}`,
+    {
+      next: { revalidate: 3600 },
+    }
+  );
+
+  if (!response.ok) {
+    redirect("/not-found");
+  }
+  return response.json();
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = params.id;
 
-  const data = await getSinglyRoutesDetails(id);
+  const data = await getSamMarshDetail(id) as TSamostoyatelnyeMarshruty;
 
   return {
     title: `${data?.title} - Всё о туризме в Рязани и Рязанской области`,
@@ -27,13 +38,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const Page = async ({ params }: Props) => {
-  const data = await getSinglyRoutesDetails(params.id) as TSinglyRoutes;
+  const data = await getSamMarshDetail(params.id) as TSamostoyatelnyeMarshruty;
 
   return (
     <Suspense fallback={<Loading />}>
       <WrapperGreyPages>
         <HeroPage
-          imgUrl={data?.imgUrl || "/heroPages/ty-s-mestnym/cit.jpg"}
+          imgUrl={getImageUrl(data.storage_image.imagePath) || "/heroPages/ty-s-mestnym/cit.jpg"}
           title={data.title}
           desc=""
           classNameImage="brightness-50"

@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { TagList, TSinglyRoutes } from "@/types/types";
+import { TagList, TSamostoyatelnyeMarshruty } from "@/types/types";
 import { Typography } from "@/components/elements/Typography/Typography";
 import { ButtonLink } from "@/components/elements/ButtonNew";
 import Image from "next/image";
@@ -7,7 +7,7 @@ import { createShimmer } from "@/utils/shimer";
 import { Tags } from "@/components/elements/Tags/Tags";
 import { getImageUrl } from "@/utils/getImageUrl";
 
-const Item = ({ item }: { item: TSinglyRoutes }) => {
+const Item = ({ item }: { item: TSamostoyatelnyeMarshruty }) => {
   return (
     <div className="rounded-[40px] flex flex-col bg-[var(--color-partner-card-grey)] shadow-lg overflow-hidden">
       <div className="relative">
@@ -55,7 +55,7 @@ const Item = ({ item }: { item: TSinglyRoutes }) => {
   );
 };
 
-export const SinglyRoutest = ({ data }: { data: TSinglyRoutes[] }) => {
+export const SinglyRoutest = ({ data }: { data: TSamostoyatelnyeMarshruty[] }) => {
   return (
     <div className="grid md:grid-cols-3 grid-cols-1 gap-7">
       {data.map((item, index) => (

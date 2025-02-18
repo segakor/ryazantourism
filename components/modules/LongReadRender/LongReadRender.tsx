@@ -2,6 +2,9 @@
 import "./style.css";
 import { ReactNode } from "react";
 import { Typography } from "@/components/elements/Typography/Typography";
+import { createSidebarItem } from "@/utils/longread/createSidebarItem";
+import { scrollIntoView } from "@/utils/longread/scrollIntoView";
+
 
 type Props = {
   body: string;
@@ -20,15 +23,8 @@ export const LongReadRender = ({
   sideBarText,
   fullW
 }: Props) => {
-  const scrollIntoView = (elementId?: string) => {
-    //@ts-ignore
-    document
-      .getElementById(elementId || "")
-      .scrollIntoView({ behavior: "smooth", block: "center" });
-  };
-
   const bodyWithStyles = body
-    .replaceAll("<h1>", "<h1 class='md:text-[40px] text-[30px] leading-tight'>")
+    .replaceAll("<h3>", "<h3 class='md:text-[40px] text-[30px] leading-tight'>")
     .replaceAll("<p>", "<p class='text3 styled_list styled_link'>")
     .replaceAll("quoteBlock", "quoteBlock")
     .replaceAll(
@@ -46,7 +42,7 @@ export const LongReadRender = ({
     <div></div>
   );
 
-  const sideBarItem = ["1", "2"];//TODO: вытащить h1
+  const sideBarItem = createSidebarItem(body)
 
   return (
     <section className="grid_layout">

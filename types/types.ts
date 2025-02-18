@@ -85,36 +85,6 @@ export type TGid = {
   storage_image: TStorageImage;
 };
 
-export type TSinglyRoutes = {
-  id: number;
-  title: string;
-  category: string;
-  subTitle: string;
-  template: TLongReadBody[];
-  tags: number[];
-  linkPath?: string;
-  imageId: number;
-  storage_image: TStorageImage;
-};
-
-export type TSinglyRoutesDetails = {
-  description: string;
-  images: { url: string }[];
-  title: string;
-  sights: {
-    id: number;
-    image_path: string;
-    name: string;
-    point_x: number;
-    point_y: number;
-  }[];
-  duration: { days: number; hours: number; minutes: number };
-};
-
-export type ResponseSinglyRoutes = { data: TSinglyRoutes[] };
-
-export type ResponseSinglyRoutesDetails = TSinglyRoutesDetails;
-
 export type TBibliotekaNavigation = {
   id: string;
   imgUrl: string;
@@ -204,4 +174,16 @@ export type TOrganizovannyeMarshruty = {
   days: string;
   storage_image: TStorageImage;
   template: string;
+};
+
+export type TSamostoyatelnyeMarshruty = {
+  id: number;
+  title: string;
+  subTitle: string;
+  storage_image: TStorageImage;
+  category: string;
+  tags: number[];
+  template: string;
+  linkPath: string;
+  sequence: number;
 };

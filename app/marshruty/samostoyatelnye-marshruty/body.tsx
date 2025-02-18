@@ -3,12 +3,12 @@ import { Tabs } from "@/components/elements/Tabs/Tabs";
 import { tabsSinglyRoutes } from "@/constants/contstants";
 import { useState } from "react";
 import { SinglyRoutest } from "@/components/modules/SinglyRoutes/SinglyRoutes";
-import { TSinglyRoutes } from "@/types/types";
+import { TSamostoyatelnyeMarshruty } from "@/types/types";
 import { PodcastCard } from "@/components/modules/PodcastCard/PodcastCard";
 import { TourCard } from "@/components/modules/TourCard/TourCard";
 import { Typography } from "@/components/elements/Typography/Typography";
 
-const Body = ({ data }: { data: TSinglyRoutes[] }) => {
+const Body = ({ data }: { data: TSamostoyatelnyeMarshruty[] }) => {
   const [tab, setTab] = useState("all");
 
   const onChangeTab = (e: string) => {
