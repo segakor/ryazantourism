@@ -31,7 +31,7 @@ export const SingleBlock = ({
           />
         </div>
       )}
-      <div className="md:py-[80px] md:px-[50px] p-[30px] grid gap-[30px]">
+      <div className="md:py-[40px] md:px-[50px] p-[30px] grid gap-[30px]">
         {date && <div>{date}</div>}
         {title && (
           <Typography variant="h3" className="font-medium">
