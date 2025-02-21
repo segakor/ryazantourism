@@ -4,7 +4,7 @@ import { useState } from "react";
 import Icons from "@/components/elements/Logo/Icons";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { NewYearLink } from "./NewYearLink";
+/* import { NewYearLink } from "./NewYearLink"; */
 
 export const HeaderNav = () => {
   return (
@@ -106,7 +106,7 @@ export const HeaderNavMobile = () => {
         ))}
       </ul>
       <div className="grid gap-3 justify-center">
-        <div className="grid gap-1 justify-center"><NewYearLink /></div>
+        {/* <div className="grid gap-1 justify-center"><NewYearLink /></div> */}
         <div className="grid gap-1">
           <div className="opacity-60 text-sm mb-2 mt-2">
             Мобильное приложение
