@@ -187,3 +187,21 @@ export type TSamostoyatelnyeMarshruty = {
   linkPath: string;
   sequence: number;
 };
+
+export type TLongread = {
+  title: string;
+  bodyText: string;
+};
+
+export type TBanner = {
+  title: string;
+  subTitle: string;
+  linkPath: string;
+  storage_image: TStorageImage;
+  sequence: number;
+};
+
+export type TResponseTableData<T> = {
+  count: number;
+  rows: T;
+};

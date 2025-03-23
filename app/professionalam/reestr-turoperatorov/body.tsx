@@ -1,8 +1,7 @@
-import { TLongReadBody } from "@/types/types";
-import { LongRead } from "@/components/modules/LongRead";
+import { LongReadRender } from "@/components/modules/LongReadRender/LongReadRender";
 
-const Body = ({ data }: { data: TLongReadBody[] }) => {
-  return <LongRead body={data} noSidebar/>;
+const Body = ({ bodyText }: { bodyText: string }) => {
+  return <LongReadRender body={bodyText} noSidebar />;
 };
 
 export default Body;

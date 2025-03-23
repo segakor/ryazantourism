@@ -46,6 +46,8 @@ export const LongReadRender = ({
 
   return (
     <section className="grid_layout">
+      <div className=" absolute invisible before:content-[url('/factBlock/fact.svg')]" />
+      <div className="absolute invisible before:content-[url('/quoteBlock/quote.svg')]" />
       <div className="logread_wrapper">
         {bodyItem}
         {!noSidebar && (
@@ -80,8 +82,6 @@ export const LongReadRender = ({
           </div>
         )}
       </div>
-      <div className=" absolute invisible before:content-[url('/factBlock/fact.svg')]" />
-      <div className="absolute invisible before:content-[url('/quoteBlock/quote.svg')]" />
     </section>
   );
 };

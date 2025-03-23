@@ -22,6 +22,7 @@ export const API_URL_CALENDAR_DETAIL = `
 https://api.tr.plenexy.digital/api/events?page=1&limit=10&with=category,tags&event_date=$date_raplace`;
 
 export const URL = "https://ryazantourism.ru";
+/* export const URL = "http://localhost:5001"; */
 
 export const API_URL_NOVOSTI_REGION = URL + "/api-v2/newsRegion";
 export const API_URL_NOVOSTI_ART = URL + "/api-v2/newsArt";
@@ -29,3 +30,6 @@ export const API_URL_CHTO_POSMOTRET = URL + "/api-v2/chtoposmotret";
 export const API_URL_ORG_MARSH = URL + "/api-v2/organizovannyeMarshruty";
 export const API_URL_SAM_MARSH = URL + "/api-v2/samostoyatelnyeMarshruty";
 export const API_URL_ANSWER = URL + "/api-v2/answer";
+export const API_URL_LONGREAD = URL + "/api-v2/longread";
+export const API_URL_BANNER = URL + "/api-v2/banner";
+export const API_URL_GID = URL + "/api-v2/gid";
