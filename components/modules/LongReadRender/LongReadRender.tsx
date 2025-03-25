@@ -24,7 +24,8 @@ export const LongReadRender = ({
   fullW
 }: Props) => {
   const bodyWithStyles = body
-    .replaceAll("<h3>", "<h3 class='md:text-[40px] text-[30px] leading-tight'>")
+    .replaceAll("<h3>", "<h3 class='md:text-[38px] text-[30px] leading-tight font-medium'>")
+    .replaceAll("<h5>", "<h5 class='md:text-[20px] text-[20px] leading-tight font-semibold'>")
     .replaceAll("<p>", "<p class='text3 styled_list styled_link'>")
     .replaceAll("quoteBlock", "quoteBlock")
     .replaceAll(
@@ -35,7 +36,7 @@ export const LongReadRender = ({
   const bodyItem = body ? (
     <div
       className={`longread_body ${noMargin ? "mt-auto" : "mt-[-7.5rem]"
-        } md:w-[80%] w-full ${noSidebar && "no_sidebar"} ${fullW && 'md:w-full'}`}
+        } md:w-[80%] w-full ${noSidebar && "no_sidebar"} ${fullW && 'md:w-full'} styled_list styled_link`}
       dangerouslySetInnerHTML={{ __html: bodyWithStyles }}
     />
   ) : (

@@ -1,8 +1,11 @@
-import { TLongReadBody } from "@/types/types";
-import { LongRead } from "@/components/modules/LongRead";
+import { LongReadRender } from "@/components/modules/LongReadRender/LongReadRender";
 
-const Body = ({ data }: { data: TLongReadBody[] }) => {
-  return <LongRead body={data} />;
+const Body = ({ bodyText }: { bodyText: string }) => {
+  return (
+    <section className="grid_layout">
+      <LongReadRender body={bodyText} />
+    </section>
+  );
 };
 
 export default Body;

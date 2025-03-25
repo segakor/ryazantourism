@@ -1,21 +1,34 @@
-import { HeroPage } from "@/components/modules/HeroPage";
-import { LongRead } from "@/components/modules/LongRead";
-import { WrapperGreyPages } from "@/components/wrapper";
-import { template } from "@/constants/pages/region/kultura";
-import { TLongReadBody } from "@/types/types";
+import { API_URL_LONGREAD } from "@/constants/apiUrl";
+import { TLongread } from "@/types/types";
 
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
+import Body from "./body";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
-  title: "Культура - Всё о туризме в Рязани и Рязанской области",
+  title: "Культура рязанского края  - Всё о туризме в Рязани и Рязанской области",
 };
 
-const Kultura = () => {
+async function getTemplate(path: string) {
+  const response = await fetch(`${API_URL_LONGREAD}/${path}`, {
+    next: { revalidate: 3600 },
+  });
+
+  if (!response.ok) {
+    redirect("/not-found");
+  }
+  return response.json();
+}
+
+const Kultura = async () => {
+  const { bodyText } = (await getTemplate('kultura')) as TLongread;
+
   return (
-    <WrapperGreyPages>
-      <HeroPage imgUrl="/heroPages/region/kultura.jpg" title="Культура" />
-      <LongRead body={template as TLongReadBody[]} />
-    </WrapperGreyPages>
+    <Suspense fallback={<Loading />}>
+      <Body bodyText={bodyText} />
+    </Suspense>
   );
 };
 

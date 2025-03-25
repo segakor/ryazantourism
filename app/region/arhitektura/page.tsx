@@ -1,24 +1,34 @@
-import { HeroPage } from "@/components/modules/HeroPage";
-import { LongRead } from "@/components/modules/LongRead";
-import { WrapperGreyPages } from "@/components/wrapper";
-import { template } from "@/constants/pages/region/arhitektura";
-import { TLongReadBody } from "@/types/types";
+import { API_URL_LONGREAD } from "@/constants/apiUrl";
+import { TLongread } from "@/types/types";
 
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
+import { Suspense } from "react";
+import Loading from "./loading";
+import Body from "./body";
 
 export const metadata: Metadata = {
   title: "Архитектура - Всё о туризме в Рязани и Рязанской области",
 };
 
-const Arhitektura = () => {
+async function getTemplate(path: string) {
+  const response = await fetch(`${API_URL_LONGREAD}/${path}`, {
+    next: { revalidate: 3600 },
+  });
+
+  if (!response.ok) {
+    redirect("/not-found");
+  }
+  return response.json();
+}
+
+const Arhitektura = async () => {
+  const { bodyText } = (await getTemplate('arhitektura')) as TLongread;
+
   return (
-    <WrapperGreyPages>
-      <HeroPage
-        imgUrl="/heroPages/region/arhitektura.jpg"
-        title="Архитектура"
-      />
-      <LongRead body={template as TLongReadBody[]} />
-    </WrapperGreyPages>
+    <Suspense fallback={<Loading />}>
+      <Body bodyText={bodyText} />
+    </Suspense>
   );
 };
 

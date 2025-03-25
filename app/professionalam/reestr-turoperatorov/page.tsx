@@ -27,11 +27,9 @@ const Page = async () => {
   const { bodyText } = (await getTemplate('reestr-turoperatorov')) as TLongread;
 
   return (
-    <>
-      <Suspense fallback={<Loading />}>
-        <Body bodyText={bodyText} />
-      </Suspense>
-    </>
+    <Suspense fallback={<Loading />}>
+      <Body bodyText={bodyText} />
+    </Suspense>
   );
 };
 

@@ -1,15 +1,34 @@
-import { HeroPage } from "@/components/modules/HeroPage";
-import { LongRead } from "@/components/modules/LongRead";
-import { WrapperGreyPages } from "@/components/wrapper";
-import { template } from "@/constants/pages/region/sobytiya";
-import { TLongReadBody } from "@/types/types";
+import { API_URL_LONGREAD } from "@/constants/apiUrl";
+import { TLongread } from "@/types/types";
 
-const Sobytia = () => {
+import type { Metadata } from "next";
+import { redirect } from "next/navigation";
+import Body from "./body";
+import { Suspense } from "react";
+import Loading from "./loading";
+
+export const metadata: Metadata = {
+  title: "События  - Всё о туризме в Рязани и Рязанской области",
+};
+
+async function getTemplate(path: string) {
+  const response = await fetch(`${API_URL_LONGREAD}/${path}`, {
+    next: { revalidate: 3600 },
+  });
+
+  if (!response.ok) {
+    redirect("/not-found");
+  }
+  return response.json();
+}
+
+const Sobytia = async () => {
+  const { bodyText } = (await getTemplate('sobytiya')) as TLongread;
+
   return (
-    <WrapperGreyPages>
-      <HeroPage imgUrl="/heroPages/region/sobytiya.jpg" title="События" />
-      <LongRead body={template as TLongReadBody[]} />
-    </WrapperGreyPages>
+    <Suspense fallback={<Loading />}>
+      <Body bodyText={bodyText} />
+    </Suspense>
   );
 };
 
