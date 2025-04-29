@@ -1,12 +1,12 @@
-import { posmotret } from "@/constants/pages/biblioteka/posmotret/posmotret";
-import { TPosmotretCard } from "@/types/types";
 import Link from "next/link";
 import { ImageBlock } from "@/components/elements/LongReadBlocks/ImageBlock/ImageBlock";
+import { TBibliotekaPosmotret } from "@/types/types";
+import { getImageUrl } from "@/utils/getImageUrl";
 
-export const PosmotretCard = () => {
+export const PosmotretCard = ({ data }: { data: TBibliotekaPosmotret[] }) => {
   return (
     <div className="grid md:gap-7 gap-10 md:grid-cols-2 grid-cols-1 my-20 md:mt-40 md:mb-20">
-      {posmotret.map((item, index) => (
+      {data.map((item, index) => (
         <PosmotretCardItem {...item} key={index} />
       ))}
     </div>
@@ -15,25 +15,25 @@ export const PosmotretCard = () => {
 
 export const PosmotretCardItem = ({
   title,
-  desc,
+  subTitle,
   prolongation,
   date,
-  imgUrl,
+  storage_image,
   linkName,
-  link,
-}: TPosmotretCard) => {
+  linkPath,
+}: TBibliotekaPosmotret) => {
   return (
     <div className="flex flex-col gap-7 h-full bg-[#F7F7F7] rounded-[30px] p-7">
-      <ImageBlock srcImg={imgUrl} />
+      <ImageBlock srcImg={getImageUrl(storage_image.imagePath)} />
       <div className="flex flex-col gap-5 h-full justify-between">
         <div className="grid gap-2">
           <div className="library-h">{title}</div>
-          <div className="text3">{desc}</div>
+          <div className="text3">{subTitle}</div>
           <p className="text3 text-gray-400">
             {prolongation} минут ・ {date}
           </p>
         </div>
-        <Link href={link} target="_blank">
+        <Link href={linkPath} target="_blank">
           <div className="group/item bg-[var(--color-green)] hover:bg-black hover:text-white transition-all py-5 px-10 inline-block rounded-full ">
             <div className="flex gap-2 items-center">
               Смотреть на {linkName}{" "}

@@ -2,12 +2,12 @@
 import { Tabs } from "@/components/elements/Tabs/Tabs";
 import { tabsPromTurizm } from "@/constants/contstants";
 import { useState } from "react";
-import { TPromTurizmCard } from "@/types/types";
 import { PromTurizmCard } from "@/components/modules/PromTurizmCard/PromTurizmCard";
 import { useSearchParams } from "next/navigation";
 import { WrapperTabs } from "@/components/wrapper";
+import { TPromturizm } from "@/types/types";
 
-const Body = ({ data }: { data: TPromTurizmCard[] }) => {
+const Body = ({ data }: { data: TPromturizm[] }) => {
   const searchParams = useSearchParams();
   const defaultParams = searchParams.get("default");
   const [tab, setTab] = useState(defaultParams);
@@ -17,7 +17,7 @@ const Body = ({ data }: { data: TPromTurizmCard[] }) => {
   };
 
   const filteredData =
-    tab !== "all" ? data.filter((item) => item.tag.includes(tab as any)) : data;
+    tab !== "all" ? data.filter((item) => item.tags.includes(tab as any)) : data;
 
   return (
     <section className="grid_layout">

@@ -33,3 +33,7 @@ export const API_URL_ANSWER = URL + "/api-v2/answer";
 export const API_URL_LONGREAD = URL + "/api-v2/longread";
 export const API_URL_BANNER = URL + "/api-v2/banner";
 export const API_URL_GID = URL + "/api-v2/gid";
+export const API_URL_POCHITAT = URL + "/api-v2/biblioteka/pochitat";
+export const API_URL_POSLUSHAT = URL + "/api-v2/biblioteka/poslushat";
+export const API_URL_POSMOTRET = URL + "/api-v2/biblioteka/posmotret";
+export const API_URL_PROMTURIZM = URL + "/api-v2/promturizm";

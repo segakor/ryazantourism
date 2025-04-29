@@ -1,4 +1,4 @@
-import { TPromTurizmCard } from "@/types/types";
+import { TPromturizm } from "@/types/types";
 import Image from "next/image";
 import { createShimmer } from "@/utils/shimer";
 import { Typography } from "@/components/elements/Typography/Typography";
@@ -11,8 +11,9 @@ import {
 } from "@nextui-org/react";
 import { ModalDetails } from "./ModalDetails";
 import { Button } from "@/components/elements/ButtonNew";
+import { getImageUrl } from "@/utils/getImageUrl";
 
-export const PromTurizmCard = ({ data }: { data: TPromTurizmCard[] }) => {
+export const PromTurizmCard = ({ data }: { data: TPromturizm[] }) => {
   return (
     <div className="grid md:grid-cols-3 grid-cols-1 gap-7 mb-40">
       {data?.map((item, index) => (
@@ -22,7 +23,7 @@ export const PromTurizmCard = ({ data }: { data: TPromTurizmCard[] }) => {
   );
 };
 
-const Card = ({ item }: { item: TPromTurizmCard }) => {
+const Card = ({ item }: { item: TPromturizm }) => {
   const { isOpen, onOpenChange } = useDisclosure();
 
   return (
@@ -36,27 +37,25 @@ const Card = ({ item }: { item: TPromTurizmCard }) => {
         <div className="grid h-[200px] w-full">
           <div className={`w-full relative`}>
             <Image
-              src={item.imgUrl[0]}
+              src={getImageUrl(item.storage_image.imagePath)}
               alt="img"
               objectFit="cover"
               fill
               className={`w-full h-full top-0 left-0 object-cover rounded-rounded-t-lg  brightness-[90%]`}
               placeholder={`data:image/svg+xml;base64,${createShimmer()}`}
               priority
-              unoptimized 
+              unoptimized
             />
           </div>
         </div>
       </div>
       <div className="p-[30px] flex flex-col justify-between h-full">
         <div className="grid gap-3">
-          <TagsPromTur tags={item.tag} />
+          <TagsPromTur tags={item.tags} />
           <Typography variant="h5" className="font-semibold">
             {item.title}
           </Typography>
-          <div className="partner-card-text flex gap-2">
-            <span>{item.desc}</span>
-          </div>
+          <div className="partner-card-text flex gap-2" dangerouslySetInnerHTML={{ __html: item.subTitle }} />
           <div className="note-text flex gap-2">
             <svg
               width="12"

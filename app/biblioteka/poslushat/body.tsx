@@ -1,12 +1,12 @@
 import { BibliotekaNavigationFlat } from "@/components/modules/BibliotekaNavigation/BibliotekaNavigation";
 import { PoslushatCard } from "@/components/modules/PoslushatCard/PoslushatCard";
+import { TBibliotekaPoslushat } from "@/types/types";
 
-const Body = () => {
-
+const Body = ({ data }: { data: TBibliotekaPoslushat[] }) => {
   return (
     <section className="grid_layout">
-      <PoslushatCard/>
-      <BibliotekaNavigationFlat exclude="poslushat"/>
+      <PoslushatCard data={data} />
+      <BibliotekaNavigationFlat exclude="poslushat" />
     </section>
   );
 };

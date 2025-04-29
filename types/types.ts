@@ -93,46 +93,16 @@ export type TBibliotekaNavigation = {
   path: string;
 };
 
-export type TPosmotretCard = {
+export type TPromturizm = {
+  id: number;
   title: string;
-  desc: string;
-  prolongation: number;
-  date: string;
-  imgUrl: string;
-  linkName: string;
-  link: string;
-};
-
-export type TPoslushatCard = {
-  title: string;
-  desc: string;
-  prolongation: number;
-  date: string;
-  imgUrl: string;
-  linkIzi?: string;
-  linkYa?: string;
-};
-
-export type TPochitatCard = {
-  title: string;
-  desc: string;
-  imgUrl: string;
-  linkLitres?: string;
-  linkOzon?: string;
-  tag?: string[];
-  fileUrl?: string;
-  defaultLink?: string;
-};
-
-export type TPromTurizmCard = {
-  title: string;
-  desc: string;
+  subTitle: string;
   address: string;
-  ageLimit: number;
-  tag: Array<"group" | "school" | "student" | "individual">;
-  imgUrl: string[];
-  popupDesc: string;
-  url: string;
+  ageLimit: string;
+  template: string;
+  tags: Array<"group" | "school" | "student" | "individual">;
+  imageId: number;
+  storage_image: TStorageImage;
 };
 
 export type TStorageImage = {
@@ -205,3 +175,31 @@ export type TResponseTableData<T> = {
   count: number;
   rows: T;
 };
+
+type TCommonBiblioteka = {
+  id: number;
+  title: string;
+  subTitle: string;
+  imageId: number;
+  storage_image: TStorageImage;
+};
+
+export type TBibliotekaPoslushat = {
+  prolongation: string;
+  date: string;
+  linkPathYa: string;
+  linkPathIzi: string;
+} & TCommonBiblioteka;
+
+export type TBibliotekaPosmotret = {
+  prolongation: string;
+  date: string;
+  linkName: string;
+  linkPath: string;
+} & TCommonBiblioteka;
+
+export type TBibliotekaPochitat = {
+  linkPathOzon: string;
+  linkPathLitres: string;
+  linkPath: string;
+} & TCommonBiblioteka;

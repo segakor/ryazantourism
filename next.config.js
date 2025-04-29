@@ -21,6 +21,12 @@ const nextConfig = {
         port: "",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "ryazantourism.ru",
+        port: "",
+        pathname: "**",
+      },
     ],
   },
   async redirects() {
