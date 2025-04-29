@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { ButtonDownload } from "@/components/elements/ButtonNew";
 import { ChipsService } from "@/components/elements/ChipsService/ChipsService";
 import { ImageBlock } from "@/components/elements/LongReadBlocks/ImageBlock/ImageBlock";
-import { poshitat } from "@/constants/pages/biblioteka/poshitat/poshitat";
-import { TBibliotekaPochitat, TPochitatCard } from "@/types/types";
+import { TBibliotekaPochitat } from "@/types/types";
 import { getImageUrl } from "@/utils/getImageUrl";
 
 export const PochitatCard = ({ data }: { data: TBibliotekaPochitat[] }) => {
@@ -24,7 +22,6 @@ const PochitatCardItem = (props: TBibliotekaPochitat) => {
     linkPathOzon,
     linkPath,
   } = props;
-  console.log(storage_image.imagePath)
   return (
     <div className="flex flex-col gap-12 bg-[#F7F7F7] rounded-[30px] p-7">
       <div className="flex flex-col gap-7 h-full">
